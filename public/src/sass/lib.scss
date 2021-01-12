@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/*****공용 변수*****/
+/* media width */
+$desktopScreen : 1000px;
+
+/* color */
+$identity: #E83B3B;
+$primary-bule: #5567ff;
+$gray-v1: #ececec;
+$text-blue-dark: #303956;
+$border-color: #ececec;
+
+
+
+$link-color: rgb(9, 148, 228);
+$line-color: rgb(28, 164, 235);
+$point-btn: rgb(255, 123, 26);
+$main-color: #E83B3B;
+$sub-color: rgb(22,134,226);
+$border-color-Lv2: rgb(218,216,216);
+$point-color: rgb(227,83,108);
+$pagination-color: rgb(236,113,65);
+$primary: #5567ff;
+$text-dark: #303956;
+
+@mixin flex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 100%;	
+}
+
+@mixin flex-l{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: left;
+	-ms-flex-pack: left;
+	-webkit-justify-content: left;
+	justify-content: left;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 100%;	
+}
+
+@mixin absPosition ($top: auto, $right: auto, $bottom: auto, $left: auto){
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin prefix($name, $value) {
+  -webkit-#{$name}: $value;
+  -moz-#{$name}: $value;
+  -ms-#{$name}: $value;
+  #{$name}: $value;
+}
+@mixin inline-block{
+  display:inline-block;
+  *zoom:1;
+  *display:inline;
+}
+@mixin clear-both{
+  content:'';
+  clear:both;
+  display:block;
+  height:0;
+}
+@mixin hide-text{
+  text-indent: -9999px;
+  text-shadow:none;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;;
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin gradient($from-color, $to-color) {
+    background-color: mix($from-color, $to-color); /* Fallback */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
+    background-image: -webkit-linear-gradient(top, $from-color, $to-color);
+    background-image:    -moz-linear-gradient(top, $from-color, $to-color);
+    background-image:     -ms-linear-gradient(top, $from-color, $to-color);
+    background-image:      -o-linear-gradient(top, $from-color, $to-color);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$from-color', EndColorStr='$to-color')";
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+
+@mixin transition($property: all, $duration: 0.2s, $timing: linear) {
+  -webkit-transition: #{$property} $duration $timing;
+  -moz-transition: #{$property} $duration $timing;
+  -ms-transition: #{$property} $duration $timing;
+  transition: $property $duration $timing;
+}
+@mixin transform($type) {
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -ms-transform: $type;
+  transform: $type;
+}
+@mixin animation($name, $timing: 0.5s) {
+  -webkit-animation: $name $timing;
+  -moz-animation: $name $timing;
+  -ms-animation: $name $timing;
+}
+
+
+@mixin printTitle {
+  font-size: 30px !important;
+  letter-spacing: -3px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/*공용 함수*/
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}

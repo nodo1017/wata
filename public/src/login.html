@@ -1,0 +1,86 @@
+@@include('./include/header.html')
+
+<div class="mdk-header-layout js-mdk-header-layout sign-up">
+    <div class="flex-parent">
+        <!-- <video autoplay muted loop id="myVideo">
+            <source src="video/bg_main.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video> -->
+        <div class="flex-child">
+            <div class="layout-login__form">
+                <img src="images/logo/logo.svg" class="id-logo" alt="와따" />
+                <h5 class="mb-4">실내외 연속형 사용자 위치추적 시스템</h5>
+                <!-- <div class="alert bg-accent text-white" role="alert">
+                    <div class="d-flex flex-wrap align-items-start">
+                        <div class="mr-8pt">
+                            <i class="material-icons">error_outline</i>
+                        </div>
+                        <div class="flex" style="min-width: 180px;">
+                            <small>오류.</small>
+                        </div>
+                    </div>
+                </div> -->
+                <form action="index.html" novalidate>
+                    <div class="form-group">
+                        <div class="input-group input-group-merge">
+                            <input id="email_2" type="email" required="" class="form-control form-control-prepended"
+                                placeholder="이메일을 입력하세요.">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <span class="fa fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-merge">
+                            <input id="password_2" type="password" required=""
+                                class="form-control form-control-prepended" placeholder="비밀번호를 입력하세요.">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <span class="fa fa-key"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-32pt">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" checked="" id="remember">
+                            <label class="custom-control-label" for="remember">아이디 기억하기</label>
+                        </div>
+                    </div>
+                    <div class="form-group text-center mb-32pt">
+                        <button class="btn btn-block btn-lg btn-primary" type="submit"><i class="material-icons icon--left">power_settings_new</i> 로그인</button><br>
+                    </div>
+                    <ul class="signin-help">
+                        <li>비밀번호를 잊으셨나요?<a class="text-body text-underline" href="">비밀번호 찾기</a><br></li>
+                        <li>아직 계정이 없으신가요?<a class="text-body text-underline" href="signup.html">계정생성</a></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+<script>
+    VANTA.NET({
+        el: ".sign-up",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x8795d7,
+        backgroundColor: 0x4549cd,
+        points: 10.00,
+        maxDistance: 20.00,
+        spacing: 19.00
+    })
+</script>
+
+@@include('./include/footer.html')

@@ -1,0 +1,8 @@
+# zip file
+*.zip
+
+# node modules
+node_modules/
+
+# visual studio
+.vscode
