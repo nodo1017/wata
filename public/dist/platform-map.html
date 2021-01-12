@@ -833,11 +833,11 @@
                                     </ul>
                                 </div>
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 essential text-50" for="">이벤트 제목</label>
+                                    <label class="form-label essential text-50" for="">이벤트 제목</label>
                                     <input type="text" class="form-line" id="" placeholder="이벤트 제목을 입력해주세요.">
                                 </div>
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 essential text-50" for="">이벤트 타입</label>
+                                    <label class="form-label essential text-50" for="">이벤트 타입</label>
                                     <div class="radio-tile-group">
                                         <div class="input-container">
                                             <input id="event-fire" class="radio-button" type="radio" name="event-type" />
@@ -870,7 +870,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50 essential" for="dateRangePickerSample02">날짜선택</label>
+                                    <label class="form-label text-50 essential" for="dateRangePickerSample02">날짜선택</label>
                                     <input id="dateRangePickerSample02"
                                            type="text"
                                            class="form-line"
@@ -880,10 +880,24 @@
                                            data-daterangepicker-start-date="2021/01/01"
                                            data-daterangepicker-end-date="2021/01/31">
                                 </div>
-                                <div class="form-group mb-32pt over-txt">
-                                    <div class="col-md-6 p-0">
-                                        <label class="form-label mb-0 text-50" for="dateRangePickerSample02">반경</label>
-                                        <input type="text" class="form-line pr-5" value="">
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">위도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample02">경도</label>
+                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">각도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="col-md-6 over-txt">
+                                        <label class="form-label text-50" for="dateRangePickerSample02">반경</label>
+                                        <input type="number" class="form-line pr-5" value="">
                                         <em class="text-50">meter</em>
                                     </div>
                                 </div>
@@ -922,8 +936,7 @@
                                 <!-- 솔루션 보유 -->
                                 <div class="d-none">
                                     <div class="card o-hidden sm-core">
-                                        <span
-                                            class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">기본제공</span>
+                                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">기본제공</span>
                                         <div class="card-body">
                                             <div class="flex">
                                                 <h2 class="mb-2">WATA</h2>

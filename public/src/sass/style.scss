@@ -1197,13 +1197,12 @@ platform Flow
       text-overflow: ellipsis;
       word-wrap: keep-all;
     }
-    &.over-txt{
-      em{
-        position: absolute;
-        right: 5px;
-        bottom: .5rem;
-        font-size: 1rem;
-      }
+  }
+  .over-txt{
+    em{
+      position: absolute;
+      right: 5px;
+      bottom: .5rem;
     }
   }
   .set-list{
@@ -1247,7 +1246,7 @@ platform Flow
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 1rem;
+        margin-top: .5rem;
         .input-container {
             position: relative;
             display: flex;
