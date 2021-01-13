@@ -713,7 +713,7 @@
                             </div>
                         </div>
                         <!-- 이벤트 등록 -->
-                        <div class="projects-inner">
+                        <div class="project-inner d-none">
                             <div class="container-fluid d-flex flex-md-row align-items-center text-sm-left border-bottom py-4 mb-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
                                     <div class="mb-24pt mb-sm-0 mr-sm-24pt">
@@ -804,6 +804,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group mb-32pt">
+                                    <label for="formFile" class="form-label text-50">파일등록</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                </div>
+                                <div class="form-group mb-32pt">
                                     <label class="form-label text-50 essential" for="dateRangePickerSample02">날짜선택</label>
                                     <input id="dateRangePickerSample02"
                                            type="text"
@@ -843,6 +847,75 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 경고 -->
+                        <div class="project-inner">
+                            <div class="video-bg">
+                                <video autoplay muted loop id="myVideo">
+                                    <source src="video/bg_fire.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <div class="video-inner d-flex justify-content-center align-items-center">
+                                    <div class="txt-cover">
+                                        <h1 class="m-0" title="화재경보">화재경보</h2>
+                                        <p class="m-0">화재 위험이 감지되었습니다</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="emg-stat p-16pt">
+                                <div class="emg-top d-flex align-items-center pb-16pt mb-16pt">
+                                    <div class="col-auto p-0">
+                                        <div class="d-flex align-items-center">
+                                            <span class="material-icons icon-24pt text-white mr-4pt">local_fire_department</span>
+                                            <p class="text-white mb-0">최초 감지 시간</p>
+                                        </div>
+                                    </div>
+                                    <div class="col p-0 text-right">
+                                        <strong class="mb-0 text-white">2020.01.13 06:42:58</strong>
+                                    </div>
+                                </div>
+                                <div class="emg-con py-8pt text-center">
+                                    <em class="time mb-2">00:01:24</em>
+                                    <p class="tit m-0">경과시간</p>
+                                </div>
+                            </div>
+                            <div class="emg-info">
+                                <div class="info-col info-col-line d-flex align-items-center">
+                                    <p class="flex m-0">경보위치</p>
+                                    <strong>판교스타트업캠퍼스 4층</strong>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="flex m-0">재실인원 <a href="#n" class="btn btn-sm btn-outline-secondary btn-rounded ml-2">긴급대피 문자 발송</a></p>
+                                    <strong class="text-accent font-size-24pt ">40명</strong>
+                                </div>
+                                <div class="card-body mt-16pt" data-perfect-scrollbar>
+                                    <div class="card-inner">
+                                        <ul>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-48pt">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#n" class="btn-lg btn-accent">화재 위치 확인</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="tab-pane sm-solution" id="sm-solution">
@@ -851,7 +924,7 @@
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
                                     <div class="mb-24pt mb-sm-0 mr-sm-24pt">
                                         <h3 class="mb-0">솔루션</h3>
-                                        <p class="text-70 mb-0">보유중인 솔루션 목록입니다.</p>
+                                        <p class="text-70 mb-0">솔루션을 구매해 보세요.</p>
                                     </div>
                                 </div>
                             </div>
@@ -868,7 +941,7 @@
                                     </div>
                                 </div>
                                 <!-- 솔루션 보유 -->
-                                <div class="d-none">
+                                <div class="">
                                     <div class="card o-hidden sm-core">
                                         <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">기본제공</span>
                                         <div class="card-body">
