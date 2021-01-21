@@ -80,7 +80,7 @@
         <a href="index.html" class="navbar-brand mr-16pt d-lg-none">
             <!-- <img class="navbar-brand-icon" src="../../public/images/logo/white-100@2x.png" width="30" alt="Luma"> -->
             <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
-                <span class="avatar-title rounded bg-primary"><img src="../../public/images/illustration/student/128/white.svg" alt="logo" class="img-fluid" /></span>
+                <span class="avatar-title rounded bg-primary"></span>
             </span>
             <span class="d-none d-lg-block">Luma</span>
         </a>
@@ -243,7 +243,6 @@
         </div>
 
         <div class="context-wrap row">
-
             <div class="col-auto p-0">
                 <div class="context-menu">
                     <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center p-12pt user-point-cover">
@@ -269,51 +268,94 @@
                         </a>
                     </div>
                     <!-- 지도 클릭시 -->
-                    <div class="nav" role="tablist">
-                        <a href="#user-menu01" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
-                        <a href="#user-menu02" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">add</span> 이벤트 생성</a>
-                        <a href="#user-menu03" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
+                    <div class="nav ml-24pt" role="tablist">
+                        <a href="#user-menu01" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
+                        <a href="#user-menu02" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
+                        <a href="#n" class="d-flex align-items-center"><span class="material-icons icon-16pt icon--left">add</span> 사용자 감시</a>
                     </div>
                     <!-- user 클릭시 -->
                     <div class="nav d-none" role="tablist">
-                        <a href="#user-menu01" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
+                        <a href="#user-menu01" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
                         <a href="#user-menu02" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">add</span> 이벤트 생성</a>
                         <a href="#user-menu03" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
                     </div>
                 </div>
             </div>
             <div class="col-auto p-0">
-                <div class="tab-content">
+                <div class="tab-content context-body">
                     <div id="user-menu01" class="tab-pane active" role="tabpanel">
                         <div class="card-header card-header-tabs-basic nav" role="tablist">
                             <a href="#menu01" class="p-12pt active" data-toggle="tab" role="tab" aria-selected="true">사용자 정보</a>
-                            <a href="#menu02" class="p-12pt" data-toggle="tab" role="tab" aria-selected="false">전체이력</a>
-                            <a href="#menu03" class="p-12pt" data-toggle="tab" role="tab" aria-selected="false">통계</a>
+                            <a href="#menu02" class="p-12pt" data-toggle="tab" role="tab" aria-selected="false">통계</a>
                         </div>
                         <div class="tab-content">
                             <div id="menu01" class="tab-pane active" role="tabpanel">
-                                <div class="chart p-16pt" style="height: 140px;">
-                                    <canvas id="iqChart" class="chart-canvas js-update-chart-line" data-chart-hide-axes="false" data-chart-points="true" data-chart-suffix="pt" data-chart-line-border-color="primary"></canvas>
+                                <div class="user-info p-16pt">
+                                    <dl class="d-flex align-items-center">
+                                        <dt class="flex mr-2 text-body">사용자</dt>
+                                        <dd class="m-0">01012345678</dd>
+                                    </dl>
+                                    <dl class="d-flex align-items-center">
+                                        <dt class="flex mr-2 text-body">성별</dt>
+                                        <dd class="m-0">남성</dd>
+                                    </dl>
+                                    <dl class="d-flex align-items-center">
+                                        <dt class="flex mr-2 text-body">나이</dt>
+                                        <dd class="m-0">32</dd>
+                                    </dl>
+                                    <dl class="d-flex align-items-center">
+                                        <dt class="flex mr-2 text-body">체류시간</dt>
+                                        <dd class="m-0">10분</dd>
+                                    </dl>
                                 </div>
                             </div>
                             <div id="menu02" class="tab-pane" role="tabpanel">
-                                menu2
-                            </div>
-                            <div id="menu03" class="tab-pane" role="tabpanel">
-                                menu3
+                                <div class="chart p-16pt">
+                                    <canvas id="iqChart" class="chart-canvas js-update-chart-line" data-chart-hide-axes="false" data-chart-points="true" data-chart-suffix="pt" data-chart-line-border-color="primary"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="user-menu02" class="tab-pane" role="tabpanel">menu2</div>
-                    <div id="user-menu03" class="tab-pane" role="tabpanel">menu3</div>
+                    <div id="user-menu02" class="tab-pane" role="tabpanel">
+                        <div class="p-24pt" style="width:400px;">
+                            <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
+                                <h3>메세지 전송</h3>
+                                <nav class="cd-stretchy-nav edit-content">
+                                    <a class="cd-nav-trigger" href="#0">
+                                        Menu
+                                        <span aria-hidden="true"></span>
+                                    </a>
+                            
+                                    <ul class="list-unstyled">
+                                        <li><a href="#0"><span>보관함</span></a></li>
+                                        <li><a href="#0"><span>공유</span></a></li>
+                                        <li><a href="#0"><span>저장</span></a></li>
+                                        <li><a href="#0"><span>삭제</span></a></li>
+                                    </ul>
+                            
+                                    <span aria-hidden="true" class="stretchy-nav-bg"></span>
+                                </nav>
+                            
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="form-label mb-0 text-50 essential" for="form02">제목</label>
+                                <input id="form02" type="email" required="" class="form-line" placeholder="제목을 입력해주세요.">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="form-label mb-0 text-50 essential mb-2" for="form02">내용</label>
+                                <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a href="#n" class="btn btn-dark mr-8pt">메세지 전송</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
 
         <!-- mouse pointer -->
         <div class="mouse-point" style="border-color: #EA4444; box-shadow: 0 0 5px rgba(234,68,68,0.7); left: 45%; top: 51%;"></div>
-
         <div class="mouse-point" style="border-color: #5297DA; box-shadow: 0 0 5px rgba(82,151,218,0.7); left: 35%; top: 35%;"></div>
         <div class="mouse-point" style="border-color: #694FD6; box-shadow: 0 0 5px rgba(105,79,214,0.7); left: 55%; top: 66%;"></div>
         <div class="mouse-point" style="border-color: #CE40AA; box-shadow: 0 0 5px rgba(206,64,170,0.7); left: 52%; top: 26%;"></div>
@@ -546,15 +588,15 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="form-group mb-20pt">
-                                    <label class="form-label mb-0 text-50 essential" for="exampleInputEmail1">프로젝트명</label>
-                                    <input type="text" class="form-line" id="exampleInputEmail1" placeholder="프로젝트명을 입력해주세요.">
+                                    <label class="form-label mb-0 text-50 essential" for="projectName">프로젝트명</label>
+                                    <input type="text" class="form-line" id="projectName" placeholder="프로젝트명을 입력해주세요.">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label mb-0 text-50 essential" for="exampleInputEmail1">제목</label>
-                                    <input type="text" class="form-line" id="exampleInputEmail1" placeholder="제목을 입력해주세요.">
+                                    <label class="form-label mb-0 text-50 essential" for="projectTitle">제목</label>
+                                    <input type="text" class="form-line" id="projectTitle" placeholder="제목을 입력해주세요.">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label mb-0 essential" for="custom-select">지역선택</label>
+                                    <label class="form-label mb-0 text-50 essential" for="custom-select">지역선택</label>
                                     <select id="custom-select" class="form-line custom-line">
                                         <option selected>지역을 선택해주세요.</option>
                                         <option value="1">강남</option>
@@ -564,8 +606,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label text-50 essential">내용</label>
-                                    <div style="height: 100px;" data-toggle="quill" data-quill-placeholder="내용을 입력해주세요." data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                    </div>
+                                    <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="formFile" class="form-label text-50">파일등록</label>
@@ -1519,6 +1560,8 @@
     <!-- Chart.js Samples -->
     <script src="js/page.student-dashboard.js"></script>
 
+    <!-- modernizr.js -->
+    <script src="js/modernizr.js"></script>
 
     <!-- Sidebar Mini JS -->
     <script src="js/sidebar-mini.js"></script>
