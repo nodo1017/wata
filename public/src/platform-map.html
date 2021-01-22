@@ -174,7 +174,8 @@
                 </li>
             </ul>
         </div>
-
+        
+        <!-- mouse click -->
         <div class="context-wrap row">
             <div class="col-auto p-0">
                 <div class="context-menu">
@@ -201,16 +202,10 @@
                         </a>
                     </div>
                     <!-- 지도 클릭시 -->
-                    <div class="nav ml-24pt" role="tablist">
+                    <div class="nav mx-16pt" role="tablist">
                         <a href="#user-menu01" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
                         <a href="#user-menu02" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
-                        <a href="#n" class="d-flex align-items-center"><span class="material-icons icon-16pt icon--left">add</span> 사용자 감시</a>
-                    </div>
-                    <!-- user 클릭시 -->
-                    <div class="nav d-none" role="tablist">
-                        <a href="#user-menu01" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
-                        <a href="#user-menu02" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">add</span> 이벤트 생성</a>
-                        <a href="#user-menu03" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
+                        <a href="#n" class="d-flex align-items-center"><span class="material-icons icon-16pt icon--left">visibility</span> 사용자 감시</a>
                     </div>
                 </div>
             </div>
@@ -225,19 +220,19 @@
                             <div id="menu01" class="tab-pane active" role="tabpanel">
                                 <div class="user-info p-16pt">
                                     <dl class="d-flex align-items-center">
-                                        <dt class="flex mr-2 text-body">사용자</dt>
+                                        <dt class="flex mr-2">사용자</dt>
                                         <dd class="m-0">01012345678</dd>
                                     </dl>
                                     <dl class="d-flex align-items-center">
-                                        <dt class="flex mr-2 text-body">성별</dt>
+                                        <dt class="flex mr-2">성별</dt>
                                         <dd class="m-0">남성</dd>
                                     </dl>
                                     <dl class="d-flex align-items-center">
-                                        <dt class="flex mr-2 text-body">나이</dt>
+                                        <dt class="flex mr-2">나이</dt>
                                         <dd class="m-0">32</dd>
                                     </dl>
                                     <dl class="d-flex align-items-center">
-                                        <dt class="flex mr-2 text-body">체류시간</dt>
+                                        <dt class="flex mr-2">체류시간</dt>
                                         <dd class="m-0">10분</dd>
                                     </dl>
                                 </div>
@@ -250,7 +245,8 @@
                         </div>
                     </div>
                     <div id="user-menu02" class="tab-pane" role="tabpanel">
-                        <div class="p-24pt" style="width:400px;">
+                        <!-- 메세지 전송 -->
+                        <div class="p-24pt d-none" style="width:400px;">
                             <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
                                 <h3>메세지 전송</h3>
                                 <nav class="cd-stretchy-nav edit-content">
@@ -268,7 +264,6 @@
                             
                                     <span aria-hidden="true" class="stretchy-nav-bg"></span>
                                 </nav>
-                            
                             </div>
                             <div class="form-group mb-4">
                                 <label class="form-label mb-0 text-50 essential" for="form02">제목</label>
@@ -279,8 +274,129 @@
                                 <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
-                                <a href="#n" class="btn btn-dark mr-8pt">메세지 전송</a>
+                                <a href="#n" class="btn btn-outline-dark mr-8pt">메세지 전송</a>
                             </div>
+                        </div>
+
+                        <!-- 메세지 보관함 -->
+                        <div class="p-24pt" style="width:400px;">
+                            <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
+                                <h3>메세지 보관함</h3>
+                                <p class="ml-2 text-50">사용자 정의 메세지 보관함</p>
+                            </div>
+                            <div class="list-group list-group-flush mb-4">
+                                <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                                    <div class="d-flex flex-column align-items-center mr-16pt">
+                                        <span class="lead text-headings lh-1 text-danger"><i class="material-icons">warning</i></span>
+                                    </div>
+                                    <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex list-cover">
+                                            <a class="card-title" href="#n">긴급상황 (지진)</a>
+                                            <div class="card-subtitle text-50">A동 건물에 긴급상황이 발생하였으니</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item">메세지 보내기</a>
+                                            <a href="#n" class="dropdown-item">수정</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                                    <div class="d-flex flex-column align-items-center mr-16pt">
+                                        <span class="lead text-headings lh-1 text-danger"><i class="material-icons">local_fire_department</i></span>
+                                    </div>
+                                    <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex list-cover">
+                                            <a class="card-title" href="#n">화재발생 (B동)</a>
+                                            <div class="card-subtitle text-50">B동 건물에 화재가 발생하였습니다</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item">메세지 보내기</a>
+                                            <a href="#n" class="dropdown-item">수정</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                                    <div class="d-flex flex-column align-items-center mr-16pt">
+                                        <span class="lead text-headings lh-1 text-danger"><i class="material-icons">coronavirus</i></span>
+                                    </div>
+                                    <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex list-cover">
+                                            <a class="card-title" href="#n">감염병 발생 (B동 지하 주차장)</a>
+                                            <div class="card-subtitle text-50">B동 지하 주차장에 감염병 환자가 감지되었습니다.</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item">메세지 보내기</a>
+                                            <a href="#n" class="dropdown-item">수정</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                                    <div class="d-flex flex-column align-items-center mr-16pt">
+                                        <span class="lead text-headings lh-1 text-danger"><i class="material-icons">warning</i></span>
+                                    </div>
+                                    <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex list-cover">
+                                            <a class="card-title" href="#n">긴급상황 (지진)</a>
+                                            <div class="card-subtitle text-50">A동 건물에 긴급상황이 발생하였으니</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item">메세지 보내기</a>
+                                            <a href="#n" class="dropdown-item">수정</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="pagination justify-content-center pagination-xsm m-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                        <span>Prev</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Page 1">
+                                        <span>1</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Page 2">
+                                        <span>2</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span>Next</span>
+                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -321,7 +437,7 @@
         </button>
     </div> -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact">
+        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
                 <!-- Brand -->
                 <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
@@ -329,40 +445,28 @@
                 </a>
                 <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
                     <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                        <li class="sidebar-menu-item active" data-title="Student" data-placement="right" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#platform-home" data-toggle="tab" role="tab" aria-controls="sm_student" aria-selected="true">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">flag</i>
-                                <span class="sidebar-menu-text">지도 홈</span>
+                        <li class="sidebar-menu-item active" data-title="Search" data-placement="right" data-container="body" data-boundary="window">
+                            <a class="sidebar-menu-button active" href="#sm-search" data-toggle="tab" role="tab" aria-controls="sm-search" aria-selected="false">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">search</i>
+                                <span class="sidebar-menu-text">검색</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item" data-title="Instructor" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm_instructor" data-toggle="tab" role="tab" aria-controls="sm_instructor" aria-selected="false">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">subdirectory_arrow_right</i>
-                                <span class="sidebar-menu-text">길찾기</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item " data-title="Apps" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#projects" data-toggle="tab" role="tab" aria-controls="sm_apps">
+                        <li class="sidebar-menu-item " data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                            <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
                                 <span class="sidebar-menu-text">프로젝트</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item " data-title="Account" data-placement="right" data-container="body" data-boundary="window">
+                        <li class="sidebar-menu-item " data-title="Solution" data-placement="right" data-container="body" data-boundary="window">
                             <a class="sidebar-menu-button" href="#sm-solution" data-toggle="tab" role="tab" aria-controls="sm_account">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">redeem</i>
                                 <span class="sidebar-menu-text">솔루션</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item " data-title="Messaging" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm_messaging" data-toggle="tab" role="tab" aria-controls="sm_messaging">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">star_outline</i>
-                                <span class="sidebar-menu-text">즐겨찾기</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item" data-title="Components" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm_components" data-toggle="tab" role="tab" aria-controls="sm_components">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">more_horiz</i>
-                                <span class="sidebar-menu-text">더보기</span>
+                        <li class="sidebar-menu-item " data-title="Metting" data-placement="right" data-container="body" data-boundary="window">
+                            <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab" aria-controls="sm-setting">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
+                                <span class="sidebar-menu-text">설정</span>
                             </a>
                         </li>
                     </ul>
@@ -370,7 +474,7 @@
             </div>
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
-                    <div class="tab-pane" id="platform-home">
+                    <div class="tab-pane platform-home" id="platform-home">
                         <div class="sidebar-heading">홈</div>
                         <nav class="cd-dropdown dropdown-is-active">
                             <h5>지도 홈</h5>
@@ -413,7 +517,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="tab-pane" id="sm_instructor">
+                    <div class="tab-pane sm-search active" id="sm-search">
                         <div class="wt-trigger-foldPanel">
                             <div class="search-form search-form--dark input-group-lg mb-3">
                                 <input type="text" class="form-control" placeholder="장소 검색" id="searchSample01">
@@ -484,17 +588,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane my-projects" id="projects">
+                    <div class="tab-pane sm-projects" id="sm-projects">
                         <!-- 프로젝트 없을때 -->
                         <div class="project-inner d-none">
                             <div class="tit-intro">
                                 <em>프로젝트가 없습니다.</em>
                                 <p>프로젝트를 만들어 보세요.</p>
-                                <button type="button" class="btn btn-accent">프로젝트 만들기</button>
+                                <a href="platform-design-02.html" class="btn btn-accent">프로젝트 만들기</a>
                             </div>
                         </div>
                         <!-- 정보입력 -->
-                        <div class="project-inner">
+                        <div class="project-inner d-none">
                             <div class="step mb-4">
                                 <div class="container-fluid page__container">
                                     <div class="progression-bar progression-bar--active-accent">
@@ -829,7 +933,7 @@
                             </div>
                         </div>
                         <!-- 이벤트 등록 -->
-                        <div class="project-inner d-none">
+                        <div class="project-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center text-sm-left border-bottom py-4 mb-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
                                     <div class="mb-24pt mb-sm-0 mr-sm-24pt">
@@ -952,7 +1056,7 @@
                             </div>
                         </div>
                         <!-- 경고 -->
-                        <div class="project-inner">
+                        <div class="project-inner d-none">
                             <div class="video-bg">
                                 <video autoplay muted loop id="myVideo">
                                     <source src="video/bg_fire.mp4" type="video/mp4">
@@ -1210,238 +1314,41 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="sm_messaging">
+                    <div class="tab-pane sm-setting" id="sm-setting">
                         <div class="container-fluid">
-                            ddd
+                            <div class="py-24pt">
+                                <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
+                                    <h3>메세지 전송</h3>
+                                    <nav class="cd-stretchy-nav edit-content">
+                                        <a class="cd-nav-trigger" href="#0">
+                                            Menu
+                                            <span aria-hidden="true"></span>
+                                        </a>
+                                
+                                        <ul class="list-unstyled">
+                                            <li><a href="#0"><span>보관함</span></a></li>
+                                            <li><a href="#0"><span>공유</span></a></li>
+                                            <li><a href="#0"><span>저장</span></a></li>
+                                            <li><a href="#0"><span>삭제</span></a></li>
+                                        </ul>
+                                
+                                        <span aria-hidden="true" class="stretchy-nav-bg"></span>
+                                    </nav>
+                                
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="form-label mb-0 text-50 essential" for="form02">제목</label>
+                                    <input id="form02" type="email" required="" class="form-line" placeholder="제목을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="form-label mb-0 text-50 essential mb-2" for="form02">내용</label>
+                                    <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#n" class="btn btn-outline-dark mr-8pt">메세지 전송</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tab-pane" id="sm_components">
-                        <div class="sidebar-heading">UI Components</div>
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span>
-                                    Components
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-buttons.html">
-                                            <span class="sidebar-menu-text">Buttons</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-avatars.html">
-                                            <span class="sidebar-menu-text">Avatars</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-forms.html">
-                                            <span class="sidebar-menu-text">Forms</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-loaders.html">
-                                            <span class="sidebar-menu-text">Loaders</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-tables.html">
-                                            <span class="sidebar-menu-text">Tables</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-cards.html">
-                                            <span class="sidebar-menu-text">Cards</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-icons.html">
-                                            <span class="sidebar-menu-text">Icons</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-tabs.html">
-                                            <span class="sidebar-menu-text">Tabs</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-alerts.html">
-                                            <span class="sidebar-menu-text">Alerts</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-badges.html">
-                                            <span class="sidebar-menu-text">Badges</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-progress.html">
-                                            <span class="sidebar-menu-text">Progress</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-pagination.html">
-                                            <span class="sidebar-menu-text">Pagination</span>
-                                        </a>
-                                    </li>
-                                    <!-- <li class="sidebar-menu-item">
-  <a class="sidebar-menu-button disabled" href="ui-typography.html">
-    <span class="sidebar-menu-text">Typography</span>
-  </a>
-</li>
-<li class="sidebar-menu-item">
-  <a class="sidebar-menu-button disabled" href="ui-colors.html">
-    <span class="sidebar-menu-text">Colors</span>
-  </a>
-</li>
-<li class="sidebar-menu-item">
-  <a class="sidebar-menu-button disabled" href="ui-breadcrumb.html">
-    <span class="sidebar-menu-text">Breadcrumb</span>
-  </a>
-</li>
-<li class="sidebar-menu-item">
-  <a class="sidebar-menu-button disabled" href="ui-accordions.html">
-    <span class="sidebar-menu-text">Accordions</span>
-  </a>
-</li>
-<li class="sidebar-menu-item">
-  <a class="sidebar-menu-button disabled" href="ui-modals.html">
-    <span class="sidebar-menu-text">Modals</span>
-  </a>
-</li>
-<li class="sidebar-menu-item">
-  <a class="sidebar-menu-button disabled" href="ui-chips.html">
-    <span class="sidebar-menu-text">Chips</span>
-  </a>
-</li> -->
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button disabled" href="">
-                                            <span class="sidebar-menu-text">Disabled</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span>
-                                    Plugins
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-charts.html">
-                                            <span class="sidebar-menu-text">Charts</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-flatpickr.html">
-                                            <span class="sidebar-menu-text">Flatpickr</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-daterangepicker.html">
-                                            <span class="sidebar-menu-text">Date Range Picker</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-dragula.html">
-                                            <span class="sidebar-menu-text">Dragula</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-dropzone.html">
-                                            <span class="sidebar-menu-text">Dropzone</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-range-sliders.html">
-                                            <span class="sidebar-menu-text">Range Sliders</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-quill.html">
-                                            <span class="sidebar-menu-text">Quill</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-select2.html">
-                                            <span class="sidebar-menu-text">Select2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-nestable.html">
-                                            <span class="sidebar-menu-text">Nestable</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-fancytree.html">
-                                            <span class="sidebar-menu-text">Fancy Tree</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-maps-vector.html">
-                                            <span class="sidebar-menu-text">Vector Maps</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-sweet-alert.html">
-                                            <span class="sidebar-menu-text">Sweet Alert</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="ui-plugin-toastr.html">
-                                            <span class="sidebar-menu-text">Toastr</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button disabled" href="">
-                                            <span class="sidebar-menu-text">Disabled</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="sm_layouts">
-                        <div class="sidebar-heading">Layouts</div>
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item active">
-                                <a class="sidebar-menu-button" href="../Compact_App_Layout/index.html">
-                                    <span class="sidebar-menu-text">Compact</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="../Mini_App_Layout/index.html">
-                                    <span class="sidebar-menu-text">Mini</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="../Mini_Secondary_Layout/index.html">
-                                    <span class="sidebar-menu-text">Mini + Secondary</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="../App_Layout/index.html">
-                                    <span class="sidebar-menu-text">App</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="../Boxed_App_Layout/index.html">
-                                    <span class="sidebar-menu-text">Boxed</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="../Sticky_App_Layout/index.html">
-                                    <span class="sidebar-menu-text">Sticky</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="../Fixed_Layout/index.html">
-                                    <span class="sidebar-menu-text">Fixed</span>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

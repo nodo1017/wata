@@ -1,71 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>WATA</title>
-
-    <!-- Prevent the demo from appearing in search engines -->
-    <meta name="robots" content="noindex">
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
-        rel="stylesheet">
-
-    <!-- Preloader -->
-    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet">
-
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet">
-
-    <!-- Material Design Icons -->
-    <link type="text/css" href="css/material-icons.css" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link type="text/css" href="css/fontawesome.css" rel="stylesheet">
-
-    <!-- Preloader -->
-    <link type="text/css" href="css/preloader.css" rel="stylesheet">
-
-    <!-- App CSS -->
-    <link type="text/css" href="css/app.css" rel="stylesheet">
-
-    <!-- Flatpickr -->
-    <link type="text/css" href="css/flatpickr.css" rel="stylesheet">
-    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet">
-
-    <!-- DateRangePicker -->
-    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet">
-
-    <!-- Quill Theme -->
-    <link type="text/css" href="css/quill.css" rel="stylesheet">
-
-    <!-- Touchspin -->
-    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet">
-
-    <!-- Select2 -->
-    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet">
-    <link type="text/css" href="css/select2.css" rel="stylesheet">
-
-    <!-- custom CSS -->
-	<link type="text/css" href="css/style.css" rel="stylesheet">
-
-</head>
-
-<body class="layout-compact">
-
-    <div class="preloader">
-        <div class="sk-chase">
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-        </div>
-    </div>
-
+@@include('./include/platform-header.html')
 
 <!-- Drawer Layout -->
 
@@ -270,15 +203,15 @@
                     </div>
                     <!-- 지도 클릭시 -->
                     <div class="nav mx-16pt" role="tablist">
-                        <a href="#user-menu01" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
-                        <a href="#user-menu02" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
+                        <a href="#user-menu01" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
+                        <a href="#user-menu02" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
                         <a href="#n" class="d-flex align-items-center"><span class="material-icons icon-16pt icon--left">visibility</span> 사용자 감시</a>
                     </div>
                 </div>
             </div>
             <div class="col-auto p-0">
                 <div class="tab-content context-body">
-                    <div id="user-menu01" class="tab-pane active" role="tabpanel">
+                    <div id="user-menu01" class="tab-pane" role="tabpanel">
                         <div class="card-header card-header-tabs-basic nav" role="tablist">
                             <a href="#menu01" class="p-12pt active" data-toggle="tab" role="tab" aria-selected="true">사용자 정보</a>
                             <a href="#menu02" class="p-12pt" data-toggle="tab" role="tab" aria-selected="false">통계</a>
@@ -311,7 +244,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="user-menu02" class="tab-pane" role="tabpanel">
+                    <div id="user-menu02" class="tab-pane active" role="tabpanel">
                         <!-- 메세지 전송 -->
                         <div class="p-24pt d-none" style="width:400px;">
                             <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
@@ -504,7 +437,7 @@
         </button>
     </div> -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
+        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact">
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
                 <!-- Brand -->
                 <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
@@ -512,8 +445,8 @@
                 </a>
                 <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
                     <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                        <li class="sidebar-menu-item active" data-title="Search" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button active" href="#sm-search" data-toggle="tab" role="tab" aria-controls="sm-search" aria-selected="false">
+                        <li class="sidebar-menu-item" data-title="Search" data-placement="right" data-container="body" data-boundary="window">
+                            <a class="sidebar-menu-button" href="#sm-search" data-toggle="tab" role="tab" aria-controls="sm-search" aria-selected="false">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">search</i>
                                 <span class="sidebar-menu-text">검색</span>
                             </a>
@@ -584,7 +517,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="tab-pane sm-search active" id="sm-search">
+                    <div class="tab-pane sm-search" id="sm-search">
                         <div class="wt-trigger-foldPanel">
                             <div class="search-form search-form--dark input-group-lg mb-3">
                                 <input type="text" class="form-control" placeholder="장소 검색" id="searchSample01">
@@ -1427,82 +1360,4 @@
 <!-- // END Drawer Layout -->
 
 
-    <!-- jQuery -->
-    <script src="vendor/jquery.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="vendor/popper.min.js"></script>
-    <script src="vendor/bootstrap.min.js"></script>
-
-    <!-- Perfect Scrollbar -->
-    <script src="vendor/perfect-scrollbar.min.js"></script>
-
-    <!-- DOM Factory -->
-    <script src="vendor/dom-factory.js"></script>
-
-    <!-- MDK -->
-    <script src="vendor/material-design-kit.js"></script>
-
-    <!-- App JS -->
-    <script src="js/app.js"></script>
-
-    <!-- Preloader -->
-    <script src="js/preloader.js"></script>
-
-    <!-- Quill -->
-    <script src="vendor/quill.min.js"></script>
-    <script src="js/quill.js"></script>
-
-    <!-- Global Settings -->
-    <script src="js/settings.js"></script>
-
-    <!-- Flatpickr -->
-    <script src="vendor/flatpickr/flatpickr.min.js"></script>
-    <script src="js/flatpickr.js"></script>
-
-    <!-- DateRangePicker -->
-    <script src="vendor/moment.min.js"></script>
-    <script src="vendor/daterangepicker.js"></script>
-    <script src="js/daterangepicker.js"></script>
-
-    <!-- jQuery Mask Plugin -->
-    <script src="vendor/jquery.mask.min.js"></script>
-
-    <!-- Moment.js -->
-    <script src="vendor/moment.min.js"></script>
-    <script src="vendor/moment-range.js"></script>
-
-    <!-- Chart.js -->
-    <script src="vendor/Chart.min.js"></script>
-    <script src="js/chartjs.js"></script>
-
-    <!-- Chart.js Samples -->
-    <script src="js/page.student-dashboard.js"></script>
-
-    <!-- modernizr.js -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- Sidebar Mini JS -->
-    <script src="js/sidebar-mini.js"></script>
-    <script>
-        (function () {
-            'use strict';
-            // ENABLE sidebar menu tabs
-            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
-                e.preventDefault()
-                $(this).tab('show')
-            })
-            $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
-                $('.js-sidebar-mini-tabs > .active').removeClass('active')
-                $(e.target).parent().addClass('active')
-            })
-        })()
-    </script>
-
-    <script src="js/custom.js"></script>
-    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
-    
-</body>
-
-</html>
-
+@@include('./include/platform-footer.html')

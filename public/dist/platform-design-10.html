@@ -270,15 +270,15 @@
                     </div>
                     <!-- 지도 클릭시 -->
                     <div class="nav mx-16pt" role="tablist">
-                        <a href="#user-menu01" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
-                        <a href="#user-menu02" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
+                        <a href="#user-menu01" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
+                        <a href="#user-menu02" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
                         <a href="#n" class="d-flex align-items-center"><span class="material-icons icon-16pt icon--left">visibility</span> 사용자 감시</a>
                     </div>
                 </div>
             </div>
             <div class="col-auto p-0">
                 <div class="tab-content context-body">
-                    <div id="user-menu01" class="tab-pane active" role="tabpanel">
+                    <div id="user-menu01" class="tab-pane" role="tabpanel">
                         <div class="card-header card-header-tabs-basic nav" role="tablist">
                             <a href="#menu01" class="p-12pt active" data-toggle="tab" role="tab" aria-selected="true">사용자 정보</a>
                             <a href="#menu02" class="p-12pt" data-toggle="tab" role="tab" aria-selected="false">통계</a>
@@ -311,7 +311,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="user-menu02" class="tab-pane" role="tabpanel">
+                    <div id="user-menu02" class="tab-pane active" role="tabpanel">
                         <!-- 메세지 전송 -->
                         <div class="p-24pt d-none" style="width:400px;">
                             <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
@@ -504,7 +504,7 @@
         </button>
     </div> -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
+        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact">
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
                 <!-- Brand -->
                 <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
@@ -512,8 +512,8 @@
                 </a>
                 <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
                     <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                        <li class="sidebar-menu-item active" data-title="Search" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button active" href="#sm-search" data-toggle="tab" role="tab" aria-controls="sm-search" aria-selected="false">
+                        <li class="sidebar-menu-item" data-title="Search" data-placement="right" data-container="body" data-boundary="window">
+                            <a class="sidebar-menu-button" href="#sm-search" data-toggle="tab" role="tab" aria-controls="sm-search" aria-selected="false">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">search</i>
                                 <span class="sidebar-menu-text">검색</span>
                             </a>
@@ -584,7 +584,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="tab-pane sm-search active" id="sm-search">
+                    <div class="tab-pane sm-search" id="sm-search">
                         <div class="wt-trigger-foldPanel">
                             <div class="search-form search-form--dark input-group-lg mb-3">
                                 <input type="text" class="form-control" placeholder="장소 검색" id="searchSample01">

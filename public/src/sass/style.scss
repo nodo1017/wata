@@ -69,6 +69,14 @@ global
 .application-shell-content {
     height: 2000px;
 }
+.list-group{
+    .list-group-item{
+        @include transition(all, 0.2s, ease-in-out);
+        &:hover{
+            background-color: #f7f7f7;
+        }
+    }
+}
 @media only screen and (min-width: 1000px) {
     [dir] .navbar {
         padding: .5rem 3.125rem;
@@ -1289,7 +1297,7 @@ platform Flow
         padding: 1.875rem 1.25rem;
     }
 }
-.my-projects {
+.sm-projects {
     .project-inner {
         padding-bottom: 64px;
     }
@@ -1939,10 +1947,14 @@ platform Flow
             a {
                 width: 100%;
                 padding: .5rem 1rem;
-                border-radius: 50px 0 0 50px;
+                border-radius: .25rem;
+                margin-bottom: .25rem;
+                &:hover{
+                    background-color: #f7f7f7;
+                }
                 &.active {
-                    background-color: #303956;
-                    color: #fff;
+                    background-color: #eee;
+                    color: #272c33;
                 }
             }
         }
@@ -1952,13 +1964,25 @@ platform Flow
             width: 400px;
             height: 200px;
         }
-        input, textarea{
-            background-color: transparent;
+        .list-cover{
+            max-width: 250px;
+            a.card-title{
+                display: block;
+            }
+            .card-title, .card-subtitle{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
         }
     }
     .user-info {
+        width: 250px;
         dl{
             dt{
+                color: #868e96;
+            }
+            dd{
                 font-weight: bold;
             }
         }
