@@ -259,6 +259,7 @@
         <!-- // END Page Content -->
     </div>
 
+    <!-- drawer -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
@@ -412,8 +413,16 @@
                         </div>
                     </div>
                     <div class="tab-pane sm-projects active" id="sm-projects">
+                        <!-- 프로젝트 없을때 -->
+                        <div class="project-inner d-none">
+                            <div class="tit-intro">
+                                <em>프로젝트가 없습니다.</em>
+                                <p>프로젝트를 만들어 보세요.</p>
+                                <a href="platform-design-02.html" class="btn btn-accent">프로젝트 만들기</a>
+                            </div>
+                        </div>
                         <!-- 정보입력 -->
-                        <div class="project-inner">
+                        <div class="project-inner d-none">
                             <div class="step mb-4">
                                 <div class="container-fluid page__container">
                                     <div class="progression-bar progression-bar--active-accent">
@@ -458,14 +467,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label text-50 essential">내용</label>
-                                    <div style="height: 150px;"
-                                     data-toggle="quill"
-                                     data-quill-placeholder="Quill WYSIWYG editor"
-                                     data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                    <p>Hello World!</p>
-                                    <p>Some initial <strong>bold</strong> text</p>
-                                    <p><br></p>
-                                </div>
+                                    <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="formFile" class="form-label text-50">파일등록</label>
@@ -755,7 +757,7 @@
                             </div>
                         </div>
                         <!-- 이벤트 등록 -->
-                        <div class="project-inner d-none">
+                        <div class="project-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center text-sm-left border-bottom py-4 mb-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
                                     <div class="mb-24pt mb-sm-0 mr-sm-24pt">
@@ -1223,16 +1225,9 @@
     <!-- jQuery Mask Plugin -->
     <script src="vendor/jquery.mask.min.js"></script>
 
-    <!-- Moment.js -->
-    <script src="vendor/moment.min.js"></script>
-    <script src="vendor/moment-range.js"></script>
-
     <!-- Chart.js -->
     <script src="vendor/Chart.min.js"></script>
     <script src="js/chartjs.js"></script>
-
-    <!-- Chart.js Samples -->
-    <script src="js/page.student-dashboard.js"></script>
 
     <!-- modernizr.js -->
     <script src="js/modernizr.js"></script>

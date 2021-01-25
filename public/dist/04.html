@@ -261,7 +261,7 @@
 
     <!-- drawer -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
+        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact">
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
                 <!-- Brand -->
                 <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
@@ -275,19 +275,19 @@
                                 <span class="sidebar-menu-text">검색</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                        <li class="sidebar-menu-item " data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
                             <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
                                 <span class="sidebar-menu-text">프로젝트</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item active" data-title="Solution" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button active" href="#sm-solution" data-toggle="tab" role="tab" aria-controls="sm_account">
+                        <li class="sidebar-menu-item " data-title="Solution" data-placement="right" data-container="body" data-boundary="window">
+                            <a class="sidebar-menu-button" href="#sm-solution" data-toggle="tab" role="tab" aria-controls="sm_account">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">redeem</i>
                                 <span class="sidebar-menu-text">솔루션</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item" data-title="Metting" data-placement="right" data-container="body" data-boundary="window">
+                        <li class="sidebar-menu-item " data-title="Metting" data-placement="right" data-container="body" data-boundary="window">
                             <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab" aria-controls="sm-setting">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
                                 <span class="sidebar-menu-text">설정</span>
@@ -499,7 +499,7 @@
                             </div>
                         </div>
                         <!-- 프로젝트 리스트 -->
-                        <div class="project-inner">
+                        <div class="project-inner d-none">
                             <div class="container-fluid d-flex flex-md-row align-items-center py-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
                                     <div class="mb-24pt mb-sm-0 mr-sm-24pt">
@@ -757,7 +757,7 @@
                             </div>
                         </div>
                         <!-- 이벤트 등록 -->
-                        <div class="project-inner d-none">
+                        <div class="project-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center text-sm-left border-bottom py-4 mb-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
                                     <div class="mb-24pt mb-sm-0 mr-sm-24pt">
@@ -949,7 +949,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-solution active" id="sm-solution">
+                    <div class="tab-pane sm-solution" id="sm-solution">
                         <div class="solution-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center text-center text-sm-left py-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
@@ -1225,16 +1225,9 @@
     <!-- jQuery Mask Plugin -->
     <script src="vendor/jquery.mask.min.js"></script>
 
-    <!-- Moment.js -->
-    <script src="vendor/moment.min.js"></script>
-    <script src="vendor/moment-range.js"></script>
-
     <!-- Chart.js -->
     <script src="vendor/Chart.min.js"></script>
     <script src="js/chartjs.js"></script>
-
-    <!-- Chart.js Samples -->
-    <script src="js/page.student-dashboard.js"></script>
 
     <!-- modernizr.js -->
     <script src="js/modernizr.js"></script>
