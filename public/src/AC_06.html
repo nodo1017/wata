@@ -1,0 +1,143 @@
+@@include('./include/header.html')
+
+<div class="mdk-header-layout js-mdk-header-layout sign-up">
+    <div class="flex-parent">
+        <!-- <video autoplay muted loop id="myVideo">
+            <source src="video/bg_main.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video> -->
+        <div class="flex-child">
+            <div class="layout-login__form">
+                <img src="images/logo/logo.svg" class="id-logo" alt="와따" />
+                <h5 class="mb-4">AI Cloud Spatial Awareness platform</h5>
+                <!-- <div class="alert bg-accent text-white" role="alert">
+                    <div class="d-flex flex-wrap align-items-start">
+                        <div class="mr-8pt">
+                            <i class="material-icons">error_outline</i>
+                        </div>
+                        <div class="flex" style="min-width: 180px;">
+                            <small>오류.</small>
+                        </div>
+                    </div>
+                </div> -->
+                <form action="index.html" novalidate>
+                    <div class="form-group mb-4">
+                        <label class="form-label mb-0 text-50 essential" for="form01">이름</label>
+                        <input id="form01" type="text" required="" class="form-line" placeholder="이름을 입력하세요.">
+                        <div class="invalid-feedback" style="display: block;">필수입력 항목입니다.</div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label mb-0 text-50 essential" for="form02">이메일</label>
+                        <input id="form02" type="email" required="" class="form-line" placeholder="이메일을 입력하세요.">
+                        <div class="invalid-feedback" style="display: block;">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label mb-0 text-50 essential" for="form03">비밀번호</label>
+                        <input id="form03" type="password" required="" class="form-line" placeholder="비밀번호를 입력하세요.">
+                        <div class="invalid-feedback" style="display: block;">8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label mb-0 text-50 essential" for="form04">비밀번호 확인</label>
+                        <input id="form04" type="password" required="" class="form-line" placeholder="비밀번호를 입력하세요.">
+                        <div class="invalid-feedback" style="display: block;">비밀번호가 일치하지 않습니다.</div>
+                    </div>
+                    <div class="form-group mb-12pt ">
+                        <div class="custom-control custom-checkbox d-flex align-items-center">
+                            <input type="checkbox" class="custom-control-input" id="form05">
+                            <label class="custom-control-label" for="form05">[필수] 서비스 약관동의</label>
+                            <a href="#n" class="p-0 btn-link font-size-12pt ml-1" data-toggle="modal" data-target="#exampleModal">[약관보기]</a>
+                        </div>
+                    </div>
+                    <div class="form-group mb-12pt">
+                        <div class="custom-control custom-checkbox d-flex align-items-center">
+                            <input type="checkbox" class="custom-control-input" id="form06">
+                            <label class="custom-control-label" for="form06">[필수] 개인정보 수집 및 이용 동의</label>
+                            <a href="#n" class="p-0 btn-link font-size-12pt ml-1" data-toggle="modal" data-target="#exampleModal">[약관보기]</a>
+                        </div>
+                    </div>
+                    <div class="form-group mb-40pt ">
+                        <div class="custom-control custom-checkbox d-flex align-items-center">
+                            <input type="checkbox" class="custom-control-input" id="form07">
+                            <label class="custom-control-label" for="form07">[필수] 위치정보 이용약관 동의</label>
+                            <a href="#n" class="p-0 btn-link font-size-12pt ml-1" data-toggle="modal" data-target="#exampleModal">[약관보기]</a>
+                        </div>
+                    </div>
+                    <div class="form-group text-center mb-0">
+                        <button class="btn btn-block btn-lg btn-primary" type="submit" disabled><i class="material-icons icon--left">person_add_alt_1</i> 회원가입</button><br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">서비스 약관</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><i class="material-icons">clear</i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="position-relative p-3" style="height:600px;" data-perfect-scrollbar>
+            이 이용약관의 취지에서 “상표”라는 용어는 현재 또는 미래에 Shutterstock이 사용하는 모든 관습법 또는 등록 상표, 로고, 서비스 표시, 상표명, 인터넷 도메인 이름 또는 기타 원산지 표시를 의미합니다.
+            이 계약에 포함된 어떤 내용도 이 이용약관에서 명시적으로 부여하지 않는 한, Shutterstock 상표를 사용할 권한을 부여하거나 부여하는 것으로 해석되지 않아야 합니다.
+            회원님은 Shutterstock의 상표 또는 Shutterstock의 평판을 손상하거나 폄하하거나 부정적인 반향을 불러일으킬 수 있는 방식으로 Shutterstock의 상표를 사용하지 않을 것에 동의합니다.
+            Shutterstock 상표 또는 Shutterstock에서 요구하는 상표 권리의 정당성을 인정하지 않거나 이의를 제기(예: 소송 등)하거나 다른 사람이나 단체가 정당성을 인정하지 않거나 이의를 제기하도록 지원 또는 장려하지 않음에 동의합니다.
+            회원님은 Shutterstock 상표 또는 그 이형(오자 포함)을 최상위 도메인에 상관없이 도메인 이름 또는 도메인 이름의 일부로, 또는 메타태그, 키워드 또는 기타 프로그래밍 코드나 데이터 유형으로 사용하지 않을 것에 동의합니다.
+            회원님은 어떤 경우에도 Shutterstock의 사전 서면 동의 없이 Shutterstock의 상표와 유사하거나 혼동될 가능성이 있는 단어 및 표지를 채택하거나 사용해서는 안 됩니다.
+            모든 페이지 머리글, 사용자 지정 그래픽, 버튼 아이콘 및 스크립트를 포함한 Shutterstock 웹사이트의 모양과 느낌은 Shutterstock의 상품 외장 및/또는 상표 또는 서비스 표시이고 Shutterstock의 사전 서면 동의 없이는 전체 또는 부분을 복사 또는 모방하거나 사용할 수 없습니다.
+            Shutterstock 웹사이트에서 사용되거나 표시된 기타 모든 상표, 제품 이름, 회사 이름 또는 로고는 각각 해당 소유자의 자산입니다. 명시적으로 진술되어 있지 않은 한 상표명, 상표, 제조업체, 공급업체 또는 기타에 의한 제품, 서비스, 프로세스 또는 기타 정보의 언급이 Shutterstock이 이를 보증, 후원 또는 추천한다는 것을 의미하지는 않습니다.
+            회원님은 Shutterstock의 사전 서면 동의 없이 Shutterstock 상표, 로고, 이미지 또는 기타 Shutterstock 소유 그래픽을 사용하여 Shutterstock 웹사이트에 링크할 수 없습니다.
+            Shutterstock의 사전 서면 동의 없이는 Shutterstock 웹사이트 또는 이미지에 프레임 또는 핫링크할 수 없습니다.
+            <br>
+            <br>
+            이 이용약관의 취지에서 “상표”라는 용어는 현재 또는 미래에 Shutterstock이 사용하는 모든 관습법 또는 등록 상표, 로고, 서비스 표시, 상표명, 인터넷 도메인 이름 또는 기타 원산지 표시를 의미합니다.
+            이 계약에 포함된 어떤 내용도 이 이용약관에서 명시적으로 부여하지 않는 한, Shutterstock 상표를 사용할 권한을 부여하거나 부여하는 것으로 해석되지 않아야 합니다.
+            회원님은 Shutterstock의 상표 또는 Shutterstock의 평판을 손상하거나 폄하하거나 부정적인 반향을 불러일으킬 수 있는 방식으로 Shutterstock의 상표를 사용하지 않을 것에 동의합니다.
+            Shutterstock 상표 또는 Shutterstock에서 요구하는 상표 권리의 정당성을 인정하지 않거나 이의를 제기(예: 소송 등)하거나 다른 사람이나 단체가 정당성을 인정하지 않거나 이의를 제기하도록 지원 또는 장려하지 않음에 동의합니다.
+            회원님은 Shutterstock 상표 또는 그 이형(오자 포함)을 최상위 도메인에 상관없이 도메인 이름 또는 도메인 이름의 일부로, 또는 메타태그, 키워드 또는 기타 프로그래밍 코드나 데이터 유형으로 사용하지 않을 것에 동의합니다.
+            회원님은 어떤 경우에도 Shutterstock의 사전 서면 동의 없이 Shutterstock의 상표와 유사하거나 혼동될 가능성이 있는 단어 및 표지를 채택하거나 사용해서는 안 됩니다.
+            모든 페이지 머리글, 사용자 지정 그래픽, 버튼 아이콘 및 스크립트를 포함한 Shutterstock 웹사이트의 모양과 느낌은 Shutterstock의 상품 외장 및/또는 상표 또는 서비스 표시이고 Shutterstock의 사전 서면 동의 없이는 전체 또는 부분을 복사 또는 모방하거나 사용할 수 없습니다.
+            Shutterstock 웹사이트에서 사용되거나 표시된 기타 모든 상표, 제품 이름, 회사 이름 또는 로고는 각각 해당 소유자의 자산입니다. 명시적으로 진술되어 있지 않은 한 상표명, 상표, 제조업체, 공급업체 또는 기타에 의한 제품, 서비스, 프로세스 또는 기타 정보의 언급이 Shutterstock이 이를 보증, 후원 또는 추천한다는 것을 의미하지는 않습니다.
+            회원님은 Shutterstock의 사전 서면 동의 없이 Shutterstock 상표, 로고, 이미지 또는 기타 Shutterstock 소유 그래픽을 사용하여 Shutterstock 웹사이트에 링크할 수 없습니다.
+            Shutterstock의 사전 서면 동의 없이는 Shutterstock 웹사이트 또는 이미지에 프레임 또는 핫링크할 수 없습니다.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+<script>
+    VANTA.NET({
+        el: ".sign-up",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x8795d7,
+        backgroundColor: 0x4549cd,
+        points: 10.00,
+        maxDistance: 20.00,
+        spacing: 19.00
+    })
+</script> -->
+
+@@include('./include/footer.html')
