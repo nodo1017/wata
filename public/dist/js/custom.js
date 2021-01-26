@@ -299,3 +299,16 @@ jQuery(document).ready(function(){
 	  	}
 	}
 });
+
+$('#status-map').on('click', function(){
+	$(":radio[name='mapStauts']").change(function(){
+		var _tabBox = $('.tabBox');
+		var _mapStauts = $(this).prop("checked",true).attr("id");
+		_tabBox.removeClass('active');
+		$('.'+_mapStauts).addClass('active');
+	});
+ });
+
+
+
+
