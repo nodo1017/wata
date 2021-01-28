@@ -237,42 +237,42 @@ jQuery(document).ready(function () {
 
 });
 
-jQuery(document).ready(function(){
-	if( $('.cd-stretchy-nav').length > 0 ) {
+jQuery(document).ready(function () {
+	if ($('.cd-stretchy-nav').length > 0) {
 		var stretchyNavs = $('.cd-stretchy-nav');
-		
-		stretchyNavs.each(function(){
+
+		stretchyNavs.each(function () {
 			var stretchyNav = $(this),
 				stretchyNavTrigger = stretchyNav.find('.cd-nav-trigger');
-			
-			stretchyNavTrigger.on('click', function(event){
+
+			stretchyNavTrigger.on('click', function (event) {
 				event.preventDefault();
 				stretchyNav.toggleClass('nav-is-visible');
 			});
 		});
 
-		$(document).on('click', function(event){
-			( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible');
+		$(document).on('click', function (event) {
+			(!$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span')) && stretchyNavs.removeClass('nav-is-visible');
 		});
 	}
 });
 
-jQuery(document).ready(function(){
-    // Slide In Panel - by CodyHouse.co
+jQuery(document).ready(function () {
+	// Slide In Panel - by CodyHouse.co
 	var panelTriggers = document.getElementsByClassName('js-cd-panel-trigger');
-	if( panelTriggers.length > 0 ) {
-		for(var i = 0; i < panelTriggers.length; i++) {
-			(function(i){
-				var panelClass = 'js-cd-panel-'+panelTriggers[i].getAttribute('data-panel'),
+	if (panelTriggers.length > 0) {
+		for (var i = 0; i < panelTriggers.length; i++) {
+			(function (i) {
+				var panelClass = 'js-cd-panel-' + panelTriggers[i].getAttribute('data-panel'),
 					panel = document.getElementsByClassName(panelClass)[0];
 				// open panel when clicking on trigger btn
-				panelTriggers[i].addEventListener('click', function(event){
+				panelTriggers[i].addEventListener('click', function (event) {
 					event.preventDefault();
 					addClass(panel, 'cd-panel--is-visible');
 				});
 				//close panel when clicking on 'x' or outside the panel
-				panel.addEventListener('click', function(event){
-					if( hasClass(event.target, 'js-cd-close') || hasClass(event.target, panelClass)) {
+				panel.addEventListener('click', function (event) {
+					if (hasClass(event.target, 'js-cd-close') || hasClass(event.target, panelClass)) {
 						event.preventDefault();
 						removeClass(panel, 'cd-panel--is-visible');
 					}
@@ -280,35 +280,59 @@ jQuery(document).ready(function(){
 			})(i);
 		}
 	}
-	
+
 	//class manipulations - needed if classList is not supported
 	//https://jaketrent.com/post/addremove-classes-raw-javascript/
 	function hasClass(el, className) {
-	  	if (el.classList) return el.classList.contains(className);
-	  	else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+		if (el.classList) return el.classList.contains(className);
+		else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
 	}
 	function addClass(el, className) {
-	 	if (el.classList) el.classList.add(className);
-	 	else if (!hasClass(el, className)) el.className += " " + className;
+		if (el.classList) el.classList.add(className);
+		else if (!hasClass(el, className)) el.className += " " + className;
 	}
 	function removeClass(el, className) {
-	  	if (el.classList) el.classList.remove(className);
-	  	else if (hasClass(el, className)) {
-	    	var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
-	    	el.className=el.className.replace(reg, ' ');
-	  	}
+		if (el.classList) el.classList.remove(className);
+		else if (hasClass(el, className)) {
+			var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+			el.className = el.className.replace(reg, ' ');
+		}
 	}
 });
 
-$('#status-map').on('click', function(){
-	$(":radio[name='mapStauts']").change(function(){
+$('#status-map').on('click', function () {
+	$(":radio[name='mapStauts']").change(function () {
 		var _tabBox = $('.tabBox');
-		var _mapStauts = $(this).prop("checked",true).attr("id");
+		var _mapStauts = $(this).prop("checked", true).attr("id");
 		_tabBox.removeClass('active');
-		$('.'+_mapStauts).addClass('active');
+		$('.' + _mapStauts).addClass('active');
 	});
- });
+});
 
+jQuery(document).ready(function (e) {
+    function t(t) {
+        e(t).bind("click", function (t) {
+            t.preventDefault();
+            e(this).parent().fadeOut()
+        })
+    }
+    e(".filter-dropdown-toggle").click(function () {
+        var t = e(this).parents(".filter-cell").children(".filter-item-dropdown").is(":hidden");
+        e(".filter-cell .filter-item-dropdown").hide();
+        e(".filter-cell .filter-dropdown-toggle").removeClass("active");
+        if (t) {
+            e(this).parents(".filter-cell").children(".filter-item-dropdown").toggle().parents(".filter-cell").children(".filter-dropdown-toggle").addClass("active")
+        }
+    });
+    e(document).bind("click", function (t) {
+        var n = e(t.target);
+        if (!n.parents().hasClass("filter-cell")) e(".filter-cell .filter-item-dropdown").hide();
+    });
+    e(document).bind("click", function (t) {
+        var n = e(t.target);
+        if (!n.parents().hasClass("filter-cell")) e(".filter-cell .filter-dropdown-toggle").removeClass("active");
+    })
+});
 
 
 

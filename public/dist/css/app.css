@@ -56,7 +56,7 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: 'Spoqa Han Sans Neo', sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(39, 44, 51, 0)
@@ -76,7 +76,7 @@ section {
 }
 
 body {
-    font-family: Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-family: 'Spoqa Han Sans Neo', Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-size: .8125rem;
     font-weight: 400;
     line-height: 1.5;
@@ -224,7 +224,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: 'Spoqa Han Sans Neo', SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
     font-size: 1em
 }
 
@@ -451,7 +451,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;
     line-height: 1.5;
     color: #303956
@@ -3868,7 +3868,7 @@ textarea.form-control {
 
 .btn {
     display: inline-block;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;
     color: #272c33;
     vertical-align: middle;
@@ -11667,7 +11667,7 @@ a.close.disabled {
     position: absolute;
     z-index: 1070;
     display: block;
-    font-family: Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-family: 'Spoqa Han Sans Neo', Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -11848,7 +11848,7 @@ a.close.disabled {
     z-index: 1060;
     display: block;
     max-width: 304px;
-    font-family: Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-family: 'Spoqa Han Sans Neo', Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -25860,7 +25860,7 @@ a.close.disabled {
 }
 
 .text-monospace {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important
+    font-family: 'Spoqa Han Sans Neo', SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important
 }
 
 [dir] .text-justify {
@@ -30587,7 +30587,7 @@ strong {
 
 .display-1 {
     line-height: 1.25;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
 }
 
 .h1,
@@ -30623,7 +30623,7 @@ h5 {
 .headings-family-exo2 h4,
 .headings-family-exo2 h5,
 .headings-family-exo2 h6 {
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600
 }
 
@@ -30639,7 +30639,7 @@ h5 {
 .headings-family-lato h4,
 .headings-family-lato h5,
 .headings-family-lato h6 {
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 700
 }
 
@@ -30655,7 +30655,7 @@ h5 {
 .headings-family-oswald h4,
 .headings-family-oswald h5,
 .headings-family-oswald h6 {
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 500
 }
 
@@ -31312,7 +31312,7 @@ body {
     font-size: .8125rem;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     letter-spacing: 2px
 }
 
@@ -31324,7 +31324,7 @@ body {
     font-size: .8125rem;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     letter-spacing: 2px;
     color: rgba(39, 44, 51, .5)
 }
@@ -31338,7 +31338,7 @@ body {
 .breadcrumb-item > a {
     color: inherit;
     display: flex;
-    align-items: center
+    /* align-items: center */
 }
 
 .breadcrumb-item + .breadcrumb-item:before {
@@ -31742,7 +31742,7 @@ body {
 
 .btn {
     display: inline-flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     text-transform: uppercase
 }
@@ -32310,7 +32310,7 @@ body {
 
 .card-title {
     font-size: 1rem;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;
     color: #303956;
     line-height: 1.25
@@ -32539,7 +32539,7 @@ body {
 
 .card-header-tabs-basic a {
     color: rgba(39, 44, 51, .54);
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 400
 }
 
@@ -32806,7 +32806,7 @@ body {
 .table thead th {
     color: #303956;
     text-transform: uppercase;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;
     letter-spacing: 2px
 }
@@ -33441,7 +33441,7 @@ body {
     color: #303956;
     font-weight: 600;
     letter-spacing: 2px;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -33711,7 +33711,7 @@ body {
 .page-num {
     width: 2.5rem;
     height: 2.5rem;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;
     line-height: 1.5;
     font-size: 1.414rem;
@@ -34252,7 +34252,7 @@ code.django .hljs-template-tag {
 .tooltip-inner {
     font-size: .9375rem;
     font-weight: 600;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
 }
 
 [dir] .tooltip-inner {
@@ -37219,7 +37219,7 @@ label {
     color: #303956;
     text-transform: uppercase;
     font-size: .8125rem;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;
 }
 
@@ -37250,7 +37250,7 @@ label {
     color: #303956;
     text-transform: uppercase;
     font-size: .8125rem;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;
     letter-spacing: 2px
 }
@@ -37668,7 +37668,7 @@ label {
 .sidebar-heading {
     font-weight: 600;
     font-size: .9rem;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-family: 'Spoqa Han Sans Neo', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: normal
@@ -39833,7 +39833,7 @@ label {
 .navbar-nav .nav-link {
     font-size: 1rem;
     align-items: center;
-    font-weight: 500;
+    font-weight: 700;
     position: relative
 }
 
@@ -41201,14 +41201,14 @@ label {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 4px;
+    width: 3px;
     content: ""
 }
 
 [dir] .dropdown-item.active:after,
 [dir] .dropdown-item:active:after {
     border-radius: 1px;
-    background-color: #5567ff
+    background-color: #e83b3a
 }
 
 [dir=ltr] .dropdown-item.active:after,
