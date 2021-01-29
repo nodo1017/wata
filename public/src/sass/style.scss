@@ -1911,9 +1911,10 @@ map options
     top: 84px;
     z-index: 2;
     .map-location {
+        position: relative;
+        display: inline-flex;
         background-color: #fff;
         border-radius: .25rem;
-        border: 1px solid #ddd;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         ol {
             li {
@@ -1942,24 +1943,97 @@ map options
             }
         }
     }
-    .btn {
+    .location-header{
+        min-width: 200px;
+        strong{
+            padding: 0 .5rem;
+        }
+        a.btn{
+            padding: 0 .5rem;
+            box-shadow: none;
+            border-radius: 0 .25rem .25rem 0;
+            border: none;
+            background-color: $identity;
+            span{
+                font-size: 1rem;
+                line-height: 34px;
+            }
+        }
+    }
+    .location-body{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        top: 40px;
+        
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        ul.sidebar-menu{
+            > li.sidebar-menu-item{
+                margin: 0;
+                border-radius: 0;
+                border-bottom: 1px solid #e9edf2;
+                &:first-of-type{
+                    > a.sidebar-menu-button{
+                        border-radius: .25rem .25rem 0 0;
+                    }
+                }
+                &:last-of-type{
+                    > a.sidebar-menu-button{
+                        border-radius: 0 0 .25rem .25rem;
+                    }
+                }
+                &:last-child{
+                    border-bottom: none;
+                }
+                &.open{
+                    > a.sidebar-menu-button{
+                        color: #fff;
+                        background-color: $identity;
+                    }
+                    &:last-of-type{
+                        a.sidebar-menu-button{
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+            a.sidebar-menu-button{
+                font-size: 0.813rem;
+                background-color: #fff;
+                span.sidebar-menu-text{
+                    border-left: 1px solid #e9edf2;
+                }
+            }
+        }
+        ul.sidebar-submenu{
+            background-color: #fff;
+            li.sidebar-menu-item{
+                &:first-child{
+                    padding-top: .75rem;
+                }
+                a.sidebar-menu-button{
+                    padding: 0 1rem 0 1.75rem;
+                }
+            }
+        }
     }
     .show {
         > .btn-white.dropdown-toggle {
             background-color: $primary-bule;
             border-color: darken($primary-bule, 5%);
             color: #fff;
-
             &:focus {
                 box-shadow: none;
             }
         }
     }
+    .btn-group{
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        border-radius: .25rem;
+    }
     .btn-white {
         font-size: 1rem;
         padding: .5rem .7rem;
-        border: 1px solid #ddd;
         &:focus {
             background-color: $primary-bule;
             border-color: darken($primary-bule, 5%);
@@ -2029,7 +2103,7 @@ map options
         padding: .5rem .7rem;
         height: 34px;
         font-size: .75rem;
-
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         &:focus {}
     }
     .nav-btn__status {
@@ -2053,7 +2127,7 @@ map options
     .btn {
         font-size: .75rem;
         height: 32px;
-        border: 1px solid #ddd;
+        border: none;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     }
     .btn-white:not(:disabled):not(.disabled).active {
@@ -2068,17 +2142,14 @@ map options
     right: 20px;
     bottom: 50px;
     z-index: 2;
-
     ul {
         padding: 0;
         margin: 0;
         list-style-type: none;
     }
-
     .btn {
         width: 34px;
         height: 34px;
-        border: 1px solid #ddd;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         font-size: 1rem;
     }

@@ -68,9 +68,8 @@
 
 
 <!-- Drawer Layout -->
-
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-    <!-- Header -->
+        <!-- Header -->
     <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
         <!-- Navbar toggler -->
         <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
@@ -132,7 +131,13 @@
                         <strong>시간선택</strong>
                     </a>
                     <div class="filter-item-dropdown" style="width: 200px;">
-                        드랍다운
+                        <div class="dropdown-header"><strong>시작시간</strong></div>
+                        <div class="px-4">
+                            <select class="form-line" name="" id="">
+                                <option value="">01</option>
+                                <option value="">02</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-cell d-flex align-items-center">
@@ -237,13 +242,13 @@
             </li>
         </ul>
         <!-- lang -->
-        <!-- <div class="form-group m-0 form-lang">
+        <div class="form-group m-0 ml-4 form-lang">
             <select id="custom-select" class="form-line custom-line">
                 <option selected="">KOR</option>
                 <option value="1">JPN</option>
                 <option value="2">ENG</option>
             </select>
-        </div> -->
+        </div>
         <!-- avarta-->
         <div class="nav-item dropdown ml-4">
             <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
@@ -261,174 +266,200 @@
         </div>
     </div>
     <div class="mdk-drawer-layout__content page-content">
-        <div class="btn-mid-holder">
-            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-white">
-                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
-                </label>
-                <label class="btn btn-white active">
-                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
-                </label>
-            </div>
+    <!-- history / live -->
+    <div class="btn-mid-holder">
+        <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-white">
+                <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
+            </label>
+            <label class="btn btn-white active">
+                <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
+            </label>
         </div>
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <div class="btn-group map-location">
-                <ol class="breadcrumb p-0 m-0">
-                    <li class="breadcrumb-item">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">경기스타트업캠퍼스</a>
-                        <div class="dropdown-menu dropdown-menu-left" data-perfect-scrollbar>
-                            <a class="dropdown-item" href="#">menu2</a>
-                            <a class="dropdown-item" href="#">menu3</a>
-                            <a class="dropdown-item" href="#">menu4</a>
-                            <a class="dropdown-item" href="#">menu5</a>
-                            <a class="dropdown-item" href="#">menu6</a>
-                            <a class="dropdown-item" href="#">menu7</a>
-                            <a class="dropdown-item" href="#">menu8</a>
-                            <a class="dropdown-item" href="#">menu9</a>
-                            <a class="dropdown-item" href="#">menu10</a>
-                            <a class="dropdown-item" href="#">menu11</a>
-                            <a class="dropdown-item" href="#">menu12</a>
-                            <a class="dropdown-item" href="#">menu13</a>
-                            <a class="dropdown-item" href="#">menu14</a>
-                            <a class="dropdown-item" href="#">menu15</a>
-                            <a class="dropdown-item" href="#">menu16</a>
-                        </div>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#n" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">4층</a>
-                        <div class="dropdown-menu dropdown-menu-right" data-perfect-scrollbar>
-                            <a class="dropdown-item" href="#">menu2</a>
-                            <a class="dropdown-item" href="#">menu3</a>
-                            <a class="dropdown-item" href="#">menu4</a>
-                            <a class="dropdown-item" href="#">menu5</a>
-                            <a class="dropdown-item" href="#">menu6</a>
-                            <a class="dropdown-item" href="#">menu7</a>
-                            <a class="dropdown-item" href="#">menu8</a>
-                            <a class="dropdown-item" href="#">menu9</a>
-                            <a class="dropdown-item" href="#">menu10</a>
-                            <a class="dropdown-item" href="#">menu11</a>
-                            <a class="dropdown-item" href="#">menu12</a>
-                            <a class="dropdown-item" href="#">menu13</a>
-                            <a class="dropdown-item" href="#">menu14</a>
-                            <a class="dropdown-item" href="#">menu15</a>
-                            <a class="dropdown-item" href="#">menu16</a>
-                        </div>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#n" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">클라우드혁신센터</a>
-                        <div class="dropdown-menu dropdown-menu-right" data-perfect-scrollbar>
-                            <a class="dropdown-item" href="#">menu2</a>
-                            <a class="dropdown-item" href="#">menu3</a>
-                            <a class="dropdown-item" href="#">menu4</a>
-                            <a class="dropdown-item" href="#">menu5</a>
-                            <a class="dropdown-item" href="#">menu6</a>
-                            <a class="dropdown-item" href="#">menu7</a>
-                            <a class="dropdown-item" href="#">menu8</a>
-                            <a class="dropdown-item" href="#">menu9</a>
-                            <a class="dropdown-item" href="#">menu10</a>
-                            <a class="dropdown-item" href="#">menu11</a>
-                            <a class="dropdown-item" href="#">menu12</a>
-                            <a class="dropdown-item" href="#">menu13</a>
-                            <a class="dropdown-item" href="#">menu14</a>
-                            <a class="dropdown-item" href="#">menu15</a>
-                            <a class="dropdown-item" href="#">menu16</a>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-            <div class="btn-group ml-2">
-                <button type="button" class="btn btn-white"><i class="fas fa-vector-square"></i></button>
-                <button type="button" class="btn btn-white"><i class="fas fa-bullseye"></i></button>
-                <button type="button" class="btn btn-white"><i class="fas fa-ruler-horizontal"></i></button>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="false"> <i class="fas fa-layer-group"></i> <span class="caret"></span> </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
-                        <ul class="item-list mb-2">
-                            <li><a href="#n" class="active"><i
-                                        class="material-icons">location_on</i><span>개별위치</span></a></li>
-                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
-                        </ul>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
-                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
-                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="btn btn-white ml-2 map-e">이벤트 등록</button>
-        </div>
-        <!-- map zoom/out -->
-        <div class="btn-widget-holder">
-            <ul>
-                <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
-                <li>
-                    <div class="btn-group-vertical">
-                        <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
-                        <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!-- mouse pointer -->
-        <div class="mouse-point" style="background-color: #EA4444; left: 45%; top: 51%;"></div>
-        <div class="mouse-point"
-            style="background-color: #5297DA; left: 35%; top: 35%;"></div>
-        <div class="mouse-point"
-            style="background-color: #694FD6; left: 55%; top: 66%;"></div>
-        <div class="mouse-point active"
-            style="background-color: #CE40AA; left: 52%; top: 26%;"></div>
-        <div class="mouse-point"
-            style="background-color: #FF9333; left: 62%; top: 43%;"></div>
-        <div class="mouse-point"
-            style="background-color: #FFD633; left: 25%; top: 16%;"></div>
-        <div class="mouse-point"
-            style="background-color: #47D3D9; left: 75%; top: 26%;"></div>
-        <div class="mouse-point"
-            style="border-color: #7DC97F; box-shadow: 0 0 5px rgba(125,201,127,0.7); left: 42%; top: 23%;"></div>
-        <div class="mouse-point"
-            style="background-color: #777; left: 50%; top: 27%;"></div>
-        <div class="mouse-point user-warning"
-            style="border-color: #777; box-shadow: 0 0 5px rgba(0,0,0,0.3); left: 50%; top: 32%;">S</div>
-        <!-- alert -->
-        <div class="map-alert d-flex alert bg-accent text-white fade show m-0" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_fire_department</i>
-                </div>
-                <div class="flex">
-                    <small>
-                        <strong>화재가 발생했습니다.</strong>
-                    </small>
-                </div>
-                <div class="ml-8pt">
-                    <a href="#" class="btn btn-link btn-sm">위치확인</a>
-                </div>
-            </div>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true"><i class="material-icons">close</i></span>
-            </button>
-        </div>
-        <!-- map container -->
-        <div id="map" style="width:100%;height:100vh;"></div>
-        <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
-        <script>
-            var container = document.getElementById('map');
-            var options = {
-                center: new kakao.maps.LatLng(37.54545431995616, 127.2236967393457),
-                level: 1
-            };
-
-            var map = new kakao.maps.Map(container, options);
-            //var mapTypeControl = new kakao.maps.MapTypeControl();
-            //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-        </script>
     </div>
+    <!-- edit tool -->
+    <div class="btn-top-holder">
+        <div class="btn-group ml-2">
+            <button type="button" class="btn btn-white"><i class="fas fa-vector-square"></i></button>
+            <button type="button" class="btn btn-white"><i class="fas fa-bullseye"></i></button>
+            <button type="button" class="btn btn-white"><i class="fas fa-ruler-horizontal"></i></button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+                    aria-expanded="false"> <i class="fas fa-layer-group"></i> <span class="caret"></span> </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header"><strong>이벤트 설정</strong></div>
+                    <ul class="item-list mb-2">
+                        <li><a href="#n" class="active"><i
+                                    class="material-icons">location_on</i><span>개별위치</span></a></li>
+                        <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
+                    </ul>
+                    <div class="dropdown-header"><strong>경보 설정</strong></div>
+                    <ul class="item-list">
+                        <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
+                        <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
+                        <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-white ml-2 map-e">이벤트 등록</button>
+        <div class="map-location ml-2">
+            <div class="location-header d-flex align-items-center">
+                <strong>신세계백화점스타필드하남점</strong>
+                <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
+                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                </a>
+            </div>
+            <div class="collapse location-body" id="map-location">
+
+                
+                <div class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">신관
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
+                                <li class="sidebar-menu-item active">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">B1</span>
+                                        <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">1F</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">2F</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">본관
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="ui-plugin-charts.html">
+                                        <span class="sidebar-menu-text">B1</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="ui-plugin-flatpickr.html">
+                                        <span class="sidebar-menu-text">1F</span>
+                                        <span class="badge badge-notifications badge-accent ml-auto">6</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="ui-plugin-daterangepicker.html">
+                                        <span class="sidebar-menu-text">2F</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#layouts_menu">별관
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="layouts_menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="../Compact_App_Layout/student-course.html">
+                                        <span class="sidebar-menu-text">1F</span>
+                                        <span class="badge badge-notifications badge-accent ml-auto">4</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="../Mini_App_Layout/student-course.html">
+                                        <span class="sidebar-menu-text">2F</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="../Mini_Secondary_Layout/student-course.html">
+                                        <span class="sidebar-menu-text">3F</span>
+                                        <span class="badge badge-notifications badge-accent ml-auto">11</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- map zoom/out -->
+    <div class="btn-widget-holder">
+        <ul>
+            <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
+            <li>
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
+                    <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- mouse pointer -->
+    <div class="mouse-point" style="background-color: #EA4444; left: 45%; top: 51%;"></div>
+    <div class="mouse-point"
+        style="background-color: #5297DA; left: 35%; top: 35%;"></div>
+    <div class="mouse-point"
+        style="background-color: #694FD6; left: 55%; top: 66%;"></div>
+    <div class="mouse-point active"
+        style="background-color: #CE40AA; left: 52%; top: 26%;"></div>
+    <div class="mouse-point"
+        style="background-color: #FF9333; left: 62%; top: 43%;"></div>
+    <div class="mouse-point"
+        style="background-color: #FFD633; left: 25%; top: 16%;"></div>
+    <div class="mouse-point"
+        style="background-color: #47D3D9; left: 75%; top: 26%;"></div>
+    <div class="mouse-point"
+        style="border-color: #7DC97F; box-shadow: 0 0 5px rgba(125,201,127,0.7); left: 42%; top: 23%;"></div>
+    <div class="mouse-point"
+        style="background-color: #777; left: 50%; top: 27%;"></div>
+    <div class="mouse-point user-warning"
+        style="border-color: #777; box-shadow: 0 0 5px rgba(0,0,0,0.3); left: 50%; top: 32%;">S</div>
+    <!-- alert -->
+    <div class="map-alert d-flex alert bg-accent text-white fade show m-0" role="alert">
+        <div class="d-flex align-items-center">
+            <div class="mr-8pt">
+                <i class="material-icons">local_fire_department</i>
+            </div>
+            <div class="flex">
+                <small>
+                    <strong>화재가 발생했습니다.</strong>
+                </small>
+            </div>
+            <div class="ml-8pt">
+                <a href="#" class="btn btn-link btn-sm">위치확인</a>
+            </div>
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true"><i class="material-icons">close</i></span>
+        </button>
+    </div>
+    <!-- map container -->
+    <div id="map" style="width:100%;height:100vh;"></div>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.54545431995616, 127.2236967393457),
+            level: 1
+        };
+
+        var map = new kakao.maps.Map(container, options);
+        //var mapTypeControl = new kakao.maps.MapTypeControl();
+        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+    </script>
+</div>
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact">
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
