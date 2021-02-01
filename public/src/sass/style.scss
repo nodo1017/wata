@@ -1301,6 +1301,9 @@ platform map
         &.active{
             display: flex;
         }
+        .dropdown-body{
+            padding: 0 1.25rem;
+        }
     }
     .status-map{
         .btn-secondary:not(:disabled):not(.disabled).active{
@@ -1393,9 +1396,8 @@ platform map
         padding: 1rem 0;
         top: 64px;
         background-color: #fff;
-        border: 1px solid $border-color;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 18px -10px;
-        border-radius: .125rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 18px -10px, rgba(0, 0, 0, 0.05) 0px -2px 8px;
+        border-radius: 0 0 .125rem .125rem;
         min-width: 100%;
         &:before, &:after{
             content: '';
@@ -1419,6 +1421,17 @@ platform map
             content: '';
             top: -9px;
             color: #fff;
+        }
+        a{
+            font-size: .875rem;
+        }
+        select{
+            font-size: .875rem;
+        }
+        .custom-control-label{
+            font-size: .875rem;
+            width: 100%;
+            outline: transparent;
         }
     }
     .date-pick{
@@ -2000,6 +2013,7 @@ map options
             a.sidebar-menu-button{
                 font-size: 0.813rem;
                 background-color: #fff;
+                transition: all .35s ease;
                 span.sidebar-menu-text{
                     border-left: 1px solid #e9edf2;
                 }

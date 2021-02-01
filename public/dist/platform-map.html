@@ -48,6 +48,9 @@
     <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet">
     <link type="text/css" href="css/select2.css" rel="stylesheet">
 
+     <!-- ion Range Slider -->
+     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet">
+
     <!-- custom CSS -->
 	<link type="text/css" href="css/style.css" rel="stylesheet">
 
@@ -111,14 +114,10 @@
                         <i class="far fa-calendar-alt"></i>
                         <strong>기간선택</strong>
                     </a>
-                    <div class="filter-item-dropdown date-pick" style="width: 400px;">
-                        <div class="card-body">
+                    <div class="filter-item-dropdown date-pick" style="width: 350px;">
+                        <div class="dropdown-body pt-8pt">
                             <div class="form-group">
-                                <input type="hidden"
-                                       data-toggle="flatpickr"
-                                       data-flatpickr-mode="range"
-                                       data-flatpickr-inline="true"
-                                       value="2021-01-01 to 2021-01-31">
+                                <input type="hidden" data-toggle="flatpickr" data-flatpickr-mode="range" data-flatpickr-inline="true" value="2021-01-01 to 2021-01-31">
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-center mb-2">
@@ -131,23 +130,109 @@
                         <i class="far fa-clock"></i>
                         <strong>시간선택</strong>
                     </a>
-                    <div class="filter-item-dropdown" style="width: 200px;">
+                    <div class="filter-item-dropdown" style="width: 250px;">
                         <div class="dropdown-header"><strong>시작시간</strong></div>
-                        <div class="px-4">
-                            <select class="form-line" name="" id="">
-                                <option value="">01</option>
-                                <option value="">02</option>
-                            </select>
+                        <div class="dropdown-body mb-4">
+                            <div class="form-row">
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">AM</option>
+                                        <option value="">PM</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                        <option value="">04</option>
+                                        <option value="">05</option>
+                                        <option value="">06</option>
+                                        <option value="">07</option>
+                                        <option value="">08</option>
+                                        <option value="">09</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">00</option>
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-header"><strong>종료시간</strong></div>
+                        <div class="dropdown-body mb-4">
+                            <div class="form-row">
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">AM</option>
+                                        <option value="">PM</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                        <option value="">04</option>
+                                        <option value="">05</option>
+                                        <option value="">06</option>
+                                        <option value="">07</option>
+                                        <option value="">08</option>
+                                        <option value="">09</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">00</option>
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <a href="#n" class="btn btn-outline-secondary">확인</a>
                         </div>
                     </div>
                 </div>
                 <div class="filter-cell d-flex align-items-center">
                     <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <i class="far fa-user"></i>
+                        <i class="fas fa-transgender"></i>
                         <strong>성별</strong>
                     </a>
-                    <div class="filter-item-dropdown" style="width: 200px;">
-                        드랍다운
+                    <div class="filter-item-dropdown">
+                        <div class="dropdown-body my-2">
+                            <div class="form-check custom-checkbox">
+                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                    value="" id="navBarGenderAll" checked>
+                                <label class="custom-control-label" for="navBarGenderAll">전체</label>
+                            </div>
+                            <div class="form-check custom-checkbox mt-12pt">
+                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                    value="1" id="navBarGenderMale">
+                                <label class="custom-control-label" for="navBarGenderMale">남</label>
+                            </div>
+                            <div class="form-check custom-checkbox mt-12pt">
+                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                    value="2" id="navBarGenderFeMale">
+                                <label class="custom-control-label" for="navBarGenderFeMale">여</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-cell d-flex align-items-center">
@@ -155,8 +240,25 @@
                         <i class="fas fa-mobile-alt"></i>
                         <strong>휴대폰 종류</strong>
                     </a>
-                    <div class="filter-item-dropdown" style="width: 200px;">
-                        드랍다운
+                    <div class="filter-item-dropdown">
+                        <div class="dropdown-body my-2">
+                            <div class="form-check custom-checkbox">
+                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                    value="" id="deviceTypeAll" checked>
+                                <label class="custom-control-label" for="deviceTypeAll">전체</label>
+                            </div>
+    
+                            <div class="form-check custom-checkbox mt-12pt">
+                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                    value="1" id="deviceTypeAos">
+                                <label class="custom-control-label" for="deviceTypeAos">Android</label>
+                            </div>
+                            <div class="form-check custom-checkbox mt-12pt">
+                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                    value="2" id="deviceTypeIos">
+                                <label class="custom-control-label" for="deviceTypeIos">iOS</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-cell d-flex align-items-center">
@@ -164,8 +266,14 @@
                         <i class="far fa-flag"></i>
                         <strong>체류시간(minute)</strong>
                     </a>
-                    <div class="filter-item-dropdown" style="width: 200px;">
-                        드랍다운
+                    <div class="filter-item-dropdown" style="width: 300px;">
+                        <div class="dropdown-body my-2">
+                            <div class="flex" style="max-width: 100%">
+                                <input id="navVarVisitRangeVal" type="text" data-toggle="ion-rangeslider"
+                                    data-min="0" data-max="50" data-from="0" data-to="5" data-type="double"
+                                    data-grid="true">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -226,19 +334,20 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Data</a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a href="courses.html" class="dropdown-item">Browse Courses</a>
-                    <a href="student-course.html" class="dropdown-item">Preview Course</a>
-                    <a href="student-lesson.html" class="dropdown-item">Preview Lesson</a>
-                    <a href="student-take-course.html" class="dropdown-item"><span class="mr-16pt">Take
-                            Course</span> <span
-                            class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span></a>
-                    <a href="student-take-lesson.html" class="dropdown-item">Take Lesson</a>
-                    <a href="student-take-quiz.html" class="dropdown-item">Take Quiz</a>
-                    <a href="student-quiz-result-details.html" class="dropdown-item">Quiz Result</a>
-                    <a href="student-dashboard.html" class="dropdown-item">Student Dashboard</a>
-                    <a href="student-my-courses.html" class="dropdown-item">My Courses</a>
-                    <a href="student-quiz-results.html" class="dropdown-item">My Quizzes</a>
-                    <a href="help-center.html" class="dropdown-item">Help Center</a>
+                    <a href="#n" class="dropdown-item">Browse Courses</a>
+                    <a href="#n" class="dropdown-item">Preview Course</a>
+                    <a href="#n" class="dropdown-item">Preview Lesson</a>
+                    <a href="#n" class="dropdown-item">
+                        <span class="mr-16pt">Take Course</span>
+                        <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span>
+                    </a>
+                    <a href="#n" class="dropdown-item">Take Lesson</a>
+                    <a href="#n" class="dropdown-item">Take Quiz</a>
+                    <a href="#n" class="dropdown-item">Quiz Result</a>
+                    <a href="#n" class="dropdown-item">Student Dashboard</a>
+                    <a href="#n" class="dropdown-item">My Courses</a>
+                    <a href="#n" class="dropdown-item">My Quizzes</a>
+                    <a href="#n" class="dropdown-item">Help Center</a>
                 </div>
             </li>
         </ul>
@@ -259,10 +368,10 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-header"><strong>Account</strong></div>
-                <a class="dropdown-item" href="edit-account.html">Edit Account</a>
-                <a class="dropdown-item" href="billing.html">Billing</a>
-                <a class="dropdown-item" href="billing-history.html">Payments</a>
-                <a class="dropdown-item" href="login.html">Logout</a>
+                <a class="dropdown-item" href="#n">Edit Account</a>
+                <a class="dropdown-item" href="#n">Billing</a>
+                <a class="dropdown-item" href="#n">Payments</a>
+                <a class="dropdown-item" href="#n">Logout</a>
             </div>
         </div>
     </div>
@@ -346,18 +455,18 @@
                             </a>
                             <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="ui-plugin-charts.html">
+                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">B1</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="ui-plugin-flatpickr.html">
+                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">1F</span>
                                         <span class="badge badge-notifications badge-accent ml-auto">6</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="ui-plugin-daterangepicker.html">
+                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">2F</span>
                                     </a>
                                 </li>
@@ -369,18 +478,18 @@
                             </a>
                             <ul class="sidebar-submenu collapse sm-indent" id="layouts_menu">
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="../Compact_App_Layout/student-course.html">
+                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">1F</span>
                                         <span class="badge badge-notifications badge-accent ml-auto">4</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="../Mini_App_Layout/student-course.html">
+                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">2F</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="../Mini_Secondary_Layout/student-course.html">
+                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">3F</span>
                                         <span class="badge badge-notifications badge-accent ml-auto">11</span>
                                     </a>
@@ -1655,6 +1764,10 @@
 
     <!-- Preloader -->
     <script src="js/preloader.js"></script>
+
+    <!-- Range Slider -->
+    <script src="vendor/ion.rangeSlider.min.js"></script>
+    <script src="js/ion-rangeslider.js"></script>
 
     <!-- Quill -->
     <script src="vendor/quill.min.js"></script>
