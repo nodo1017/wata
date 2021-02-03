@@ -1261,11 +1261,12 @@ platform map
     .sidebar-secondary {
         height: calc(100% - 64px);
         margin-top: 64px;
-    }
-    .sidebar-secondary {
         background-color: #fff;
         width: 400px;
         border-left: 1px solid $border-color;
+        .tab-pane{
+            padding-bottom: 4rem;
+        }
     }
 }
 .nav-search{
@@ -1532,9 +1533,6 @@ platform map
 }
 /* projects */
 .sm-projects {
-    .project-inner {
-        padding-bottom: 64px;
-    }
     .tit-intro {
         text-align: center;
         padding-top: 5rem;
