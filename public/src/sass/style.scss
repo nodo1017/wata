@@ -139,7 +139,7 @@ login
             }
         }
         .btn-link{
-            color: $primary-bule;
+            color: $identity;
         }
     }
     .input-group {
@@ -1234,7 +1234,6 @@ platform map
     }
     .sidebar-mini {
         background-color: #fff;
-
         .sidebar-brand {
             background-color: $identity;
             @include transition(all, 0.2s, ease-in-out);
@@ -1243,16 +1242,19 @@ platform map
                 background-color: darken($identity, 10%);
             }
         }
-
         .avatar img {
             vertical-align: top;
         }
-
         ul.nav {
             li {
                 a.active {
                     color: $identity;
                 }
+            }
+        }
+        .nav-item{
+            > a{
+                padding-top: 1rem;
             }
         }
     }
@@ -1353,7 +1355,6 @@ platform map
         padding: 0 2rem;
         color: #000;
         font-size: .875rem;
-        border-right: 1px solid $border-color;
         i{
             margin-right: .5rem;
         }
@@ -1439,6 +1440,25 @@ platform map
             margin-bottom: 1rem;
         }
     }
+    &.filter-area{
+        border-right: 1px solid $border-color;
+    }
+}
+.filter-btn-cell{
+    a{
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        color: $identity;
+        font-size: .875rem;
+        font-weight: 500;
+        background: #fff;
+        padding: 0 1.75rem;
+        &:hover{
+            color: #fff;
+            background-color: $identity;
+        }
+    }
 }
 /* search */
 .sm-search{
@@ -1518,12 +1538,10 @@ platform map
     .tit-intro {
         text-align: center;
         padding-top: 5rem;
-
         em {
             font-size: 1.875rem;
             font-style: normal;
         }
-
         p {
             font-size: 1rem;
             color: #999;
@@ -1532,13 +1550,6 @@ platform map
     .step {
         padding: 1.875rem 0;
         background-color: #fafafa;
-    }
-    .over-txt {
-        em {
-            position: absolute;
-            right: 5px;
-            bottom: .5rem;
-        }
     }
     .set-list {
         position: relative;
@@ -1560,7 +1571,6 @@ platform map
             right: 0;
         }
     }
-
     .pj-list {
         border-top: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
@@ -1587,11 +1597,159 @@ platform map
         }
     }
 
+}
+@keyframes titGlitch {
+
+    2%,
+    64% {
+        transform: translate(1px, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+        transform: translate(-1px, 0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+@keyframes glitchTop {
+
+    2%,
+    64% {
+        transform: translate(1px, -1px);
+    }
+
+    4%,
+    60% {
+        transform: translate(-1px, 1px);
+    }
+
+    62% {
+        transform: translate(7px, -1px) skew(-7deg);
+    }
+}
+@keyframes glitchBotom {
+    2%,
+    64% {
+        transform: translate(-1px, 0);
+    }
+    4%,
+    60% {
+        transform: translate(-1px, 0);
+    }
+    62% {
+        transform: translate(-15px, 3px) skew(30deg);
+    }
+}
+/* solution */
+.sm-solution {
+    .solution-list {
+        border-radius: .25rem;
+        border: 1px solid $border-color;
+    }
+    .card {
+        box-shadow: none;
+        margin-bottom: 1rem;
+        .rounded-circle {
+            background-color: #a6aeb4;
+
+            i {
+                font-size: 24px;
+                color: #fff;
+            }
+        }
+        &.method {
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+        &.active {
+            opacity: 1;
+            border-color: lighten($identity, 20%);
+
+            .rounded-circle {
+                background: rgb(232, 59, 59);
+                background: linear-gradient(35deg, rgba(232, 59, 59, 1) 0%, rgba(232, 59, 147, 1) 100%);
+            }
+
+            .card-title {
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
+    }
+    .sm-core {
+        border: none;
+        background-image: url("../images/slider02.jpg");
+        background-size: cover;
+
+        .corner-ribbon {
+            width: 150px;
+            right: -62px;
+            top: -48px;
+        }
+
+        .card-body {
+
+            h2,
+            p.desc {
+                color: #fff;
+            }
+
+            h2 {
+                line-height: 1;
+            }
+
+            p.desc {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+/* events */
+.sm-events{
+    .envent-tab{
+        a{
+            display: flex;
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: .5rem;
+            align-items: center;
+            justify-content: center;
+            background-color: #edeef3;
+            transition: transform 300ms ease;
+            span.menu-cover{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                i{
+                    font-size: 1.5rem;
+                }
+                span{
+                    font-size: .75rem;
+                    font-weight: 600;
+                }
+            }
+            &.active{
+                background-color: $identity;
+                color: #fff;
+                transform: scale(1.1, 1.1);
+                z-index: 1;
+                box-shadow: 0 0 10px rgba(232, 59, 59, 0.75);
+            }
+        }
+    }
     .radio-tile-group {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-top: .5rem;
+
+
 
         .input-container {
             position: relative;
@@ -1654,7 +1812,13 @@ platform map
             }
         }
     }
-
+    .over-txt {
+        em {
+            position: absolute;
+            right: 5px;
+            bottom: .5rem;
+        }
+    }
     .video-bg {
         position: relative;
         z-index: 0;
@@ -1709,7 +1873,6 @@ platform map
             }
         }
     }
-
     .emg-stat {
         position: relative;
         z-index: 1;
@@ -1741,7 +1904,6 @@ platform map
             }
         }
     }
-
     .emg-info {
         padding: 1.5rem;
 
@@ -1767,122 +1929,6 @@ platform map
             ul {
                 margin: 0;
                 padding-left: 1rem;
-            }
-        }
-    }
-}
-@keyframes titGlitch {
-
-    2%,
-    64% {
-        transform: translate(1px, 0) skew(0deg);
-    }
-
-    4%,
-    60% {
-        transform: translate(-1px, 0) skew(0deg);
-    }
-
-    62% {
-        transform: translate(0, 0) skew(5deg);
-    }
-}
-@keyframes glitchTop {
-
-    2%,
-    64% {
-        transform: translate(1px, -1px);
-    }
-
-    4%,
-    60% {
-        transform: translate(-1px, 1px);
-    }
-
-    62% {
-        transform: translate(7px, -1px) skew(-7deg);
-    }
-}
-@keyframes glitchBotom {
-    2%,
-    64% {
-        transform: translate(-1px, 0);
-    }
-    4%,
-    60% {
-        transform: translate(-1px, 0);
-    }
-    62% {
-        transform: translate(-15px, 3px) skew(30deg);
-    }
-}
-/* solution */
-.sm-solution {
-    .solution-list {
-        border-radius: .25rem;
-        border: 1px solid $border-color;
-    }
-    .card {
-        box-shadow: none;
-        margin-bottom: 1rem;
-
-        .rounded-circle {
-            background-color: #a6aeb4;
-
-            i {
-                font-size: 24px;
-                color: #fff;
-            }
-        }
-
-        &.method {
-            opacity: 0.7;
-
-            &:hover {
-                opacity: 0.9;
-            }
-        }
-
-        &.active {
-            opacity: 1;
-            border-color: lighten($identity, 20%);
-
-            .rounded-circle {
-                background: rgb(232, 59, 59);
-                background: linear-gradient(35deg, rgba(232, 59, 59, 1) 0%, rgba(232, 59, 147, 1) 100%);
-            }
-
-            .card-title {
-                color: $main-color;
-                font-weight: bold;
-            }
-        }
-    }
-
-    .sm-core {
-        border: none;
-        background-image: url("../images/slider02.jpg");
-        background-size: cover;
-
-        .corner-ribbon {
-            width: 150px;
-            right: -62px;
-            top: -48px;
-        }
-
-        .card-body {
-
-            h2,
-            p.desc {
-                color: #fff;
-            }
-
-            h2 {
-                line-height: 1;
-            }
-
-            p.desc {
-                font-size: 1rem;
             }
         }
     }
@@ -2968,7 +3014,7 @@ map options
         left: 14px;
         height: 3px;
         width: 32px;
-        background-color: #424f5c;
+        background-color: rgba(255,255,255,0.8);
         -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
     }
@@ -3004,6 +3050,7 @@ map options
 .cd-panel--is-visible{
     .cd-panel__close{
         opacity: 1;
+        background-color: rgba(0,0,0,0.8);
         -webkit-transition: -webkit-transform 0.3s 0.3s;
         transition: -webkit-transform 0.3s 0.3s;
         transition: all 0.3s 0.3s;

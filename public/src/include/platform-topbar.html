@@ -9,7 +9,7 @@
             <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
             <button type="button"><i class="fas fa-search"></i></button>
         </div>
-        <div class="filter-cell d-flex align-items-center">
+        <div class="filter-cell filter-area d-flex align-items-center">
             <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
                 <i class="fas fa-map-marker-alt"></i>
                 <strong>구역선택</strong>
@@ -195,11 +195,14 @@
                         <div class="dropdown-body my-2">
                             <div class="flex" style="max-width: 100%">
                                 <input id="navVarVisitRangeVal" type="text" data-toggle="ion-rangeslider"
-                                    data-min="0" data-max="50" data-from="0" data-to="5" data-type="double"
+                                    data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
                                     data-grid="true">
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="filter-btn-cell d-flex align-items-center">
+                    <a href="#n" class=""><i class="material-icons mr-1">done</i> 설정</a>
                 </div>
             </div>
             <div class="tabBox mapStauts02 status-con ml-32pt">
@@ -249,10 +252,14 @@
                         <strong class="navbar-text-100">0건</strong>
                     </small>
                 </span>
+                <div class="filter-btn-cell d-flex align-items-center">
+                    <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
+                </div>
             </div>
         </div>
+        
         <!-- menu -->
-        <ul class="nav navbar-nav flex justify-content-end">
+        <!-- <ul class="nav navbar-nav flex justify-content-end">
             <li class="nav-item active">
                 <a href="#n" class="nav-link">Projects</a>
             </li>
@@ -275,28 +282,30 @@
                     <a href="#n" class="dropdown-item">Help Center</a>
                 </div>
             </li>
-        </ul>
+        </ul> -->
         <!-- lang -->
-        <div class="form-group m-0 ml-4 form-lang">
-            <select id="custom-select" class="form-line custom-line">
-                <option selected="">KOR</option>
-                <option value="1">JPN</option>
-                <option value="2">ENG</option>
-            </select>
-        </div>
         <!-- avarta-->
-        <div class="nav-item dropdown ml-4">
-            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                <span class="avatar avatar-sm">
-                    <span class="avatar-title rounded-circle">SH</span>
-                </span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header"><strong>Account</strong></div>
-                <a class="dropdown-item" href="#n">Edit Account</a>
-                <a class="dropdown-item" href="#n">Billing</a>
-                <a class="dropdown-item" href="#n">Payments</a>
-                <a class="dropdown-item" href="#n">Logout</a>
+        <div class="d-flex flex justify-content-end align-items-center">
+            <div class="form-group m-0 ml-4 form-lang">
+                <select id="custom-select" class="form-line custom-line">
+                    <option selected="">KOR</option>
+                    <option value="1">JPN</option>
+                    <option value="2">ENG</option>
+                </select>
+            </div>
+            <div class="nav-item dropdown ml-4">
+                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                    <span class="avatar avatar-sm">
+                        <span class="avatar-title rounded-circle">SH</span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header"><strong>Account</strong></div>
+                    <a class="dropdown-item" href="#n">Edit Account</a>
+                    <a class="dropdown-item" href="#n">Billing</a>
+                    <a class="dropdown-item" href="#n">Payments</a>
+                    <a class="dropdown-item" href="#n">Logout</a>
+                </div>
             </div>
         </div>
     </div>

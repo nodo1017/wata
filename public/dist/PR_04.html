@@ -84,7 +84,7 @@
             <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
             <button type="button"><i class="fas fa-search"></i></button>
         </div>
-        <div class="filter-cell d-flex align-items-center">
+        <div class="filter-cell filter-area d-flex align-items-center">
             <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
                 <i class="fas fa-map-marker-alt"></i>
                 <strong>구역선택</strong>
@@ -270,11 +270,14 @@
                         <div class="dropdown-body my-2">
                             <div class="flex" style="max-width: 100%">
                                 <input id="navVarVisitRangeVal" type="text" data-toggle="ion-rangeslider"
-                                    data-min="0" data-max="50" data-from="0" data-to="5" data-type="double"
+                                    data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
                                     data-grid="true">
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="filter-btn-cell d-flex align-items-center">
+                    <a href="#n" class=""><i class="material-icons mr-1">done</i> 설정</a>
                 </div>
             </div>
             <div class="tabBox mapStauts02 status-con ml-32pt">
@@ -324,10 +327,14 @@
                         <strong class="navbar-text-100">0건</strong>
                     </small>
                 </span>
+                <div class="filter-btn-cell d-flex align-items-center">
+                    <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
+                </div>
             </div>
         </div>
+        
         <!-- menu -->
-        <ul class="nav navbar-nav flex justify-content-end">
+        <!-- <ul class="nav navbar-nav flex justify-content-end">
             <li class="nav-item active">
                 <a href="#n" class="nav-link">Projects</a>
             </li>
@@ -350,28 +357,30 @@
                     <a href="#n" class="dropdown-item">Help Center</a>
                 </div>
             </li>
-        </ul>
+        </ul> -->
         <!-- lang -->
-        <div class="form-group m-0 ml-4 form-lang">
-            <select id="custom-select" class="form-line custom-line">
-                <option selected="">KOR</option>
-                <option value="1">JPN</option>
-                <option value="2">ENG</option>
-            </select>
-        </div>
         <!-- avarta-->
-        <div class="nav-item dropdown ml-4">
-            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                <span class="avatar avatar-sm">
-                    <span class="avatar-title rounded-circle">SH</span>
-                </span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header"><strong>Account</strong></div>
-                <a class="dropdown-item" href="#n">Edit Account</a>
-                <a class="dropdown-item" href="#n">Billing</a>
-                <a class="dropdown-item" href="#n">Payments</a>
-                <a class="dropdown-item" href="#n">Logout</a>
+        <div class="d-flex flex justify-content-end align-items-center">
+            <div class="form-group m-0 ml-4 form-lang">
+                <select id="custom-select" class="form-line custom-line">
+                    <option selected="">KOR</option>
+                    <option value="1">JPN</option>
+                    <option value="2">ENG</option>
+                </select>
+            </div>
+            <div class="nav-item dropdown ml-4">
+                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                    <span class="avatar avatar-sm">
+                        <span class="avatar-title rounded-circle">SH</span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header"><strong>Account</strong></div>
+                    <a class="dropdown-item" href="#n">Edit Account</a>
+                    <a class="dropdown-item" href="#n">Billing</a>
+                    <a class="dropdown-item" href="#n">Payments</a>
+                    <a class="dropdown-item" href="#n">Logout</a>
+                </div>
             </div>
         </div>
     </div>
@@ -515,6 +524,233 @@
             </li>
         </ul>
     </div>
+    <!-- mouse click -->
+    <div class="context-wrap row">
+        <div class="col-auto p-0">
+            <div class="context-menu">
+                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center p-12pt user-point-cover">
+                    <a href="#n" class="user-point" data-toggle="tooltip" data-title="user01" data-placement="top" data-boundary="window" data-original-title- title>
+                        <span class="dot-icon" style="border-color: #EA4444;"></span>
+                        <span class="btn-remove"><i class="material-icons">clear</i></span>
+                    </a>
+                    <a href="#n" class="user-point" data-toggle="tooltip" data-title="user02" data-placement="top" data-boundary="window" data-original-title- title>
+                        <span class="dot-icon" style="border-color: #5297DA;"></span>
+                        <span class="btn-remove"><i class="material-icons">clear</i></span>
+                    </a>
+                    <a href="#n" class="user-point" data-toggle="tooltip" data-title="user03" data-placement="top" data-boundary="window" data-original-title- title>
+                        <span class="dot-icon" style="border-color: #694FD6;"></span>
+                        <span class="btn-remove"><i class="material-icons">clear</i></span>
+                    </a>
+                    <a href="#n" class="user-point" data-toggle="tooltip" data-title="user04" data-placement="top" data-boundary="window" data-original-title- title>
+                        <span class="dot-icon" style="border-color: #CE40AA;"></span>
+                        <span class="btn-remove"><i class="material-icons">clear</i></span>
+                    </a>
+                    <a href="#n" class="user-point" data-toggle="tooltip" data-title="user05" data-placement="top" data-boundary="window" data-original-title- title>
+                        <span class="dot-icon" style="border-color: #FF9333;"></span>
+                        <span class="btn-remove"><i class="material-icons">clear</i></span>
+                    </a>
+                </div>
+                <!-- 지도 클릭시 -->
+                <div class="nav mx-16pt" role="tablist">
+                    <a href="#user-menu01" class="d-flex align-items-center active" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">person_search</span> 사용자 정보</a>
+                    <a href="#user-menu02" class="d-flex align-items-center" data-toggle="tab" role="tab" aria-selected="true"><span class="material-icons icon-16pt icon--left">mail_outline</span> 메세지 전송</a>
+                    <a href="#n" class="d-flex align-items-center js-cd-panel-trigger" data-panel="main"><span class="material-icons icon-16pt icon--left">visibility</span> 사용자 감시</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto p-0">
+            <div class="tab-content context-body">
+                <div id="user-menu01" class="tab-pane active" role="tabpanel">
+                    <div class="card-header card-header-tabs-basic nav" role="tablist">
+                        <a href="#menu01" class="p-12pt active" data-toggle="tab" role="tab" aria-selected="true">사용자 정보</a>
+                        <a href="#menu02" class="p-12pt" data-toggle="tab" role="tab" aria-selected="false">통계</a>
+                    </div>
+                    <div class="tab-content">
+                        <div id="menu01" class="tab-pane active" role="tabpanel">
+                            <div class="user-info p-16pt">
+                                <dl class="d-flex align-items-center">
+                                    <dt class="flex mr-2">사용자</dt>
+                                    <dd class="m-0">01012345678</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center">
+                                    <dt class="flex mr-2">성별</dt>
+                                    <dd class="m-0">남성</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center">
+                                    <dt class="flex mr-2">나이</dt>
+                                    <dd class="m-0">32</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center">
+                                    <dt class="flex mr-2">체류시간</dt>
+                                    <dd class="m-0">10분</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div id="menu02" class="tab-pane" role="tabpanel">
+                            <div class="chart p-16pt">
+                                <canvas id="iqChart" class="chart-canvas js-update-chart-line" data-chart-hide-axes="false" data-chart-points="true" data-chart-suffix="pt" data-chart-line-border-color="primary"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="user-menu02" class="tab-pane" role="tabpanel">
+                    <!-- 메세지 전송 -->
+                    <div class="p-24pt" style="width:400px;">
+                        <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
+                            <h3>메세지 전송</h3>
+                            <nav class="cd-stretchy-nav edit-content">
+                                <a class="cd-nav-trigger" href="#0">
+                                    Menu
+                                    <span aria-hidden="true"></span>
+                                </a>
+                        
+                                <ul class="list-unstyled">
+                                    <li><a href="#0"><span>보관함</span></a></li>
+                                    <li><a href="#0"><span>공유</span></a></li>
+                                    <li><a href="#0"><span>저장</span></a></li>
+                                    <li><a href="#0"><span>삭제</span></a></li>
+                                </ul>
+                        
+                                <span aria-hidden="true" class="stretchy-nav-bg"></span>
+                            </nav>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label mb-0 text-50 essential" for="form01">제목</label>
+                            <input id="form01" type="email" required="" class="form-line" placeholder="제목을 입력해주세요.">
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label mb-0 text-50 essential mb-2" for="form02">내용</label>
+                            <textarea class="form-control" name="comment" id="form02" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="#n" class="btn btn-outline-dark mr-8pt">메세지 전송</a>
+                        </div>
+                    </div>
+
+                    <!-- 메세지 보관함 -->
+                    <div class="p-24pt d-none" style="width:400px;">
+                        <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
+                            <h3>메세지 보관함</h3>
+                            <p class="ml-2 text-50">사용자 정의 메세지 보관함</p>
+                        </div>
+                        <div class="list-group list-group-flush mb-4">
+                            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                                <div class="d-flex flex-column align-items-center mr-16pt">
+                                    <span class="lead text-headings lh-1 text-danger"><i class="material-icons">warning</i></span>
+                                </div>
+                                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                    <div class="flex list-cover">
+                                        <a class="card-title" href="#n">긴급상황 (지진)</a>
+                                        <div class="card-subtitle text-50">A동 건물에 긴급상황이 발생하였으니</div>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item">메세지 보내기</a>
+                                        <a href="#n" class="dropdown-item">수정</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                                <div class="d-flex flex-column align-items-center mr-16pt">
+                                    <span class="lead text-headings lh-1 text-danger"><i class="material-icons">local_fire_department</i></span>
+                                </div>
+                                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                    <div class="flex list-cover">
+                                        <a class="card-title" href="#n">화재발생 (B동)</a>
+                                        <div class="card-subtitle text-50">B동 건물에 화재가 발생하였습니다</div>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item">메세지 보내기</a>
+                                        <a href="#n" class="dropdown-item">수정</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                                <div class="d-flex flex-column align-items-center mr-16pt">
+                                    <span class="lead text-headings lh-1 text-danger"><i class="material-icons">coronavirus</i></span>
+                                </div>
+                                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                    <div class="flex list-cover">
+                                        <a class="card-title" href="#n">감염병 발생 (B동 지하 주차장)</a>
+                                        <div class="card-subtitle text-50">B동 지하 주차장에 감염병 환자가 감지되었습니다.</div>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item">메세지 보내기</a>
+                                        <a href="#n" class="dropdown-item">수정</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                                <div class="d-flex flex-column align-items-center mr-16pt">
+                                    <span class="lead text-headings lh-1 text-danger"><i class="material-icons">warning</i></span>
+                                </div>
+                                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                    <div class="flex list-cover">
+                                        <a class="card-title" href="#n">긴급상황 (지진)</a>
+                                        <div class="card-subtitle text-50">A동 건물에 긴급상황이 발생하였으니</div>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item">메세지 보내기</a>
+                                        <a href="#n" class="dropdown-item">수정</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="pagination justify-content-center pagination-xsm m-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>Prev</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 1">
+                                    <span>1</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 2">
+                                    <span>2</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>Next</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- mouse pointer -->
     <div class="mouse-point" style="background-color: #EA4444; left: 45%; top: 51%;"></div>
     <div class="mouse-point"
@@ -581,25 +817,27 @@
                 </a>
                 <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
                     <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                        <li class="sidebar-menu-item" data-title="Search" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-search" data-toggle="tab" role="tab" aria-controls="sm-search" aria-selected="false">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">search</i>
-                                <span class="sidebar-menu-text">검색</span>
-                            </a>
-                        </li>
                         <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
                             <a class="sidebar-menu-button active" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
                                 <span class="sidebar-menu-text">프로젝트</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item" data-title="Solution" data-placement="right" data-container="body" data-boundary="window">
+                        <li class="sidebar-menu-item " data-title="Solution" data-placement="right" data-container="body" data-boundary="window">
                             <a class="sidebar-menu-button" href="#sm-solution" data-toggle="tab" role="tab" aria-controls="sm_account">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">redeem</i>
                                 <span class="sidebar-menu-text">솔루션</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item" data-title="Metting" data-placement="right" data-container="body" data-boundary="window">
+                        <li class="sidebar-menu-item" data-title="Events" data-placement="right" data-container="body"
+                            data-boundary="window">
+                            <a class="sidebar-menu-button" href="#sm-events" data-toggle="tab" role="tab"
+                                aria-controls="sm-event">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">pin_drop</i>
+                                <span class="sidebar-menu-text">이벤트</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item " data-title="Metting" data-placement="right" data-container="body" data-boundary="window">
                             <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab" aria-controls="sm-setting">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
                                 <span class="sidebar-menu-text">설정</span>
@@ -1068,198 +1306,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- 이벤트 등록 -->
-                        <div class="project-inner d-none">
-                            <div class="container-fluid d-flex flex-md-row align-items-center text-sm-left border-bottom py-4 mb-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">이벤트 등록</h3>
-                                        <p class="text-70 mb-0">이벤트 등록 페이지</p>
-                                    </div>
-                                </div>
-                                <div class="row" role="tablist">
-                                    <div class="col-auto">
-                                        <a href="#n" class="btn btn-outline-secondary">신규등록</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="mb-32pt">
-                                    <ul class="accordion accordion--boxed js-accordion mb-0" id="toc-1">
-                                        <li class="accordion__item open">
-                                            <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
-                                                <span class="flex text-accent">4개의 이벤트</span>
-                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                            </a>
-                                            <div class="accordion__menu">
-                                                <ul class="list-unstyled collapse show" id="toc-content-1">
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">open_with</span>
-                                                        <a class="flex" href="#n">반경설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">query_builder</span>
-                                                        <a class="flex" href="#n">알림설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">tab_unselected</span>
-                                                        <a class="flex" href="#n">구역설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">error_outline</span>
-                                                        <a class="flex" href="#n">경보설정</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label essential text-50" for="">이벤트 제목</label>
-                                    <input type="text" class="form-line" id="" placeholder="이벤트 제목을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label essential text-50" for="">이벤트 타입</label>
-                                    <div class="radio-tile-group">
-                                        <div class="input-container">
-                                            <input id="event-fire" class="radio-button" type="radio" name="event-type" />
-                                            <div class="radio-tile">
-                                                <i class="material-icons">local_fire_department</i>
-                                                <label for="event-fire" class="radio-tile-label">화재</label>
-                                            </div>
-                                        </div>
-                                        <div class="input-container">
-                                            <input id="event-warning" class="radio-button" type="radio" name="event-type" />
-                                            <div class="radio-tile">
-                                                <i class="material-icons">warning</i>
-                                                <label for="event-warning" class="radio-tile-label">긴급상황</label>
-                                            </div>
-                                        </div>
-                                        <div class="input-container">
-                                            <input id="event-virus" class="radio-button" type="radio" name="event-type" />
-                                            <div class="radio-tile">
-                                                <i class="material-icons">coronavirus</i>
-                                                <label for="event-virus" class="radio-tile-label">감염병</label>
-                                            </div>
-                                        </div>
-                                        <div class="input-container">
-                                            <input id="event-emergency" class="radio-button" type="radio" name="event-type" />
-                                            <div class="radio-tile">
-                                                <i class="material-icons">local_hospital</i>
-                                                <label for="event-emergency" class="radio-tile-label">응급환자</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label for="formFile" class="form-label text-50">파일등록</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="dateRangePickerSample02">날짜선택</label>
-                                    <input id="dateRangePickerSample02" type="text" class="form-line" placeholder="Range example" data-toggle="daterangepicker" data-daterangepicker-drops="up" data-daterangepicker-start-date="2021/01/01" data-daterangepicker-end-date="2021/01/31">
-                                </div>
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample01">위도</label>
-                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample02">경도</label>
-                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
-                                    </div>
-                                </div>
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample01">각도</label>
-                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
-                                    </div>
-                                    <div class="col-md-6 over-txt">
-                                        <label class="form-label text-50" for="dateRangePickerSample02">반경</label>
-                                        <input type="number" class="form-line pr-5" value="">
-                                        <em class="text-50">meters</em>
-                                    </div>
-                                </div>
-                                <div class="mt-64pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">임시저장</a>
-                                        <a href="#n" class="btn btn-accent ml-0">저장후 다음단계</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 경고 -->
-                        <div class="project-inner d-none">
-                            <div class="video-bg">
-                                <video autoplay muted loop id="myVideo">
-                                    <source src="video/bg_fire.mp4" type="video/mp4">
-                                    Your browser does not support HTML5 video.
-                                </video>
-                                <div class="video-inner d-flex justify-content-center align-items-center">
-                                    <div class="txt-cover">
-                                        <h1 class="m-0" title="화재경보">화재경보</h2>
-                                            <p class="m-0">화재 위험이 감지되었습니다</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="emg-stat p-16pt">
-                                <div class="emg-top d-flex align-items-center pb-16pt mb-16pt">
-                                    <div class="col-auto p-0">
-                                        <div class="d-flex align-items-center">
-                                            <span class="material-icons icon-24pt text-white mr-4pt">local_fire_department</span>
-                                            <p class="text-white mb-0">최초 감지 시간</p>
-                                        </div>
-                                    </div>
-                                    <div class="col p-0 text-right">
-                                        <strong class="mb-0 text-white">2020.01.13 06:42:58</strong>
-                                    </div>
-                                </div>
-                                <div class="emg-con py-8pt text-center">
-                                    <em class="time mb-2">00:01:24</em>
-                                    <p class="tit m-0">경과시간</p>
-                                </div>
-                            </div>
-                            <div class="emg-info">
-                                <div class="info-col info-col-line d-flex align-items-center">
-                                    <p class="flex m-0">경보위치</p>
-                                    <strong>판교스타트업캠퍼스 4층</strong>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <p class="flex m-0">재실인원 <a href="#n" class="btn btn-sm btn-outline-secondary btn-rounded ml-2">긴급대피 문자 발송</a></p>
-                                    <strong class="text-accent font-size-24pt ">40명</strong>
-                                </div>
-                                <div class="card-body mt-16pt" data-perfect-scrollbar>
-                                    <div class="card-inner">
-                                        <ul>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                            <li>01012345678 / 남성 / 23세</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-48pt">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <a href="#n" class="btn-lg btn-accent">화재 위치 확인</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="tab-pane sm-solution" id="sm-solution">
                         <div class="solution-inner">
@@ -1450,41 +1496,236 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-setting" id="sm-setting">
-                        <div class="container-fluid">
-                            <div class="py-24pt">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center border-bottom mb-4 position-relative">
-                                    <h3>메세지 전송</h3>
-                                    <nav class="cd-stretchy-nav edit-content">
-                                        <a class="cd-nav-trigger" href="#0">
-                                            Menu
-                                            <span aria-hidden="true"></span>
+                    <div class="tab-pane sm-events" id="sm-events">
+                        <!-- 이벤트 등록 -->
+                        <div class="event-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">이벤트 등록</h3>
+                                        <p class="text-70 mb-0">이벤트 등록 페이지</p>
+                                    </div>
+                                </div>
+                                <a href="#n" class="btn btn-outline-secondary">신규등록</a>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="mb-32pt">
+                                    <ul class="accordion accordion--boxed js-accordion mb-0" id="toc-1">
+                                        <li class="accordion__item open">
+                                            <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
+                                                <span class="flex text-accent">4개의 이벤트</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <div class="accordion__menu">
+                                                <ul class="list-unstyled collapse show" id="toc-content-1">
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body">open_with</span>
+                                                        <a class="flex" href="#n">반경설정</a>
+                                                        <span class="text-muted">2020.01.01</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body">query_builder</span>
+                                                        <a class="flex" href="#n">알림설정</a>
+                                                        <span class="text-muted">2020.01.01</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body">tab_unselected</span>
+                                                        <a class="flex" href="#n">구역설정</a>
+                                                        <span class="text-muted">2020.01.01</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body">error_outline</span>
+                                                        <a class="flex" href="#n">경보설정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential text-50" for="">이벤트 제목</label>
+                                    <input type="text" class="form-line" id="" placeholder="이벤트 제목을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential text-50" for="">이벤트 타입</label>
+
+
+                                    <div class="envent-tab nav mb-4" role="tablist">
+                                        <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                                            <span class="menu-cover">
+                                                <i class="material-icons">local_fire_department</i><span>화재</span>
+                                            </span>
                                         </a>
-                                
-                                        <ul class="list-unstyled">
-                                            <li><a href="#0"><span>보관함</span></a></li>
-                                            <li><a href="#0"><span>공유</span></a></li>
-                                            <li><a href="#0"><span>저장</span></a></li>
-                                            <li><a href="#0"><span>삭제</span></a></li>
-                                        </ul>
-                                
-                                        <span aria-hidden="true" class="stretchy-nav-bg"></span>
-                                    </nav>
-                                
+                                        <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover">
+                                                <i class="material-icons">warning</i><span>긴급상황</span>
+                                            </span>
+                                        </a>
+                                        <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover">
+                                                <i class="material-icons">coronavirus</i><span>감염병</span>
+                                            </span>
+                                        </a>
+                                        <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover">
+                                                <i class="material-icons">local_hospital</i><span>응급환자</span>
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                    <div class="tab-content">
+                                        <div id="tab01" class="tab-pane active" role="tabpanel">
+                                        </div>
+                                        <div id="tab02" class="tab-pane" role="tabpanel">
+                                        </div>
+                                        <div id="tab03" class="tab-pane" role="tabpanel">
+                                        </div>
+                                        <div id="tab04" class="tab-pane" role="tabpanel">
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <div class="radio-tile-group">
+                                        <div class="input-container">
+                                            <input id="event-fire" class="radio-button" type="radio" name="event-type" />
+                                            <div class="radio-tile">
+                                                <i class="material-icons">local_fire_department</i>
+                                                <label for="event-fire" class="radio-tile-label">화재</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-container">
+                                            <input id="event-warning" class="radio-button" type="radio" name="event-type" />
+                                            <div class="radio-tile">
+                                                <i class="material-icons">warning</i>
+                                                <label for="event-warning" class="radio-tile-label">긴급상황</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-container">
+                                            <input id="event-virus" class="radio-button" type="radio" name="event-type" />
+                                            <div class="radio-tile">
+                                                <i class="material-icons">coronavirus</i>
+                                                <label for="event-virus" class="radio-tile-label">감염병</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-container">
+                                            <input id="event-emergency" class="radio-button" type="radio" name="event-type" />
+                                            <div class="radio-tile">
+                                                <i class="material-icons">local_hospital</i>
+                                                <label for="event-emergency" class="radio-tile-label">응급환자</label>
+                                            </div>
+                                        </div>
+                                    </div> -->
                                 </div>
-                                <div class="form-group mb-4">
-                                    <label class="form-label mb-0 text-50 essential" for="form02">제목</label>
-                                    <input id="form02" type="email" required="" class="form-line" placeholder="제목을 입력해주세요.">
+                                <div class="form-group mb-32pt">
+                                    <label for="formFile" class="form-label text-50">파일등록</label>
+                                    <input class="form-control" type="file" id="formFile">
                                 </div>
-                                <div class="form-group mb-4">
-                                    <label class="form-label mb-0 text-50 essential mb-2" for="form02">내용</label>
-                                    <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 essential" for="dateRangePickerSample02">날짜선택</label>
+                                    <input id="dateRangePickerSample02" type="text" class="form-line" placeholder="Range example" data-toggle="daterangepicker" data-daterangepicker-drops="up" data-daterangepicker-start-date="2021/01/01" data-daterangepicker-end-date="2021/01/31">
                                 </div>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <a href="#n" class="btn btn-outline-dark mr-8pt">메세지 전송</a>
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">위도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample02">경도</label>
+                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">각도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="col-md-6 over-txt">
+                                        <label class="form-label text-50" for="dateRangePickerSample02">반경</label>
+                                        <input type="number" class="form-line pr-5" value="">
+                                        <em class="text-50">meters</em>
+                                    </div>
+                                </div>
+                                <div class="mt-64pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">임시저장</a>
+                                        <a href="#n" class="btn btn-accent ml-0">저장후 다음단계</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- 경고 -->
+                        <div class="event-inner d-none">
+                            <div class="video-bg">
+                                <video autoplay muted loop id="myVideo">
+                                    <source src="video/bg_fire.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <div class="video-inner d-flex justify-content-center align-items-center">
+                                    <div class="txt-cover">
+                                        <h1 class="m-0" title="화재경보">화재경보</h2>
+                                            <p class="m-0">화재 위험이 감지되었습니다</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="emg-stat p-16pt">
+                                <div class="emg-top d-flex align-items-center pb-16pt mb-16pt">
+                                    <div class="col-auto p-0">
+                                        <div class="d-flex align-items-center">
+                                            <span
+                                                class="material-icons icon-24pt text-white mr-4pt">local_fire_department</span>
+                                            <p class="text-white mb-0">최초 감지 시간</p>
+                                        </div>
+                                    </div>
+                                    <div class="col p-0 text-right">
+                                        <strong class="mb-0 text-white">2020.01.13 06:42:58</strong>
+                                    </div>
+                                </div>
+                                <div class="emg-con py-8pt text-center">
+                                    <em class="time mb-2">00:01:24</em>
+                                    <p class="tit m-0">경과시간</p>
+                                </div>
+                            </div>
+                            <div class="emg-info">
+                                <div class="info-col info-col-line d-flex align-items-center">
+                                    <p class="flex m-0">경보위치</p>
+                                    <strong>판교스타트업캠퍼스 4층</strong>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="flex m-0">재실인원 <a href="#n"
+                                            class="btn btn-sm btn-outline-secondary btn-rounded ml-2">긴급대피 문자 발송</a></p>
+                                    <strong class="text-accent font-size-24pt ">40명</strong>
+                                </div>
+                                <div class="card-body mt-16pt" data-perfect-scrollbar>
+                                    <div class="card-inner">
+                                        <ul>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                            <li>01012345678 / 남성 / 23세</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-48pt">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#n" class="btn-lg btn-accent">화재 위치 확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane sm-setting" id="sm-setting">
                     </div>
                 </div>
             </div>
@@ -1496,6 +1737,248 @@
 <!-- // END Drawer Layout -->
 
 
+    <div class="cd-panel cd-panel--from-right js-cd-panel-main">
+        <a href="#0" class="cd-panel__close js-cd-close">Close</a>
+
+        <div class="cd-panel__container">
+            <div class="cd-panel__content">
+                
+                <div class="d-flex flex-column flex-md-row align-items-center text-center text-sm-left mb-4">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+                        <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">이용자 정보</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table mb-0 thead-border-top-0 table-nowrap">
+                    <thead>
+                        <tr>
+
+                            <th style="width: 18px;"
+                                class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-toggle-check-all"
+                                        data-target="#staff"
+                                        id="customCheckAllstaff">
+                                    <label class="custom-control-label"
+                                        for="customCheckAllstaff"><span class="text-hide">Toggle all</span></label>
+                                </div>
+                            </th>
+
+                            <th>
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-employee-name">Employee</a>
+                            </th>
+
+                            <th style="width: 150px;">
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-employer-name">Employer</a>
+                            </th>
+
+                            <th class="text-center"
+                                style="width: 48px;">
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-projects">Projects</a>
+                            </th>
+
+                            <th style="width: 37px;">Status</th>
+
+                            <th style="width: 120px;">
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-activity">Activity</a>
+                            </th>
+                            <th style="width: 51px;">
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-earnings">Earnings</a>
+                            </th>
+                            <th style="width: 24px;"
+                                class="pl-0"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="list"
+                        id="staff">
+
+                        <tr class="selected">
+
+                            <td class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        checked=""
+                                        id="customCheck1_staff1">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_staff1"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+
+                            <td>Michael Smith</td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                    class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                    <a href=""
+                                    class="text-70"><span class="js-lists-values-employer-name">Black Ops</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">12</td>
+
+                            <td>
+
+                                <a href=""
+                                class="chip chip-outline-secondary">Admin</a>
+
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">3 days ago</td>
+                            <td class="js-lists-values-earnings small">$12,402</td>
+                            <td class="text-right pl-0">
+                                <a href=""
+                                class="text-50"><i class="material-icons">more_vert</i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_staff2">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_staff2"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+
+                            <td>Connie Smith</td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                    class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                    <a href=""
+                                    class="text-70"><span class="js-lists-values-employer-name">Backend Ltd</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">42</td>
+
+                            <td>
+
+                                <a href=""
+                                class="chip chip-outline-secondary">User</a>
+
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">1 week ago</td>
+                            <td class="js-lists-values-earnings small">$1,943</td>
+                            <td class="text-right pl-0">
+                                <a href=""
+                                class="text-50"><i class="material-icons">more_vert</i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_staff3">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_staff3"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+
+                            <td>John Connor</td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                    class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                    <a href=""
+                                    class="text-70"><span class="js-lists-values-employer-name">Frontted</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">31</td>
+
+                            <td>
+
+                                <a href=""
+                                class="chip chip-outline-secondary">Manager</a>
+
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">2 weeks ago</td>
+                            <td class="js-lists-values-earnings small">$1,401</td>
+                            <td class="text-right pl-0">
+                                <a href=""
+                                class="text-50"><i class="material-icons">more_vert</i></a>
+                            </td>
+                        </tr>
+
+                        <tr class="selected">
+
+                            <td class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        checked=""
+                                        id="customCheck1_staff4">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_staff4"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+
+                            <td>Laza Bogdan</td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                    class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                    <a href=""
+                                    class="text-70"><span class="js-lists-values-employer-name">Frontted</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">44</td>
+
+                            <td>
+
+                                <a href=""
+                                class="chip chip-outline-secondary">Admin</a>
+
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">3 weeks ago</td>
+                            <td class="js-lists-values-earnings small">$22,402</td>
+                            <td class="text-right pl-0">
+                                <a href=""
+                                class="text-50"><i class="material-icons">more_vert</i></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+
+
+            </div> <!-- cd-panel__content -->
+        </div> <!-- cd-panel__container -->
+    </div> <!-- cd-panel -->
+
+
+    
     <!-- jQuery -->
     <script src="vendor/jquery.min.js"></script>
 
