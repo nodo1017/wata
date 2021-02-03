@@ -771,38 +771,15 @@
                                 <a href="#n" class="btn btn-outline-secondary">신규등록</a>
                             </div>
                             <div class="container-fluid">
-                                <div class="mb-32pt">
-                                    <ul class="accordion accordion--boxed js-accordion mb-0" id="toc-1">
-                                        <li class="accordion__item open">
-                                            <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
-                                                <span class="flex text-accent">4개의 이벤트</span>
-                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                            </a>
-                                            <div class="accordion__menu">
-                                                <ul class="list-unstyled collapse show" id="toc-content-1">
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">open_with</span>
-                                                        <a class="flex" href="#n">반경설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">query_builder</span>
-                                                        <a class="flex" href="#n">알림설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">tab_unselected</span>
-                                                        <a class="flex" href="#n">구역설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">error_outline</span>
-                                                        <a class="flex" href="#n">경보설정</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential text-50">이벤트 종류</label>
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="vuejs">개별위치기반</option>
+                                        <option value="vuejs">스마트빌딩</option>
+                                        <option value="vuejs">스마트팩토리</option>
+                                        <option value="vuejs">스마트아파트</option>
+                                        <option value="vuejs">스마트오피스텔</option>
+                                    </select>
                                 </div>
                                 <div class="form-group mb-32pt">
                                     <label class="form-label essential text-50" for="">이벤트 제목</label>
