@@ -1353,7 +1353,7 @@ platform map
         display: flex;
         align-items: center;
         height: 100%;
-        padding: 0 2rem;
+        padding: 0 1.5rem;
         color: #000;
         font-size: .875rem;
         i{
@@ -2915,19 +2915,57 @@ map options
 .mouse-point {
     position: absolute;
     z-index: 2;
-    width: 20px;
-    height: 20px;
-    border: 5px solid #fff;
     border-radius: 50%;
-    background-color: #fff;
+    cursor: pointer;
+    padding: 1rem;
     @include transition(all, 0.2s, ease-in-out);
+    &.user{
+        background: url(../images/person_pin.svg) no-repeat center;
+        &:hover{
+            background: url(../images/person_pin_view.svg) no-repeat center;
+        }
+    }
+    &.user-unknow{
+        background: url(../images/person_pin_unknow.svg) no-repeat center;
+        &:hover{
+            background: url(../images/person_pin_unknow_view.svg) no-repeat center;
+        }
+    }
+    &.warning-fire{
+        padding: 2rem;
+        background: url(../images/warning_fire.svg) no-repeat center;
+    }
+    &.warning-cau{
+        padding: 2rem;
+        background: url(../images/warning_cau.svg) no-repeat center;
+    }
+    &.warning-virus{
+        padding: 2rem;
+        background: url(../images/warning_virus.svg) no-repeat center;
+    }
+    &.warning-emg{
+        padding: 2rem;
+        background: url(../images/warning_emg.svg) no-repeat center;
+    }
+    &.manager{
+        background: url(../images/local_police.svg) no-repeat center;
+        &:hover{
+            background: url(../images/local_police_view.svg) no-repeat center;
+        }
+    }
+    &.user-red{
+        background: url(../images/person_pin_red.svg) no-repeat center;
+        &:hover{
+            background: url(../images/person_pin_red_view.svg) no-repeat center;
+        }
+    }
     &:hover{
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        border-width: 0;
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        z-index: 3;
     }
     .user-point {
         -webkit-filter: drop-shadow(0 0 5px rgba(232, 34, 34, 0.7));
@@ -2943,12 +2981,11 @@ map options
         justify-content: center;
     }
     &.active{
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        border: none;
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
     }
 }
 /* Slide In Panel */

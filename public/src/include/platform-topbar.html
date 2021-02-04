@@ -188,13 +188,28 @@
                 </div>
                 <div class="filter-cell d-flex align-items-center">
                     <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                        <i class="fas fa-arrows-alt-h"></i>
+                        <strong>나이대</strong>
+                    </a>
+                    <div class="filter-item-dropdown" style="width: 300px;">
+                        <div class="dropdown-body my-2">
+                            <div class="flex" style="max-width: 100%">
+                                <input id="userAge" type="text" data-toggle="ion-rangeslider"
+                                    data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
+                                    data-grid="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
                         <i class="far fa-flag"></i>
                         <strong>체류시간(minute)</strong>
                     </a>
                     <div class="filter-item-dropdown" style="width: 300px;">
                         <div class="dropdown-body my-2">
                             <div class="flex" style="max-width: 100%">
-                                <input id="navVarVisitRangeVal" type="text" data-toggle="ion-rangeslider"
+                                <input id="userStay" type="text" data-toggle="ion-rangeslider"
                                     data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
                                     data-grid="true">
                             </div>
@@ -229,7 +244,7 @@
                         <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
                     </span>
                     <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">평균 체류시간</span>
+                        <span class="navbar-text-50">사용자 체류시간</span>
                         <strong class="navbar-text-100">10분</strong>
                     </small>
                 </span>
