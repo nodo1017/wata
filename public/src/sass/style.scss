@@ -24,7 +24,7 @@ body.layout-compact{
 }
 .form-group {
     position: relative;
-    label {
+    label, span {
         font-size: 0.75rem;
         &.essential {
             position: relative;
@@ -926,7 +926,6 @@ main contents
     padding: 6% 0;
     background-color: #101317;
     overflow: hidden;
-
     &:before,
     &:after {
         content: '';
@@ -938,25 +937,21 @@ main contents
         pointer-events: none;
         z-index: 1;
     }
-
     &:before {
         left: 0;
         background: rgb(25, 30, 37);
         background: linear-gradient(90deg, rgba(25, 30, 37, 1) 0%, rgba(25, 30, 37, 0) 100%);
 
     }
-
     &:after {
         right: 0;
         background: rgb(25, 30, 37);
         background: linear-gradient(90deg, rgba(25, 30, 37, 0) 0%, rgba(25, 30, 37, 1) 100%);
     }
-
     .main-visual-slider {
         position: relative;
         // overflow: hidden;
     }
-
     .visual-item {
         opacity: 1;
         transition: all 300ms ease;
@@ -993,7 +988,6 @@ main contents
             transform: scale(1.2);
         }
     }
-
     .slick-arrow {
         position: absolute;
         z-index: 2;
@@ -1049,7 +1043,6 @@ main contents
             }
         }
     }
-
     .txt-box {
         position: absolute;
         height: 100%;
@@ -1247,6 +1240,10 @@ platform map
         }
         ul.nav {
             li {
+                i.far, i.fas{
+                    font-size: 1.5rem;
+                    margin-bottom: .5rem;
+                }
                 a.active {
                     color: $identity;
                 }
@@ -1294,6 +1291,64 @@ platform map
             font-size: inherit;
             font-size: 1rem;
         }
+    }
+}
+.set-list {
+    position: relative;
+    display: flex;
+    padding: 1rem .25rem;
+    border-bottom: 1px solid $border-color;
+    align-items: center;
+    label {
+        color: #384046;
+        span {
+            color: #8e8e8e;
+            font-size: .75rem;
+        }
+    }
+    .control-cover{
+        flex: 1 1 0%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    select{
+        font-size: 1rem;
+        font-weight: 500;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        border: none;
+        padding: 0 .5rem;
+    }
+}
+.row-list {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    a.pj-favorite {
+        color: #ddd;
+        padding: .5rem;
+        i {
+            font-size: 1.25rem;
+        }
+        &:hover {
+            color: #d2d2d2;
+        }
+        &.active {
+            color: #fbc600;
+        }
+    }
+    .dropdown-menu .dropdown-item i {
+        font-size: 1rem;
+    }
+}
+.tit-intro {
+    text-align: center;
+    padding-top: 5rem;
+    em {
+        font-size: 1.875rem;
+        font-style: normal;
+    }
+    p {
+        font-size: 1rem;
+        color: #999;
     }
 }
 /* history / live btn */
@@ -1533,112 +1588,9 @@ platform map
 }
 /* projects */
 .sm-projects {
-    .tit-intro {
-        text-align: center;
-        padding-top: 5rem;
-        em {
-            font-size: 1.875rem;
-            font-style: normal;
-        }
-        p {
-            font-size: 1rem;
-            color: #999;
-        }
-    }
     .step {
         padding: 1.875rem 0;
         background-color: #fafafa;
-    }
-    .set-list {
-        position: relative;
-        display: flex;
-        padding: 1rem .25rem;
-        border-bottom: 1px solid $border-color;
-
-        label {
-            color: #384046;
-
-            span {
-                color: #8e8e8e;
-                font-size: .75rem;
-            }
-        }
-
-        .custom-control {
-            position: absolute;
-            right: 0;
-        }
-    }
-    .pj-list {
-        border-top: 1px solid $border-color;
-        border-bottom: 1px solid $border-color;
-
-        a.pj-favorite {
-            color: #ddd;
-            padding: .5rem;
-
-            i {
-                font-size: 1.25rem;
-            }
-
-            &:hover {
-                color: #d2d2d2;
-            }
-
-            &.active {
-                color: #fbc600;
-            }
-        }
-
-        .dropdown-menu .dropdown-item i {
-            font-size: 1rem;
-        }
-    }
-
-}
-@keyframes titGlitch {
-
-    2%,
-    64% {
-        transform: translate(1px, 0) skew(0deg);
-    }
-
-    4%,
-    60% {
-        transform: translate(-1px, 0) skew(0deg);
-    }
-
-    62% {
-        transform: translate(0, 0) skew(5deg);
-    }
-}
-@keyframes glitchTop {
-
-    2%,
-    64% {
-        transform: translate(1px, -1px);
-    }
-
-    4%,
-    60% {
-        transform: translate(-1px, 1px);
-    }
-
-    62% {
-        transform: translate(7px, -1px) skew(-7deg);
-    }
-}
-@keyframes glitchBotom {
-    2%,
-    64% {
-        transform: translate(-1px, 0);
-    }
-    4%,
-    60% {
-        transform: translate(-1px, 0);
-    }
-    62% {
-        transform: translate(-15px, 3px) skew(30deg);
     }
 }
 /* solution */
@@ -1876,8 +1828,7 @@ platform map
         position: relative;
         z-index: 1;
         background: rgb(236, 16, 76);
-        background: linear-gradient(45deg, rgba(236, 16, 76, 1) 0%, rgba(232, 59, 59, 1) 100%);
-
+        background: linear-gradient(45deg, rgba(236, 16, 76, 1) 0%, rgb(253, 95, 3) 100%);
         .emg-top {
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -1886,7 +1837,6 @@ platform map
                 font-size: 1rem;
             }
         }
-
         .emg-con {
             color: #fff;
 
@@ -1905,7 +1855,6 @@ platform map
     }
     .emg-info {
         padding: 1.5rem;
-
         .info-col {
             padding-bottom: 1rem;
             margin-bottom: 1rem;
@@ -1918,7 +1867,6 @@ platform map
                 font-weight: bold;
             }
         }
-
         .card-body {
             position: relative;
             background-color: #f5f5f5;
@@ -1928,6 +1876,83 @@ platform map
             ul {
                 margin: 0;
                 padding-left: 1rem;
+            }
+        }
+    }
+}
+@keyframes titGlitch {
+    2%,
+    64% {
+        transform: translate(1px, 0) skew(0deg);
+    }
+    4%,
+    60% {
+        transform: translate(-1px, 0) skew(0deg);
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+@keyframes glitchTop {
+    2%,
+    64% {
+        transform: translate(1px, -1px);
+    }
+    4%,
+    60% {
+        transform: translate(-1px, 1px);
+    }
+    62% {
+        transform: translate(7px, -1px) skew(-7deg);
+    }
+}
+@keyframes glitchBotom {
+    2%,
+    64% {
+        transform: translate(-1px, 0);
+    }
+    4%,
+    60% {
+        transform: translate(-1px, 0);
+    }
+    62% {
+        transform: translate(-15px, 3px) skew(30deg);
+    }
+}
+/* setting */
+.sm-setting{
+    .top-cell{
+        position: relative;
+        display: block;
+        padding: 32px;
+        z-index: 1;
+        text-align: center;
+        // background: rgb(236, 16, 76);
+        // background: linear-gradient(45deg, rgba(236, 16, 76, 1) 0%, rgb(253, 95, 3) 100%);
+        background: url(../images/setting_bg.jpg) no-repeat center;
+        background-size: cover;
+        .app-cover{
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 1rem;
+            width: 116px;
+            height: 116px;
+            margin: 0 auto 1rem;
+        }
+        h5{
+            color: #fff;
+            font-size: 1rem;
+            margin: 0;
+            text-transform: none;
+        }
+        p{
+            color: #fff;
+        }
+        a.btn-outline{
+            border: 1px solid #fff;
+            color: #fff;
+            &:hover{
+                text-decoration: underline;
             }
         }
     }
@@ -2960,11 +2985,11 @@ map options
         }
     }
     &:hover{
-        -moz-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-        -o-transform: scale(1.5);
-        -webkit-transform: scale(1.5);
-        transform: scale(1.5);
+        -moz-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
         z-index: 3;
     }
     .user-point {

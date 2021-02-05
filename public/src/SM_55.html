@@ -1,7 +1,6 @@
 @@include('./include/platform-header.html')
 
 <!-- Drawer Layout -->
-
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
     @@include('./include/platform-topbar.html')
     @@include('./include/platform-tools.html')
@@ -54,91 +53,84 @@
                         </nav>
                     </div>
                     <div class="tab-pane sm-search" id="sm-search">
-                        <div class="wt-trigger-foldPanel">
-                            <div class="search-form search-form--dark input-group-lg mb-3">
-                                <input type="text" class="form-control" placeholder="장소 검색" id="searchSample01">
-                                <button class="btn" type="button"><i class="material-icons">search</i></button>
-                            </div>
-                            <div class="flex" style="max-width: 100%">
-                                <span class="badge badge-accent">Badges</span>
-                                <span class="badge badge-primary">Badges</span>
-                                <span class="badge badge-dark">Badges</span>
-                                <span class="badge badge-secondary">Badges</span>
-                                <span class="badge badge-success">Badges</span>
-                                <span class="badge badge-info">Badges</span>
-                                <span class="badge badge-warning">Badges</span>
-                                <span class="badge badge-danger">Badges</span>
-                            </div>
+                        <div class="search-value d-flex align-items-center">
+                            <span class="d-flex align-items-center text-muted">검색결과<strong class="text-danger">26</strong>건</span>
                         </div>
-                        <div class="cell o-hidden mb-0">
-                            <div class="card-header-tabs-basic nav" role="tablist">
-                                <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="tab01">Traffic</a>
-                                <a href="#tab02" data-toggle="tab" role="tab" aria-selected="tab02">Purchases</a>
-                                <a href="#tab03" data-toggle="tab" role="tab" aria-selected="tab03">Quotes</a>
-                            </div>
-                            <div class="tab-content">
-                                <div id="tab01" class="tab-pane active" role="tabpanel">
-                                    <div class="form-row">
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label class="form-label" for="validationSample01">First name</label>
-                                            <input type="text" class="form-control" id="validationSample01" placeholder="First name" value="Mark" required="">
-                                            <div class="invalid-feedback">Please provide a first name.</div>
-                                            <div class="valid-feedback">Looks good!</div>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label class="form-label" for="validationSample02">Last name</label>
-                                            <input type="text" class="form-control" id="validationSample02" placeholder="Last name" value="Otto" required="">
-                                            <div class="invalid-feedback">Please provide a last name.</div>
-                                            <div class="valid-feedback">Looks good!</div>
-                                        </div>
+                        <div class="list-group list-group-flush mb-4">
+                            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center">
+                                <div class="flex d-flex align-items-center">
+                                    <div class="flex list-cover">
+                                        <a class="card-title" href="#n">소화기</a>
+                                        <div class="card-subtitle text-70">물류창고 2번 출구</div>
                                     </div>
-                                    <div class="card card--elevated posts-card-popular overlay card-group-row__card">
-                                        <img src="images/slider01.jpg" alt="" class="card-img">
-                                        <div class="posts-card-popular__content">
-                                            <div class="card-body d-flex align-items-center">
-                                                <a style="text-decoration: none;" class="d-flex align-items-center" href=""><i class="material-icons mr-1" style="font-size: inherit;">favorite</i> <small>327</small></a>
-                                            </div>
-                                            <div class="posts-card-popular__title card-body">
-                                                <small class="text-muted text-uppercase">sketch</small>
-                                                <a class="card-title" href="#n">Merge Duplicates Inconsistent
-                                                    Symbols</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card card--elevated posts-card-popular overlay card-group-row__card">
-                                        <img src="images/slider02.jpg" alt="" class="card-img">
-                                        <div class="posts-card-popular__content">
-                                            <div class="card-body d-flex align-items-center">
-                                                <a style="text-decoration: none;" class="d-flex align-items-center" href=""><i class="material-icons mr-1" style="font-size: inherit;">favorite</i> <small>327</small></a>
-                                            </div>
-                                            <div class="posts-card-popular__title card-body">
-                                                <small class="text-muted text-uppercase">sketch</small>
-                                                <a class="card-title" href="#n">Merge Duplicates Inconsistent
-                                                    Symbols</a>
-                                            </div>
-                                        </div>
+                                    <div class="d-flex flex-column align-items-center">
+                                        <span class="img-cover">
+                                            <img src="images/fire_ext.jpg" alt="">
+                                        </span>
                                     </div>
                                 </div>
-                                <div id="tab02" class="tab-pane" role="tabpanel">tab02</div>
-                                <div id="tab03" class="tab-pane" role="tabpanel">tab03</div>
+                            </div>
+                            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center">
+                                <div class="flex d-flex align-items-center">
+                                    <div class="flex list-cover">
+                                        <a class="card-title" href="#n">화재감지 센서</a>
+                                        <div class="card-subtitle text-70">건물 4층</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center">
+                                <div class="flex d-flex align-items-center">
+                                    <div class="flex list-cover">
+                                        <a class="card-title" href="#n">직원 식당</a>
+                                        <div class="card-subtitle text-70">A동 식당</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center">
+                                <div class="flex d-flex align-items-center">
+                                    <div class="flex list-cover">
+                                        <a class="card-title" href="#n">홍길동</a>
+                                        <div class="card-subtitle text-70">23세/남성</div>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex flex-column align-items-center">
+                                    <span class="lead text-headings lh-1 text-50"><i class="material-icons">warning</i></span>
+                                </div> -->
                             </div>
                         </div>
+                        <ul class="pagination justify-content-center pagination-xsm m-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>Prev</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 1">
+                                    <span>1</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 2">
+                                    <span>2</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>Next</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="tab-pane sm-projects active" id="sm-projects">
-                        <!-- 프로젝트 없을때 -->
-                        <div class="project-inner d-none">
-                            <div class="tit-intro">
-                                <em>프로젝트가 없습니다.</em>
-                                <p>프로젝트를 만들어 보세요.</p>
-                                <a href="platform-design-02.html" class="btn btn-accent">프로젝트 만들기</a>
-                            </div>
-                        </div>
+                    <div class="tab-pane sm-projects" id="sm-projects">
                         <!-- 정보입력 -->
                         <div class="project-inner">
                             <div class="step mb-4">
                                 <div class="container-fluid page__container">
                                     <div class="progression-bar progression-bar--active-accent">
-                                        <a href="#n" class="progression-bar__item progression-bar__item--complete progression-bar__item--active">
+                                        <a href="#n"
+                                            class="progression-bar__item progression-bar__item--complete progression-bar__item--active">
                                             <span class="progression-bar__item-content">
                                                 <i class="material-icons progression-bar__item-icon">done</i>
                                                 <span class="mb-0 text-uppercase">정보입력</span>
@@ -179,14 +171,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label text-50 essential">내용</label>
-                                    <div style="height: 150px;"
-                                     data-toggle="quill"
-                                     data-quill-placeholder="Quill WYSIWYG editor"
-                                     data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                    <p>Hello World!</p>
-                                    <p>Some initial <strong>bold</strong> text</p>
-                                    <p><br></p>
-                                </div>
+                                    <div style="height: 150px;" data-toggle="quill"
+                                        data-quill-placeholder="Quill WYSIWYG editor"
+                                        data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
+                                        <p>Hello World!</p>
+                                        <p>Some initial <strong>bold</strong> text</p>
+                                        <p><br></p>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="formFile" class="form-label text-50">파일등록</label>
@@ -197,21 +188,24 @@
                                     <div class="set-list">
                                         <label class="form-label mb-0" for="option01">남은 데이터<span>(1GB이하)</span></label>
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                            <input checked="" type="checkbox" id="option01" class="custom-control-input">
+                                            <input checked="" type="checkbox" id="option01"
+                                                class="custom-control-input">
                                             <label class="custom-control-label" for="option01">active</label>
                                         </div>
                                     </div>
                                     <div class="set-list">
                                         <label class="form-label mb-0" for="option02">옵션2</label>
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                            <input checked="" type="checkbox" id="option02" class="custom-control-input">
+                                            <input checked="" type="checkbox" id="option02"
+                                                class="custom-control-input">
                                             <label class="custom-control-label" for="option02">active</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="student-take-course.html" class="btn btn-outline-secondary mr-8pt">임시저장</a>
+                                        <a href="student-take-course.html"
+                                            class="btn btn-outline-secondary mr-8pt">임시저장</a>
                                         <a href="student-take-lesson.html" class="btn btn-accent ml-0">저장후 다음단계</a>
                                     </div>
                                 </div>
@@ -219,18 +213,14 @@
                         </div>
                         <!-- 프로젝트 리스트 -->
                         <div class="project-inner d-none">
-                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
                                         <h3 class="mb-0">프로젝트</h3>
                                         <p class="text-70 mb-0">현재 진행중인 프로젝트 목록입니다.</p>
                                     </div>
                                 </div>
-                                <div class="row" role="tablist">
-                                    <div class="col-auto">
-                                        <a href="#n" class="btn btn-outline-secondary">신규등록</a>
-                                    </div>
-                                </div>
+                                <a href="#n" class="btn btn-outline-secondary">신규등록</a>
                             </div>
                             <div class="container-fluid">
                                 <div class="form-group">
@@ -245,7 +235,7 @@
                                 </div>
                                 <div class="list-group row-list list-group-flush mb-4">
                                     <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
-                                        <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
                                             <div class="d-flex flex-column align-items-center">
                                                 <a href="#n" class="pj-favorite active"><i class="material-icons">star</i></a>
                                             </div>
@@ -255,26 +245,32 @@
                                             </a>
                                             <div class="flex">
                                                 <a class="card-title" href="#n">스타트업 캠퍼스 2동 4층</a>
-                                                <div class="card-subtitle text-50"><span class="badge badge-pill badge-accent">NEW</span> 2021.01.07
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-pill badge-accent">NEW</span> 2021.01.07
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
                                                     수정</a>
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
-                                        <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                    <div
+                                        class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
                                             <div class="d-flex flex-column align-items-center">
-                                                <a href="#n" class="pj-favorite active"><i class="material-icons">star</i></a>
+                                                <a href="#n" class="pj-favorite active"><i
+                                                        class="material-icons">star</i></a>
                                             </div>
                                             <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
                                                 <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
@@ -286,18 +282,22 @@
                                             </div>
                                         </div>
                                         <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
                                                     수정</a>
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
-                                        <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                    <div
+                                        class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
                                             <div class="d-flex flex-column align-items-center">
                                                 <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
                                             </div>
@@ -307,23 +307,27 @@
                                             </a>
                                             <div class="flex">
                                                 <a class="card-title" href="#n">메가시티</a>
-                                                <div class="card-subtitle text-50"><span class="badge badge-pill badge-accent">NEW</span> 2021.01.07
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-pill badge-accent">NEW</span> 2021.01.07
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
                                                     수정</a>
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
-                                        <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
                                             <div class="d-flex flex-column align-items-center">
                                                 <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
                                             </div>
@@ -337,18 +341,21 @@
                                             </div>
                                         </div>
                                         <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
                                                     수정</a>
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
-                                        <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
                                             <div class="d-flex flex-column align-items-center">
                                                 <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
                                             </div>
@@ -362,18 +369,21 @@
                                             </div>
                                         </div>
                                         <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
                                                     수정</a>
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
-                                        <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
                                             <div class="d-flex flex-column align-items-center">
                                                 <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
                                             </div>
@@ -387,18 +397,21 @@
                                             </div>
                                         </div>
                                         <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
                                                     수정</a>
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
-                                        <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
                                             <div class="d-flex flex-column align-items-center">
                                                 <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
                                             </div>
@@ -412,18 +425,21 @@
                                             </div>
                                         </div>
                                         <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
                                                     수정</a>
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
-                                        <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
                                             <div class="d-flex flex-column align-items-center">
                                                 <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
                                             </div>
@@ -437,13 +453,16 @@
                                             </div>
                                         </div>
                                         <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
                                                     수정</a>
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
@@ -478,13 +497,14 @@
                     </div>
                     <div class="tab-pane sm-solution" id="sm-solution">
                         <div class="solution-inner">
-                            <div class="container-fluid d-flex flex-md-row align-items-center text-center text-sm-left py-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
                                         <h3 class="mb-0">솔루션</h3>
                                         <p class="text-70 mb-0">솔루션을 구매해 보세요.</p>
                                     </div>
                                 </div>
+                                <a href="#n" class="btn btn-outline-secondary">신규등록</a>
                             </div>
                             <div class="container-fluid">
                                 <!-- 솔루션 없을때 -->
@@ -509,27 +529,32 @@
                                             </div>
                                             <div class="mt-12pt">
                                                 <div class="d-flex align-items-center">
-                                                    <span class="material-icons icon-16pt text-white mr-8pt">check</span>
+                                                    <span
+                                                        class="material-icons icon-16pt text-white mr-8pt">check</span>
                                                     <p class="flex text-white lh-1 mb-0"><small>Fundamentals of working
                                                             with Angular</small></p>
                                                 </div>
                                                 <div class="d-flex align-items-center">
-                                                    <span class="material-icons icon-16pt text-white mr-8pt">check</span>
+                                                    <span
+                                                        class="material-icons icon-16pt text-white mr-8pt">check</span>
                                                     <p class="flex text-white lh-1 mb-0"><small>Create complete Angular
                                                             applications</small></p>
                                                 </div>
                                                 <div class="d-flex align-items-center">
-                                                    <span class="material-icons icon-16pt text-white mr-8pt">check</span>
+                                                    <span
+                                                        class="material-icons icon-16pt text-white mr-8pt">check</span>
                                                     <p class="flex text-white lh-1 mb-0"><small>Working with the Angular
                                                             CLI</small></p>
                                                 </div>
                                                 <div class="d-flex align-items-center">
-                                                    <span class="material-icons icon-16pt text-white mr-8pt">check</span>
+                                                    <span
+                                                        class="material-icons icon-16pt text-white mr-8pt">check</span>
                                                     <p class="flex text-white lh-1 mb-0"><small>Understanding Dependency
                                                             Injection</small></p>
                                                 </div>
                                                 <div class="d-flex align-items-center">
-                                                    <span class="material-icons icon-16pt text-white mr-8pt">check</span>
+                                                    <span
+                                                        class="material-icons icon-16pt text-white mr-8pt">check</span>
                                                     <p class="flex text-white lh-1 mb-0"><small>Testing with
                                                             Angular</small></p>
                                                 </div>
@@ -540,7 +565,8 @@
                                         <label for="sm-office" class="card-body d-flex flex-column m-0">
                                             <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
                                             <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <div
+                                                    class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
                                                     <i class="fas fa-building"></i>
                                                 </div>
                                                 <div class="flex">
@@ -548,7 +574,8 @@
                                                     <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
                                                 </div>
                                             </div>
-                                            <input id="sm-office" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <input id="sm-office" name="radio-stacked" type="radio"
+                                                class="custom-control-input">
                                             <div class="custom-control custom-radio d-none">
                                                 <label for="sm-office" class="custom-control-label">Smart Office</label>
                                             </div>
@@ -587,7 +614,8 @@
                                     <div class="card method">
                                         <label for="sm-hospoital" class="card-body d-flex flex-column m-0">
                                             <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <div
+                                                    class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
                                                     <i class="fas fa-hospital-alt"></i>
                                                 </div>
                                                 <div class="flex">
@@ -595,14 +623,16 @@
                                                     <p class="m-0 text-70">의료 지원 솔루션 직원 및 보다 편리한 제공 병원 경험</p>
                                                 </div>
                                             </div>
-                                            <input id="sm-hospoital" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <input id="sm-hospoital" name="radio-stacked" type="radio"
+                                                class="custom-control-input">
 
                                         </label>
                                     </div>
                                     <div class="card method">
                                         <label for="sm-factory" class="card-body d-flex flex-column m-0">
                                             <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <div
+                                                    class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
                                                     <i class="fas fa-city"></i>
                                                 </div>
                                                 <div class="flex">
@@ -610,13 +640,15 @@
                                                     <p class="m-0 text-70">스마트 자산 관리 도구를 사용하여 안전한 작업 환경을 만드는 솔루션</p>
                                                 </div>
                                             </div>
-                                            <input id="sm-factory" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <input id="sm-factory" name="radio-stacked" type="radio"
+                                                class="custom-control-input">
                                         </label>
                                     </div>
                                     <div class="card method">
                                         <label for="sm-store" class="card-body d-flex flex-column m-0">
                                             <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <div
+                                                    class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
                                                     <i class="fas fa-store"></i>
                                                 </div>
                                                 <div class="flex">
@@ -624,13 +656,15 @@
                                                     <p class="m-0 text-70">의료 지원 솔루션 직원 및 보다 편리한 제공 병원 경험</p>
                                                 </div>
                                             </div>
-                                            <input id="sm-store" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <input id="sm-store" name="radio-stacked" type="radio"
+                                                class="custom-control-input">
                                         </label>
                                     </div>
                                     <div class="card method">
                                         <label for="sm-school" class="card-body d-flex flex-column m-0">
                                             <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <div
+                                                    class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
                                                     <i class="fas fa-school"></i>
                                                 </div>
                                                 <div class="flex">
@@ -638,13 +672,15 @@
                                                     <p class="m-0 text-70">의료 지원 솔루션 직원 및 보다 편리한 제공 병원 경험</p>
                                                 </div>
                                             </div>
-                                            <input id="sm-school" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <input id="sm-school" name="radio-stacked" type="radio"
+                                                class="custom-control-input">
                                         </label>
                                     </div>
                                     <div class="card method">
                                         <label for="sm-logistics" class="card-body d-flex flex-column m-0">
                                             <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <div
+                                                    class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
                                                     <i class="fas fa-shipping-fast"></i>
                                                 </div>
                                                 <div class="flex">
@@ -652,7 +688,8 @@
                                                     <p class="m-0 text-70">의료 지원 솔루션 직원 및 보다 편리한 제공 병원 경험</p>
                                                 </div>
                                             </div>
-                                            <input id="sm-logistics" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <input id="sm-logistics" name="radio-stacked" type="radio"
+                                                class="custom-control-input">
                                         </label>
                                     </div>
                                     <div class="my-32pt">
@@ -665,161 +702,313 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-events" id="sm-events">
-                        <!-- 이벤트 등록 -->
+                    <div class="tab-pane sm-events active" id="sm-events">
+                        <!-- 이벤트 없을때 -->
+                        <div class="event-inner d-none">
+                            <div class="tit-intro">
+                                <em>이벤트가 없습니다.</em>
+                                <p>이벤트를 등록해 보세요.</p>
+                                <a href="#n" class="btn btn-accent">이벤트 등록</a>
+                            </div>
+                        </div>
+                        <!-- 이벤트 리스트 -->
                         <div class="event-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
                                     <div class="mr-24pt">
-                                        <h3 class="mb-0">이벤트 등록</h3>
-                                        <p class="text-70 mb-0">이벤트 등록 페이지</p>
+                                        <h3 class="mb-0">이벤트</h3>
+                                        <p class="text-70 mb-0">현재 진행중인 이벤트 목록입니다.</p>
                                     </div>
                                 </div>
                                 <a href="#n" class="btn btn-outline-secondary">신규등록</a>
                             </div>
                             <div class="container-fluid">
-                                <div class="mb-32pt">
-                                    <ul class="accordion accordion--boxed js-accordion mb-0" id="toc-1">
-                                        <li class="accordion__item open">
-                                            <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
-                                                <span class="flex text-accent">4개의 이벤트</span>
-                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                <div class="list-group row-list list-group-flush mb-4">
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite active"><i class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
                                             </a>
-                                            <div class="accordion__menu">
-                                                <ul class="list-unstyled collapse show" id="toc-content-1">
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">open_with</span>
-                                                        <a class="flex" href="#n">반경설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">query_builder</span>
-                                                        <a class="flex" href="#n">알림설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">tab_unselected</span>
-                                                        <a class="flex" href="#n">구역설정</a>
-                                                        <span class="text-muted">2020.01.01</span>
-                                                    </li>
-                                                    <li class="accordion__menu-link">
-                                                        <span class="material-icons icon-16pt icon--left text-body">error_outline</span>
-                                                        <a class="flex" href="#n">경보설정</a>
-                                                    </li>
-                                                </ul>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">스타트업 캠퍼스 2동 4층</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-pill badge-accent">NEW</span> 2021.01.07
+                                                </div>
                                             </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label essential text-50" for="">이벤트 제목</label>
-                                    <input type="text" class="form-line" id="" placeholder="이벤트 제목을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label essential text-50" for="">이벤트 타입</label>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite active"><i class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n"><small class="text-50">[복사]</small> 스타트업 캠퍼스 2동 4층</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-pill badge-accent">NEW</span> 2021.01.07
+                                                </div>
+                                            </div>
+                                        </div>
 
-
-                                    <div class="envent-tab nav mb-4" role="tablist">
-                                        <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
-                                            <span class="menu-cover">
-                                                <i class="material-icons">local_fire_department</i><span>화재</span>
-                                            </span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite active"><i
+                                                        class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">강남역 센트럴 푸르지오시티</a>
+                                                <div class="card-subtitle text-50">2020.11.21</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">메가시티</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-pill badge-accent">NEW</span> 2021.01.07
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider04.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">메리츠타워</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">국립어린이청소년도서관</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">판교역</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">삼성서울병원</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-0">
+                                        <div class="flex d-flex align-items-center mr-16pt mb-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="#n" class="pj-favorite"><i class="material-icons">star</i></a>
+                                            </div>
+                                            <a href="#n" class="avatar overlay overlay--primary avatar-4by3 mr-12pt">
+                                                <img src="images/slider04.jpg" alt="" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">서울숲힐스테이트</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="pagination justify-content-center pagination-xsm m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
                                         </a>
-                                        <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                            <span class="menu-cover">
-                                                <i class="material-icons">warning</i><span>긴급상황</span>
-                                            </span>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1">
+                                            <span>1</span>
                                         </a>
-                                        <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                            <span class="menu-cover">
-                                                <i class="material-icons">coronavirus</i><span>감염병</span>
-                                            </span>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2">
+                                            <span>2</span>
                                         </a>
-                                        <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                            <span class="menu-cover">
-                                                <i class="material-icons">local_hospital</i><span>응급환자</span>
-                                            </span>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
                                         </a>
-                                    </div>
-
-                                    <div class="tab-content">
-                                        <div id="tab01" class="tab-pane active" role="tabpanel">
-                                        </div>
-                                        <div id="tab02" class="tab-pane" role="tabpanel">
-                                        </div>
-                                        <div id="tab03" class="tab-pane" role="tabpanel">
-                                        </div>
-                                        <div id="tab04" class="tab-pane" role="tabpanel">
-                                        </div>
-                                    </div>
-
-
-                                    <!-- <div class="radio-tile-group">
-                                        <div class="input-container">
-                                            <input id="event-fire" class="radio-button" type="radio" name="event-type" />
-                                            <div class="radio-tile">
-                                                <i class="material-icons">local_fire_department</i>
-                                                <label for="event-fire" class="radio-tile-label">화재</label>
-                                            </div>
-                                        </div>
-                                        <div class="input-container">
-                                            <input id="event-warning" class="radio-button" type="radio" name="event-type" />
-                                            <div class="radio-tile">
-                                                <i class="material-icons">warning</i>
-                                                <label for="event-warning" class="radio-tile-label">긴급상황</label>
-                                            </div>
-                                        </div>
-                                        <div class="input-container">
-                                            <input id="event-virus" class="radio-button" type="radio" name="event-type" />
-                                            <div class="radio-tile">
-                                                <i class="material-icons">coronavirus</i>
-                                                <label for="event-virus" class="radio-tile-label">감염병</label>
-                                            </div>
-                                        </div>
-                                        <div class="input-container">
-                                            <input id="event-emergency" class="radio-button" type="radio" name="event-type" />
-                                            <div class="radio-tile">
-                                                <i class="material-icons">local_hospital</i>
-                                                <label for="event-emergency" class="radio-tile-label">응급환자</label>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label for="formFile" class="form-label text-50">파일등록</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="dateRangePickerSample02">날짜선택</label>
-                                    <input id="dateRangePickerSample02" type="text" class="form-line" placeholder="Range example" data-toggle="daterangepicker" data-daterangepicker-drops="up" data-daterangepicker-start-date="2021/01/01" data-daterangepicker-end-date="2021/01/31">
-                                </div>
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample01">위도</label>
-                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample02">경도</label>
-                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
-                                    </div>
-                                </div>
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample01">각도</label>
-                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
-                                    </div>
-                                    <div class="col-md-6 over-txt">
-                                        <label class="form-label text-50" for="dateRangePickerSample02">반경</label>
-                                        <input type="number" class="form-line pr-5" value="">
-                                        <em class="text-50">meters</em>
-                                    </div>
-                                </div>
-                                <div class="mt-64pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">임시저장</a>
-                                        <a href="#n" class="btn btn-accent ml-0">저장후 다음단계</a>
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <!-- 경고 -->
@@ -895,6 +1084,55 @@
                         </div>
                     </div>
                     <div class="tab-pane sm-setting" id="sm-setting">
+                        <div class="top-cell">
+                            <div class="app-cover">
+                                <img src="images/logo/symbol_col.svg" alt="Avatar" class="avatar-img rounded">
+                            </div>
+                            <h5>WATA Platform</h5>
+                            <p>현재버전 1.0 (최신버전 1.1)</p>
+                            <a href="#n" class="btn btn-outline">소프트웨어 업데이트</a>
+                        </div>
+                        <div class="container-fluid d-flex align-items-center py-4">
+                            <div class="flex d-flex">
+                                <div class="mr-24pt">
+                                    <h3 class="mb-0">환경설정</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group">
+                                <div class="set-list">
+                                    <label class="form-label mb-0" for="option01">자동업데이트</label>
+                                    <div class="control-cover">
+                                        <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                            <input checked="" type="checkbox" id="option03"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="option03">active</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="set-list">
+                                    <label class="form-label mb-0" for="option02">옵션2</label>
+                                    <div class="control-cover">
+                                        <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                            <input checked="" type="checkbox" id="option04"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="option04">active</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="set-list">
+                                    <label class="form-label mb-0" for="option02">언어선택</label>
+                                    <div class="control-cover">
+                                        <select class="">
+                                            <option value="">Korean</option>
+                                            <option value="">Japanese</option>
+                                            <option value="">English</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -902,8 +1140,6 @@
     </div>
     <!-- // END drawer -->
 </div>
-
-<!-- // END Drawer Layout -->
 
 
 @@include('./include/platform-footer.html')

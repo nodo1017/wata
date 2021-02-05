@@ -8,42 +8,7 @@
     <!-- drawer -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact">
-            <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-                <!-- Brand -->
-                <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
-                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
-                </a>
-                <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-                    <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                        <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
-                                <span class="sidebar-menu-text">프로젝트</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item" data-title="Solution" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-solution" data-toggle="tab" role="tab" aria-controls="sm_account">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">redeem</i>
-                                <span class="sidebar-menu-text">솔루션</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item" data-title="Events" data-placement="right" data-container="body"
-                            data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-events" data-toggle="tab" role="tab"
-                                aria-controls="sm-event">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">pin_drop</i>
-                                <span class="sidebar-menu-text">이벤트</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item" data-title="Metting" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab" aria-controls="sm-setting">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
-                                <span class="sidebar-menu-text">설정</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            @@include('./include/platform-side-menu.html')
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
                     <div class="tab-pane platform-home" id="platform-home">

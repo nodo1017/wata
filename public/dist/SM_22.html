@@ -766,24 +766,23 @@
         </div>
     </div>
     <!-- mouse pointer -->
-    <div class="mouse-point user" style="left: 45.5%; top: 51%;"></div>
-    <div class="mouse-point user" style="left: 44.5%; top: 51%;"></div>
-    <div class="mouse-point user" style="left: 45%; top: 51.5%;"></div>
-    <div class="mouse-point user" style="left: 46%; top: 52.5%;"></div>
-    <div class="mouse-point user" style="left: 44%; top: 50.3%;"></div>
-    <div class="mouse-point user" style="left: 45%; top: 50.1%;"></div>
-    <div class="mouse-point user" style="left: 46.2%; top: 52%;"></div>
-
-    <div class="mouse-point user" style="left: 35%; top: 35%;"></div>
+    <div class="mouse-point user" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 46%; top: 52.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 44%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 45%; top: 50.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 46.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
     <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
     <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
     <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
-    <div class="mouse-point user active" style="left: 52%; top: 26%;"></div>
+    <div class="mouse-point user-red" style="left: 52%; top: 26%;" data-toggle="tooltip" data-title="A-1239" data-placement="right" data-boundary="window"></div>
     <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
-    <div class="mouse-point user" style="left: 62%; top: 43%;"></div>
-    <div class="mouse-point user" style="left: 32%; top: 16%;"></div>
-    <div class="mouse-point user" style="left: 75%; top: 65%;"></div>
-    <div class="mouse-point user" style="left: 42%; top: 23%;"></div>
+    <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
+    <div class="mouse-point user" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window"></div>
     <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
     <div class="mouse-point manager" style="left: 55%; top: 50%;"></div>
     <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
@@ -795,7 +794,7 @@
             </div>
             <div class="flex">
                 <small>
-                    <strong>화재가 발생했습니다.</strong>
+                    <strong>화재가 발생했습니.</strong>
                 </small>
             </div>
             <div class="ml-8pt">
@@ -825,41 +824,49 @@
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact">
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-                <!-- Brand -->
-                <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
-                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
+    <!-- Brand -->
+    <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
+        <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
+    </a>
+    <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs"
+            role="tablist">
+            <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body"
+                data-boundary="window">
+                <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab"
+                    aria-controls="sm-projects">
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
+                    <span class="sidebar-menu-text">프로젝트</span>
                 </a>
-                <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-                    <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                        <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
-                                <span class="sidebar-menu-text">프로젝트</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item " data-title="Solution" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-solution" data-toggle="tab" role="tab" aria-controls="sm_account">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">redeem</i>
-                                <span class="sidebar-menu-text">솔루션</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item" data-title="Events" data-placement="right" data-container="body"
-                            data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-events" data-toggle="tab" role="tab"
-                                aria-controls="sm-event">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">pin_drop</i>
-                                <span class="sidebar-menu-text">이벤트</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item " data-title="Metting" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab" aria-controls="sm-setting">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
-                                <span class="sidebar-menu-text">설정</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </li>
+            <li class="sidebar-menu-item" data-title="Solution" data-placement="right" data-container="body"
+                data-boundary="window">
+                <a class="sidebar-menu-button" href="#sm-solution" data-toggle="tab" role="tab"
+                    aria-controls="sm_account">
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">redeem</i>
+                    <span class="sidebar-menu-text">솔루션</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item" data-title="Events" data-placement="right" data-container="body"
+                data-boundary="window">
+                <a class="sidebar-menu-button" href="#sm-events" data-toggle="tab" role="tab"
+                    aria-controls="sm-event">
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">pin_drop</i>
+                    <span class="sidebar-menu-text">이벤트</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item" data-title="Metting" data-placement="right" data-container="body"
+                data-boundary="window">
+                <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab"
+                    aria-controls="sm-setting">
+                    <i
+                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
+                    <span class="sidebar-menu-text">설정</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
                     <div class="tab-pane platform-home" id="platform-home">
