@@ -58,7 +58,7 @@
 
 <body class="layout-compact">
 
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="sk-chase">
             <div class="sk-chase-dot"></div>
             <div class="sk-chase-dot"></div>
@@ -67,7 +67,7 @@
             <div class="sk-chase-dot"></div>
             <div class="sk-chase-dot"></div>
         </div>
-    </div>
+    </div> -->
 
 
 <!-- Drawer Layout -->
@@ -540,25 +540,26 @@
             </ul>
         </div>
         <!-- mouse pointer -->
-        <div class="mouse-point" style="background-color: #EA4444; left: 45%; top: 51%;"></div>
-        <div class="mouse-point"
-            style="background-color: #5297DA; left: 35%; top: 35%;"></div>
-        <div class="mouse-point"
-            style="background-color: #694FD6; left: 55%; top: 66%;"></div>
-        <div class="mouse-point active"
-            style="background-color: #CE40AA; left: 52%; top: 26%;"></div>
-        <div class="mouse-point"
-            style="background-color: #FF9333; left: 62%; top: 43%;"></div>
-        <div class="mouse-point"
-            style="background-color: #FFD633; left: 25%; top: 16%;"></div>
-        <div class="mouse-point"
-            style="background-color: #47D3D9; left: 75%; top: 26%;"></div>
-        <div class="mouse-point"
-            style="border-color: #7DC97F; box-shadow: 0 0 5px rgba(125,201,127,0.7); left: 42%; top: 23%;"></div>
-        <div class="mouse-point"
-            style="background-color: #777; left: 50%; top: 27%;"></div>
-        <div class="mouse-point user-warning"
-            style="border-color: #777; box-shadow: 0 0 5px rgba(0,0,0,0.3); left: 50%; top: 32%;">S</div>
+        <div class="mouse-point user" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 46%; top: 52.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 44%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 45%; top: 50.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 46.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
+        <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
+        <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
+        <div class="mouse-point user-red" style="left: 52%; top: 26%;" data-toggle="tooltip" data-title="A-1239" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
+        <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
+        <div class="mouse-point manager" style="left: 55%; top: 50%;"></div>
+        <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
         <!-- alert -->
         <div class="map-alert d-flex alert bg-accent text-white fade show m-0" role="alert">
             <div class="d-flex align-items-center">
@@ -612,20 +613,28 @@
                     <span class="sidebar-menu-text">프로젝트</span>
                 </a>
             </li>
+            <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body"
+                data-boundary="window">
+                <a class="sidebar-menu-button" href="#sm-event" data-toggle="tab" role="tab"
+                    aria-controls="sm-projects">
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">local_mall</i>
+                    <span class="sidebar-menu-text">이벤트</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item" data-title="Events" data-placement="right" data-container="body"
+                data-boundary="window">
+                <a class="sidebar-menu-button" href="#sm-accident" data-toggle="tab" role="tab"
+                    aria-controls="sm-event">
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">error_outline</i>
+                    <span class="sidebar-menu-text">사고관리</span>
+                </a>
+            </li>
             <li class="sidebar-menu-item" data-title="Solution" data-placement="right" data-container="body"
                 data-boundary="window">
                 <a class="sidebar-menu-button" href="#sm-solution" data-toggle="tab" role="tab"
                     aria-controls="sm_account">
                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">redeem</i>
                     <span class="sidebar-menu-text">솔루션</span>
-                </a>
-            </li>
-            <li class="sidebar-menu-item" data-title="Events" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-events" data-toggle="tab" role="tab"
-                    aria-controls="sm-event">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">pin_drop</i>
-                    <span class="sidebar-menu-text">이벤트</span>
                 </a>
             </li>
             <li class="sidebar-menu-item" data-title="Metting" data-placement="right" data-container="body"
