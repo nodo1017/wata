@@ -71,6 +71,7 @@
 
 
 <!-- Drawer Layout -->
+
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
         <!-- Header -->
     <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
@@ -822,6 +823,13 @@
         //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
     </script>
 </div>
+
+    <!-- drawer -->
+    <!-- <div class="navbar-toggler-box">
+        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+    </div> -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
@@ -973,7 +981,7 @@
                                 </div>
                                 <div class="row" role="tablist">
                                     <div class="col-auto">
-                                        <a href="project_write.html" class="btn btn-outline-dark">신규등록</a>
+                                        <a href="project_write.html" class="btn btn-outline-secondary">신규등록</a>
                                     </div>
                                 </div>
                             </div>
@@ -1209,7 +1217,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-event" id="sm-event">
+                    <div class="tab-pane sm-event active" id="sm-event">
                         <!-- 이벤트 리스트 -->
                         <div class="event-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center py-4">
@@ -1650,13 +1658,163 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-accident active" id="sm-accident">
-                        <!-- 사고관리 리스트 없을때 -->
+                    <div class="tab-pane sm-accident" id="sm-accident">
+                        <!-- 사고관리 리스트 -->
                         <div class="event-inner">
-                            <div class="tit-intro">
-                                <em>이벤트가 없습니다.</em>
-                                <p>이벤트를 등록해 보세요.</p>
-                                <a href="accident_write.html" class="btn btn-accent">이벤트 등록</a>
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">사고관리 리스트</h3>
+                                        <p class="text-70 mb-0">현재까지 등록된 사고관리 리스트입니다.</p>
+                                    </div>
+                                </div>
+                                <a href="accident_write.html" class="btn btn-outline-dark">신규등록</a>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="list-group row-list list-group-flush mb-4">
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="accident_board.html" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">local_fire_department</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="accident_board.html">스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
+                                                <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">local_fire_department</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n"><small class="text-50">[복사]</small> 스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
+                                                <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">warning</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n">강남역 센트럴 푸르지오시티</a>
+                                                <div class="card-subtitle text-50">2020.11.21</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">coronavirus</i></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">메가시티</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">local_hospital</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n">삼성서울병원</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="pagination justify-content-center pagination-xsm m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1">
+                                            <span>1</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2">
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1666,8 +1824,7 @@
                                 <img src="images/logo/symbol_col.svg" alt="Avatar" class="avatar-img rounded">
                             </div>
                             <h5>WATA Platform</h5>
-                            <p>현재버전 1.0 (최신버전 1.1)</p>
-                            <a href="#n" class="btn btn-outline">소프트웨어 업데이트</a>
+                            <p class="m-0">현재버전 1.0 (최신버전 1.1)</p>
                         </div>
                         <div class="container-fluid d-flex align-items-center py-4">
                             <div class="flex d-flex">
@@ -1717,6 +1874,8 @@
     </div>
     <!-- // END drawer -->
 </div>
+
+<!-- // END Drawer Layout -->
 
 
     <div class="cd-panel cd-panel--from-right js-cd-panel-main">
@@ -2036,3 +2195,4 @@
 </body>
 
 </html>
+

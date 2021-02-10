@@ -2030,7 +2030,6 @@ platform map
     }
     .emg-stat {
         position: relative;
-        z-index: 1;
         background: rgb(236, 16, 76);
         background: linear-gradient(45deg, rgba(236, 16, 76, 1) 0%, rgb(253, 95, 3) 100%);
         .emg-top {
@@ -3161,21 +3160,23 @@ map options
             background: url(../images/person_pin_unknow_view.svg) no-repeat center;
         }
     }
+    &.warning-fire, &.warning-cau, &.warning-virus, &.warning-emg, &.place_pin{
+        padding: 1.5rem;
+    }
     &.warning-fire{
-        padding: 2rem;
         background: url(../images/warning_fire.svg) no-repeat center;
     }
     &.warning-cau{
-        padding: 2rem;
         background: url(../images/warning_cau.svg) no-repeat center;
     }
     &.warning-virus{
-        padding: 2rem;
         background: url(../images/warning_virus.svg) no-repeat center;
     }
     &.warning-emg{
-        padding: 2rem;
         background: url(../images/warning_emg.svg) no-repeat center;
+    }
+    &.place_pin{
+        background: url(../images/place_pin.svg) no-repeat center;
     }
     &.manager{
         background: url(../images/local_police.svg) no-repeat center;
