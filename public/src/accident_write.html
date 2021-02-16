@@ -352,7 +352,7 @@
                                 </div>
                                 <div class="row" role="tablist">
                                     <div class="col-auto">
-                                        <a href="event_write.html" class="btn btn-outline-secondary">신규등록</a>
+                                        <a href="event_write.html" class="btn btn-outline-dark">신규등록</a>
                                     </div>
                                 </div>
                             </div>
@@ -588,6 +588,89 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane sm-accident active" id="sm-accident">
+                        <!-- 이벤트 등록 -->
+                        <div class="event-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">사고 등록</h3>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <a href="#n" class="btn btn-outline-accent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons icon--left">timeline</i> 기능 선택</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-header"><strong>범위 지정</strong></div>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">highlight_alt</i> 구조물 선택</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">adjust</i> 범위 선택</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">timeline</i> 선 그리기</a>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="dropdown-header"><strong>위치 지정</strong></div>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">warning</i>긴급상황</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">local_fire_department</i>화재</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">local_hospital</i>구조요청</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">coronavirus</i>감염병</a>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="dropdown-header"><strong>사용자 지정</strong></div>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">place</i> 위치 선택</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1. 기능 선택 -->
+                            <!-- <div class="container-fluid">
+                                <em class="none-list">기능선택을 해주세요.</em>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- 2. 정보입력 -->
+                            <div class="container-fluid">
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential text-50">사고 종류</label>
+                                    <select name="category" class="form-line">
+                                        <option value="경보 이벤트">긴급 상황</option>
+                                        <option value="화재">화재</option>
+                                        <option value="감염병">구조요청</option>
+                                        <option value="구조">감염병</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential text-50">사고 위치</label>
+                                    <input type="text" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                </div>
+                                
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">위도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample02">경도</label>
+                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">각도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="col-md-6 over-txt">
+                                        <label class="form-label text-50" for="dateRangePickerSample02">반경</label>
+                                        <input type="number" class="form-line pr-5" value="">
+                                        <em class="text-50">meters</em>
+                                    </div>
+                                </div>
+                                <div class="mt-64pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                                        <a href="accident_board.html" class="btn btn-accent ml-0">등록하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane sm-solution" id="sm-solution">
                         <div class="solution-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
@@ -776,87 +859,6 @@
                                     <div class="d-flex align-items-center justify-content-center">
                                         <a href="#n" class="btn btn-outline-secondary mr-8pt">취소</a>
                                         <a href="#n" class="btn btn-accent ml-0">다음단계</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane sm-accident active" id="sm-accident">
-                        <!-- 이벤트 등록 -->
-                        <div class="event-inner">
-                            <div class="container-fluid d-flex align-items-center py-4">
-                                <div class="flex d-flex">
-                                    <div class="mr-24pt">
-                                        <h3 class="mb-0">사고 등록</h3>
-                                    </div>
-                                </div>
-                                <div class="btn-group">
-                                    <a href="#n" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons icon--left">timeline</i> 기능 선택</a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <div class="dropdown-header"><strong>범위 지정</strong></div>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">highlight_alt</i> 구조물 선택</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">adjust</i> 범위 선택</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">timeline</i> 선 그리기</a>
-                                        <div class="dropdown-divider"></div>
-                                        <div class="dropdown-header"><strong>위치 지정</strong></div>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">warning</i>긴급상황</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">local_fire_department</i>화재</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">local_hospital</i>구조요청</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">coronavirus</i>감염병</a>
-                                        <div class="dropdown-divider"></div>
-                                        <div class="dropdown-header"><strong>사용자 지정</strong></div>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">place</i> 위치 선택</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label essential text-50">사고 종류</label>
-                                    <select name="category" class="form-line">
-                                        <option value="경보 이벤트">긴급 상황</option>
-                                        <option value="화재">화재</option>
-                                        <option value="감염병">감염병</option>
-                                        <option value="구조">구조</option>
-                                        <option value="테러">테러</option>
-                                        <option value="범죄">범죄</option>
-                                        <option value="홍수">홍수</option>
-                                        <option value="지진">지진</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label essential text-50">사고 위치</label>
-                                    <select name="category" class="form-line">
-                                        <option value="A동">A동</option>
-                                        <option value="B동">B동</option>
-                                        <option value="C동">C동</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample01">위도</label>
-                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample02">경도</label>
-                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
-                                    </div>
-                                </div>
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample01">각도</label>
-                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
-                                    </div>
-                                    <div class="col-md-6 over-txt">
-                                        <label class="form-label text-50" for="dateRangePickerSample02">반경</label>
-                                        <input type="number" class="form-line pr-5" value="">
-                                        <em class="text-50">meters</em>
-                                    </div>
-                                </div>
-                                <div class="mt-64pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">임시저장</a>
-                                        <a href="accident_board.html" class="btn btn-accent ml-0">사고관리 등록</a>
                                     </div>
                                 </div>
                             </div>

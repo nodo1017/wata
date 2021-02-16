@@ -352,7 +352,7 @@
                                 </div>
                                 <div class="row" role="tablist">
                                     <div class="col-auto">
-                                        <a href="event_write.html" class="btn btn-outline-secondary">신규등록</a>
+                                        <a href="event_write.html" class="btn btn-outline-dark">신규등록</a>
                                     </div>
                                 </div>
                             </div>
@@ -588,6 +588,168 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane sm-accident active" id="sm-accident">
+                        <!-- 경고 -->
+                        <div class="event-inner">
+                            <!-- <div class="video-bg">
+                                <video autoplay muted loop id="myVideo">
+                                    <source src="video/bg_fire.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <div class="video-inner d-flex justify-content-center align-items-center">
+                                    <div class="txt-cover">
+                                        <h1 class="m-0" title="화재경보">화재경보</h2>
+                                            <p class="m-0">화재 위험이 감지되었습니다</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="emg-stat p-16pt">
+                                <div class="emg-top d-flex align-items-center pb-12pt mb-16pt">
+                                    <a href="accident_list.html" title="목록으로" class="go-back"><span class="material-icons text-white">arrow_back</span></a>
+                                    <div class="d-flex col-auto">
+                                        <p class="text-white mb-0">최초 감지 시간</p>
+                                    </div>
+                                    <div class="col p-0 text-right">
+                                        <strong class="mb-0 text-white">2020.01.13 06:42:58</strong>
+                                    </div>
+                                </div>
+                                <div class="emg-con py-8pt text-center">
+                                    <em class="time mb-2">00:01:24</em>
+                                    <p class="tit m-0">경과시간</p>
+                                </div>
+                            </div>
+                            <div class="emg-info">
+                                <div class="info-col info-col-line d-flex align-items-center">
+                                    <p class="flex m-0">사고종류</p>
+                                    <strong>화재</strong>
+                                </div>
+                                <div class="info-col info-col-line d-flex align-items-center">
+                                    <p class="flex m-0">사고위치</p>
+                                    <strong>판교스타트업캠퍼스 4층</strong>
+                                </div>
+                                <div class="info-col info-col-line">
+                                    <div class="d-flex align-items-center">
+                                        <p class="flex m-0">재실인원</p>
+                                        <strong class="text-accent font-size-24pt">40명</strong>
+                                    </div>
+                                    <div class="card-body mt-2" data-perfect-scrollbar>
+                                        <div class="card-inner">
+                                            <ul>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="flex m-0">발송이력</p>
+                                </div>
+                                <div class="card-body mt-2" data-perfect-scrollbar>
+                                    <div class="card-inner">
+                                        <ul>
+                                            <li><a href="#n"><span>[화재]</span>화재가발생했습니다 <small>20.01.13 06:42:58</small></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50 essential" for="projectTitle">제목</label>
+                                    <input type="text" class="form-line" id="projectTitle" placeholder="제목을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <div style="height: 130px;" data-toggle="quill"
+                                        data-quill-placeholder="화재가 발생했습니다."
+                                        data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50" for="">링크 URL</label>
+                                    <input type="text" class="form-line" id="" placeholder="URL 주소를 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label for="formFile" class="form-label text-50">파일등록</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                </div>
+                                <!-- <div class="form-group mb-32pt">
+                                    <div class="envent-tab nav mb-4" role="tablist">
+                                        <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                                            <span class="menu-cover">
+                                                <i class="material-icons">local_fire_department</i><span>화재</span>
+                                            </span>
+                                        </a>
+                                        <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover">
+                                                <i class="material-icons">warning</i><span>긴급상황</span>
+                                            </span>
+                                        </a>
+                                        <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover">
+                                                <i class="material-icons">coronavirus</i><span>감염병</span>
+                                            </span>
+                                        </a>
+                                        <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover">
+                                                <i class="material-icons">local_hospital</i><span>응급환자</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div id="tab01" class="tab-pane active" role="tabpanel">
+                                            <div class="form-group mb-4">
+                                                <div style="height: 130px;" data-toggle="quill"
+                                                    data-quill-placeholder="화재가 발생했습니다."
+                                                    data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-32pt">
+                                                <label class="form-label essential text-50" for="">링크 URL</label>
+                                                <input type="text" class="form-line" id="" placeholder="URL 주소를 입력해주세요.">
+                                            </div>
+                                            <div class="form-group mb-32pt">
+                                                <label for="formFile" class="form-label text-50">파일등록</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                        <div id="tab02" class="tab-pane" role="tabpanel">
+                                            <div class="form-group mb-4">
+                                                <div style="height: 130px;" data-toggle="quill"
+                                                    data-quill-placeholder="긴급상황이 발생했습니다."
+                                                    data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-32pt">
+                                                <label class="form-label essential text-50" for="">링크 URL</label>
+                                                <input type="text" class="form-line" id="" placeholder="URL 주소를 입력해주세요.">
+                                            </div>
+                                            <div class="form-group mb-32pt">
+                                                <label for="formFile" class="form-label text-50">파일등록</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                        <div id="tab03" class="tab-pane" role="tabpanel">
+                                        </div>
+                                        <div id="tab04" class="tab-pane" role="tabpanel">
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="mt-48pt">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="#n" class="btn btn-outline-secondary">상황 종료</a>
+                                    <a href="accident_done.html" class="btn btn-accent ml-3">메세지 전송</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
                     <div class="tab-pane sm-solution" id="sm-solution">
                         <div class="solution-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
@@ -777,168 +939,6 @@
                                         <a href="#n" class="btn btn-outline-secondary mr-8pt">취소</a>
                                         <a href="#n" class="btn btn-accent ml-0">다음단계</a>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane sm-accident active" id="sm-accident">
-                        <!-- 경고 -->
-                        <div class="event-inner">
-                            <!-- <div class="video-bg">
-                                <video autoplay muted loop id="myVideo">
-                                    <source src="video/bg_fire.mp4" type="video/mp4">
-                                    Your browser does not support HTML5 video.
-                                </video>
-                                <div class="video-inner d-flex justify-content-center align-items-center">
-                                    <div class="txt-cover">
-                                        <h1 class="m-0" title="화재경보">화재경보</h2>
-                                            <p class="m-0">화재 위험이 감지되었습니다</p>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class="emg-stat p-16pt">
-                                <div class="emg-top d-flex align-items-center pb-12pt mb-16pt">
-                                    <a href="accident_list.html" title="목록으로" class="go-back"><span class="material-icons text-white">arrow_back</span></a>
-                                    <div class="d-flex col-auto">
-                                        <p class="text-white mb-0">최초 감지 시간</p>
-                                    </div>
-                                    <div class="col p-0 text-right">
-                                        <strong class="mb-0 text-white">2020.01.13 06:42:58</strong>
-                                    </div>
-                                </div>
-                                <div class="emg-con py-8pt text-center">
-                                    <em class="time mb-2">00:01:24</em>
-                                    <p class="tit m-0">경과시간</p>
-                                </div>
-                            </div>
-                            <div class="emg-info">
-                                <div class="info-col info-col-line d-flex align-items-center">
-                                    <p class="flex m-0">사고종류</p>
-                                    <strong>화재</strong>
-                                </div>
-                                <div class="info-col info-col-line d-flex align-items-center">
-                                    <p class="flex m-0">사고위치</p>
-                                    <strong>판교스타트업캠퍼스 4층</strong>
-                                </div>
-                                <div class="info-col info-col-line">
-                                    <div class="d-flex align-items-center">
-                                        <p class="flex m-0">재실인원</p>
-                                        <strong class="text-accent font-size-24pt">40명</strong>
-                                    </div>
-                                    <div class="card-body mt-2" data-perfect-scrollbar>
-                                        <div class="card-inner">
-                                            <ul>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                                <li><a href="#n">01012345678 / 남성 / 23세</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <p class="flex m-0">발송이력</p>
-                                </div>
-                                <div class="card-body mt-2" data-perfect-scrollbar>
-                                    <div class="card-inner">
-                                        <ul>
-                                            <li><a href="#n"><span>[화재]</span>화재가발생했습니다 <small>20.01.13 06:42:58</small></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="form-group">
-                                    <label class="form-label mb-0 text-50 essential" for="projectTitle">제목</label>
-                                    <input type="text" class="form-line" id="projectTitle" placeholder="제목을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-4">
-                                    <div style="height: 130px;" data-toggle="quill"
-                                        data-quill-placeholder="화재가 발생했습니다."
-                                        data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50" for="">링크 URL</label>
-                                    <input type="text" class="form-line" id="" placeholder="URL 주소를 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label for="formFile" class="form-label text-50">파일등록</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div>
-                                <!-- <div class="form-group mb-32pt">
-                                    <div class="envent-tab nav mb-4" role="tablist">
-                                        <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
-                                            <span class="menu-cover">
-                                                <i class="material-icons">local_fire_department</i><span>화재</span>
-                                            </span>
-                                        </a>
-                                        <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                            <span class="menu-cover">
-                                                <i class="material-icons">warning</i><span>긴급상황</span>
-                                            </span>
-                                        </a>
-                                        <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                            <span class="menu-cover">
-                                                <i class="material-icons">coronavirus</i><span>감염병</span>
-                                            </span>
-                                        </a>
-                                        <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                            <span class="menu-cover">
-                                                <i class="material-icons">local_hospital</i><span>응급환자</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="tab-content">
-                                        <div id="tab01" class="tab-pane active" role="tabpanel">
-                                            <div class="form-group mb-4">
-                                                <div style="height: 130px;" data-toggle="quill"
-                                                    data-quill-placeholder="화재가 발생했습니다."
-                                                    data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                                </div>
-                                            </div>
-                                            <div class="form-group mb-32pt">
-                                                <label class="form-label essential text-50" for="">링크 URL</label>
-                                                <input type="text" class="form-line" id="" placeholder="URL 주소를 입력해주세요.">
-                                            </div>
-                                            <div class="form-group mb-32pt">
-                                                <label for="formFile" class="form-label text-50">파일등록</label>
-                                                <input class="form-control" type="file" id="formFile">
-                                            </div>
-                                        </div>
-                                        <div id="tab02" class="tab-pane" role="tabpanel">
-                                            <div class="form-group mb-4">
-                                                <div style="height: 130px;" data-toggle="quill"
-                                                    data-quill-placeholder="긴급상황이 발생했습니다."
-                                                    data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                                </div>
-                                            </div>
-                                            <div class="form-group mb-32pt">
-                                                <label class="form-label essential text-50" for="">링크 URL</label>
-                                                <input type="text" class="form-line" id="" placeholder="URL 주소를 입력해주세요.">
-                                            </div>
-                                            <div class="form-group mb-32pt">
-                                                <label for="formFile" class="form-label text-50">파일등록</label>
-                                                <input class="form-control" type="file" id="formFile">
-                                            </div>
-                                        </div>
-                                        <div id="tab03" class="tab-pane" role="tabpanel">
-                                        </div>
-                                        <div id="tab04" class="tab-pane" role="tabpanel">
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
-                            <div class="mt-48pt">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <a href="#n" class="btn btn-outline-secondary">상황 종료</a>
-                                    <a href="accident_done.html" class="btn btn-accent ml-3">메세지 전송</a>
                                 </div>
                             </div>
                         </div>

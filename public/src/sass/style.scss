@@ -62,6 +62,14 @@ body.layout-compact{
     background-clip: padding-box;
     border: none;
     border-bottom: 1px solid #384046;
+    &:disabled{
+        opacity: 0.3;
+    }
+}
+.custom-checkbox-toggle{
+    .custom-control-label{
+        font-size: 0;
+    }
 }
 .text-iden{
     color: $identity;
@@ -1262,7 +1270,6 @@ platform map
         }
     }
 }
-
 .nav-search{
     display: flex;
     align-items: center;
@@ -1430,6 +1437,15 @@ platform map
             transform: rotate(-45deg);
             background-color: #FFFFFF;
         }
+    }
+}
+.container-fluid{
+    em.none-list{
+        display: block;
+        text-align: center;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 2rem 0;
     }
 }
 @keyframes rotate-circle {
