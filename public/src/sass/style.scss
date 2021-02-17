@@ -2352,9 +2352,12 @@ map options
             color: #fff;
             box-shadow: none;
         }
+        i{
+            line-height: 1;
+        }
     }
     .dropdown-menu {
-        width: 250px;
+        width: 260px;
     }
     ul.item-list {
         display: flex;
@@ -2368,8 +2371,7 @@ map options
         }
 
         li {
-            width: 33.3%;
-
+            width: 25%;
             a {
                 display: block;
                 text-align: center;
@@ -2540,18 +2542,15 @@ map options
                 border-radius: 50px;
                 justify-content: flex-end;
                 background-color: #dbe1e6;
-
                 i {
                     font-size: 0.625rem;
                 }
-
                 &:hover {
                     background-color: darken(#dbe1e6, 5%);
                 }
             }
             &:hover {
                 width: 40px;
-
                 span.dot-icon {
                     -moz-transform: scale(1.2);
                     -ms-transform: scale(1.2);
@@ -2559,11 +2558,24 @@ map options
                     -webkit-transform: scale(1.2);
                     transform: scale(1.2);
                 }
-
                 span.btn-remove {
                     width: 100%;
                     opacity: 1;
                 }
+                .mouse-point{
+                    -moz-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    -o-transform: scale(1.2);
+                    -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+                }
+            }
+            .mouse-point{
+                padding: .75rem;
+                display: inline-flex;
+                position: absolute;
+                left: 0;
+                transition: all .2s ease;
             }
         }
         .nav {
@@ -3166,15 +3178,9 @@ map options
     @include transition(all, 0.2s, ease-in-out);
     &.user{
         background: url(../images/person_pin.svg) no-repeat center;
-        &:hover{
-            background: url(../images/person_pin_view.svg) no-repeat center;
-        }
     }
     &.user-unknow{
         background: url(../images/person_pin_unknow.svg) no-repeat center;
-        &:hover{
-            background: url(../images/person_pin_unknow_view.svg) no-repeat center;
-        }
     }
     &.warning-fire, &.warning-cau, &.warning-virus, &.warning-emg, &.place_pin{
         padding: 1.5rem;
@@ -3196,15 +3202,9 @@ map options
     }
     &.manager{
         background: url(../images/local_police.svg) no-repeat center;
-        &:hover{
-            background: url(../images/local_police_view.svg) no-repeat center;
-        }
     }
     &.user-red{
         background: url(../images/person_pin_red.svg) no-repeat center;
-        &:hover{
-            background: url(../images/person_pin_red_view.svg) no-repeat center;
-        }
     }
     &:hover{
         -moz-transform: scale(1.25);
