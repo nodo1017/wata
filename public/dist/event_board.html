@@ -1218,250 +1218,87 @@
                         </div>
                     </div>
                     <div class="tab-pane sm-event active" id="sm-event">
-                        <!-- 이벤트 리스트 -->
+                        <!-- 프로젝트 등록 -->
                         <div class="event-inner">
-                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">이벤트</h3>
-                                        <p class="text-70 mb-0">현재 진행중인 이벤트 목록입니다.</p>
-                                    </div>
-                                </div>
-                                <div class="row" role="tablist">
-                                    <div class="col-auto">
-                                        <a href="event_write.html" class="btn btn-outline-dark">신규등록</a>
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <a href="event_list.html"><i class="material-icons">arrow_back_ios</i></a>
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">이벤트 보기</h3>
                                     </div>
                                 </div>
                             </div>
-                            <div class="container-fluid">
+                            <div class="container-fluid contents-view">
                                 <div class="form-group">
-                                    <label class="form-label">Category</label>
-                                    <select name="category" class="form-control custom-select">
-                                        <option value="vuejs">전체</option>
-                                        <option value="vuejs">스마트빌딩</option>
-                                        <option value="vuejs">스마트팩토리</option>
-                                        <option value="vuejs">스마트아파트</option>
-                                        <option value="vuejs">스마트오피스텔</option>
-                                    </select>
+                                    <label class="form-label mb-0 text-50" for="eventName">이벤트명</label>
+                                    <p class="form-text">마감전 파이널 세일</p>
                                 </div>
-                                <div class="list-group row-list list-group-flush mb-4">
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="event_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="event_board.html">스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
-                                                <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventArea">구역</label>
+                                    <p class="form-text">본관 지하1층 롯데마트 프레쉬 코너</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">제목</label>
+                                    <p class="form-text">20:30분 마감 파이널 세일</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-50">내용</label>
+                                    <div class="form-text-content">
+                                        <p>마감 전까지 신선제품 50% 세일</p>
+                                        <h6>할인 품목</h6>
+                                        <ul>
+                                            <li>야채</li>
+                                            <li>고기</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formFile" class="form-label text-50">첨부파일</label>
+                                    <div class="form-row align-items-center">
+                                        <div class="col-auto">
+                                            <div class="avatar">
                                             </div>
                                         </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
-                                                    수정</a>
-                                                <a href="#n" class="dropdown-item"><i
-                                                        class="material-icons">content_copy</i> 복사</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i
-                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                        <div class="col">
+                                            <div class="font-weight-bold" data-dz-name="">fire_img.jpg</div>
+                                            <p class="small text-muted mb-0" data-dz-size=""><strong>0.2</strong> MB</p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#" class="text-muted-light" data-dz-remove="">
+                                                <i class="material-icons">close</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-50 mb-0" for="">알람설정</label>
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option01">활성화 여부</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option03"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label" for="option03">active</label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">강남역 센트럴 푸르지오시티</a>
-                                                <div class="card-subtitle text-50">2020.11.21</div>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>수정</a>
-                                                <a href="#n" class="dropdown-item"><i
-                                                        class="material-icons">content_copy</i> 복사</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i
-                                                        class="material-icons">delete_outline</i> 삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex">
-                                                <a class="card-title" href="#n">메가시티</a>
-                                                <div class="card-subtitle text-50"><span
-                                                        class="badge badge-accent">N</span> 2021.01.07
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
-                                                    수정</a>
-                                                <a href="#n" class="dropdown-item"><i
-                                                        class="material-icons">content_copy</i> 복사</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i
-                                                        class="material-icons">delete_outline</i> 삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt deactivate">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/slider04.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">메리츠타워</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
-                                                    수정</a>
-                                                <a href="#n" class="dropdown-item"><i
-                                                        class="material-icons">content_copy</i> 복사</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i
-                                                        class="material-icons">delete_outline</i> 삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt deactivate">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">국립어린이청소년도서관</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
-                                                    수정</a>
-                                                <a href="#n" class="dropdown-item"><i
-                                                        class="material-icons">content_copy</i> 복사</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i
-                                                        class="material-icons">delete_outline</i> 삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">판교역</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
-                                                    수정</a>
-                                                <a href="#n" class="dropdown-item"><i
-                                                        class="material-icons">content_copy</i> 복사</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i
-                                                        class="material-icons">delete_outline</i> 삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">삼성서울병원</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
-                                                    수정</a>
-                                                <a href="#n" class="dropdown-item"><i
-                                                        class="material-icons">content_copy</i> 복사</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i
-                                                        class="material-icons">delete_outline</i> 삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt0">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/slider04.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">서울숲힐스테이트</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
-                                                    수정</a>
-                                                <a href="#n" class="dropdown-item"><i
-                                                        class="material-icons">content_copy</i> 복사</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="#n" class="dropdown-item text-danger"><i
-                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option02">옵션2</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option04"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label" for="option04">active</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="pagination justify-content-center pagination-xsm m-0">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                            <span>Prev</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Page 1">
-                                            <span>1</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Page 2">
-                                            <span>2</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span>Next</span>
-                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">수정하기</a>
+                                        <a href="event_done.html" class="btn btn-accent ml-0">이벤트 종료</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1860,7 +1697,7 @@
                         <div class="container-fluid">
                             <div class="form-group">
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option01">자동업데이트</label>
+                                    <label class="form-label mb-0" for="option03">자동업데이트</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option03"
@@ -1870,7 +1707,7 @@
                                     </div>
                                 </div>
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option02">옵션2</label>
+                                    <label class="form-label mb-0" for="option04">옵션2</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option04"

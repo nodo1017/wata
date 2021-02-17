@@ -1448,6 +1448,30 @@ platform map
         padding: 2rem 0;
     }
 }
+.contents-view{
+    border-top: 1px solid $border-color;
+    padding-top: 2rem;
+    .form-group{
+        border-bottom: 1px solid $border-color;
+    }
+    .form-text{
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: .5rem 0;
+        font-weight: 500;
+        margin: 0;
+    }
+    .form-text-content{
+        line-height: 1.5;
+        font-weight: 500;
+        h1,h2,h3,h4,h5,h6,p,span,em,a,ul,ol,dl,dt,dd,li{
+            font-size: 1rem;
+            margin-bottom: .5rem;
+            color: #272c33;
+            font-weight: 500;
+        }
+    }
+}
 @keyframes rotate-circle {
     0% {
         transform: rotate(-45deg);
