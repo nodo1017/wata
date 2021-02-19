@@ -353,7 +353,7 @@
                         <div class="event-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
-                                    <a href="event_list.html"><i class="material-icons">arrow_back_ios</i></a>
+                                    <a href="event_list.html" class="pr-2"><i class="material-icons">arrow_back</i></a>
                                     <div class="mr-24pt">
                                         <h3 class="mb-0">이벤트 보기</h3>
                                     </div>
@@ -361,8 +361,11 @@
                             </div>
                             <div class="container-fluid contents-view">
                                 <div class="form-group">
-                                    <label class="form-label mb-0 text-50" for="eventName">이벤트명</label>
-                                    <p class="form-text">마감전 파이널 세일</p>
+                                    <em class="form-title">마감전 파이널 세일</em>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventArea">기간</label>
+                                    <p class="form-text">2021-02-01 ~ 2021-02-28</p>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label mb-0 text-50" for="eventArea">구역</label>
@@ -388,38 +391,28 @@
                                     <div class="form-row align-items-center">
                                         <div class="col-auto">
                                             <div class="avatar">
+                                                <img src="images/slider01.jpg" class="avatar-img rounded" alt="">
                                             </div>
                                         </div>
                                         <div class="col">
-                                            <div class="font-weight-bold" data-dz-name="">fire_img.jpg</div>
+                                            <div class="font-weight-bold" data-dz-name="">coupon_img.jpg</div>
                                             <p class="small text-muted mb-0" data-dz-size=""><strong>0.2</strong> MB</p>
                                         </div>
                                         <div class="col-auto">
                                             <a href="#" class="text-muted-light" data-dz-remove="">
-                                                <i class="material-icons">close</i>
+                                                <i class="material-icons">file_download</i>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label text-50 mb-0" for="">알람설정</label>
                                     <div class="set-list">
                                         <label class="form-label mb-0" for="option01">활성화 여부</label>
                                         <div class="control-cover">
                                             <div class="custom-control custom-checkbox-toggle ml-8pt">
                                                 <input checked="" type="checkbox" id="option03"
-                                                    class="custom-control-input">
+                                                    class="custom-control-input" checked="checked" onclick="return false">
                                                 <label class="custom-control-label" for="option03">active</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="set-list">
-                                        <label class="form-label mb-0" for="option02">옵션2</label>
-                                        <div class="control-cover">
-                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                <input checked="" type="checkbox" id="option04"
-                                                    class="custom-control-input">
-                                                <label class="custom-control-label" for="option04">active</label>
                                             </div>
                                         </div>
                                     </div>

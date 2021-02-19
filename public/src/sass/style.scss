@@ -47,6 +47,69 @@ body.layout-compact{
         text-overflow: ellipsis;
         word-wrap: keep-all;
     }
+    .flatpickr-input{
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 1rem + 2px);
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #272c33;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        padding: .5rem .25rem;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #384046;
+        &:disabled{
+            opacity: 0.3;
+        }
+    }
+    ul.list-wrap{
+        margin: 0;
+        padding: 0;
+        border-radius: .25rem;
+        li{
+            &:hover{
+                background-color: #fafafa;
+            }
+            p{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 240px;
+            }
+            a{
+                &:hover{
+                    p{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            a.close{
+                position: absolute;
+                right: 1rem;
+            }
+            &.on{
+                span.icon-holder{
+                    background-color: $identity;
+                    border-color: $identity;
+                    color: #fff;
+                }
+            }
+            span.icon-holder{
+                display: inline-flex;
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 50%;
+                margin-right: .5rem;
+                width: 30px;
+                height: 30px;
+
+            }
+        }
+    }
 }
 .form-line {
     display: block;
@@ -82,6 +145,11 @@ body.layout-compact{
 }
 .application-shell-content {
     height: 2000px;
+}
+input, select{
+    &:focus{
+        outline: none;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -1451,24 +1519,116 @@ platform map
 .contents-view{
     border-top: 1px solid $border-color;
     padding-top: 2rem;
+    em.form-title{
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 600;
+    }
     .form-group{
         border-bottom: 1px solid $border-color;
+        padding-bottom: 1rem;
+        .set-list{
+            padding: 0;
+            &:last-of-type{
+                border: none;
+            }
+        }
     }
     .form-text{
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: .875rem;
+        line-height: 1;
         padding: .5rem 0;
         font-weight: 500;
         margin: 0;
     }
     .form-text-content{
-        line-height: 1.5;
+        line-height: 1;
         font-weight: 500;
         h1,h2,h3,h4,h5,h6,p,span,em,a,ul,ol,dl,dt,dd,li{
-            font-size: 1rem;
+            font-size: .875rem;
             margin-bottom: .5rem;
             color: #272c33;
             font-weight: 500;
+        }
+    }
+}
+.custom-depth{
+    z-index: 0;
+    .mdk-drawer__scrim{
+        visibility: hidden;
+        opacity: 0;
+    }
+    .mdk-drawer__content{
+        left: 463px;
+        height: calc(100% - 64px);
+        margin-top: 64px;
+    }
+}
+.sidebar-depth{
+    position: absolute;
+    top: 0;
+    left: 464px;
+    height: calc(100% - 64px);
+    margin-top: 64px;
+    z-index: 0;
+    width: 40%;
+    background-color: #fff;
+    .sidebar-depth-wrap{
+        padding: 3rem;
+    }
+    ul.nav{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        border-bottom: 1px solid #ddd;
+        li{
+            position: relative;
+            bottom: -1px;
+            margin-left: -1px;
+            &:first-child{
+                margin: 0;
+            }
+            a{
+                display: block;
+                position: relative;
+                border: 1px solid $border-color;
+                border-bottom-color: #ddd;
+                font-size: 1rem;
+                padding: .75rem 2rem;
+                background-color: #fafafa;
+                &.active{
+                    z-index: 1;
+                    border: 1px solid #ddd;
+                    border-bottom-color: #fff;
+                    border-top-color: $identity;
+                    background-color: #fff;
+                    color: $identity;
+                }
+            }
+        }
+    }
+    table{
+        margin-bottom: 5rem;
+        border-bottom: 1px solid $border-color;
+        thead, tbody{
+            th,td{
+                padding: 1rem .75rem !important;
+            }
+        }
+        td.noData{
+            text-align: center;
+            em{
+                display: block;
+                margin-bottom: .5rem;
+            }
+        }
+    }
+    .circle-cover{
+        
+    }
+    .rounded-circle{
+        i.fas{
+            font-size: 1.5rem;
         }
     }
 }

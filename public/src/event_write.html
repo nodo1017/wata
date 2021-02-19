@@ -387,30 +387,39 @@
                                     <input type="text" class="form-line" id="eventName" placeholder="이벤트명을 입력해주세요.">
                                 </div>
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50 essential" for="eventTitle">제목</label>
-                                    <input type="text" class="form-line" id="eventTitle" placeholder="제목을 입력해주세요.">
+                                    <label class="form-label mb-0 text-50 essential" for="eventName">기간</label>
+                                    <input id="flatpickrSample02"
+                                           type="hidden"
+                                           class="form-control flatpickr-input"
+                                           data-toggle="flatpickr"
+                                           data-flatpickr-mode="range"
+                                           value="2021-02-01 to 2021-02-28">
                                 </div>
                                 <div class="form-group mb-32pt">
                                     <label class="form-label mb-0 text-50 essential" for="eventArea">구역선택</label>
                                     <input type="text" class="form-line" id="eventArea" placeholder="구역을 선택해주세요." value="" required="">
                                 </div>
                                 <div class="form-group mb-32pt">
+                                    <label class="form-label mb-0 text-50 essential" for="eventTitle">제목</label>
+                                    <input type="text" class="form-line" id="eventTitle" placeholder="제목을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-32pt">
                                     <label class="form-label text-50 essential">내용</label>
                                     <div style="height: 150px;"
-                                     data-toggle="quill"
-                                     data-quill-placeholder="Quill WYSIWYG editor"
-                                     data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                    <p>Hello World!</p>
-                                    <p>Some initial <strong>bold</strong> text</p>
-                                    <p><br></p>
-                                </div>
+                                        data-toggle="quill"
+                                        data-quill-placeholder="Quill WYSIWYG editor"
+                                        data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
+                                        <p>Hello World!</p>
+                                        <p>Some initial <strong>bold</strong> text</p>
+                                        <p><br></p>
+                                    </div>
                                 </div>
                                 <div class="form-group mb-32pt">
                                     <label for="formFile" class="form-label text-50">파일등록</label>
                                     <input class="form-control" type="file" id="formFile">
                                 </div>
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 mb-0" for="">알람설정</label>
+                                    <label class="form-label text-50 mb-0" for="">설정</label>
                                     <div class="set-list">
                                         <label class="form-label mb-0" for="option01">활성화 여부</label>
                                         <div class="control-cover">
@@ -418,16 +427,6 @@
                                                 <input checked="" type="checkbox" id="option03"
                                                     class="custom-control-input">
                                                 <label class="custom-control-label" for="option03">active</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="set-list">
-                                        <label class="form-label mb-0" for="option02">옵션2</label>
-                                        <div class="control-cover">
-                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                <input checked="" type="checkbox" id="option04"
-                                                    class="custom-control-input">
-                                                <label class="custom-control-label" for="option04">active</label>
                                             </div>
                                         </div>
                                     </div>

@@ -975,19 +975,130 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-pane sm-projects" id="sm-projects">
-                        <!-- 프로젝트 리스트 -->
+                    <div class="tab-pane sm-projects active" id="sm-projects">
+                        <!-- 프로젝트 등록 -->
                         <div class="project-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">프로젝트 등록</h3>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <a href="#n" class="btn btn-outline-accent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">기능 선택</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-header"><strong>범위 지정</strong></div>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">highlight_alt</i> 구조물 선택</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">adjust</i> 범위 선택</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">timeline</i> 선 그리기</a>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="dropdown-header"><strong>사용자 지정</strong></div>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">place</i> 관리구역 A</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">place</i> 관리구역 B</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label mb-0 text-50 essential" for="projectName">프로젝트명</label>
+                                    <input type="text" class="form-line" id="projectName" placeholder="프로젝트명을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label mb-0 text-50 essential" for="projectTitle">제목</label>
+                                    <input type="text" class="form-line" id="projectTitle" placeholder="제목을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 essential">내용</label>
+                                    <div style="height: 150px;"
+                                     data-toggle="quill"
+                                     data-quill-placeholder="Quill WYSIWYG editor"
+                                     data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
+                                    <p>Hello World!</p>
+                                    <p>Some initial <strong>bold</strong> text</p>
+                                    <p><br></p>
+                                </div>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label for="" class="form-label text-50">지도등록</label>
+                                    <ul class="list-wrap">
+                                        <li class="list-group-item d-flex align-items-center on">
+                                            <span class="icon-holder">
+                                                <i class="material-icons icon-16pt">done</i>
+                                            </span>
+                                            <p class="m-0">sinbundang_pangyo_station.map</p>
+                                            <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#n" class="d-flex align-items-center">
+                                                <span class="icon-holder">
+                                                    <i class="material-icons icon-16pt">file_upload</i>
+                                                </span>
+                                                <p class="m-0">지도 등록</p>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#n" class="d-flex align-items-center">
+                                                <span class="icon-holder">
+                                                    <i class="material-icons icon-16pt">file_upload</i>
+                                                </span>
+                                                <p class="m-0">지도 등록</p>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#n" class="d-flex align-items-center">
+                                                <span class="icon-holder">
+                                                    <i class="material-icons icon-16pt">file_upload</i>
+                                                </span>
+                                                <p class="m-0">지도 등록</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 mb-0" for="">알람설정</label>
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option01">옵션1</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option03"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label" for="option03">active</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option02">옵션2</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option04"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label" for="option04">active</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                                        <a href="project_done.html" class="btn btn-accent ml-0">등록하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                                                                                                                                                                                                                      
+                    </div>
+                    <div class="tab-pane sm-event" id="sm-event"> 
+                        <!-- 이벤트 리스트 -->
+                        <div class="event-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center py-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
                                     <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">프로젝트</h3>
-                                        <p class="text-70 mb-0">현재 진행중인 프로젝트 목록입니다.</p>
+                                        <h3 class="mb-0">이벤트</h3>
+                                        <p class="text-70 mb-0">현재 진행중인 이벤트 목록입니다.</p>
                                     </div>
                                 </div>
                                 <div class="row" role="tablist">
                                     <div class="col-auto">
-                                        <a href="project_write.html" class="btn btn-outline-dark">신규등록</a>
+                                        <a href="event_write.html" class="btn btn-outline-dark">신규등록</a>
                                     </div>
                                 </div>
                             </div>
@@ -1005,11 +1116,11 @@
                                 <div class="list-group row-list list-group-flush mb-4">
                                     <div class="list-group-item d-flex">
                                         <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
+                                            <a href="event_board.html" class="avatar mr-12pt">
                                                 <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
                                             </a>
                                             <div class="flex list-els">
-                                                <a class="card-title" href="#n">스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
+                                                <a class="card-title" href="event_board.html">스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
                                                 <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
                                             </div>
                                         </div>
@@ -1076,7 +1187,7 @@
                                         </div>
                                     </div>
                                     <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
+                                        <div class="flex d-flex align-items-center mr-16pt deactivate">
                                             <a href="#n" class="avatar mr-12pt">
                                                 <img src="images/slider04.jpg" alt="" class="avatar-img rounded">
                                             </a>
@@ -1100,7 +1211,7 @@
                                         </div>
                                     </div>
                                     <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
+                                        <div class="flex d-flex align-items-center mr-16pt deactivate">
                                             <a href="#n" class="avatar mr-12pt">
                                                 <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
                                             </a>
@@ -1220,15 +1331,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane sm-event active" id="sm-event">
-                        <!-- 등록 완료 -->
-                        <div class="event-inner">
-                            <div class="tit-intro">
-                                <em>등록을 완료했습니다.</em>
-                                <a href="event_list.html" class="btn btn-accent">이벤트 목록</a>
                             </div>
                         </div>
                     </div>
@@ -1627,7 +1729,7 @@
                         <div class="container-fluid">
                             <div class="form-group">
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option01">자동업데이트</label>
+                                    <label class="form-label mb-0" for="option03">자동업데이트</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option03"
@@ -1637,7 +1739,7 @@
                                     </div>
                                 </div>
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option02">옵션2</label>
+                                    <label class="form-label mb-0" for="option04">옵션2</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option04"
@@ -1663,7 +1765,277 @@
             </div>
         </div>
     </div>
-    <!-- // END drawer -->
+    <div class="sidebar-depth">
+        <div class="sidebar-depth-wrap">
+            <ul class="nav" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#sidebar-menu01">내지도</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#sidebar-menu02">공공지도</a>
+                </li>
+            </ul>
+            <div class="tab-content mt-4 text-70">
+                <div id="sidebar-menu01" class="tab-pane active" role="tabpanel">
+                    <table class="table mb-4 thead-border-top-0 table-nowrap">
+                        <colgroup>
+                            <col width="5%" />
+                            <col width="*" />
+                            <col width="*" />
+                            <col width="*" />
+                            <col width="*" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="pr-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               class="custom-control-input js-toggle-check-all"
+                                               data-target="#projects"
+                                               id="customCheckAll">
+                                        <label class="custom-control-label"
+                                               for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                    </div>
+                                </th>
+                                <th>menu</th>
+                                <th>menu</th>
+                                <th>menu</th>
+                                <th>menu</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list" id="projects">
+                            <tr>
+                                <td colspan="5" class="noData">
+                                    <em>아직 등록된 파일이 없습니다.</em>
+                                    <a href="#n" class="btn btn-outline-accent btn-rounded btn-sm">파일등록</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pr-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               class="custom-control-input js-check-selected-row"
+                                               id="customCheck1_1">
+                                        <label class="custom-control-label"
+                                               for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                    </div>
+                                </td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               class="custom-control-input js-check-selected-row"
+                                               id="customCheck1_1">
+                                        <label class="custom-control-label"
+                                               for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                    </div>
+                                </td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               class="custom-control-input js-check-selected-row"
+                                               id="customCheck1_1">
+                                        <label class="custom-control-label"
+                                               for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                    </div>
+                                </td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination justify-content-center pagination-xsm m-0">
+                        <li class="page-item disabled">
+                            <a class="page-link"
+                               href="#"
+                               aria-label="Previous">
+                                <span aria-hidden="true"
+                                      class="material-icons">chevron_left</span>
+                                <span>Prev</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Page 1"><span>1</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Page 2"><span>2</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span>Next</span>
+                                <span aria-hidden="true" class="material-icons">chevron_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="sidebar-menu02" class="tab-pane" role="tabpanel">
+                    <h4 class="py-4">카테고리</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="d-flex col-md">
+                            <a href="#n" class="d-flex align-items-center justify-content-center">
+                                <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                    <i class="fas fa-subway text-white"></i>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title mb-4pt">지하철</div>
+                                    <p class="card-subtitle text-70">description.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex col-md">
+                            <a href="#n" class="d-flex align-items-center justify-content-center">
+                                <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                    <i class="fas fa-hotel text-white"></i>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title mb-4pt">백화점</div>
+                                    <p class="card-subtitle text-70">description.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex col-md">
+                            <a href="#n" class="d-flex align-items-center justify-content-center">
+                                <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                    <i class="fas fa-road text-white"></i>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title mb-4pt">공항</div>
+                                    <p class="card-subtitle text-70">description.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex col-md">
+                            <a href="#n" class="d-flex align-items-center justify-content-center">
+                                <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                    <i class="fas fa-hospital text-white"></i>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title mb-4pt">병원</div>
+                                    <p class="card-subtitle text-70">description.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <table class="table mb-4 table-nowrap">
+                        <colgroup>
+                            <col width="5%" />
+                            <col width="*" />
+                            <col width="*" />
+                            <col width="*" />
+                            <col width="*" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="pr-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               class="custom-control-input js-toggle-check-all"
+                                               data-target="#projects"
+                                               id="customCheckAll">
+                                        <label class="custom-control-label"
+                                               for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                    </div>
+                                </th>
+                                <th>menu</th>
+                                <th>menu</th>
+                                <th>menu</th>
+                                <th>menu</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list" id="projects">
+                            <tr>
+                                <td colspan="5" class="noData">
+                                    <em>아직 등록된 파일이 없습니다.</em>
+                                    <a href="#n" class="btn btn-outline-accent btn-rounded btn-sm">파일등록</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pr-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               class="custom-control-input js-check-selected-row"
+                                               id="customCheck1_1">
+                                        <label class="custom-control-label"
+                                               for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                    </div>
+                                </td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               class="custom-control-input js-check-selected-row"
+                                               id="customCheck1_1">
+                                        <label class="custom-control-label"
+                                               for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                    </div>
+                                </td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               class="custom-control-input js-check-selected-row"
+                                               id="customCheck1_1">
+                                        <label class="custom-control-label"
+                                               for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                    </div>
+                                </td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                                <td>item</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination justify-content-center pagination-xsm m-0">
+                        <li class="page-item disabled">
+                            <a class="page-link"
+                               href="#"
+                               aria-label="Previous">
+                                <span aria-hidden="true"
+                                      class="material-icons">chevron_left</span>
+                                <span>Prev</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Page 1"><span>1</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Page 2"><span>2</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span>Next</span>
+                                <span aria-hidden="true" class="material-icons">chevron_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- // END Drawer Layout -->
@@ -1986,4 +2358,3 @@
 </body>
 
 </html>
-
