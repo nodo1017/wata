@@ -1,0 +1,140 @@
+    <!-- Header -->
+    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+        <!-- history / live -->
+        <div class="nav-search">
+            <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
+            <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="status-map row align-items-center justify-content-center m-0">
+            <div class="tabBox mapStauts01 status-con active">
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="maps_write2.html" class="filter-dropdown-toggle on">
+                        <strong>지도 등록</strong>
+                    </a>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="#n" class="filter-dropdown-toggle">
+                        <strong>경로 편집</strong>
+                    </a>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="#n" class="filter-dropdown-toggle">
+                        <strong>실내지도 편집</strong>
+                    </a>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="#n" class="filter-dropdown-toggle">
+                        <strong>POI 편집</strong>
+                    </a>
+                </div>
+                <div class="filter-btn-cell d-flex align-items-center">
+                    <a href="#n" class=""><i class="material-icons mr-1">done</i> 저장</a>
+                    <span class="assi">(10분전 자동 저장)</span>
+                </div>
+            </div>
+            <div class="tabBox mapStauts02 status-con ml-32pt">
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">전체 이용객 수</span>
+                        <strong class="navbar-text-100">117명<span class="liveUser liveUser-up">2명 증가</span></strong>
+                    </small>
+                </span>
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">구역별 이용객 수</span>
+                        <strong class="navbar-text-100">11명<span class="liveUser liveUser-down">5명 감소</span></strong>
+                    </small>
+                </span>
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">사용자 체류시간</span>
+                        <strong class="navbar-text-100">10분</strong>
+                    </small>
+                </span>
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i class="material-icons">track_changes</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">구역별 방문 순위</span>
+                        <strong class="navbar-text-100">미디어회의실</strong>
+                    </small>
+                </span>
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i
+                                class="material-icons">notification_important</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">사고발생 건 수</span>
+                        <strong class="navbar-text-100">0건</strong>
+                    </small>
+                </span>
+                <div class="filter-btn-cell d-flex align-items-center">
+                    <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- menu -->
+        <!-- <ul class="nav navbar-nav flex justify-content-end">
+            <li class="nav-item active">
+                <a href="#n" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Data</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="#n" class="dropdown-item">Browse Courses</a>
+                    <a href="#n" class="dropdown-item">Preview Course</a>
+                    <a href="#n" class="dropdown-item">Preview Lesson</a>
+                    <a href="#n" class="dropdown-item">
+                        <span class="mr-16pt">Take Course</span>
+                        <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span>
+                    </a>
+                    <a href="#n" class="dropdown-item">Take Lesson</a>
+                    <a href="#n" class="dropdown-item">Take Quiz</a>
+                    <a href="#n" class="dropdown-item">Quiz Result</a>
+                    <a href="#n" class="dropdown-item">Student Dashboard</a>
+                    <a href="#n" class="dropdown-item">My Courses</a>
+                    <a href="#n" class="dropdown-item">My Quizzes</a>
+                    <a href="#n" class="dropdown-item">Help Center</a>
+                </div>
+            </li>
+        </ul> -->
+        <div class="d-flex flex justify-content-end align-items-center">
+            <div class="form-group m-0 ml-4 form-lang">
+                <select id="custom-select" class="form-line custom-line">
+                    <option selected="">KOR</option>
+                    <option value="1">JPN</option>
+                    <option value="2">ENG</option>
+                </select>
+            </div>
+            <div class="nav-item dropdown ml-4">
+                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                    <span class="avatar avatar-sm">
+                        <span class="avatar-title rounded-circle">SH</span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header"><strong>Account</strong></div>
+                    <a class="dropdown-item" href="#n">Edit Account</a>
+                    <a class="dropdown-item" href="#n">Billing</a>
+                    <a class="dropdown-item" href="#n">Payments</a>
+                    <a class="dropdown-item" href="#n">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>

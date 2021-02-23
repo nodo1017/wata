@@ -3905,7 +3905,7 @@ textarea.form-control {
 
 [dir] .btn.focus,
 [dir] .btn:focus {
-    box-shadow: 0 0 0 1px #5567ff
+    /* box-shadow: 0 0 0 1px #5567ff */
 }
 
 .btn.disabled,
@@ -3929,7 +3929,7 @@ textarea.form-control {
 
 [dir] .btn:not(:disabled):not(.disabled).active:focus,
 [dir] .btn:not(:disabled):not(.disabled):active:focus {
-    box-shadow: 0 0 0 1px #5567ff, inset 0 3px 5px rgba(39, 44, 51, .125)
+    /* box-shadow: 0 0 0 1px #5567ff, inset 0 3px 5px rgba(39, 44, 51, .125) */
 }
 
 a.btn.disabled,
@@ -15026,6 +15026,11 @@ a.close.disabled {
 [dir=ltr] .pr-5,
 [dir=ltr] .px-5 {
     padding-right: 3rem !important
+}
+
+[dir=ltr] .pr-6,
+[dir=ltr] .px-6 {
+    padding-right: 4rem !important
 }
 
 [dir=rtl] .pr-5,
