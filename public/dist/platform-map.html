@@ -51,6 +51,9 @@
      <!-- ion Range Slider -->
      <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet">
 
+     <!-- Dragula -->
+     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet">
+
     <!-- custom CSS -->
 	<link type="text/css" href="css/style.css" rel="stylesheet">
 
@@ -375,7 +378,7 @@
         </ul> -->
         <div class="d-flex flex justify-content-end align-items-center">
             <div class="form-group m-0 ml-4 form-lang">
-                <select id="custom-select" class="form-line custom-line">
+                <select id="custom-select" class="custom-line">
                     <option selected="">KOR</option>
                     <option value="1">JPN</option>
                     <option value="2">ENG</option>
@@ -826,7 +829,7 @@
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact">
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
     <!-- Brand -->
-    <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
+    <a href="sub.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
         <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
     </a>
     <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
@@ -845,7 +848,7 @@
                 <a class="sidebar-menu-button" href="#sm-maps" data-toggle="tab" role="tab"
                     aria-controls="sm-maps">
                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">map</i>
-                    <span class="sidebar-menu-text">공간등록</span>
+                    <span class="sidebar-menu-text">내지도</span>
                 </a>
             </li>
             <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body"
@@ -2504,6 +2507,20 @@
             })
         })()
     </script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
 
     <script src="js/custom.js"></script>
     <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->

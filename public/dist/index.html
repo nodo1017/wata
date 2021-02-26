@@ -64,22 +64,26 @@
 			<a href="index.html" class="navbar-brand mr-16pt">
 				<img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
 			</a>
+			<!-- <a href="index.html" class="navbar-brand mr-16pt">
+				<img src="images/logo/symbol_col.svg" alt="logo" class="img-fluid" style="max-width: 42px;" />
+			</a> -->
 		
 			<div class="nav navbar-nav flex justify-content-start ml-8pt cd-morph-dropdown">
 				<a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
 				<nav class="main-nav">
 					<ul>
-						<li class="has-dropdown" data-content="menu01">
-							<a href="#0">1depth</a>
-						</li>
-		
-						<li class="has-dropdown" data-content="menu02">
-							<a href="#0">1depth</a>
-						</li>
-		
 						<li>
-							<a href="platform-flow.html">Service</a>
+							<a href="home.html">Home</a>
 						</li>
+						<li>
+							<a href="sub.html">Place</a>
+						</li>
+						<li>
+							<a href="project.html">Project</a>
+						</li>
+						<!-- <li class="has-dropdown" data-content="menu02">
+							<a href="#n"></a>
+						</li> -->
 					</ul>
 				</nav>
 				<div class="morph-dropdown-wrapper">
@@ -113,174 +117,29 @@
 				</div>
 			</div>
 		
-			<a href="login.html"
-				class="navbar-toggler navbar-toggler-custom align-items-center justify-content-center d-none d-lg-flex"
-				data-toggle="tooltip" data-title="Switch to Compact Layout" data-placement="bottom"
-				data-boundary="window">
-				<span class="material-icons">lock_open</span>
-			</a>
-			<div class="navbar-nav flex-nowrap d-flex mr-16pt">
-		
-				<!-- Notifications dropdown -->
-				<div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full" data-toggle="tooltip"
-					data-title="Messages" data-placement="bottom" data-boundary="window">
-					<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown"
-						data-caret="false">
-						<i class="material-icons icon-24pt">mail_outline</i>
-					</button>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div data-perfect-scrollbar class="position-relative">
-							<div class="dropdown-header"><strong>Messages</strong></div>
-							<div class="list-group list-group-flush mb-0">
-		
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">5 minutes ago</small>
-		
-										<span class="ml-auto unread-indicator bg-accent"></span>
-		
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<img src="../../public/images/people/110/woman-5.jpg" alt="people"
-												class="avatar-img rounded-circle">
-										</span>
-										<span class="flex d-flex flex-column">
-											<strong class="text-black-100">Michelle</strong>
-											<span class="text-black-70">Clients loved the new design.</span>
-										</span>
-									</span>
-								</a>
-		
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">5 minutes ago</small>
-		
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<img src="../../public/images/people/110/woman-5.jpg" alt="people"
-												class="avatar-img rounded-circle">
-										</span>
-										<span class="flex d-flex flex-column">
-											<strong class="text-black-100">Michelle</strong>
-											<span class="text-black-70">🔥 Superb job..</span>
-										</span>
-									</span>
-								</a>
-		
-							</div>
-						</div>
-					</div>
+			<div class="d-flex flex justify-content-end align-items-center">
+				<div class="form-group m-0 ml-4 form-lang">
+					<select id="custom-select" class="custom-line">
+						<option selected="">KOR</option>
+						<option value="1">JPN</option>
+						<option value="2">ENG</option>
+					</select>
 				</div>
-				<!-- // END Notifications dropdown -->
-		
-				<!-- Notifications dropdown -->
-				<div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
-					data-toggle="tooltip" data-title="Notifications" data-placement="bottom" data-boundary="window">
-					<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown"
-						data-caret="false">
-						<i class="material-icons">notifications_none</i>
-						<span class="badge badge-notifications badge-accent">2</span>
-					</button>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div data-perfect-scrollbar class="position-relative">
-							<div class="dropdown-header"><strong>System notifications</strong></div>
-							<div class="list-group list-group-flush mb-0">
-		
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">3 minutes ago</small>
-		
-										<span class="ml-auto unread-indicator bg-accent"></span>
-		
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<span class="avatar-title rounded-circle bg-light">
-												<i class="material-icons font-size-16pt text-accent">account_circle</i>
-											</span>
-										</span>
-										<span class="flex d-flex flex-column">
-		
-											<span class="text-black-70">Your profile information has not been synced
-												correctly.</span>
-										</span>
-									</span>
-								</a>
-		
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">5 hours ago</small>
-		
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<span class="avatar-title rounded-circle bg-light">
-												<i class="material-icons font-size-16pt text-primary">group_add</i>
-											</span>
-										</span>
-										<span class="flex d-flex flex-column">
-											<strong class="text-black-100">Adrian. D</strong>
-											<span class="text-black-70">Wants to join your private group.</span>
-										</span>
-									</span>
-								</a>
-		
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">1 day ago</small>
-		
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<span class="avatar-title rounded-circle bg-light">
-												<i class="material-icons font-size-16pt text-warning">storage</i>
-											</span>
-										</span>
-										<span class="flex d-flex flex-column">
-		
-											<span class="text-black-70">Your deploy was successful.</span>
-										</span>
-									</span>
-								</a>
-		
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- // END Notifications dropdown -->
-		
-				<div class="nav-item dropdown">
-					<a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
-						data-caret="false">
-		
-						<span class="avatar avatar-sm mr-8pt2">
-		
-							<span class="avatar-title rounded-circle bg-primary"><i
-									class="material-icons">account_box</i></span>
-		
+				<div class="nav-item dropdown ml-4">
+					<a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+						<span class="avatar avatar-sm">
+							<span class="avatar-title rounded-circle">SH</span>
 						</span>
-		
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<div class="dropdown-header"><strong>Account</strong></div>
-						<a class="dropdown-item" href="edit-account.html">Edit Account</a>
-						<a class="dropdown-item" href="billing.html">Billing</a>
-						<a class="dropdown-item" href="billing-history.html">Payments</a>
-						<a class="dropdown-item" href="login.html">Logout</a>
+						<a class="dropdown-item" href="#n">Edit Account</a>
+						<a class="dropdown-item" href="#n">Billing</a>
+						<a class="dropdown-item" href="#n">Payments</a>
+						<a class="dropdown-item" href="#n">Logout</a>
 					</div>
 				</div>
 			</div>
-			<ul class="navbar-nav ml-auto mr-0">
-				<!-- <li class="nav-item">
-					<a href="login.html" class="nav-link" data-toggle="tooltip" data-title="Login"
-						data-placement="bottom" data-boundary="window"><i class="material-icons">lock_open</i></a>
-				</li> -->
-				<li class="nav-item">
-					<a href="platform-map.html" class="btn btn-outline-dark">Get Started</a>
-				</li>
-			</ul>
 		</div>
 	</div>
 </div>
@@ -1334,10 +1193,10 @@
 	<!-- // END Header Layout Content -->
 
 		<!-- Footer -->
-	<div class="border-top-2 mt-auto">
+	<div class="footer">
 		<div class="container page__container page-section d-flex flex-column">
 			<p class="text-70 brand mb-24pt">
-				<img class="brand-icon" src="images/logo/logo.svg" width="120" alt="Luma"> 와따
+				<img class="brand-icon" src="images/logo/logo.svg" width="100" alt="WATA"> 와따
 			</p>
 			<p class="measure-lead-max text-50 small mr-8pt">판교 스타트업 캠퍼스 1동
 			</p>

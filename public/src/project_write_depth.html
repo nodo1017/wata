@@ -105,49 +105,39 @@
                         <div class="project-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
+                                    <a href="project_write.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
                                     <div class="mr-24pt">
-                                        <h3 class="mb-0">프로젝트 등록</h3>
-                                    </div>
-                                </div>
-                                <div class="btn-group">
-                                    <a href="#n" class="btn btn-outline-accent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">기능 선택</a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <div class="dropdown-header"><strong>범위 지정</strong></div>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">highlight_alt</i> 구조물 선택</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">adjust</i> 범위 선택</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">timeline</i> 선 그리기</a>
-                                        <div class="dropdown-divider"></div>
-                                        <div class="dropdown-header"><strong>사용자 지정</strong></div>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">place</i> 관리구역 A</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">place</i> 관리구역 B</a>
+                                        <h3 class="mb-0">지도등록</h3>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 1. 기능 선택 -->
-                            <!-- <div class="container-fluid">
-                                <em class="none-list">기능선택을 해주세요.</em>
-                                <div class="my-32pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                            <div class="container-fluid">
+                                <div class="step mb-4">
+                                    <div class="progression-bar progression-bar--active-accent">
+                                        <a href="#n" class="progression-bar__item progression-bar__item--complete">
+                                            <span class="progression-bar__item-content">
+                                                <i class="material-icons progression-bar__item-icon">done</i>
+                                                <span class="mb-0 text-uppercase">정보입력</span>
+                                            </span>
+                                        </a>
+                                        <a href="#n" class="progression-bar__item progression-bar__item--complete progression-bar__item--active">
+                                            <span class="progression-bar__item-content">
+                                                <i class="material-icons progression-bar__item-icon">done</i>
+                                                <span class="mb-0 text-uppercase">지도등록</span>
+                                            </span>
+                                        </a>
+                                        <a href="#n" class="progression-bar__item">
+                                            <span class="progression-bar__item-content">
+                                                <i class="material-icons progression-bar__item-icon"></i>
+                                                <span class="mb-0 text-uppercase">솔루션 선택</span>
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
-                            </div> -->
-
+                            </div>
                             <!-- 2. 정보입력 -->
                             <div class="container-fluid">
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="projectName">프로젝트명</label>
-                                    <input type="text" class="form-line" id="projectName" placeholder="프로젝트명을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label class="form-label text-50 essential" for="">내용</label>
-                                    <div style="height: 130px;" data-toggle="quill"
-                                        data-quill-placeholder="화재가 발생했습니다."
-                                        data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label for="" class="form-label text-50">지도등록</label>
                                     <ul class="list-wrap">
                                         <li class="list-group-item d-flex align-items-center on">
                                             <span class="icon-holder">
@@ -173,94 +163,10 @@
                                         </li>
                                     </ul>
                                 </div>
-
-                                <div class="solution-list">
-                                    <label for="" class="form-label text-50">솔루션 선택</label>
-                                    <div class="solution-card method">
-                                        <label for="sm-control" class="card-body d-flex flex-column m-0">
-                                            <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
-                                            <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-server"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 관제</div>
-                                                    <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-control" name="radio-stacked" type="radio"
-                                                class="custom-control-input">
-                                            <div class="custom-control custom-radio d-none">
-                                                <label for="sm-office" class="custom-control-label">Smart Control</label>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="solution-card method">
-                                        <label for="sm-office" class="card-body d-flex flex-column m-0">
-                                            <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
-                                            <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-building"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 오피스</div>
-                                                    <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-office" name="radio-stacked" type="radio" class="custom-control-input">
-                                            <div class="custom-control custom-radio d-none">
-                                                <label for="sm-office" class="custom-control-label">Smart Office</label>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="solution-card method">
-                                        <label for="sm-hospoital" class="card-body d-flex flex-column m-0">
-                                            <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-hospital-alt"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 병원</div>
-                                                    <p class="m-0 text-70">의료 지원 솔루션 직원 및 보다 편리한 제공 병원 경험</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-hospoital" name="radio-stacked" type="radio" class="custom-control-input">
-                                        </label>
-                                    </div>
-                                    <div class="solution-card method">
-                                        <label for="sm-factory" class="card-body d-flex flex-column m-0">
-                                            <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-city"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 팩토리</div>
-                                                    <p class="m-0 text-70">스마트 자산 관리 도구를 사용하여 안전한 작업 환경을 만드는 솔루션</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-factory" name="radio-stacked" type="radio" class="custom-control-input">
-                                        </label>
-                                    </div>
-                                    <div class="solution-card method">
-                                        <label for="sm-store" class="card-body d-flex flex-column m-0">
-                                            <div class="d-flex">
-                                                <div
-                                                    class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-store"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 리테일</div>
-                                                    <p class="m-0 text-70">의료 지원 솔루션 직원 및 보다 편리한 제공 병원 경험</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-store" name="radio-stacked" type="radio" class="custom-control-input">
-                                        </label>
-                                    </div>
-                                </div>
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
-                                        <a href="project_done.html" class="btn btn-outline-accent ml-0">등록하기</a>
+                                        <a href="project_write.html" class="btn btn-outline-secondary mr-8pt">이전단계</a>
+                                        <a href="project_write3.html" class="btn btn-outline-accent ml-0">다음단계</a>
                                     </div>
                                 </div>
                             </div>
@@ -1195,14 +1101,16 @@
     </div>
     <div class="sidebar-depth">
         <div class="sidebar-depth-wrap">
-            <ul class="nav" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#sidebar-menu01">내지도</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#sidebar-menu02">공공지도</a>
-                </li>
-            </ul>
+            <div class="tab-cover">
+                <ul class="nav" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#sidebar-menu01">내지도</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#sidebar-menu02">공공지도</a>
+                    </li>
+                </ul>
+            </div>
             <div class="tab-content mt-4 text-70">
                 <div id="sidebar-menu01" class="tab-pane active" role="tabpanel">
                     <table class="table mb-4 thead-border-top-0 table-nowrap">
@@ -1305,7 +1213,8 @@
                     </ul>
                     <div class="my-32pt">
                         <div class="d-flex align-items-center justify-content-center">
-                            <a href="project_done.html" class="btn btn-accent ml-0">선택파일 등록</a>
+                            <a href="maps_write2.html" class="btn btn-outline-dark mr-3">신규 지도 등록</a>
+                            <a href="#n" class="btn btn-outline-accent">선택파일 등록</a>
                         </div>
                     </div>
                 </div>

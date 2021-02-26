@@ -51,6 +51,9 @@
      <!-- ion Range Slider -->
      <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet">
 
+     <!-- Dragula -->
+     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet">
+
     <!-- custom CSS -->
 	<link type="text/css" href="css/style.css" rel="stylesheet">
 
@@ -374,7 +377,7 @@
         </ul> -->
         <div class="d-flex flex justify-content-end align-items-center">
             <div class="form-group m-0 ml-4 form-lang">
-                <select id="custom-select" class="form-line custom-line">
+                <select id="custom-select" class="custom-line">
                     <option selected="">KOR</option>
                     <option value="1">JPN</option>
                     <option value="2">ENG</option>
@@ -423,12 +426,19 @@
                         <li><a href="#n" class="active"><i class="material-icons">location_on</i><span>개별위치</span></a></li>
                         <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
                     </ul>
+                    <div class="dropdown-divider"></div>
                     <div class="dropdown-header"><strong>경보 설정</strong></div>
                     <ul class="item-list">
                         <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
                         <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
                         <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
                         <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
+                    </ul>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-header"><strong>경보 설정</strong></div>
+                    <ul class="item-list">
+                        <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
+                        <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -786,23 +796,71 @@
     <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
     <div class="mouse-point place_pin" style="left: 48%; top: 55%;"></div>
     <!-- alert -->
-    <div class="map-alert d-flex alert bg-accent text-white fade show m-0" role="alert">
-        <div class="d-flex align-items-center">
-            <div class="mr-8pt">
-                <i class="material-icons">local_fire_department</i>
-            </div>
-            <div class="flex">
-                <small>
+    <div class="map-alert-container">
+        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">local_fire_department</i>
+                </div>
+                <div class="map-alert-title">
                     <strong>화재가 발생했습니.</strong>
-                </small>
+                </div>
             </div>
-            <div class="ml-8pt">
+            <div class="d-flex flex justify-content-end align-items-center">
                 <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
             </div>
         </div>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true"><i class="material-icons">close</i></span>
-        </button>
+        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">coronavirus</i>
+                </div>
+                <div class="map-alert-title">
+                    <strong>감염병이 발생했습니.</strong>
+                </div>
+            </div>
+            <div class="d-flex flex justify-content-end align-items-center">
+                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+        </div>
+        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">warning</i>
+                </div>
+                <div class="map-alert-title">
+                    <strong>긴급상황이 발생했습니.</strong>
+                </div>
+            </div>
+            <div class="d-flex flex justify-content-end align-items-center">
+                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+        </div>
+        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">local_hospital</i>
+                </div>
+                <div class="map-alert-title">
+                    <strong>응급상황이 발생했습니.</strong>
+                </div>
+            </div>
+            <div class="d-flex flex justify-content-end align-items-center">
+                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+        </div>
     </div>
     <!-- map container -->
     <div id="map" style="width:100%;height:100vh;"></div>
@@ -824,7 +882,7 @@
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
     <!-- Brand -->
-    <a href="platform-map.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
+    <a href="sub.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
         <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
     </a>
     <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
@@ -843,7 +901,7 @@
                 <a class="sidebar-menu-button" href="#sm-maps" data-toggle="tab" role="tab"
                     aria-controls="sm-maps">
                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">map</i>
-                    <span class="sidebar-menu-text">공간등록</span>
+                    <span class="sidebar-menu-text">내지도</span>
                 </a>
             </li>
             <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body"
@@ -2434,6 +2492,20 @@
             })
         })()
     </script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
 
     <script src="js/custom.js"></script>
     <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
