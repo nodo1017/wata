@@ -11732,7 +11732,7 @@ a.close.disabled {
 [dir] .bs-tooltip-auto[x-placement^=top] .arrow:before,
 [dir] .bs-tooltip-top .arrow:before {
     border-width: .4rem .4rem 0;
-    border-top-color: #fff
+    border-top-color: rgba(0,0,0,0.7);
 }
 
 [dir] .bs-tooltip-auto[x-placement^=right],

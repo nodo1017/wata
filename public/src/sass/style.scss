@@ -218,7 +218,6 @@ input, select{
 }
 .dropdown-menu{
     a.dropdown-item{
-        color: #5567ff;
         padding: .5rem 1.25rem;
         font-weight: 500;
     }
@@ -2258,38 +2257,60 @@ a.btn-grad-de{
     }
 }
 .recent-section{
-    padding: 3rem 0;
-    background-color: #f8f9fa;
+    padding: 4rem 0;
+    background-color: #f1f3f5;
 }
-
+.accordion{
+    &.accordion--boxed{
+        .accordion__item{
+            border-radius: .25rem;
+            margin-bottom: .5rem;
+        }
+    }
+    a.close{
+        padding: .25rem;
+        i{
+            font-size: 1rem;
+        }
+    }
+}
 
 /* list group */
 .list-group{
+    &.dragula-list{
+        box-shadow: none;
+        border-radius: 0;
+        .list-group-item{
+            border: 1px solid #e9edf2;
+            border-radius: .25rem;
+            margin-bottom: .75rem;
+            @include transition(all, 0.2s, ease-in-out);
+            &.active{
+                border-color: #303b56;
+            }
+            &:after{
+                content: '\e8d5';
+                font-family: 'Material Icons';
+                position: absolute;
+                left: -1.25rem;
+                font-size: 1rem;
+                opacity: 0;
+                color: lighten(#303a56, 50%);
+                @include transition(all, 0.2s, ease-in-out);
+            }
+            &:hover{
+                box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+                &:after{
+                    opacity: 1;
+                }
+            }
+        }
+    }
     .list-group-item{
         position: relative;
         padding: 12px;
         flex-direction: row;
         align-items: center;
-        margin-bottom: .75rem;
-        border: 1px solid #e9edf2 !important;
-        border-radius: .25rem !important;
-        @include transition(all, 0.2s, ease-in-out);
-        &:after{
-            content: '\e8d5';
-            font-family: 'Material Icons';
-            position: absolute;
-            left: -1.25rem;
-            font-size: 1rem;
-            opacity: 0;
-            color: lighten(#303a56, 50%);
-            @include transition(all, 0.2s, ease-in-out);
-        }
-        &:hover{
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            &:after{
-                opacity: 1;
-            }
-        }
         .list-els{
             a.card-title{
                 display: block;

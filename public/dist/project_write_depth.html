@@ -655,7 +655,7 @@
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
     <!-- Brand -->
-    <a href="sub.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+    <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
         <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
     </a>
     <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
@@ -801,6 +801,7 @@
                     <div class="tab-pane sm-projects active" id="sm-projects">
                         <!-- 프로젝트 등록 -->
                         <div class="project-inner">
+                            
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
                                     <a href="project_write.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
@@ -833,9 +834,89 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- 2. 정보입력 -->
                             <div class="container-fluid">
-                                <div class="form-group mb-32pt">
+
+                                <div class="accordion js-accordion accordion--boxed mb-4" id="parent">
+                                    <div class="accordion__item">
+                                        <a href="#" class="accordion__toggle" data-toggle="collapse" data-target="#course-toc-1"
+                                           data-parent="#parent">
+                                            <span class="flex">스타트업캠퍼스 1동 <small class="text-danger">(5)</small></span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse" id="course-toc-1">
+                                            <div class="accordion__menu-link">
+                                                <span class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                    <i class="far fa-map"></i>
+                                                </span>
+                                                <p class="flex m-0">스타트업캠퍼스 1동 1층</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <span class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                    <i class="far fa-map"></i>
+                                                </span>
+                                                <p class="flex m-0">스타트업캠퍼스 1동 2층</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <span class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                    <i class="far fa-map"></i>
+                                                </span>
+                                                <p class="flex m-0">스타트업캠퍼스 1동 3층</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <span class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                    <i class="far fa-map"></i>
+                                                </span>
+                                                <p class="flex m-0">스타트업캠퍼스 1동 4층</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <span class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                    <i class="far fa-map"></i>
+                                                </span>
+                                                <p class="flex m-0">스타트업캠퍼스 1동 5층</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__item">
+                                        <a href="#" class="accordion__toggle" data-toggle="collapse" data-target="#course-toc-2"
+                                           data-parent="#parent">
+                                            <span class="flex">스타트업캠퍼스 2동 <small class="text-danger">(3)</small></span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse" id="course-toc-2">
+                                            <div class="accordion__menu-link">
+                                                <span class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                    <i class="far fa-map"></i>
+                                                </span>
+                                                <p class="flex m-0">스타트업캠퍼스 2동 1층</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <span class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                    <i class="far fa-map"></i>
+                                                </span>
+                                                <p class="flex m-0">스타트업캠퍼스 2동 2층</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <span class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                    <i class="far fa-map"></i>
+                                                </span>
+                                                <p class="flex m-0">스타트업캠퍼스 2동 3층</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="project_write_depth.html" class="btn-row-add"><i class="material-icons">add</i> 지도 등록</a>
+                                    <!-- <a href="maps_write2.html" class="btn-add" data-toggle="tooltip" data-title="지도 등록" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <!-- <div class="form-group mb-32pt">
                                     <ul class="list-wrap">
                                         <li class="list-group-item d-flex align-items-center on">
                                             <span class="icon-holder">
@@ -860,7 +941,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
                                         <a href="project_write.html" class="btn btn-outline-secondary mr-8pt">이전단계</a>
