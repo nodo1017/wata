@@ -87,31 +87,266 @@
             <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
             <button type="button"><i class="fas fa-search"></i></button>
         </div>
+        <div class="filter-cell filter-area d-flex align-items-center">
+            <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>구역선택</strong>
+            </a>
+            <div class="filter-item-dropdown">
+                <div class="dropdown-header"><strong>건물구분</strong></div>
+                <a href="#n" class="dropdown-item">전체구역</a>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-header"><strong>문화콘텐츠 컴플렉스</strong></div>
+                <a href="#n" class="dropdown-item">1층 주차장</a>
+                <a href="#n" class="dropdown-item">1층 로비</a>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-header"><strong>영상후반작업시설</strong></div>
+                <a href="#n" class="dropdown-item">4층 전체</a>
+                <a href="#n" class="dropdown-item">교육실</a>
+                <a href="#n" class="dropdown-item">회의실</a>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-header"><strong>사용자 정의</strong></div>
+                <a href="#n" class="dropdown-item">관리구역 A</a>
+                <a href="#n" class="dropdown-item">관리구역 B</a>
+            </div>
+        </div>
         <div class="status-map row align-items-center justify-content-center m-0">
-            <div class="status-con active">
+            <div class="tabBox mapStauts01 status-con active">
                 <div class="filter-cell d-flex align-items-center">
-                    <a href="#n" class="filter-dropdown-toggle on">
-                        <strong>지도 등록</strong>
+                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                        <i class="far fa-calendar-alt"></i>
+                        <strong>기간선택</strong>
                     </a>
+                    <div class="filter-item-dropdown date-pick" style="width: 350px;">
+                        <div class="dropdown-body pt-8pt">
+                            <div class="form-group">
+                                <input type="hidden" data-toggle="flatpickr" data-flatpickr-mode="range" data-flatpickr-inline="true" value="2021-01-01 to 2021-01-31">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <a href="#n" class="btn btn-outline-secondary">확인</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="filter-cell d-flex align-items-center">
-                    <a href="#n" class="filter-dropdown-toggle">
-                        <strong>실내지도 편집</strong>
+                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                        <i class="far fa-clock"></i>
+                        <strong>시간선택</strong>
                     </a>
+                    <div class="filter-item-dropdown" style="width: 250px;">
+                        <div class="dropdown-header"><strong>시작시간</strong></div>
+                        <div class="dropdown-body mb-4">
+                            <div class="form-row">
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">AM</option>
+                                        <option value="">PM</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                        <option value="">04</option>
+                                        <option value="">05</option>
+                                        <option value="">06</option>
+                                        <option value="">07</option>
+                                        <option value="">08</option>
+                                        <option value="">09</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">00</option>
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-header"><strong>종료시간</strong></div>
+                        <div class="dropdown-body mb-4">
+                            <div class="form-row">
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">AM</option>
+                                        <option value="">PM</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                        <option value="">04</option>
+                                        <option value="">05</option>
+                                        <option value="">06</option>
+                                        <option value="">07</option>
+                                        <option value="">08</option>
+                                        <option value="">09</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <select class="form-line" name="" id="">
+                                        <option value="">00</option>
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <a href="#n" class="btn btn-outline-secondary">확인</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="filter-cell d-flex align-items-center">
-                    <a href="#n" class="filter-dropdown-toggle">
-                        <strong>경로 편집</strong>
+                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                        <i class="fas fa-transgender"></i>
+                        <strong>성별</strong>
                     </a>
+                    <div class="filter-item-dropdown">
+                        <div class="dropdown-body my-2">
+                            <div class="form-check custom-checkbox">
+                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                    value="" id="navBarGenderAll" checked>
+                                <label class="custom-control-label" for="navBarGenderAll">전체</label>
+                            </div>
+                            <div class="form-check custom-checkbox mt-12pt">
+                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                    value="1" id="navBarGenderMale">
+                                <label class="custom-control-label" for="navBarGenderMale">남</label>
+                            </div>
+                            <div class="form-check custom-checkbox mt-12pt">
+                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                    value="2" id="navBarGenderFeMale">
+                                <label class="custom-control-label" for="navBarGenderFeMale">여</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="filter-cell d-flex align-items-center">
-                    <a href="#n" class="filter-dropdown-toggle">
-                        <strong>POI 편집</strong>
+                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                        <i class="fas fa-mobile-alt"></i>
+                        <strong>휴대폰 종류</strong>
                     </a>
+                    <div class="filter-item-dropdown">
+                        <div class="dropdown-body my-2">
+                            <div class="form-check custom-checkbox">
+                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                    value="" id="deviceTypeAll" checked>
+                                <label class="custom-control-label" for="deviceTypeAll">전체</label>
+                            </div>
+    
+                            <div class="form-check custom-checkbox mt-12pt">
+                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                    value="1" id="deviceTypeAos">
+                                <label class="custom-control-label" for="deviceTypeAos">Android</label>
+                            </div>
+                            <div class="form-check custom-checkbox mt-12pt">
+                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                    value="2" id="deviceTypeIos">
+                                <label class="custom-control-label" for="deviceTypeIos">iOS</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                        <i class="fas fa-arrows-alt-h"></i>
+                        <strong>나이대</strong>
+                    </a>
+                    <div class="filter-item-dropdown" style="width: 300px;">
+                        <div class="dropdown-body my-2">
+                            <div class="flex" style="max-width: 100%">
+                                <input id="userAge" type="text" data-toggle="ion-rangeslider"
+                                    data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
+                                    data-grid="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                        <i class="far fa-flag"></i>
+                        <strong>체류시간(minute)</strong>
+                    </a>
+                    <div class="filter-item-dropdown" style="width: 300px;">
+                        <div class="dropdown-body my-2">
+                            <div class="flex" style="max-width: 100%">
+                                <input id="userStay" type="text" data-toggle="ion-rangeslider"
+                                    data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
+                                    data-grid="true">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="filter-btn-cell d-flex align-items-center">
-                    <a href="#n" class=""><i class="material-icons mr-1">done</i> 저장</a>
-                    <span>(10분전 자동 저장)</span>
+                    <a href="#n" class=""><i class="material-icons mr-1">done</i> 설정</a>
+                </div>
+            </div>
+            <div class="tabBox mapStauts02 status-con ml-32pt">
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">전체 이용객 수</span>
+                        <strong class="navbar-text-100">117명<span class="liveUser liveUser-up">2명 증가</span></strong>
+                    </small>
+                </span>
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">구역별 이용객 수</span>
+                        <strong class="navbar-text-100">11명<span class="liveUser liveUser-down">5명 감소</span></strong>
+                    </small>
+                </span>
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">사용자 체류시간</span>
+                        <strong class="navbar-text-100">10분</strong>
+                    </small>
+                </span>
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i class="material-icons">track_changes</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">구역별 방문 순위</span>
+                        <strong class="navbar-text-100">미디어회의실</strong>
+                    </small>
+                </span>
+                <span class="d-flex align-items-center mr-40pt">
+                    <span class="avatar mr-12pt">
+                        <span class="avatar-title navbar-avatar"><i
+                                class="material-icons">notification_important</i></span>
+                    </span>
+                    <small class="flex d-flex flex-column">
+                        <span class="navbar-text-50">사고발생 건 수</span>
+                        <strong class="navbar-text-100">0건</strong>
+                    </small>
+                </span>
+                <div class="filter-btn-cell d-flex align-items-center">
+                    <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
                 </div>
             </div>
         </div>
@@ -212,7 +447,7 @@
         <button type="button" class="btn btn-white ml-2 map-e">이벤트 등록</button>
         <div class="map-location ml-2">
             <div class="location-header d-flex align-items-center">
-                <strong>신세계백화점스타필드하남점</strong>
+                <strong>스타트업캠퍼스 2동</strong>
                 <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
                     <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                 </a>
@@ -223,30 +458,30 @@
                 <div class="sidebar">
                     <ul class="sidebar-menu">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">신관
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">2동
                                 <span class="ml-auto sidebar-menu-toggle-icon"></span>
                             </a>
                             <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
                                 <li class="sidebar-menu-item active">
                                     <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">B1</span>
+                                        <span class="sidebar-menu-text">1층</span>
                                         <span class="badge badge-notifications badge-accent ml-auto">2</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1F</span>
+                                        <span class="sidebar-menu-text">2층</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2F</span>
+                                        <span class="sidebar-menu-text">3층</span>
                                     </a>
                                 </li>
 
                             </ul>
                         </li>
-                        <li class="sidebar-menu-item">
+                        <!-- <li class="sidebar-menu-item">
                             <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">본관
                                 <span class="ml-auto sidebar-menu-toggle-icon"></span>
                             </a>
@@ -292,7 +527,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
@@ -669,14 +904,14 @@
                     <span class="sidebar-menu-text">프로젝트</span>
                 </a>
             </li>
-            <li class="sidebar-menu-item" data-title="Maps" data-placement="right" data-container="body"
+            <!-- <li class="sidebar-menu-item" data-title="Maps" data-placement="right" data-container="body"
                 data-boundary="window">
                 <a class="sidebar-menu-button" href="#sm-maps" data-toggle="tab" role="tab"
                     aria-controls="sm-maps">
                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">map</i>
                     <span class="sidebar-menu-text">내지도</span>
                 </a>
-            </li>
+            </li> -->
             <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body"
                 data-boundary="window">
                 <a class="sidebar-menu-button" href="#sm-event" data-toggle="tab" role="tab"
@@ -849,7 +1084,7 @@
                                 </div>
                                 <div class="tab-content">
                                     <div id="tab01" class="tab-pane active" role="tabpanel">
-                                        <div class="list-group dragula-list list-group-flush mb-4" data-toggle="dragula">
+                                        <div class="list-group dragula-list mb-4" data-toggle="dragula">
                                             <div class="list-group-item d-flex">
                                                 <div class="flex d-flex align-items-center mr-16pt">
                                                     <div class="flex">

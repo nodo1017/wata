@@ -3,7 +3,7 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-    @@include('./include/platform-topbar2.html')
+    @@include('./include/platform-topbar.html')
     @@include('./include/platform-tools.html')
 
     <!-- drawer -->
@@ -1194,79 +1194,188 @@
             </div>
             <div class="tab-content mt-4 text-70">
                 <div id="sidebar-menu01" class="tab-pane active" role="tabpanel">
-                    <table class="table mb-4 thead-border-top-0 table-nowrap">
+                    <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                        <div class="flex title-row">
+                            <h3 class="mb-0">지도 목록</h3>
+                            <small class="text-muted text-headings text-uppercase"><strong class="text-accent">6개</strong>의 지도가 등록되어 있습니다.</small>
+                        </div>
+                        
+                        <!-- <div class="w-auto table d-flex align-items-center mb-sm-0">
+                            <small class="text-muted text-headings text-uppercase mr-3 d-none d-sm-block">Sort by</small>
+                            <a href="#" class="sort desc small text-headings text-uppercase">최근순</a>
+                            <a href="#" class="sort small text-headings text-uppercase ml-2">이름순</a>
+                        </div> -->
+                        <form class="form-inline ml-4">
+                            <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
+                            <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
+                        </form>
+                        <a href="maps_write.html" class="btn btn-accent ml-4">새로운 지도 등록</a>
+                    </div>
+    
+                    <table class="table mb-4 table-nowrap">
                         <colgroup>
-                            <col width="5%" />
-                            <col width="45%" />
-                            <col width="*" />
-                            <col width="*" />
-                            <col width="13%" />
+                            <col width="5%">
+                            <col width="*">
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="12%">
+                            <col width="5%">
                         </colgroup>
                         <thead>
                             <tr>
                                 <th>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox"
-                                               class="custom-control-input js-toggle-check-all"
-                                               data-target="#projects"
-                                               id="customCheckAll" checked>
+                                            class="custom-control-input js-toggle-check-all"
+                                            data-target="#projects"
+                                            id="customCheckAll">
                                         <label class="custom-control-label"
-                                               for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                            for="customCheckAll"><span class="text-hide">Toggle all</span></label>
                                     </div>
                                 </th>
-                                <th>지도명</th>
-                                <th>최근수정일</th>
-                                <th>배포일자</th>
-                                <th>상태</th>
+                                <th>
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">지도 제목</a>
+                                </th>
+                                <th>
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">최근 수정일</a>
+                                </th>
+                                <th>
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">배포일자</a>
+                                </th>
+                                <th>
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">상태</a>
+                                </th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody class="list" id="projects">
-                            <!-- <tr>
-                                <td colspan="5" class="noData">
-                                    <em>아직 등록된 파일이 없습니다.</em>
-                                    <a href="#n" class="btn btn-outline-accent btn-rounded btn-sm">파일등록</a>
-                                </td>
-                            </tr> -->
                             <tr>
-                                <td class="txt-l">
+                                <td>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox"
-                                               class="custom-control-input js-check-selected-row"
-                                               id="customCheck1_1" checked>
+                                            class="custom-control-input js-check-selected-row"
+                                            id="customCheck1_1">
                                         <label class="custom-control-label"
-                                               for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                            for="customCheck1_1"><span class="text-hide">Check</span></label>
                                     </div>
                                 </td>
-                                <td class="txt-l">스마트공장A동</td>
-                                <td>2021.02.15</td>
-                                <td>2021.02.20</td>
+                                <td>
+                                    <div class="flex d-flex align-items-center mr-16pt">
+                                        <a href="maps_board.html" class="avatar mr-12pt">
+                                            <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                        </a>
+                                        <div class="flex list-els">
+                                            <a class="card-title" href="maps_board.html">CU 판교역점</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2021.01.06</td>
+                                <td>2021.01.10</td>
                                 <td>
                                     <select name="" id="" class="form-control">
                                         <option value="">배포중</option>
                                         <option value="">수정중</option>
                                     </select>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td class="txt-l">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox"
-                                               class="custom-control-input js-check-selected-row"
-                                               id="customCheck1_2" checked>
-                                        <label class="custom-control-label"
-                                               for="customCheck1_2"><span class="text-hide">Check</span></label>
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item">상단 고정</a>
+                                            <a href="#n" class="dropdown-item">수정</a>
+                                            <a href="#n" class="dropdown-item">복사</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
                                     </div>
                                 </td>
-                                <td class="txt-l">스마트공장B동</td>
-                                <td>2021.02.16</td>
-                                <td>2021.02.20</td>
+                            </tr>
+    
+                            <tr class="selected">
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                            class="custom-control-input js-check-selected-row"
+                                            checked=""
+                                            id="customCheck1_5">
+                                        <label class="custom-control-label"
+                                            for="customCheck1_5"><span class="text-hide">Check</span></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex d-flex align-items-center mr-16pt">
+                                        <a href="maps_board.html" class="avatar mr-12pt">
+                                            <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
+                                        </a>
+                                        <div class="flex list-els">
+                                            <a class="card-title" href="maps_board.html">CU 에이치스퀘어점</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2021.01.07</td>
+                                <td>2021.01.12</td>
                                 <td>
                                     <select name="" id="" class="form-control">
                                         <option value="">배포중</option>
                                         <option value="">수정중</option>
                                     </select>
                                 </td>
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item">상단 고정</a>
+                                            <a href="#n" class="dropdown-item">수정</a>
+                                            <a href="#n" class="dropdown-item">복사</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
+    
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                            class="custom-control-input js-check-selected-row"
+                                            id="customCheck1_2">
+                                        <label class="custom-control-label"
+                                            for="customCheck1_2"><span class="text-hide">Check</span></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex d-flex align-items-center mr-16pt">
+                                        <a href="maps_board.html" class="avatar mr-12pt">
+                                            <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                        </a>
+                                        <div class="flex list-els">
+                                            <a class="card-title" href="maps_board.html">스타트업캠퍼스</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2021.01.07</td>
+                                <td>2021.01.12</td>
+                                <td>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">배포중</option>
+                                        <option value="">수정중</option>
+                                    </select>
+                                </td>
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item">상단 고정</a>
+                                            <a href="#n" class="dropdown-item">수정</a>
+                                            <a href="#n" class="dropdown-item">복사</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+    
                         </tbody>
                     </table>
                     <ul class="pagination justify-content-center pagination-xsm m-0">
@@ -1294,7 +1403,6 @@
                     </ul>
                     <div class="my-32pt">
                         <div class="d-flex align-items-center justify-content-center">
-                            <a href="maps_write2.html" class="btn btn-outline-dark mr-3">신규 지도 등록</a>
                             <a href="#n" class="btn btn-outline-accent">선택파일 등록</a>
                         </div>
                     </div>

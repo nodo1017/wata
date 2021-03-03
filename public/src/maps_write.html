@@ -3,15 +3,36 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-    @@include('./include/platform-topbar2.html')
-    @@include('./include/platform-tools.html')
-
-    <!-- drawer -->
-    <!-- <div class="navbar-toggler-box">
-        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-    </div> -->
+    @@include('./include/platform-topbar3.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- map zoom/out -->
+        <div class="btn-widget-holder">
+            <ul>
+                <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
+                <li>
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
+                        <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- map container -->
+        <div id="map" style="width:100%;height:100vh;"></div>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(37.54545431995616, 127.2236967393457),
+                level: 1
+            };
+    
+            var map = new kakao.maps.Map(container, options);
+            //var mapTypeControl = new kakao.maps.MapTypeControl();
+            //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+        </script>
+    </div>
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             @@include('./include/platform-side-menu2.html')
@@ -354,7 +375,7 @@
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
                                     <div class="mr-24pt">
-                                        <h3 class="mb-0">지도 등록</h3>
+                                        <h3 class="mb-0">지도 정보 등록</h3>
                                     </div>
                                 </div>
                                 <div class="btn-group">
