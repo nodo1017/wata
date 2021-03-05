@@ -3267,9 +3267,9 @@ map options
     left: 45%;
     z-index: 3;
     background-color: #fff;
-    border-radius: .5rem;
+    border-radius: .25rem;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
     .col-auto:first-of-type{
         background-color: #fbfbfb;
         box-shadow: 1px 0 2px rgba(0,0,0,0.05);
@@ -3355,11 +3355,11 @@ map options
                     opacity: 1;
                 }
                 .mouse-point{
-                    -moz-transform: scale(1.2);
-                    -ms-transform: scale(1.2);
-                    -o-transform: scale(1.2);
-                    -webkit-transform: scale(1.2);
-                    transform: scale(1.2);
+                    -moz-transform: scale(1.25);
+                    -ms-transform: scale(1.25);
+                    -o-transform: scale(1.25);
+                    -webkit-transform: scale(1.25);
+                    transform: scale(1.25);
                 }
             }
             .mouse-point{
@@ -3382,6 +3382,26 @@ map options
                 &.active {
                     background-color: #eee;
                     color: #272c33;
+                }
+            }
+        }
+        &.type-row{
+            width: 160px;
+            .nav{
+                margin: .5rem 0;
+                a{
+                    margin: 0 .5rem;
+                    padding: .5rem;
+                    i{
+                        font-size: 1rem;
+                        color: #999;
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                }
+                .dropdown-divider{
+                    width: 100%;
                 }
             }
         }
