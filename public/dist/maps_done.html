@@ -165,9 +165,8 @@
             </div>
         </div>
     </div>
-    <div class="mdk-drawer-layout__content page-content">
-    <!-- history / live -->
-    <div class="btn-mid-holder">
+        <!-- history / live -->
+    <div class="btn-mid-holder d-none">
         <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-white">
                 <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
@@ -178,7 +177,7 @@
         </div>
     </div>
     <!-- edit tool -->
-    <div class="btn-top-holder">
+    <div class="btn-top-holder d-none">
         <div class="btn-group ml-2">
             <button type="button" class="btn btn-white"><i class="material-icons">highlight_alt</i></button>
             <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
@@ -209,75 +208,31 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="btn btn-white ml-2 map-e">이벤트 등록</button>
+        <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
         <div class="map-location ml-2">
             <div class="location-header d-flex align-items-center">
-                <strong>스타트업캠퍼스 2동</strong>
+                <strong>프로젝트 A</strong>
                 <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
                     <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                 </a>
             </div>
             <div class="collapse location-body" id="map-location">
-
-                
                 <div class="sidebar">
                     <ul class="sidebar-menu">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">2동
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
                                 <span class="ml-auto sidebar-menu-toggle-icon"></span>
                             </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
+                            <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
                                 <li class="sidebar-menu-item active">
                                     <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1층</span>
+                                        <span class="sidebar-menu-text">B1</span>
                                         <span class="badge badge-notifications badge-accent ml-auto">2</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2층</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">3층</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <!-- <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">본관
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">B1</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">1F</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">6</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2F</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#layouts_menu">별관
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="layouts_menu">
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1F</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">4</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
@@ -288,29 +243,58 @@
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">3F</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">11</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">4F</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">5F</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">6F</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">7F</span>
                                     </a>
                                 </li>
                             </ul>
-                        </li> -->
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">1F</span>
+                                        <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">2F</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#n">
+                                        <span class="sidebar-menu-text">3F</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
                     </ul>
                 </div>
-
-
             </div>
         </div>
-    </div>
-    <!-- map zoom/out -->
-    <div class="btn-widget-holder">
-        <ul>
-            <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
-            <li>
-                <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
-                    <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
-                </div>
-            </li>
-        </ul>
     </div>
     <!-- mouse click -->
     <div class="context-wrap row d-none">
@@ -540,46 +524,44 @@
         </div>
     </div>
     <!-- mouse pointer -->
-    <div class="mouse-point user" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 46%; top: 52.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 44%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 45%; top: 50.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 46.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
-    <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
-    <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
-    <div class="mouse-point user-red" style="left: 52%; top: 26%;" data-toggle="tooltip" data-title="A-1239" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
-    <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point user" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window"></div>
-    <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
-    <div class="mouse-point manager" style="left: 55%; top: 50%;"></div>
-    <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
-    <div class="mouse-point place_pin" style="left: 48%; top: 55%;"></div>
+    <div class="pointer-wrap">
+        <div class="mouse-point user" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 46%; top: 52.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 44%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 45%; top: 50.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 46.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
+        <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
+        <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
+        <div class="mouse-point user-red" style="left: 52%; top: 26%;" data-toggle="tooltip" data-title="A-1239" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
+        <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
+        <div class="mouse-point manager" style="left: 55%; top: 50%;"></div>
+        <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
+        <div class="mouse-point place_pin" style="left: 48%; top: 55%;"></div>
+    </div>
+    <!-- map zoom/out -->
+    <div class="btn-widget-holder">
+        <ul>
+            <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
+            <li>
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
+                    <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
+                </div>
+            </li>
+        </ul>
+    </div>
     <!-- alert -->
-    <div class="map-alert-container">
-        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_fire_department</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>화재가 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+    <div class="map-alert-container"> 
+        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
             <div class="d-flex align-items-center">
                 <div class="mr-8pt">
                     <i class="material-icons">coronavirus</i>
@@ -595,7 +577,7 @@
                 </button>
             </div>
         </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
             <div class="d-flex align-items-center">
                 <div class="mr-8pt">
                     <i class="material-icons">warning</i>
@@ -611,13 +593,29 @@
                 </button>
             </div>
         </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
             <div class="d-flex align-items-center">
                 <div class="mr-8pt">
                     <i class="material-icons">local_hospital</i>
                 </div>
                 <div class="map-alert-title">
                     <strong>응급상황이 발생했습니.</strong>
+                </div>
+            </div>
+            <div class="d-flex flex justify-content-end align-items-center">
+                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+        </div>
+        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">local_fire_department</i>
+                </div>
+                <div class="map-alert-title">
+                    <strong>화재가 발생했습니.</strong>
                 </div>
             </div>
             <div class="d-flex flex justify-content-end align-items-center">
@@ -643,7 +641,6 @@
         //var mapTypeControl = new kakao.maps.MapTypeControl();
         //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
     </script>
-</div>
 
     <!-- drawer -->
     <!-- <div class="navbar-toggler-box">

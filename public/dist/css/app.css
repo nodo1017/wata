@@ -6324,7 +6324,7 @@ input[type=submit].btn-block {
 }
 
 [dir] .dropdown-toggle:after {
-    border-top: .3em solid;
+    border-top: 4px solid;
     border-bottom: 0
 }
 
@@ -6334,8 +6334,8 @@ input[type=submit].btn-block {
 
 [dir=ltr] .dropdown-toggle:after,
 [dir=rtl] .dropdown-toggle:after {
-    border-right: .3em solid transparent;
-    border-left: .3em solid transparent
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent
 }
 
 [dir=rtl] .dropdown-toggle:after {
