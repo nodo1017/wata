@@ -274,16 +274,43 @@
         </div>
     </div>
     <!-- mouse click -->
-    <div class="context-wrap row">
+    <div class="context-wrap row" style="top: 30%; left: 40%;">
         <div class="context-menu type-row">
             <!-- 지도 클릭시 -->
             <div class="nav">
                 <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">open_with</i> menu01</a>
                 <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">filter_tilt_shift</i> menu02</a>
                 <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">pin_drop</i> menu03</a>
+            </div>
+        </div>
+    </div>
+    <!-- mouse click -->
+    <div class="context-wrap row" style="top: 30%; left: 50%;">
+        <div class="context-menu type-row">
+            <!-- 지도 클릭시 -->
+            <div class="nav">
+                <div class="toolbox-distance">
+                    <dl class="row align-items-center">
+                        <dt class="col">반경</dt>
+                        <dd class="col">100.0m</dd>
+                    </dl>
+                    <a href="#n" class="btn-ers"><i class="fas fa-eraser"></i> 지우기</a>
+                </div>
+                <a href="#n" class="d-flex align-items-center active"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
+            </div>
+        </div>
+    </div>
+    <!-- mouse click -->
+    <div class="context-wrap row" style="top: 30%; left: 60%;">
+        <div class="context-menu type-row">
+            <!-- 지도 클릭시 -->
+            <div class="nav">
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
                 <div class="dropdown-divider"></div>
                 <a href="#n" class="d-flex align-items-center">menu02</a>
-                <a href="#n" class="d-flex align-items-center">menu03</a>
+                <a href="#n" class="d-flex align-items-center js-cd-panel-trigger" data-panel="main">menu03</a>
             </div>
         </div>
     </div>
@@ -1878,9 +1905,6 @@
 
                     </tbody>
                 </table>
-
-
-
 
             </div> <!-- cd-panel__content -->
         </div> <!-- cd-panel__container -->
