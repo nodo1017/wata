@@ -2613,7 +2613,7 @@ pre code {
 }
 
 [dir] .table thead th {
-    border-bottom: 2px solid #e9edf2
+    border-bottom: 1px solid #e9edf2
 }
 
 [dir] .table tbody + tbody {

@@ -150,8 +150,13 @@ body.layout-compact{
 .form-none {
     padding: .5rem .25rem;
 }
-table{
+.table{
     border-bottom: 1px solid #e9edf2;
+    thead{
+        th{
+            padding: .75rem !important;
+        }
+    }
 }
 .custom-checkbox-toggle{
     .custom-control-label{
@@ -2285,7 +2290,7 @@ a.btn-grad-de{
 }
 .recent-section{
     padding: 4rem 0;
-    background-color: #f1f3f5;
+    background-color: #f9f9f9;
 }
 .accordion{
     &.accordion--boxed{
