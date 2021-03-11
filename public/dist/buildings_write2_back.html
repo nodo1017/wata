@@ -1,10 +1,287 @@
-@@include('./include/platform-header.html')
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WATA</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
+        rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="css/material-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="css/fontawesome.css" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="css/preloader.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="css/app.css" rel="stylesheet">
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="css/flatpickr.css" rel="stylesheet">
+    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet">
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="css/quill.css" rel="stylesheet">
+
+    <!-- Touchspin -->
+    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet">
+    <link type="text/css" href="css/select2.css" rel="stylesheet">
+
+     <!-- ion Range Slider -->
+     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet">
+
+     <!-- Dragula -->
+     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet">
+
+    <!-- custom CSS -->
+	<link type="text/css" href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="layout-compact">
+
+    <!-- <div class="preloader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div> -->
+
 
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-    @@include('./include/platform-topbar3.html')
+        <!-- Header -->
+    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+        <!-- history / live -->
+        <div class="nav-search">
+            <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
+            <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="status-map row align-items-center justify-content-center m-0">
+            <div class="status-con active">
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="#n" class="filter-dropdown-toggle on">
+                        <i class="material-icons">map</i><strong>평면도 등록</strong>
+                    </a>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="#n" class="filter-dropdown-toggle">
+                        <i class="material-icons">roofing</i><strong>실내지도 편집</strong>
+                    </a>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="#n" class="filter-dropdown-toggle">
+                        <i class="material-icons">alt_route</i><strong>경로 편집</strong>
+                    </a>
+                </div>
+                <div class="filter-cell d-flex align-items-center">
+                    <a href="#n" class="filter-dropdown-toggle">
+                        <i class="material-icons">add_location</i><strong>POI 편집</strong>
+                    </a>
+                </div>
+                <div class="filter-btn-cell d-flex align-items-center">
+                    <a href="#n" class=""><i class="material-icons mr-1">save</i> 저장</a>
+                    <span>(10분전 자동 저장)</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- menu -->
+        <!-- <ul class="nav navbar-nav flex justify-content-end">
+            <li class="nav-item active">
+                <a href="#n" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Data</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="#n" class="dropdown-item">Browse Courses</a>
+                    <a href="#n" class="dropdown-item">Preview Course</a>
+                    <a href="#n" class="dropdown-item">Preview Lesson</a>
+                    <a href="#n" class="dropdown-item">
+                        <span class="mr-16pt">Take Course</span>
+                        <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span>
+                    </a>
+                    <a href="#n" class="dropdown-item">Take Lesson</a>
+                    <a href="#n" class="dropdown-item">Take Quiz</a>
+                    <a href="#n" class="dropdown-item">Quiz Result</a>
+                    <a href="#n" class="dropdown-item">Student Dashboard</a>
+                    <a href="#n" class="dropdown-item">My Courses</a>
+                    <a href="#n" class="dropdown-item">My Quizzes</a>
+                    <a href="#n" class="dropdown-item">Help Center</a>
+                </div>
+            </li>
+        </ul> -->
+        <div class="d-flex flex justify-content-end align-items-center">
+            <div class="form-group m-0 ml-4 form-lang">
+                <select id="custom-select" class="custom-line">
+                    <option selected="">KOR</option>
+                    <option value="1">JPN</option>
+                    <option value="2">ENG</option>
+                </select>
+            </div>
+            <div class="nav-item dropdown ml-4">
+                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                    <span class="avatar avatar-sm">
+                        <span class="avatar-title rounded-circle">SH</span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header"><strong>Account</strong></div>
+                    <a class="dropdown-item" href="#n">Edit Account</a>
+                    <a class="dropdown-item" href="#n">Billing</a>
+                    <a class="dropdown-item" href="#n">Payments</a>
+                    <a class="dropdown-item" href="#n">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <div class="btn-group ml-2">
+                <button type="button" class="btn btn-white"><i class="material-icons">highlight_alt</i></button>
+                <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
+                <button type="button" class="btn btn-white"><i class="material-icons">timeline</i></button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span> </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
+                        <ul class="item-list mb-2">
+                            <li><a href="#n" class="active"><i class="material-icons">location_on</i><span>개별위치</span></a></li>
+                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
+                        </ul>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
+                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <button type="button" class="btn btn-white ml-2 map-e">이벤트 등록</button> -->
+            <!-- <div class="map-location ml-2">
+                <div class="location-header d-flex align-items-center">
+                    <strong>신세계백화점스타필드하남점</strong>
+                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
+                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                    </a>
+                </div>
+                <div class="collapse location-body" id="map-location">
+    
+                    
+                    <div class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">신관
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+    
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">본관
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">6</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#layouts_menu">별관
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="layouts_menu">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">4</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">11</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+    
+    
+                </div>
+            </div> -->
+        </div>
         <!-- map zoom/out -->
         <div class="btn-widget-holder">
             <ul>
@@ -16,6 +293,15 @@
                     </div>
                 </li>
             </ul>
+        </div>
+        <!-- map cus -->
+        <div class="map-thumb" style="position: absolute; left:45%; top:45%; width: 300px; z-index: 2;">
+            <a href="#n" class="opt-bunddle comp-top-left"><i class="material-icons">loop</i></a>
+            <a href="#n" class="opt-bunddle comp-top-right"><i class="material-icons">open_in_full</i></a>
+            <a href="#n" class="opt-bunddle comp-btm-left"><i class="material-icons">open_in_full</i></a>
+            <a href="#n" class="opt-bunddle comp-btm-right"><i class="material-icons">loop</i></a>
+            <a href="#n" class="opt-bunddle comp-center"><i class="fas fa-arrows-alt"></i></a>
+            <img src="images/iso.jpg" />
         </div>
         <!-- map container -->
         <div id="map" style="width:100%;height:100vh;"></div>
@@ -35,7 +321,25 @@
     </div>
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
-            @@include('./include/platform-side-menu2.html')
+            <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+    <!-- Brand -->
+    <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+        <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
+    </a>
+    <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs"
+            role="tablist">
+            <li class="sidebar-menu-item active" data-title="Maps" data-placement="right" data-container="body"
+                data-boundary="window">
+                <a class="sidebar-menu-button active" href="#sm-maps" data-toggle="tab" role="tab"
+                    aria-controls="sm-maps">
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">business</i>
+                    <span class="sidebar-menu-text">건물</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
                     <div class="tab-pane sm-search" id="sm-search">
@@ -375,109 +679,63 @@
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
                                     <div class="mr-24pt">
-                                        <h3 class="mb-0">주소 등록</h3>
+                                        <h3 class="mb-0">지도 편집</h3>
                                     </div>
-                                </div>
-                                <div class="btn-group">
-                                    <a href="#n" class="circle-iden-icon" data-toggle="tooltip" data-title="위치 지정" data-placement="left" data-boundary="window"><i class="material-icons">pin_drop</i></a>
                                 </div>
                             </div>
-                            <!-- 1. 기능 선택 -->
-                            <!-- <div class="container-fluid">
-                                <em class="none-list">기능선택을 해주세요.</em>
-                                <div class="my-32pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
-                                    </div>
-                                </div>
-                            </div> -->
 
-                            <!-- 2. 정보입력 -->
+                            <!-- 정보입력 -->
                             <div class="container-fluid">
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="projectName">제목</label>
-                                    <input type="text" class="form-line" id="projectName" placeholder="제목을 입력해주세요.">
+                                    <label class="form-label text-50 essential" for="projectName">지도명</label>
+                                    <input type="text" class="form-line" id="projectName" placeholder="지도명을 입력해주세요.">
                                 </div>
                                 <div class="form-row mb-32pt">
                                     <div class="col-md-6">
-                                        <label class="form-label text-50">국가</label>
-                                        <select name="category" class="form-line">
-                                            <option value="경보 이벤트">대한민국</option>
-                                            <option value="화재">일본</option>
-                                            <option value="감염병">미국</option>
-                                        </select>
+                                        <label class="form-label text-50" for="validationSample01">층</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50">도시</label>
-                                        <input type="text" class="form-line" id="" placeholder="" value="" required="">
+                                    <div class="col-md-6 over-txt">
+                                        <label class="form-label text-50" for="validationSample02">고도</label>
+                                        <input type="number" class="form-line pr-5" id="validationSample02" placeholder="" value="" required="">
+                                        <em class="text-50">meters</em>
                                     </div>
-                                </div>
-                                <div class="form-group mb-32pt over-txt">
-                                    <label class="form-label text-50 essential" for="projectTitle">주소</label>
-                                    <input type="text" class="form-line pr-6" id="projectTitle" placeholder="">
-                                    <a href="#n" class="btn btn-secondary btn-sm">주소검색</a>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="projectTitle">상세주소</label>
-                                    <input type="text" class="form-line" id="projectTitle" placeholder="">
                                 </div>
                                 <div class="form-row mb-32pt">
                                     <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample01">위도</label>
+                                        <label class="form-label text-50" for="validationSample01">각도</label>
                                         <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample02">경도</label>
-                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                        <label class="form-label text-50" for="dateRangePickerSample02">규모</label>
+                                        <input type="number" class="form-line" value="">
                                     </div>
                                 </div>
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 mb-0" for="">언어설정</label>
-                                    <div class="set-list">
-                                        <label class="form-label mb-0" for="option01">한국어</label>
-                                        <div class="control-cover">
-                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                <input checked="" type="checkbox" id="option01"
-                                                    class="custom-control-input">
-                                                <label class="custom-control-label" for="option01">active</label>
-                                            </div>
+                                    <label for="formFile" class="form-label text-50">평면도 업로드</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50" for="projectName">투명도</label>
+                                        <div class="flex"
+                                             style="max-width: 100%">
+            
+                                            <input type="text"
+                                                   data-toggle="ion-rangeslider"
+                                                   data-min="0"
+                                                   data-max="10"
+                                                   data-from="7">
+            
                                         </div>
-                                    </div>
-                                    <div class="set-list">
-                                        <label class="form-label mb-0" for="option02">일본어</label>
-                                        <div class="control-cover">
-                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                <input checked="" type="checkbox" id="option02"
-                                                    class="custom-control-input">
-                                                <label class="custom-control-label" for="option02">active</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="set-list">
-                                        <label class="form-label mb-0" for="option03">중국어</label>
-                                        <div class="control-cover">
-                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                <input checked="" type="checkbox" id="option03"
-                                                    class="custom-control-input">
-                                                <label class="custom-control-label" for="option03">active</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="set-list">
-                                        <label class="form-label mb-0" for="option04">영어</label>
-                                        <div class="control-cover">
-                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                <input checked="" type="checkbox" id="option04"
-                                                    class="custom-control-input">
-                                                <label class="custom-control-label" for="option04">active</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 essential" for="projectName">스페이스 ID</label>
+                                    <input type="text" class="form-line" id="projectName" placeholder="2314059" disabled>
                                 </div>
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
-                                        <a href="maps_write2.html" class="btn btn-outline-accent ml-0">다음으로</a>
+                                        <a href="maps_write.html" class="btn btn-outline-secondary mr-8pt">이전으로</a>
+                                        <a href="alert_page.html" class="btn btn-outline-accent ml-0">다음으로</a>
                                     </div>
                                 </div>
                             </div>
@@ -1167,4 +1425,332 @@
 <!-- // END Drawer Layout -->
 
 
-@@include('./include/platform-footer.html')
+    <div class="cd-panel cd-panel--from-right js-cd-panel-main">
+        <a href="#0" class="cd-panel__close js-cd-close">Close</a>
+
+        <div class="cd-panel__container">
+            <div class="cd-panel__content">
+                
+                <div class="d-flex flex-column flex-md-row align-items-center text-center text-sm-left mb-4">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+                        <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">이용자 정보</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table mb-0 thead-border-top-0 table-nowrap">
+                    <thead>
+                        <tr>
+
+                            <th style="width: 18px;"
+                                class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-toggle-check-all"
+                                        data-target="#staff"
+                                        id="customCheckAllstaff">
+                                    <label class="custom-control-label"
+                                        for="customCheckAllstaff"><span class="text-hide">Toggle all</span></label>
+                                </div>
+                            </th>
+
+                            <th>
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-employee-name">Employee</a>
+                            </th>
+
+                            <th style="width: 150px;">
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-employer-name">Employer</a>
+                            </th>
+
+                            <th class="text-center"
+                                style="width: 48px;">
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-projects">Projects</a>
+                            </th>
+
+                            <th style="width: 37px;">Status</th>
+
+                            <th style="width: 120px;">
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-activity">Activity</a>
+                            </th>
+                            <th style="width: 51px;">
+                                <a href="javascript:void(0)"
+                                class="sort"
+                                data-sort="js-lists-values-earnings">Earnings</a>
+                            </th>
+                            <th style="width: 24px;"
+                                class="pl-0"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="list"
+                        id="staff">
+
+                        <tr class="selected">
+
+                            <td class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        checked=""
+                                        id="customCheck1_staff1">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_staff1"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+
+                            <td>Michael Smith</td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                    class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                    <a href=""
+                                    class="text-70"><span class="js-lists-values-employer-name">Black Ops</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">12</td>
+
+                            <td>
+
+                                <a href=""
+                                class="chip chip-outline-secondary">Admin</a>
+
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">3 days ago</td>
+                            <td class="js-lists-values-earnings small">$12,402</td>
+                            <td class="text-right pl-0">
+                                <a href=""
+                                class="text-50"><i class="material-icons">more_vert</i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_staff2">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_staff2"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+
+                            <td>Connie Smith</td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                    class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                    <a href=""
+                                    class="text-70"><span class="js-lists-values-employer-name">Backend Ltd</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">42</td>
+
+                            <td>
+
+                                <a href=""
+                                class="chip chip-outline-secondary">User</a>
+
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">1 week ago</td>
+                            <td class="js-lists-values-earnings small">$1,943</td>
+                            <td class="text-right pl-0">
+                                <a href=""
+                                class="text-50"><i class="material-icons">more_vert</i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_staff3">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_staff3"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+
+                            <td>John Connor</td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                    class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                    <a href=""
+                                    class="text-70"><span class="js-lists-values-employer-name">Frontted</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">31</td>
+
+                            <td>
+
+                                <a href=""
+                                class="chip chip-outline-secondary">Manager</a>
+
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">2 weeks ago</td>
+                            <td class="js-lists-values-earnings small">$1,401</td>
+                            <td class="text-right pl-0">
+                                <a href=""
+                                class="text-50"><i class="material-icons">more_vert</i></a>
+                            </td>
+                        </tr>
+
+                        <tr class="selected">
+
+                            <td class="pr-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        checked=""
+                                        id="customCheck1_staff4">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_staff4"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+
+                            <td>Laza Bogdan</td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                    class="text-warning"><i class="material-icons mr-8pt">star</i></a>
+                                    <a href=""
+                                    class="text-70"><span class="js-lists-values-employer-name">Frontted</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">44</td>
+
+                            <td>
+
+                                <a href=""
+                                class="chip chip-outline-secondary">Admin</a>
+
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">3 weeks ago</td>
+                            <td class="js-lists-values-earnings small">$22,402</td>
+                            <td class="text-right pl-0">
+                                <a href=""
+                                class="text-50"><i class="material-icons">more_vert</i></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div> <!-- cd-panel__content -->
+        </div> <!-- cd-panel__container -->
+    </div> <!-- cd-panel -->
+
+
+    
+    <!-- jQuery -->
+    <script src="vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="vendor/popper.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Preloader -->
+    <script src="js/preloader.js"></script>
+
+    <!-- Range Slider -->
+    <script src="vendor/ion.rangeSlider.min.js"></script>
+    <script src="js/ion-rangeslider.js"></script>
+
+    <!-- Quill -->
+    <script src="vendor/quill.min.js"></script>
+    <script src="js/quill.js"></script>
+
+    <!-- Global Settings -->
+    <script src="js/settings.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="js/flatpickr.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="vendor/moment.min.js"></script>
+    <script src="vendor/daterangepicker.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+    <!-- jQuery Mask Plugin -->
+    <script src="vendor/jquery.mask.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="vendor/Chart.min.js"></script>
+    <script src="js/chartjs.js"></script>
+
+    <!-- modernizr.js -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Sidebar Mini JS -->
+    <script src="js/sidebar-mini.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
+    
+</body>
+
+</html>
+

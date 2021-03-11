@@ -2,6 +2,12 @@
 jQuery(document).ready(function ($) {
 
 	//solution select
+	$('.card-inner ul li').on('hover', function () {
+		$('a.btn-del').removeClass('on');
+		$(this).addClass('on');
+	});
+
+	//solution select
 	$('.method').on('click', function () {
 		$('.method').removeClass('active');
 		$(this).addClass('active');

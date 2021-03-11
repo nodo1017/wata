@@ -76,7 +76,7 @@
 							<a href="home.html">Home</a>
 						</li>
 						<li>
-							<a href="maps.html">Maps</a>
+							<a href="buildings.html">Buildings</a>
 						</li>
 						<li>
 							<a href="project_list.html">Projects</a>
@@ -165,8 +165,8 @@
             <div class="container page__container">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
-                        <h3 class="mb-0">지도 목록</h3>
-                        <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 지도가 등록되어 있습니다.</small>
+                        <h3 class="mb-0">건물 목록</h3>
+                        <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 건물이 등록되어 있습니다.</small>
                     </div>
                     
                     <!-- <div class="w-auto table d-flex align-items-center mb-sm-0">
@@ -178,7 +178,7 @@
                         <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
                         <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
                     </form>
-                    <a href="maps_write.html" class="btn btn-accent ml-4">새로운 지도 등록</a>
+                    <a href="buildings_write.html" class="btn btn-accent ml-4">새로운 건물 생성</a>
                 </div>
 
                 <table class="table mb-4 table-nowrap">
@@ -204,7 +204,7 @@
                                 </div>
                             </th>
                             <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">지도 제목</a>
+                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">건물명</a>
                             </th>
                             <th>
                                 <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-link">프로젝트</a>
@@ -234,11 +234,11 @@
                             </td>
                             <td>
                                 <div class="flex d-flex align-items-center mr-16pt">
-                                    <a href="maps_board.html" class="avatar mr-12pt">
+                                    <a href="buildings_board.html" class="avatar mr-12pt">
                                         <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
                                     </a>
                                     <div class="flex list-els">
-                                        <a class="card-title" href="maps_board.html">건물 A</a>
+                                        <a class="card-title" href="buildings_board.html">건물 A</a>
                                     </div>
                                 </div>
                             </td>
@@ -247,19 +247,15 @@
                                     <a href="#n" type="button" class="dropdown-toggle text-primary" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">3 Project</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">프로젝트 A</a>
-                                        <a class="dropdown-item" href="#">프로젝트 B</a>
-                                        <a class="dropdown-item" href="#">프로젝트 C</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 B</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 C</a>
                                     </div>
                                 </div>
                             </td>
                             <td>2021.01.06</td>
                             <td>2021.01.10</td>
-                            <td>
-                                <select name="" id="" class="form-control">
-                                    <option value="">배포중</option>
-                                    <option value="">수정중</option>
-                                </select>
+                            <td><span class="text-success">배포중</span>
                             </td>
                             <td class="text-right">
                                 <div class="dropdown">
@@ -268,7 +264,7 @@
                                         <a href="#n" class="dropdown-item">상단 고정</a>
                                         <a href="#n" class="dropdown-item">복사</a>
                                         <div class="dropdown-divider"></div>
-                                        <a href="maps_write.html" class="dropdown-item text-primary">수정</a>
+                                        <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
                                         <a href="#n" class="dropdown-item text-danger">삭제</a>
                                     </div>
                                 </div>
@@ -288,11 +284,11 @@
                             </td>
                             <td>
                                 <div class="flex d-flex align-items-center mr-16pt">
-                                    <a href="maps_board.html" class="avatar mr-12pt">
+                                    <a href="buildings_board.html" class="avatar mr-12pt">
                                         <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
                                     </a>
                                     <div class="flex list-els">
-                                        <a class="card-title" href="maps_board.html">건물 B</a>
+                                        <a class="card-title" href="buildings_board.html">건물 B</a>
                                     </div>
                                 </div>
                             </td>
@@ -301,18 +297,13 @@
                                     <a href="#n" type="button" class="dropdown-toggle text-primary" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">1 Project</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">프로젝트 A</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
                                     </div>
                                 </div>
                             </td>
                             <td>2021.01.07</td>
                             <td>2021.01.12</td>
-                            <td>
-                                <select name="" id="" class="form-control">
-                                    <option value="">배포중</option>
-                                    <option value="">수정중</option>
-                                </select>
-                            </td>
+                            <td><span class="text-success">배포중</span>
                             <td class="text-right">
                                 <div class="dropdown">
                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
@@ -320,7 +311,7 @@
                                         <a href="#n" class="dropdown-item">상단 고정</a>
                                         <a href="#n" class="dropdown-item">복사</a>
                                         <div class="dropdown-divider"></div>
-                                        <a href="maps_write.html" class="dropdown-item text-primary">수정</a>
+                                        <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
                                         <a href="#n" class="dropdown-item text-danger">삭제</a>
                                     </div>
                                 </div>
@@ -339,11 +330,11 @@
                             </td>
                             <td>
                                 <div class="flex d-flex align-items-center mr-16pt">
-                                    <a href="maps_board.html" class="avatar mr-12pt">
+                                    <a href="buildings_board.html" class="avatar mr-12pt">
                                         <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
                                     </a>
                                     <div class="flex list-els">
-                                        <a class="card-title" href="maps_board.html">건물 C</a>
+                                        <a class="card-title" href="buildings_board.html">건물 C</a>
                                     </div>
                                 </div>
                             </td>
@@ -352,19 +343,14 @@
                                     <a href="#n" type="button" class="dropdown-toggle text-primary" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">2 Project</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">프로젝트 A</a>
-                                        <a class="dropdown-item" href="#">프로젝트 B</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 B</a>
                                     </div>
                                 </div>
                             </td>
                             <td>2021.01.07</td>
                             <td>2021.01.12</td>
-                            <td>
-                                <select name="" id="" class="form-control">
-                                    <option value="">배포중</option>
-                                    <option value="">수정중</option>
-                                </select>
-                            </td>
+                            <td><span class="text-accent">수정중</span>
                             <td class="text-right">
                                 <div class="dropdown">
                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
@@ -372,7 +358,7 @@
                                         <a href="#n" class="dropdown-item">상단 고정</a>
                                         <a href="#n" class="dropdown-item">복사</a>
                                         <div class="dropdown-divider"></div>
-                                        <a href="maps_write.html" class="dropdown-item text-primary">수정</a>
+                                        <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
                                         <a href="#n" class="dropdown-item text-danger">삭제</a>
                                     </div>
                                 </div>

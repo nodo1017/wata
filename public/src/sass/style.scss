@@ -123,11 +123,6 @@ body.layout-compact{
             font-size: 1rem;
         }
     }
-    em {
-        position: absolute;
-        right: 5px;
-        bottom: .5rem;
-    }
     a.btn{
         position: absolute;
         right: 5px;
@@ -1691,7 +1686,7 @@ platform map
     height: calc(100% - 64px);
     margin-top: 64px;
     z-index: 0;
-    width: 40%;
+    width: 1024px;
     background-color: #fff;
     .sidebar-depth-wrap{
         position: relative;
@@ -1742,7 +1737,6 @@ platform map
         thead, tbody{
             th,td{
                 padding: 1rem .75rem !important;
-                text-align: center;
             }
         }
         td.noData{
@@ -2392,6 +2386,54 @@ a.btn-grad-de{
                     border-color: #1d6dbb;
                 }
             }
+            &.line-purple{
+                &:after{
+                    background-color: #694FD6;
+                }
+                .route-title:before{
+                    border-color: #361c9e;
+                }
+            }
+            &.line-pink{
+                &:after{
+                    background-color: #CE40AA;
+                }
+                .route-title:before{
+                    border-color: #971476;
+                }
+            }
+            &.line-orenge{
+                &:after{
+                    background-color: #FF9333;
+                }
+                .route-title:before{
+                    border-color: #be5901;
+                }
+            }
+            &.line-yellow{
+                &:after{
+                    background-color: #FFD633;
+                }
+                .route-title:before{
+                    border-color: #be9800;
+                }
+            }
+            &.line-sky{
+                &:after{
+                    background-color: #47D3D9;
+                }
+                .route-title:before{
+                    border-color: #03a5aa;
+                }
+            }
+            &.line-green{
+                &:after{
+                    background-color: #7DC97F;
+                }
+                .route-title:before{
+                    border-color: #2a9c2e;
+                }
+            }
             &.current{
                 .route-title{
                     &:before{
@@ -3031,19 +3073,121 @@ a.btn-grad-de{
         transform: translate(-15px, 3px) skew(30deg);
     }
 }
+/* setting */
+.address-wrap{
+    ul.place-name{
+        list-style: none;
+        padding: .5rem;
+        background-color: #fafafa;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        margin-bottom: 2rem;
+        li{
+            display: inline-flex;
+            a{
+                display: flex;
+                padding: .25rem .5rem;
+                position: relative;
+                color: $primary-bule;
+                &:hover{
+                    background-color: #f2f2f2;
+                    border-radius: .25rem;
+                    text-decoration: underline;
+                }
+                &:after{
+                    content: '';
+                    width: 1px;
+                    height: 12px;
+                    position: absolute;
+                    right: -2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-top: -2px;
+                    background-color: #e0e0e0;
+                    display: none;
+                }
+            }
+            &:last-child{
+                margin-left: 0;
+            }
+        }
+    }
+    .place-cover{
+        margin-bottom: 2rem;
+        ul.place-list{
+            list-style: none;
+            padding: 0;
+            border-top: 1px solid $border-color;
+            li{
+                a{
+                    display: flex;
+                    padding: 1rem;
+                    position: relative;
+                    border-bottom: 1px solid $border-color;
+                    &:after{
+                        content: '\E5E1';
+                        position: absolute;
+                        right: 1rem;
+                        font-family: Material Icons;
+                        font-size: 1rem;
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+    }
+    .address-title{
+        font-weight: 600;
+        font-size: .75rem;
+        color: rgba(39, 44, 51, .5);
+        margin-bottom: .25rem;
+        display: inline-flex
+    }
+    .address-fullName{
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 1rem;
+        background-color: #fafafa;
+        em{
+            display: flex;
+            font-size: 1.25rem;
+            font-weight: 500;
+            font-style: normal;
+        }
+        p{
+            margin: 0;
+            color: rgba(39, 44, 51, .5);
+        }
+    }
+}
 /* user */
 .sm-user{
     .user-info {
-        .card-body{
-            position: relative;
-            background-color: #f5f5f5;
-            border-radius: .5rem;
-            max-height: 120px;
-            margin-bottom: 1rem;
-            ul {
-                margin: 0;
-                padding-left: 1rem;
+        dl{
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $border-color;
+            dt{
+                color: #868e96;
+            }
+            dd{
+                font-weight: bold;
+            }
+        }
+    }
+    .selected-user{
+        position: relative;
+        background-color: #f5f5f5;
+        border-radius: .5rem;
+        max-height: 100px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        ul {
+            margin: 0;
+            padding-left: 1rem;
+            li{
+                position: relative;
                 a{
+                    display: flex;
                     span{
                         color: $identity;
                         margin-right: 5px;
@@ -3060,16 +3204,24 @@ a.btn-grad-de{
                         text-decoration: underline;
                     }
                 }
-            }
-        }
-        dl{
-            padding-bottom: 1rem;
-            border-bottom: 1px solid $border-color;
-            dt{
-                color: #868e96;
-            }
-            dd{
-                font-weight: bold;
+                a.btn-del{
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    display: none;
+                    padding: .25rem;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                    i{
+                        font-size: 1rem;
+                    }
+                }
+                &:hover{
+                    a.btn-del{
+                        text-decoration: none;
+                        display: inline-flex;
+                    }
+                }
             }
         }
     }
@@ -4215,10 +4367,19 @@ map options
     &.user{
         background: url(../images/person_pin.svg) no-repeat center;
     }
+    &.active{
+        background: url(../images/person_pin_view.svg) no-repeat center;
+        -moz-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
+        z-index: 3;
+    }
     &.user-unknow{
         background: url(../images/person_pin_unknow.svg) no-repeat center;
     }
-    &.warning-fire, &.warning-cau, &.warning-virus, &.warning-emg, &.place_pin{
+    &.warning-fire, &.warning-cau, &.warning-virus, &.warning-emg, &.place-pin, &.location-pin{
         padding: 1.5rem;
     }
     &.warning-fire{
@@ -4233,8 +4394,11 @@ map options
     &.warning-emg{
         background: url(../images/warning_emg.svg) no-repeat center;
     }
-    &.place_pin{
+    &.place-pin{
         background: url(../images/place_pin.svg) no-repeat center;
+    }
+    &.location-pin{
+        background: url(../images/location_pin.svg) no-repeat center;
     }
     &.manager{
         background: url(../images/local_police.svg) no-repeat center;

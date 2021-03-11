@@ -33981,7 +33981,7 @@ body {
 
 [dir] .progression-bar__item-icon:not(.progression-bar__item--disabled),
 [dir] .progression-bar__item-text:not(.progression-bar__item--disabled) {
-    cursor: pointer
+    /* cursor: pointer */
 }
 
 [dir] .progression-bar__item--complete:after {

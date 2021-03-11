@@ -76,7 +76,7 @@
 							<a href="home.html">Home</a>
 						</li>
 						<li>
-							<a href="maps.html">Maps</a>
+							<a href="buildings.html">Buildings</a>
 						</li>
 						<li>
 							<a href="project_list.html">Projects</a>
@@ -212,11 +212,6 @@
                                         <a class="card-title" href="#n">프로젝트 B</a>
                                         <small class="text-50 font-weight-bold mb-4pt">2021.01.12</small>
                                     </div>
-                                    <a href="#n" data-toggle="tooltip"
-                                       data-title="Add Favorite"
-                                       data-placement="top"
-                                       data-boundary="window"
-                                       class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite_border</a>
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -242,11 +237,6 @@
                                         <a class="card-title" href="#n">프로젝트 C</a>
                                         <small class="text-50 font-weight-bold mb-4pt">2021.01.10</small>
                                     </div>
-                                    <a href="#n" data-toggle="tooltip"
-                                       data-title="Add Favorite"
-                                       data-placement="top"
-                                       data-boundary="window"
-                                       class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite_border</a>
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -272,11 +262,6 @@
                                         <a class="card-title" href="#n">프로젝트 D</a>
                                         <small class="text-50 font-weight-bold mb-4pt">2021.01.10</small>
                                     </div>
-                                    <a href="#n" data-toggle="tooltip"
-                                       data-title="Add Favorite"
-                                       data-placement="top"
-                                       data-boundary="window"
-                                       class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite_border</a>
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -303,8 +288,8 @@
             <div class="container page__container">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
-                        <h3 class="mb-0">지도 목록</h3>
-                        <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 지도가 등록되어 있습니다.</small>
+                        <h3 class="mb-0">건물 목록</h3>
+                        <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 건물이 등록되어 있습니다.</small>
                     </div>
                     
                     <!-- <div class="w-auto table d-flex align-items-center mb-sm-0">
@@ -316,7 +301,7 @@
                         <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
                         <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
                     </form>
-                    <a href="maps_write.html" class="btn btn-accent ml-4">새로운 지도 등록</a>
+                    <a href="buildings_write.html" class="btn btn-accent ml-4">새로운 건물 생성</a>
                 </div>
 
                 <table class="table mb-4 table-nowrap">
@@ -342,7 +327,7 @@
                                 </div>
                             </th>
                             <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">지도 제목</a>
+                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">건물명</a>
                             </th>
                             <th>
                                 <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-link">프로젝트</a>
@@ -385,19 +370,15 @@
                                     <a href="#n" type="button" class="dropdown-toggle text-primary" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">3 Project</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">프로젝트 A</a>
-                                        <a class="dropdown-item" href="#">프로젝트 B</a>
-                                        <a class="dropdown-item" href="#">프로젝트 C</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 B</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 C</a>
                                     </div>
                                 </div>
                             </td>
                             <td>2021.01.06</td>
                             <td>2021.01.10</td>
-                            <td>
-                                <select name="" id="" class="form-control">
-                                    <option value="">배포중</option>
-                                    <option value="">수정중</option>
-                                </select>
+                            <td><span class="text-success">배포중</span>
                             </td>
                             <td class="text-right">
                                 <div class="dropdown">
@@ -439,18 +420,13 @@
                                     <a href="#n" type="button" class="dropdown-toggle text-primary" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">1 Project</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">프로젝트 A</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
                                     </div>
                                 </div>
                             </td>
                             <td>2021.01.07</td>
                             <td>2021.01.12</td>
-                            <td>
-                                <select name="" id="" class="form-control">
-                                    <option value="">배포중</option>
-                                    <option value="">수정중</option>
-                                </select>
-                            </td>
+                            <td><span class="text-success">배포중</span>
                             <td class="text-right">
                                 <div class="dropdown">
                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
@@ -490,19 +466,14 @@
                                     <a href="#n" type="button" class="dropdown-toggle text-primary" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">2 Project</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">프로젝트 A</a>
-                                        <a class="dropdown-item" href="#">프로젝트 B</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
+                                        <a class="dropdown-item text-primary" href="#">프로젝트 B</a>
                                     </div>
                                 </div>
                             </td>
                             <td>2021.01.07</td>
                             <td>2021.01.12</td>
-                            <td>
-                                <select name="" id="" class="form-control">
-                                    <option value="">배포중</option>
-                                    <option value="">수정중</option>
-                                </select>
-                            </td>
+                            <td><span class="text-accent">수정중</span>
                             <td class="text-right">
                                 <div class="dropdown">
                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>

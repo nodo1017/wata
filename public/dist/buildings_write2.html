@@ -91,7 +91,7 @@
             <div class="status-con active">
                 <div class="filter-cell d-flex align-items-center">
                     <a href="#n" class="filter-dropdown-toggle on">
-                        <i class="material-icons">map</i><strong>지도 등록</strong>
+                        <i class="material-icons">map</i><strong>평면도 등록</strong>
                     </a>
                 </div>
                 <div class="filter-cell d-flex align-items-center">
@@ -165,303 +165,155 @@
             </div>
         </div>
     </div>
+    <div class="mdk-drawer-layout__content page-content">
         <!-- history / live -->
-    <div class="btn-mid-holder d-none">
-        <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-white">
-                <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
-            </label>
-            <label class="btn btn-white active">
-                <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
-            </label>
-        </div>
-    </div>
-    <!-- edit tool -->
-    <div class="btn-top-holder d-none">
-        <div class="btn-group ml-2">
-            <button type="button" class="btn btn-white"><i class="material-icons">highlight_alt</i></button>
-            <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
-            <button type="button" class="btn btn-white"><i class="material-icons">timeline</i></button>
+        <div class="btn-mid-holder">
             <div class="btn-group">
-                <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
-                    aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span> </button>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>이벤트 설정</strong></div>
-                    <ul class="item-list mb-2">
-                        <li><a href="#n" class="active"><i class="material-icons">location_on</i><span>개별위치</span></a></li>
-                        <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
-                    </ul>
-                    <div class="dropdown-divider"></div>
-                    <div class="dropdown-header"><strong>경보 설정</strong></div>
-                    <ul class="item-list">
-                        <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
-                        <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
-                        <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
-                        <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
-                    </ul>
-                    <div class="dropdown-divider"></div>
-                    <div class="dropdown-header"><strong>경보 설정</strong></div>
-                    <ul class="item-list">
-                        <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
-                        <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
-                    </ul>
-                </div>
+                <a href="#n" class="btn btn-white">B1</a>
+                <a href="#n" class="btn btn-white active">1F</a>
+                <a href="#n" class="btn btn-white">2F</a>
+                <a href="#n" class="btn btn-white">3F</a>
+                <a href="#n" class="btn btn-white">4F</a>
+                <a href="#n" class="btn btn-white">5F</a>
+                <a href="#n" class="btn btn-white">6F</a>
+                <a href="#n" class="btn btn-white">7F</a>
             </div>
         </div>
-        <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-        <div class="map-location ml-2">
-            <div class="location-header d-flex align-items-center">
-                <strong>프로젝트 A</strong>
-                <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
-                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                </a>
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <div class="btn-group ml-2 map-edit-tools">
+                <button type="button" class="btn btn-white active"><i class="material-icons">highlight_alt</i></button>
+                <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
+                <button type="button" class="btn btn-white"><i class="material-icons">timeline</i></button>
             </div>
-            <div class="collapse location-body" id="map-location">
-                <div class="sidebar">
-                    <ul class="sidebar-menu">
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
-                                <li class="sidebar-menu-item active">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">B1</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">3F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">4F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">5F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">6F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">7F</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1F</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">3F</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
+            <!-- <button type="button" class="btn btn-white ml-2 map-e">이벤트 등록</button> -->
+            <!-- <div class="map-location ml-2">
+                <div class="location-header d-flex align-items-center">
+                    <strong>신세계백화점스타필드하남점</strong>
+                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
+                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                    </a>
                 </div>
-            </div>
+                <div class="collapse location-body" id="map-location">
+    
+                    
+                    <div class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">신관
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+    
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">본관
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">6</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#layouts_menu">별관
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="layouts_menu">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">4</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">11</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+    
+    
+                </div>
+            </div> -->
         </div>
+        <!-- map zoom/out -->
+        <div class="btn-widget-holder">
+            <ul>
+                <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
+                <li>
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
+                        <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- map cus -->
+        <div class="map-thumb" style="position: absolute; left:45%; top:45%; width: 300px; z-index: 2;">
+            <a href="#n" class="opt-bunddle comp-top-left"><i class="material-icons">loop</i></a>
+            <a href="#n" class="opt-bunddle comp-top-right"><i class="material-icons">open_in_full</i></a>
+            <a href="#n" class="opt-bunddle comp-btm-left"><i class="material-icons">open_in_full</i></a>
+            <a href="#n" class="opt-bunddle comp-btm-right"><i class="material-icons">loop</i></a>
+            <a href="#n" class="opt-bunddle comp-center"><i class="fas fa-arrows-alt"></i></a>
+            <img src="images/iso.jpg" />
+        </div>
+        <!-- map container -->
+        <div id="map" style="width:100%;height:100vh;"></div>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(37.54545431995616, 127.2236967393457),
+                level: 1
+            };
+    
+            var map = new kakao.maps.Map(container, options);
+            //var mapTypeControl = new kakao.maps.MapTypeControl();
+            //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+        </script>
     </div>
-    <!-- mouse click -->
-    <div class="context-wrap row" style="top: 30%; left: 40%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">open_with</i> menu01</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">filter_tilt_shift</i> menu02</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">pin_drop</i> menu03</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row" style="top: 30%; left: 50%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <div class="toolbox-distance">
-                    <dl class="row align-items-center">
-                        <dt class="col">반경</dt>
-                        <dd class="col">100.0m</dd>
-                    </dl>
-                    <a href="#n" class="btn-ers"><i class="fas fa-eraser"></i> 지우기</a>
-                </div>
-                <a href="#n" class="d-flex align-items-center active"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row" style="top: 30%; left: 60%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
-                <div class="dropdown-divider"></div>
-                <a href="#n" class="d-flex align-items-center">menu02</a>
-                <a href="#n" class="d-flex align-items-center js-cd-panel-trigger" data-panel="main">menu03</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse pointer -->
-    <div class="pointer-wrap">
-        <div class="mouse-point user" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 46%; top: 52.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 44%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 45%; top: 50.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 46.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
-        <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
-        <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
-        <div class="mouse-point user-red" style="left: 52%; top: 26%;" data-toggle="tooltip" data-title="A-1239" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
-        <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
-        <div class="mouse-point manager" style="left: 55%; top: 50%;"></div>
-        <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
-        <div class="mouse-point place_pin" style="left: 48%; top: 55%;"></div>
-    </div>
-    <!-- map zoom/out -->
-    <div class="btn-widget-holder">
-        <ul>
-            <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
-            <li>
-                <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
-                    <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!-- alert -->
-    <div class="map-alert-container"> 
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">coronavirus</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>감염병이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">warning</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>긴급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_hospital</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>응급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_fire_department</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>화재가 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-    </div>
-    <!-- map container -->
-    <div id="map" style="width:100%;height:100vh;"></div>
-    <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
-    <script>
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(37.54545431995616, 127.2236967393457),
-            level: 1
-        };
-
-        var map = new kakao.maps.Map(container, options);
-        //var mapTypeControl = new kakao.maps.MapTypeControl();
-        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-    </script>
-
-    <!-- drawer -->
-    <!-- <div class="navbar-toggler-box">
-        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-    </div> -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
@@ -472,63 +324,14 @@
     <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
         <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs"
             role="tablist">
-            <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body"
+            <li class="sidebar-menu-item active" data-title="Maps" data-placement="right" data-container="body"
                 data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab"
-                    aria-controls="sm-projects">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
-                    <span class="sidebar-menu-text">프로젝트</span>
-                </a>
-            </li>
-            <!-- <li class="sidebar-menu-item" data-title="Maps" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-maps" data-toggle="tab" role="tab"
+                <a class="sidebar-menu-button active" href="#sm-maps" data-toggle="tab" role="tab"
                     aria-controls="sm-maps">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">map</i>
-                    <span class="sidebar-menu-text">내지도</span>
-                </a>
-            </li> -->
-            <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-event" data-toggle="tab" role="tab"
-                    aria-controls="sm-event">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">local_mall</i>
-                    <span class="sidebar-menu-text">이벤트</span>
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">business</i>
+                    <span class="sidebar-menu-text">건물</span>
                 </a>
             </li>
-            <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-accident" data-toggle="tab" role="tab"
-                    aria-controls="sm-accident">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">error_outline</i>
-                    <span class="sidebar-menu-text">사고관리</span>
-                </a>
-            </li>
-            <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-user" data-toggle="tab" role="tab"
-                    aria-controls="sm-user">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person_outline</i>
-                    <span class="sidebar-menu-text">사용자</span>
-                </a>
-            </li>
-            <!-- <li class="sidebar-menu-item" data-title="Assets" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-assets" data-toggle="tab" role="tab"
-                    aria-controls="sm-assets">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_balance_wallet</i>
-                    <span class="sidebar-menu-text">자산관리</span>
-                </a>
-            </li> -->
-            <!-- <li class="sidebar-menu-item" data-title="Setting" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab"
-                    aria-controls="sm-setting">
-                    <i
-                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
-                    <span class="sidebar-menu-text">설정</span>
-                </a>
-            </li> -->
         </ul>
     </div>
 </div>
@@ -866,15 +669,306 @@
                         </div>
                     </div>
                     <div class="tab-pane sm-maps active" id="sm-maps">
-                        <!-- 등록 완료 -->
+                        <!-- 프로젝트 등록 -->
                         <div class="maps-inner">
-                            <div class="tit-intro">
-                                <em>등록을 완료했습니다.</em>
-                                <a href="maps_list.html" class="btn btn-outline-accent">지도 목록</a>
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">평면도 등록</h3>
+                                        <p class="text-70 mb-0">여러층을 등록하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 정보입력 -->
+                            <div class="container-fluid">
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-9">
+                                        <label class="form-label text-50 essential" for="projectName">평명도명</label>
+                                        <input type="text" class="form-line" id="projectName" placeholder="평면도명을 입력해주세요.">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label text-50" for="validationSample01">층</label>
+                                        <input type="text" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label for="formFile" class="form-label text-50">파일 업로드</label>
+                                    <input class="form-control pr-5" type="file" id="formFile">
+                                    <a href="#n" class="file-del"><i class="material-icons">close</i></a>
+                                </div>
+                                <div class="my-16pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="#n" class="btn-grad-col btn-grad-small ml-3">추가</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid maps-item-list">
+                                <h5>등록한 평면도 목록</h5>
+                                <!-- 1. 지도 없을때 -->
+                                <!-- <em class="none-list">지도를 추가해 보세요.</em> -->
+                                <div class="maps-list">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex mr-12pt">
+                                            <a class="card-title" href="#n">건물A B1</a>
+                                            <dl>
+                                                <dt>스페이스ID : </dt>
+                                                <dd>3213495</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <span class="lead text-headings">B1</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex mr-2 file-att">
+                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_B1.jpg
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="maps-list active">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex mr-12pt">
+                                            <a class="card-title" href="#n">건물A 1층</a>
+                                            <dl>
+                                                <dt>스페이스ID : </dt>
+                                                <dd>3213495</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <span class="lead text-headings">1F</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex mr-2 file-att">
+                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_1f.jpg
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="maps-list">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex mr-12pt">
+                                            <a class="card-title" href="#n">건물A 2층</a>
+                                            <dl>
+                                                <dt>스페이스ID : </dt>
+                                                <dd>3213495</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <span class="lead text-headings">2F</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex mr-2 file-att">
+                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_2f.jpg
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="maps-list">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex mr-12pt">
+                                            <a class="card-title" href="#n">건물A 3층</a>
+                                            <dl>
+                                                <dt>스페이스ID : </dt>
+                                                <dd>3213495</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <span class="lead text-headings">3F</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex mr-2 file-att">
+                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_3f.jpg
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="maps-list">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex mr-12pt">
+                                            <a class="card-title" href="#n">건물A 4층</a>
+                                            <dl>
+                                                <dt>스페이스ID : </dt>
+                                                <dd>3213495</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <span class="lead text-headings">4F</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex mr-2 file-att">
+                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_4f.jpg
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="maps-list">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex mr-12pt">
+                                            <a class="card-title" href="#n">건물A 5층</a>
+                                            <dl>
+                                                <dt>스페이스ID : </dt>
+                                                <dd>3213495</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <span class="lead text-headings">5F</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex mr-2 file-att">
+                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_5f.jpg
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="maps-list">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex mr-12pt">
+                                            <a class="card-title" href="#n">건물A 6층</a>
+                                            <dl>
+                                                <dt>스페이스ID : </dt>
+                                                <dd>3213495</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <span class="lead text-headings">6F</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex mr-2 file-att">
+                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_6f.jpg
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="maps-list">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex mr-12pt">
+                                            <a class="card-title" href="#n">건물A 7층</a>
+                                            <dl>
+                                                <dt>스페이스ID : </dt>
+                                                <dd>3213495</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <span class="lead text-headings">7F</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex mr-2 file-att">
+                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_7f.jpg
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="buildings_write.html" class="btn btn-outline-secondary mr-8pt">이전으로</a>
+                                        <a href="alert_page.html" class="btn btn-outline-accent ml-0">다음으로</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-event" id="sm-event">
+                    <div class="tab-pane sm-event" id="sm-event"> 
                         <!-- 이벤트 리스트 -->
                         <div class="event-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center py-4">
@@ -1517,7 +1611,7 @@
                         <div class="container-fluid">
                             <div class="form-group">
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option01">자동업데이트</label>
+                                    <label class="form-label mb-0" for="option03">자동업데이트</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option03"
@@ -1527,7 +1621,7 @@
                                     </div>
                                 </div>
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option02">옵션2</label>
+                                    <label class="form-label mb-0" for="option04">옵션2</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option04"
@@ -1553,7 +1647,6 @@
             </div>
         </div>
     </div>
-    <!-- // END drawer -->
 </div>
 
 <!-- // END Drawer Layout -->

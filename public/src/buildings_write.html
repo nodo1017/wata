@@ -3,119 +3,8 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-    @@include('./include/platform-topbar2.html')
+    @@include('./include/platform-topbar3.html')
     <div class="mdk-drawer-layout__content page-content">
-        <!-- history / live -->
-        <div class="btn-mid-holder">
-            <div class="btn-group">
-                <a href="#n" class="btn btn-white">B1</a>
-                <a href="#n" class="btn btn-white active">1F</a>
-                <a href="#n" class="btn btn-white">2F</a>
-                <a href="#n" class="btn btn-white">3F</a>
-                <a href="#n" class="btn btn-white">4F</a>
-                <a href="#n" class="btn btn-white">5F</a>
-                <a href="#n" class="btn btn-white">6F</a>
-                <a href="#n" class="btn btn-white">7F</a>
-            </div>
-        </div>
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <div class="btn-group ml-2 map-edit-tools">
-                <button type="button" class="btn btn-white active"><i class="material-icons">highlight_alt</i></button>
-                <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
-                <button type="button" class="btn btn-white"><i class="material-icons">timeline</i></button>
-            </div>
-            <!-- <button type="button" class="btn btn-white ml-2 map-e">이벤트 등록</button> -->
-            <!-- <div class="map-location ml-2">
-                <div class="location-header d-flex align-items-center">
-                    <strong>신세계백화점스타필드하남점</strong>
-                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
-                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                    </a>
-                </div>
-                <div class="collapse location-body" id="map-location">
-    
-                    
-                    <div class="sidebar">
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">신관
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
-                                    <li class="sidebar-menu-item active">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">B1</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-    
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">본관
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">B1</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">6</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#layouts_menu">별관
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="layouts_menu">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">4</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">11</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-    
-    
-                </div>
-            </div> -->
-        </div>
         <!-- map zoom/out -->
         <div class="btn-widget-holder">
             <ul>
@@ -127,15 +16,6 @@
                     </div>
                 </li>
             </ul>
-        </div>
-        <!-- map cus -->
-        <div class="map-thumb" style="position: absolute; left:45%; top:45%; width: 300px; z-index: 2;">
-            <a href="#n" class="opt-bunddle comp-top-left"><i class="material-icons">loop</i></a>
-            <a href="#n" class="opt-bunddle comp-top-right"><i class="material-icons">open_in_full</i></a>
-            <a href="#n" class="opt-bunddle comp-btm-left"><i class="material-icons">open_in_full</i></a>
-            <a href="#n" class="opt-bunddle comp-btm-right"><i class="material-icons">loop</i></a>
-            <a href="#n" class="opt-bunddle comp-center"><i class="fas fa-arrows-alt"></i></a>
-            <img src="images/iso.jpg" />
         </div>
         <!-- map container -->
         <div id="map" style="width:100%;height:100vh;"></div>
@@ -495,299 +375,150 @@
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
                                     <div class="mr-24pt">
-                                        <h3 class="mb-0">지도 등록</h3>
-                                        <p class="text-70 mb-0">여러층을 등록하실 수 있습니다.</p>
+                                        <h3 class="mb-0">건물 등록</h3>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 정보입력 -->
-                            <div class="container-fluid">
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-9">
-                                        <label class="form-label text-50 essential" for="projectName">지도명</label>
-                                        <input type="text" class="form-line" id="projectName" placeholder="지도명을 입력해주세요.">
+                            <!-- 1. 기능 선택 -->
+                            <!-- <div class="container-fluid">
+                                <em class="none-list">기능선택을 해주세요.</em>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
                                     </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label text-50" for="validationSample01">층</label>
-                                        <input type="text" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                </div>
+                            </div> -->
+
+                            <!-- 2. 정보입력 -->
+                            <div class="container-fluid">
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 essential" for="projectName">건물명</label>
+                                    <input type="text" class="form-line" id="projectName" placeholder="건물명을 입력해주세요.">
+                                </div>
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50">국가</label>
+                                        <select name="category" class="form-line">
+                                            <option value="경보 이벤트">대한민국</option>
+                                            <option value="화재">일본</option>
+                                            <option value="감염병">미국</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50">도시</label>
+                                        <input type="text" class="form-line" id="" placeholder="" value="" required="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-32pt over-txt">
+                                    <label class="form-label text-50 essential" for="projectTitle">주소</label>
+                                    <input type="text" class="form-line pr-6" id="projectTitle" placeholder="">
+                                    <a href="buildings_write_jp_address.html" class="btn btn-secondary btn-sm">주소검색</a>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 essential" for="projectTitle">상세주소</label>
+                                    <input type="text" class="form-line" id="projectTitle" placeholder="">
+                                </div>
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">위도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample02">경도</label>
+                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
                                     </div>
                                 </div>
                                 <div class="form-group mb-32pt">
-                                    <label for="formFile" class="form-label text-50">파일 업로드</label>
-                                    <input class="form-control pr-5" type="file" id="formFile">
-                                    <a href="#n" class="file-del"><i class="material-icons">close</i></a>
-                                </div>
-                                <div class="my-16pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn-grad-col btn-grad-small ml-3">추가</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="container-fluid maps-item-list">
-                                <h5>등록한 지도 목록</h5>
-                                <!-- 1. 지도 없을때 -->
-                                <!-- <em class="none-list">지도를 추가해 보세요.</em> -->
-                                <div class="maps-list">
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="flex mr-12pt">
-                                            <a class="card-title" href="#n">건물A B1</a>
-                                            <dl>
-                                                <dt>스페이스ID : </dt>
-                                                <dd>3213495</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center">
-                                            <span class="lead text-headings">B1</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex mr-2 file-att">
-                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_B1.jpg
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
-                                                </div>
+                                    <label class="form-label text-50 mb-0" for="">언어설정</label>
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option01">한국어</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option01"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label" for="option01">active</label>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="maps-list active">
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="flex mr-12pt">
-                                            <a class="card-title" href="#n">건물A 1층</a>
-                                            <dl>
-                                                <dt>스페이스ID : </dt>
-                                                <dd>3213495</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center">
-                                            <span class="lead text-headings">1F</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex mr-2 file-att">
-                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_1f.jpg
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
-                                                </div>
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option02">일본어</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option02"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label" for="option02">active</label>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="maps-list">
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="flex mr-12pt">
-                                            <a class="card-title" href="#n">건물A 2층</a>
-                                            <dl>
-                                                <dt>스페이스ID : </dt>
-                                                <dd>3213495</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center">
-                                            <span class="lead text-headings">2F</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex mr-2 file-att">
-                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_2f.jpg
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
-                                                </div>
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option03">중국어</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option03"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label" for="option03">active</label>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="maps-list">
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="flex mr-12pt">
-                                            <a class="card-title" href="#n">건물A 3층</a>
-                                            <dl>
-                                                <dt>스페이스ID : </dt>
-                                                <dd>3213495</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center">
-                                            <span class="lead text-headings">3F</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex mr-2 file-att">
-                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_3f.jpg
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="maps-list">
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="flex mr-12pt">
-                                            <a class="card-title" href="#n">건물A 4층</a>
-                                            <dl>
-                                                <dt>스페이스ID : </dt>
-                                                <dd>3213495</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center">
-                                            <span class="lead text-headings">4F</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex mr-2 file-att">
-                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_4f.jpg
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="maps-list">
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="flex mr-12pt">
-                                            <a class="card-title" href="#n">건물A 5층</a>
-                                            <dl>
-                                                <dt>스페이스ID : </dt>
-                                                <dd>3213495</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center">
-                                            <span class="lead text-headings">5F</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex mr-2 file-att">
-                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_5f.jpg
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="maps-list">
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="flex mr-12pt">
-                                            <a class="card-title" href="#n">건물A 6층</a>
-                                            <dl>
-                                                <dt>스페이스ID : </dt>
-                                                <dd>3213495</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center">
-                                            <span class="lead text-headings">6F</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex mr-2 file-att">
-                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_6f.jpg
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="maps-list">
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="flex mr-12pt">
-                                            <a class="card-title" href="#n">건물A 7층</a>
-                                            <dl>
-                                                <dt>스페이스ID : </dt>
-                                                <dd>3213495</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center">
-                                            <span class="lead text-headings">7F</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-footer">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex mr-2 file-att">
-                                                <i class="material-icons font-size-16pt">attachment</i> smart_factory_7f.jpg
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#N" class="dropdown-item text-danger">삭제</a>
-                                                </div>
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option04">영어</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option04"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label" for="option04">active</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="maps_write.html" class="btn btn-outline-secondary mr-8pt">이전으로</a>
-                                        <a href="alert_page.html" class="btn btn-outline-accent ml-0">다음으로</a>
+                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                                        <a href="buildings_write2.html" class="btn btn-outline-accent ml-0">다음으로</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <nav class="cd-dropdown dropdown-is-activ d-none">
+                            <h5>지도 홈</h5>
+                            <ul class="cd-dropdown-content">
+                                <li class="has-children">
+                                    <a href="#0">2depth</a>
+                                    <ul class="cd-secondary-dropdown is-hidden">
+                                        <li class="go-back"><a href="#0">2depth</a></li>
+                                        <li class="see-all"><a href="#0">3depth</a></li>
+                                        <li class="has-children">
+                                            <a href="#0">3depth</a>
+                                            <ul class="is-hidden">
+                                                <li class="go-back"><a href="#0">3depth</a></li>
+                                                <li class="see-all"><a href="#0">4depth</a></li>
+                                                <li class="has-children">
+                                                    <a href="#0">4depth</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="#0">4depth</a></li>
+                                                        <li class="see-all"><a href="#0">5depth</a></li>
+                                                        <li><a href="#0">5depth</a></li>
+                                                        <li><a href="#0">5depth</a></li>
+                                                        <li><a href="#0">5depth</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#0">4depth</a></li>
+                                                <li><a href="#0">4depth</a></li>
+                                                <li><a href="#0">4depth</a></li>
+                                                <li><a href="#0">4depth</a></li>
+                                                <li><a href="#0">4depth</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#0">3depth</a></li>
+                                        <li><a href="#0">3depth</a></li>
+                                        <li><a href="#0">3depth</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#0">2depth</a></li>
+                                <li><a href="#0">2depth</a></li>
+                                <li><a href="#0">2depth</a></li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="tab-pane sm-event" id="sm-event"> 
                         <!-- 이벤트 리스트 -->
@@ -1463,6 +1194,49 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="tab-pane sm-address" id="sm-address">
+                        <div class="sidebar-heading">홈</div>
+                        <nav class="cd-dropdown dropdown-is-active">
+                            <h5>지도 홈</h5>
+                            <ul class="cd-dropdown-content">
+                                <li class="has-children">
+                                    <a href="#0">2depth</a>
+                                    <ul class="cd-secondary-dropdown is-hidden">
+                                        <li class="go-back"><a href="#0">2depth</a></li>
+                                        <li class="see-all"><a href="#0">3depth</a></li>
+                                        <li class="has-children">
+                                            <a href="#0">3depth</a>
+                                            <ul class="is-hidden">
+                                                <li class="go-back"><a href="#0">3depth</a></li>
+                                                <li class="see-all"><a href="#0">4depth</a></li>
+                                                <li class="has-children">
+                                                    <a href="#0">4depth</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="#0">4depth</a></li>
+                                                        <li class="see-all"><a href="#0">5depth</a></li>
+                                                        <li><a href="#0">5depth</a></li>
+                                                        <li><a href="#0">5depth</a></li>
+                                                        <li><a href="#0">5depth</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#0">4depth</a></li>
+                                                <li><a href="#0">4depth</a></li>
+                                                <li><a href="#0">4depth</a></li>
+                                                <li><a href="#0">4depth</a></li>
+                                                <li><a href="#0">4depth</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#0">3depth</a></li>
+                                        <li><a href="#0">3depth</a></li>
+                                        <li><a href="#0">3depth</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#0">2depth</a></li>
+                                <li><a href="#0">2depth</a></li>
+                                <li><a href="#0">2depth</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
