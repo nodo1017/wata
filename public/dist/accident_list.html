@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>WATA</title>
 
     <!-- Prevent the demo from appearing in search engines -->
@@ -85,7 +85,6 @@
         </div>
         <div class="filter-cell filter-area d-flex align-items-center">
             <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                <i class="fas fa-map-marker-alt"></i>
                 <strong>구역선택</strong>
             </a>
             <div class="filter-item-dropdown">
@@ -106,247 +105,243 @@
                 <a href="#n" class="dropdown-item">관리구역 B</a>
             </div>
         </div>
-        <div class="status-map row align-items-center justify-content-center m-0">
-            <div class="tabBox mapStauts01 status-con active">
-                <div class="filter-cell d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <i class="far fa-calendar-alt"></i>
-                        <strong>기간선택</strong>
-                    </a>
-                    <div class="filter-item-dropdown date-pick" style="width: 350px;">
-                        <div class="dropdown-body pt-8pt">
-                            <div class="form-group">
-                                <input type="hidden" data-toggle="flatpickr" data-flatpickr-mode="range" data-flatpickr-inline="true" value="2021-01-01 to 2021-01-31">
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-2">
-                            <a href="#n" class="btn btn-outline-secondary">확인</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-cell d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <i class="far fa-clock"></i>
-                        <strong>시간선택</strong>
-                    </a>
-                    <div class="filter-item-dropdown" style="width: 250px;">
-                        <div class="dropdown-header"><strong>시작시간</strong></div>
-                        <div class="dropdown-body mb-4">
-                            <div class="form-row">
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">AM</option>
-                                        <option value="">PM</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">01</option>
-                                        <option value="">02</option>
-                                        <option value="">03</option>
-                                        <option value="">04</option>
-                                        <option value="">05</option>
-                                        <option value="">06</option>
-                                        <option value="">07</option>
-                                        <option value="">08</option>
-                                        <option value="">09</option>
-                                        <option value="">10</option>
-                                        <option value="">11</option>
-                                        <option value="">12</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">00</option>
-                                        <option value="">10</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
-                                        <option value="">40</option>
-                                        <option value="">50</option>
-                                    </select>
+        <div id="filter-bar">
+            <a href="#0" class="cd-filter-trigger"><i class="material-icons">tune</i>필터</a>
+            <div class="status-map align-items-center justify-content-center">
+                <div class="tabBox mapStauts01 status-con active">
+                    <div class="filter-cell filter-list d-flex align-items-center">
+                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                            <strong>기간선택</strong>
+                        </a>
+                        <div class="filter-item-dropdown date-pick" style="width: 350px;">
+                            <div class="dropdown-body pt-8pt">
+                                <div class="form-group">
+                                    <input type="hidden" data-toggle="flatpickr" data-flatpickr-mode="range" data-flatpickr-inline="true" value="2021-01-01 to 2021-01-31">
                                 </div>
                             </div>
-                        </div>
-                        <div class="dropdown-header"><strong>종료시간</strong></div>
-                        <div class="dropdown-body mb-4">
-                            <div class="form-row">
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">AM</option>
-                                        <option value="">PM</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">01</option>
-                                        <option value="">02</option>
-                                        <option value="">03</option>
-                                        <option value="">04</option>
-                                        <option value="">05</option>
-                                        <option value="">06</option>
-                                        <option value="">07</option>
-                                        <option value="">08</option>
-                                        <option value="">09</option>
-                                        <option value="">10</option>
-                                        <option value="">11</option>
-                                        <option value="">12</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">00</option>
-                                        <option value="">10</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
-                                        <option value="">40</option>
-                                        <option value="">50</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-2">
-                            <a href="#n" class="btn btn-outline-secondary">확인</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-cell d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <i class="fas fa-arrows-alt-h"></i>
-                        <strong>연령대</strong>
-                    </a>
-                    <div class="filter-item-dropdown" style="width: 300px;">
-                        <div class="dropdown-body my-2">
-                            <div class="flex" style="max-width: 100%">
-                                <input id="userAge" type="text" data-toggle="ion-rangeslider"
-                                    data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
-                                    data-grid="true">
+                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                <a href="#n" class="btn btn-outline-secondary">확인</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="filter-cell d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <i class="fas fa-transgender"></i>
-                        <strong>성별</strong>
-                    </a>
-                    <div class="filter-item-dropdown">
-                        <div class="dropdown-body my-2">
-                            <div class="form-check custom-checkbox">
-                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
-                                    value="" id="navBarGenderAll" checked>
-                                <label class="custom-control-label" for="navBarGenderAll">전체</label>
+                    <div class="filter-cell filter-list d-flex align-items-center">
+                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                            <strong>시간선택</strong>
+                        </a>
+                        <div class="filter-item-dropdown" style="width: 250px;">
+                            <div class="dropdown-header"><strong>시작시간</strong></div>
+                            <div class="dropdown-body mb-4">
+                                <div class="form-row">
+                                    <div class="col-lg-4">
+                                        <select class="form-line" name="" id="">
+                                            <option value="">AM</option>
+                                            <option value="">PM</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <select class="form-line" name="" id="">
+                                            <option value="">01</option>
+                                            <option value="">02</option>
+                                            <option value="">03</option>
+                                            <option value="">04</option>
+                                            <option value="">05</option>
+                                            <option value="">06</option>
+                                            <option value="">07</option>
+                                            <option value="">08</option>
+                                            <option value="">09</option>
+                                            <option value="">10</option>
+                                            <option value="">11</option>
+                                            <option value="">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <select class="form-line" name="" id="">
+                                            <option value="">00</option>
+                                            <option value="">10</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
+                                            <option value="">40</option>
+                                            <option value="">50</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check custom-checkbox mt-12pt">
-                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
-                                    value="1" id="navBarGenderMale">
-                                <label class="custom-control-label" for="navBarGenderMale">남</label>
+                            <div class="dropdown-header"><strong>종료시간</strong></div>
+                            <div class="dropdown-body mb-4">
+                                <div class="form-row">
+                                    <div class="col-lg-4">
+                                        <select class="form-line" name="" id="">
+                                            <option value="">AM</option>
+                                            <option value="">PM</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <select class="form-line" name="" id="">
+                                            <option value="">01</option>
+                                            <option value="">02</option>
+                                            <option value="">03</option>
+                                            <option value="">04</option>
+                                            <option value="">05</option>
+                                            <option value="">06</option>
+                                            <option value="">07</option>
+                                            <option value="">08</option>
+                                            <option value="">09</option>
+                                            <option value="">10</option>
+                                            <option value="">11</option>
+                                            <option value="">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <select class="form-line" name="" id="">
+                                            <option value="">00</option>
+                                            <option value="">10</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
+                                            <option value="">40</option>
+                                            <option value="">50</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check custom-checkbox mt-12pt">
-                                <input class="custom-control-input" type="radio" name="navBarGenderVal"
-                                    value="2" id="navBarGenderFeMale">
-                                <label class="custom-control-label" for="navBarGenderFeMale">여</label>
+                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                <a href="#n" class="btn btn-outline-secondary">확인</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="filter-cell d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <i class="fas fa-mobile-alt"></i>
-                        <strong>휴대폰 종류</strong>
-                    </a>
-                    <div class="filter-item-dropdown">
-                        <div class="dropdown-body my-2">
-                            <div class="form-check custom-checkbox">
-                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
-                                    value="" id="deviceTypeAll" checked>
-                                <label class="custom-control-label" for="deviceTypeAll">전체</label>
-                            </div>
-    
-                            <div class="form-check custom-checkbox mt-12pt">
-                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
-                                    value="1" id="deviceTypeAos">
-                                <label class="custom-control-label" for="deviceTypeAos">Android</label>
-                            </div>
-                            <div class="form-check custom-checkbox mt-12pt">
-                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
-                                    value="2" id="deviceTypeIos">
-                                <label class="custom-control-label" for="deviceTypeIos">iOS</label>
+                    <div class="filter-cell filter-list d-flex align-items-center">
+                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                            <strong>연령대</strong>
+                        </a>
+                        <div class="filter-item-dropdown" style="width: 300px;">
+                            <div class="dropdown-body my-2">
+                                <div class="flex" style="max-width: 100%">
+                                    <input id="userAge" type="text" data-toggle="ion-rangeslider"
+                                        data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
+                                        data-grid="true">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="filter-cell d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <i class="far fa-flag"></i>
-                        <strong>체류시간(minute)</strong>
-                    </a>
-                    <div class="filter-item-dropdown" style="width: 300px;">
-                        <div class="dropdown-body my-2">
-                            <div class="flex" style="max-width: 100%">
-                                <input id="userStay" type="text" data-toggle="ion-rangeslider"
-                                    data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
-                                    data-grid="true">
+                    <div class="filter-cell filter-list d-flex align-items-center">
+                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                            <strong>성별</strong>
+                        </a>
+                        <div class="filter-item-dropdown">
+                            <div class="dropdown-body my-2">
+                                <div class="form-check custom-checkbox">
+                                    <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                        value="" id="navBarGenderAll" checked>
+                                    <label class="custom-control-label" for="navBarGenderAll">전체</label>
+                                </div>
+                                <div class="form-check custom-checkbox mt-12pt">
+                                    <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                        value="1" id="navBarGenderMale">
+                                    <label class="custom-control-label" for="navBarGenderMale">남</label>
+                                </div>
+                                <div class="form-check custom-checkbox mt-12pt">
+                                    <input class="custom-control-input" type="radio" name="navBarGenderVal"
+                                        value="2" id="navBarGenderFeMale">
+                                    <label class="custom-control-label" for="navBarGenderFeMale">여</label>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="filter-cell filter-list d-flex align-items-center">
+                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                            <strong>휴대폰 종류</strong>
+                        </a>
+                        <div class="filter-item-dropdown">
+                            <div class="dropdown-body my-2">
+                                <div class="form-check custom-checkbox">
+                                    <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                        value="" id="deviceTypeAll" checked>
+                                    <label class="custom-control-label" for="deviceTypeAll">전체</label>
+                                </div>
+        
+                                <div class="form-check custom-checkbox mt-12pt">
+                                    <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                        value="1" id="deviceTypeAos">
+                                    <label class="custom-control-label" for="deviceTypeAos">Android</label>
+                                </div>
+                                <div class="form-check custom-checkbox mt-12pt">
+                                    <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
+                                        value="2" id="deviceTypeIos">
+                                    <label class="custom-control-label" for="deviceTypeIos">iOS</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-cell filter-list d-flex align-items-center">
+                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
+                            <strong>체류시간(m)</strong>
+                        </a>
+                        <div class="filter-item-dropdown" style="width: 300px;">
+                            <div class="dropdown-body my-2">
+                                <div class="flex" style="max-width: 100%">
+                                    <input id="userStay" type="text" data-toggle="ion-rangeslider"
+                                        data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
+                                        data-grid="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
+                        <a href="#n" class=""><i class="material-icons mr-1">done</i> 설정</a>
+                    </div>
                 </div>
-                <div class="filter-btn-cell d-flex align-items-center">
-                    <a href="#n" class=""><i class="material-icons mr-1">done</i> 설정</a>
-                </div>
-            </div>
-            <div class="tabBox mapStauts02 status-con ml-32pt">
-                <span class="d-flex align-items-center mr-40pt">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
+                <div class="tabBox mapStauts02 status-con">
+                    <span class="d-flex align-items-center mr-4 pl-3">
+                        <span class="avatar mr-12pt">
+                            <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
+                        </span>
+                        <small class="flex d-flex flex-column">
+                            <span class="navbar-text-50">전체 이용객 수</span>
+                            <strong class="navbar-text-100">117명<span class="liveUser liveUser-up">2명 증가</span></strong>
+                        </small>
                     </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">전체 이용객 수</span>
-                        <strong class="navbar-text-100">117명<span class="liveUser liveUser-up">2명 증가</span></strong>
-                    </small>
-                </span>
-                <span class="d-flex align-items-center mr-40pt">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
+                    <span class="d-flex align-items-center mr-4">
+                        <span class="avatar mr-12pt">
+                            <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
+                        </span>
+                        <small class="flex d-flex flex-column">
+                            <span class="navbar-text-50">구역별 이용객 수</span>
+                            <strong class="navbar-text-100">11명<span class="liveUser liveUser-down">5명 감소</span></strong>
+                        </small>
                     </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">구역별 이용객 수</span>
-                        <strong class="navbar-text-100">11명<span class="liveUser liveUser-down">5명 감소</span></strong>
-                    </small>
-                </span>
-                <span class="d-flex align-items-center mr-40pt">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
+                    <span class="d-flex align-items-center mr-4">
+                        <span class="avatar mr-12pt">
+                            <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
+                        </span>
+                        <small class="flex d-flex flex-column">
+                            <span class="navbar-text-50">사용자 체류시간</span>
+                            <strong class="navbar-text-100">10분</strong>
+                        </small>
                     </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">사용자 체류시간</span>
-                        <strong class="navbar-text-100">10분</strong>
-                    </small>
-                </span>
-                <span class="d-flex align-items-center mr-40pt">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">track_changes</i></span>
+                    <span class="d-flex align-items-center mr-4">
+                        <span class="avatar mr-12pt">
+                            <span class="avatar-title navbar-avatar"><i class="material-icons">track_changes</i></span>
+                        </span>
+                        <small class="flex d-flex flex-column">
+                            <span class="navbar-text-50">구역별 방문 순위</span>
+                            <strong class="navbar-text-100">미디어회의실</strong>
+                        </small>
                     </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">구역별 방문 순위</span>
-                        <strong class="navbar-text-100">미디어회의실</strong>
-                    </small>
-                </span>
-                <span class="d-flex align-items-center mr-40pt">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i
-                                class="material-icons">notification_important</i></span>
+                    <span class="d-flex align-items-center mr-4">
+                        <span class="avatar mr-12pt">
+                            <span class="avatar-title navbar-avatar"><i
+                                    class="material-icons">notification_important</i></span>
+                        </span>
+                        <small class="flex d-flex flex-column">
+                            <span class="navbar-text-50">사고발생 건 수</span>
+                            <strong class="navbar-text-100">0건</strong>
+                        </small>
                     </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">사고발생 건 수</span>
-                        <strong class="navbar-text-100">0건</strong>
-                    </small>
-                </span>
-                <div class="filter-btn-cell d-flex align-items-center">
-                    <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
+                    <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
+                        <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
+                    </div>
                 </div>
             </div>
         </div>
-        
         <!-- menu -->
         <!-- <ul class="nav navbar-nav flex justify-content-end">
             <li class="nav-item active">
