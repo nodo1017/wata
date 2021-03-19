@@ -80,10 +80,10 @@
             <span class="material-icons">short_text</span>
         </button>
         <!-- history / live -->
-        <div class="nav-search">
+        <!-- <div class="nav-search">
             <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
             <button type="button"><i class="fas fa-search"></i></button>
-        </div>
+        </div> -->
         
         <!-- menu -->
         <!-- <ul class="nav navbar-nav flex justify-content-end">
@@ -793,10 +793,9 @@
                                             <div class="dropdown">
                                                 <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
                                                 <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="buildings_write2.html" class="dropdown-item">평면도 추가</a>
                                                     <a href="#n" class="dropdown-item">복사</a>
                                                     <div class="dropdown-divider"></div>
-                                                    <a href="maps_write.html" class="dropdown-item text-primary">수정</a>
+                                                    <a href="maps_write.html" class="dropdown-item text-primary">이름변경</a>
                                                     <a href="#n" class="dropdown-item text-danger">삭제</a>
                                                 </div>
                                             </div>
@@ -808,216 +807,82 @@
                                 </div>
                             </div>
                             <div class="container-fluid">
-                                <div class="row align-items-center mb-4">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center">
-                                            <div class="avatar avatar-xs">
-                                                <span class="avatar-title rounded-circle">SH</span>
+                                <div class="list-group dragula-list mb-4" data-toggle="dragula">
+                                    <div class="list-group-item d-flex active">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="avatar avatar-sm mr-2">
+                                                <span class="avatar-title rounded-circle">B1</span>
                                             </div>
-                                            <strong class="flex ml-1">SH Jeong</strong>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <select class="form-none" name="" id="" disabled>
-                                            <option value="">스마트 팩토리</option>
-                                            <option value="">스마트 리테일</option>
-                                            <option value="">스마트 빌딩</option>
-                                            <option value="">스마트 뱡원</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="contents-tab nav mb-4" role="tablist">
-                                    <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
-                                        <span class="menu-cover"><span>공간</span></span>
-                                    </a>
-                                    <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                        <span class="menu-cover"><span>경로</span></span>
-                                    </a>
-                                    <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                        <span class="menu-cover"><span>지도</span></span>
-                                    </a>
-                                    <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                        <span class="menu-cover"><span>POI</span></span>
-                                    </a>
-                                </div>
-                                <div class="tab-content">
-                                    <div id="tab01" class="tab-pane active" role="tabpanel">
-                                        <div class="list-group dragula-list mb-4" data-toggle="dragula">
-                                            <div class="list-group-item d-flex active">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물A B1</a>
-                                                        <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물A 1F</a>
-                                                        <div class="card-subtitle text-50">2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물A 2F</a>
-                                                        <div class="card-subtitle text-50">2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물A 3F</a>
-                                                        <div class="card-subtitle text-50">2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물A 4F</a>
-                                                        <div class="card-subtitle text-50">2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물A 5F</a>
-                                                        <div class="card-subtitle text-50">2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물A 6F</a>
-                                                        <div class="card-subtitle text-50">2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물A 7F</a>
-                                                        <div class="card-subtitle text-50">2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="buildings_write2.html" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                    </div>
-                                                </div>
+                                            <div class="flex">
+                                                <a class="card-title" href="buildings_detail.html">지하창고</a>
+                                                <dl class="space-id">
+                                                    <dt>스페이스ID : </dt>
+                                                    <dd>3213495</dd>
+                                                </dl>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a href="buildings_write2.html" class="btn-row-add"><i class="material-icons">add</i> 새로운 평면도 추가</a>
-                                            <!-- <a href="maps_write2.html" class="btn-add" data-toggle="tooltip" data-title="새지도 만들기" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a> -->
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
                                         </div>
-                                        <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
-                                            <li class="page-item disabled">
-                                                <a class="page-link" href="#" aria-label="Previous">
-                                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                                    <span>Prev</span>
-                                                </a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Page 1">
-                                                    <span>1</span>
-                                                </a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Page 2">
-                                                    <span>2</span>
-                                                </a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Next">
-                                                    <span>Next</span>
-                                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </div>
-                                    <div id="tab02" class="tab-pane" role="tabpanel">2
-                                    </div>
-                                    <div id="tab03" class="tab-pane" role="tabpanel">3
-                                    </div>
-                                    <div id="tab04" class="tab-pane" role="tabpanel">4
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="avatar avatar-sm mr-2">
+                                                <span class="avatar-title rounded-circle">1F</span>
+                                            </div>
+                                            <div class="flex">
+                                                <a class="card-title" href="buildings_detail.html">로비</a>
+                                                <dl class="space-id">
+                                                    <dt>스페이스ID : </dt>
+                                                    <dd>3213495</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="maps_write2.html" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="buildings_write2.html" class="btn-row-add"><i class="material-icons">add</i> 새로운 평면도 추가</a>
+                                    <!-- <a href="maps_write2.html" class="btn-add" data-toggle="tooltip" data-title="새지도 만들기" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a> -->
+                                </div>
+                                <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1">
+                                            <span>1</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2">
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

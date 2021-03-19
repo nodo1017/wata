@@ -430,6 +430,7 @@
         //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
     </script>
     </div>
+
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
@@ -440,68 +441,20 @@
     <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
         <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs"
             role="tablist">
-            <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body"
+            <li class="sidebar-menu-item active" data-title="Maps" data-placement="right" data-container="body"
                 data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab"
-                    aria-controls="sm-projects">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
-                    <span class="sidebar-menu-text">프로젝트</span>
+                <a class="sidebar-menu-button active" href="#sm-maps" data-toggle="tab" role="tab"
+                    aria-controls="sm-maps">
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">business</i>
+                    <span class="sidebar-menu-text">건물</span>
                 </a>
             </li>
-            <!-- <li class="sidebar-menu-item" data-title="Maps" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-maps" data-toggle="tab" role="tab"
-                    aria-controls="sm-maps">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">map</i>
-                    <span class="sidebar-menu-text">내지도</span>
-                </a>
-            </li> -->
-            <!-- <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-event" data-toggle="tab" role="tab"
-                    aria-controls="sm-event">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">local_mall</i>
-                    <span class="sidebar-menu-text">이벤트</span>
-                </a>
-            </li> -->
-            <!-- <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-accident" data-toggle="tab" role="tab"
-                    aria-controls="sm-accident">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">error_outline</i>
-                    <span class="sidebar-menu-text">사고관리</span>
-                </a>
-            </li> -->
-            <!-- <li class="sidebar-menu-item" data-title="Assets" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-assets" data-toggle="tab" role="tab"
-                    aria-controls="sm-assets">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_balance_wallet</i>
-                    <span class="sidebar-menu-text">자산관리</span>
-                </a>
-            </li> -->
-            <!-- <li class="sidebar-menu-item" data-title="Setting" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab"
-                    aria-controls="sm-setting">
-                    <i
-                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
-                    <span class="sidebar-menu-text">설정</span>
-                </a>
-            </li> -->
         </ul>
     </div>
 </div>
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
                     <div class="tab-pane sm-search" id="sm-search">
-                        <!-- <div class="wt-trigger-foldPanel">
-                            <div class="search-form search-form--dark input-group-lg">
-                                <input type="text" class="form-control" placeholder="POI, 센서, 장소 등 검색"
-                                    id="searchSample01">
-                                <button class="btn" type="button"><i class="material-icons">search</i></button>
-                            </div>
-                        </div> -->
                         <div class="search-value d-flex align-items-center">
                             <span class="d-flex align-items-center text-muted">검색결과<strong class="text-danger">26</strong>건</span>
                         </div>
@@ -577,147 +530,19 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-pane sm-projects active" id="sm-projects">
-                        <!-- 프로젝트 등록 -->
-                        <div class="project-inner">
-                            <div class="container-fluid d-flex align-items-center py-4">
-                                <div class="flex d-flex">
-                                    <a href="project_write.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
-                                    <div class="mr-24pt">
-                                        <h3 class="mb-0">솔루션 선택</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="step mb-4">
-                                    <div class="progression-bar progression-bar--active-accent">
-                                        <span class="progression-bar__item progression-bar__item--complete">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon">done</i>
-                                                <span class="mb-0 text-uppercase">정보입력</span>
-                                            </span>
-                                        </span>
-                                        <span class="progression-bar__item progression-bar__item--complete">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon">done</i>
-                                                <span class="mb-0 text-uppercase">건물연결</span>
-                                            </span>
-                                        </span>
-                                        <span class="progression-bar__item progression-bar__item--complete progression-bar__item--active">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon">done</i>
-                                                <span class="mb-0 text-uppercase">솔루션 선택</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 2. 정보입력 -->
-                            <div class="container-fluid">
-                                <div class="solution-list">
-                                    <div class="solution-card method active">
-                                        <label for="sm-control" class="card-body d-flex flex-column m-0">
-                                            <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
-                                            <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-server"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 관제</div>
-                                                    <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-control" name="radio-stacked" type="radio"
-                                                class="custom-control-input">
-                                            <div class="custom-control custom-radio d-none">
-                                                <label for="sm-office" class="custom-control-label">Smart Control</label>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="solution-card method">
-                                        <label for="sm-office" class="card-body d-flex flex-column m-0">
-                                            <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
-                                            <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-building"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 오피스</div>
-                                                    <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-office" name="radio-stacked" type="radio" class="custom-control-input">
-                                            <div class="custom-control custom-radio d-none">
-                                                <label for="sm-office" class="custom-control-label">Smart Office</label>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="solution-card method">
-                                        <label for="sm-hospoital" class="card-body d-flex flex-column m-0">
-                                            <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-hospital-alt"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 병원</div>
-                                                    <p class="m-0 text-70">의료 지원 솔루션 직원 및 보다 편리한 제공 병원 경험</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-hospoital" name="radio-stacked" type="radio" class="custom-control-input">
-                                        </label>
-                                    </div>
-                                    <div class="solution-card method">
-                                        <label for="sm-factory" class="card-body d-flex flex-column m-0">
-                                            <div class="d-flex">
-                                                <div class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-city"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 팩토리</div>
-                                                    <p class="m-0 text-70">스마트 자산 관리 도구를 사용하여 안전한 작업 환경을 만드는 솔루션</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-factory" name="radio-stacked" type="radio" class="custom-control-input">
-                                        </label>
-                                    </div>
-                                    <div class="solution-card method">
-                                        <label for="sm-store" class="card-body d-flex flex-column m-0">
-                                            <div class="d-flex">
-                                                <div
-                                                    class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                    <i class="fas fa-store"></i>
-                                                </div>
-                                                <div class="flex">
-                                                    <div class="card-title mb-8pt">스마트 리테일</div>
-                                                    <p class="m-0 text-70">의료 지원 솔루션 직원 및 보다 편리한 제공 병원 경험</p>
-                                                </div>
-                                            </div>
-                                            <input id="sm-store" name="radio-stacked" type="radio" class="custom-control-input">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="my-32pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="project_write2.html" class="btn btn-outline-secondary mr-8pt">이전단계</a>
-                                        <a href="project_done.html" class="btn btn-outline-accent ml-0">등록하기</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane sm-maps" id="sm-maps">
+                    <div class="tab-pane sm-projects" id="sm-projects">
                         <!-- 프로젝트 리스트 -->
-                        <div class="maps-inner">
+                        <div class="project-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center py-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
                                     <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">지도 목록</h3>
-                                        <p class="text-70 mb-0">현재 생성한 지도 목록입니다.</p>
+                                        <h3 class="mb-0">프로젝트</h3>
+                                        <p class="text-70 mb-0">현재 진행중인 프로젝트 목록입니다.</p>
                                     </div>
                                 </div>
                                 <div class="row" role="tablist">
                                     <div class="col-auto">
-                                        <a href="maps_write.html" class="btn btn-outline-dark">신규등록</a>
+                                        <a href="project_write.html" class="btn btn-outline-dark">신규등록</a>
                                     </div>
                                 </div>
                             </div>
@@ -735,11 +560,11 @@
                                 <div class="list-group row-list list-group-flush mb-4">
                                     <div class="list-group-item d-flex">
                                         <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="maps_board.html" class="avatar mr-12pt">
+                                            <a href="project_board.html" class="avatar mr-12pt">
                                                 <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
                                             </a>
                                             <div class="flex list-els">
-                                                <a class="card-title" href="maps_board.html">스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
+                                                <a class="card-title" href="project_board.html">스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
                                                 <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
                                             </div>
                                         </div>
@@ -953,7 +778,64 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-event" id="sm-event"> 
+                    <div class="tab-pane sm-maps active" id="sm-maps">
+                        <!-- 맵 보기 -->
+                        <div class="maps-inner">
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <a href="buildings_detail2.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">사용자편집</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 essential" for="projectName">제목</label>
+                                    <input type="text" class="form-line" id="projectName" placeholder="제목을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50">카테고리</label>
+                                    <select name="category" class="form-line">
+                                        <option value="경보 이벤트">옵션1</option>
+                                        <option value="화재">옵션2</option>
+                                        <option value="감염병">옵션3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50">아이콘</label>
+                                    <div class="poi-list">
+                                        <ul>
+                                            <li><a href="#n" class="poi-orange"><img src="../images/poi/fashion_beauty.svg" alt=""></a></li>
+                                            <li><a href="#n" class="poi-orange"><img src="../images/poi/fashion_cloth.svg" alt=""></a></li>
+                                            <li><a href="#n" class="poi-orange"><img src="../images/poi/fashion_jewely.svg" alt=""></a></li>
+                                            <li><a href="#n" class="poi-orange"><img src="../images/poi/fashion_langerie.svg" alt=""></a></li>
+                                            <li><a href="#n" class="poi-orange"><img src="../images/poi/fashion_shoes.svg" alt=""></a></li>
+                                            <li><a href="#n" class="poi-orange"><img src="../images/poi/fashion_stuff.svg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">위도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample02">경도</label>
+                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                    </div>
+                                </div>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="buildings_detail2.html" class="btn btn-outline-accent ml-0">저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane sm-event" id="sm-event">
                         <!-- 이벤트 리스트 -->
                         <div class="event-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center py-4">
@@ -1214,14 +1096,6 @@
                                 <a href="accident_write.html" class="btn btn-outline-dark">신규등록</a>
                             </div>
                             <div class="container-fluid">
-                                <div class="form-group">
-                                    <label class="form-label">프로젝트 리스트</label>
-                                    <select name="category" class="form-control custom-select">
-                                        <option value="vuejs">전체</option>
-                                        <option value="vuejs">건물 A</option>
-                                        <option value="vuejs">건물 B</option>
-                                    </select>
-                                </div>
                                 <div class="list-group row-list list-group-flush mb-4">
                                     <div class="list-group-item d-flex">
                                         <div class="flex d-flex align-items-center mr-16pt">
@@ -1229,7 +1103,7 @@
                                                 <span class="lead text-headings text-iden"><i class="material-icons">local_fire_department</i></span>
                                             </a>
                                             <div class="flex list-els">
-                                                <a class="card-title" href="accident_board.html">건물 A 화재 발생</a>
+                                                <a class="card-title" href="accident_board.html">스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
                                                 <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
                                             </div>
                                         </div>
@@ -1253,7 +1127,7 @@
                                                 <span class="lead text-headings text-iden"><i class="material-icons">subdirectory_arrow_right</i></span>
                                             </a>
                                             <div class="flex list-els">
-                                                <a class="card-title" href="accident_board.html">건물 A 화재 발생</a>
+                                                <a class="card-title" href="accident_board.html">화재가 발생하였습니다.</a>
                                                 <div class="card-subtitle text-50"><span class="badge badge-accent">N</span>  20.01.13 06:42:58</div>
                                             </div>
                                         </div>
@@ -1277,7 +1151,7 @@
                                                 <span class="lead text-headings text-iden"><i class="material-icons">local_fire_department</i></span>
                                             </a>
                                             <div class="flex list-els">
-                                                <a class="card-title" href="#n"><small class="text-50">[복사]</small> 건물 A 화재 발생</a>
+                                                <a class="card-title" href="#n"><small class="text-50">[복사]</small> 스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층스타트업 캠퍼스 2동 4층</a>
                                                 <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
                                             </div>
                                         </div>
@@ -1301,7 +1175,7 @@
                                                 <span class="lead text-headings text-iden"><i class="material-icons">warning</i></span>
                                             </a>
                                             <div class="flex list-els">
-                                                <a class="card-title" href="#n">건물 B 긴급상황</a>
+                                                <a class="card-title" href="#n">강남역 센트럴 푸르지오시티</a>
                                                 <div class="card-subtitle text-50">2020.11.21</div>
                                             </div>
                                         </div>
@@ -1323,7 +1197,7 @@
                                                 <span class="lead text-headings text-iden"><i class="material-icons">coronavirus</i></span>
                                             </a>
                                             <div class="flex">
-                                                <a class="card-title" href="#n">건물 B 감염병 발생</a>
+                                                <a class="card-title" href="#n">메가시티</a>
                                                 <div class="card-subtitle text-50">2021.01.07</div>
                                             </div>
                                         </div>
@@ -1347,7 +1221,7 @@
                                                 <span class="lead text-headings text-iden"><i class="material-icons">local_hospital</i></span>
                                             </a>
                                             <div class="flex list-els">
-                                                <a class="card-title" href="#n">건물 A 응급상황</a>
+                                                <a class="card-title" href="#n">삼성서울병원</a>
                                                 <div class="card-subtitle text-50">2021.01.07</div>
                                             </div>
                                         </div>
@@ -1604,7 +1478,7 @@
                         <div class="container-fluid">
                             <div class="form-group">
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option03">자동업데이트</label>
+                                    <label class="form-label mb-0" for="option01">자동업데이트</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option03"
@@ -1614,7 +1488,7 @@
                                     </div>
                                 </div>
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option04">옵션2</label>
+                                    <label class="form-label mb-0" for="option02">옵션2</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option04"
@@ -1640,6 +1514,7 @@
             </div>
         </div>
     </div>
+    <!-- // END drawer -->
 </div>
 
 <!-- // END Drawer Layout -->

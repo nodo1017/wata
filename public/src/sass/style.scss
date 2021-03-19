@@ -34,20 +34,6 @@ body.layout-compact{
     position: relative;
     label, span {
         font-size: 0.75rem;
-        &.essential {
-            position: relative;
-            &:after {
-                content: '';
-                position: relative;
-                top: -10px;
-                margin-left: 3px;
-                width: 4px;
-                height: 4px;
-                background-color: $identity;
-                border-radius: 50%;
-                display: inline-block;
-            }
-        }
     }
     input[type=file] {
         height: auto;
@@ -135,6 +121,20 @@ body.layout-compact{
         position: absolute;
         right: 5px;
         bottom: .5rem;
+    }
+}
+.essential {
+    position: relative;
+    &:after {
+        content: '';
+        position: relative;
+        top: -10px;
+        margin-left: 3px;
+        width: 4px;
+        height: 4px;
+        background-color: $identity;
+        border-radius: 50%;
+        display: inline-block;
     }
 }
 .form-line {
@@ -1962,7 +1962,6 @@ a.circle-iden-icon{
         box-shadow: 0 0 10px rgba(232, 59, 59, 0.75);
     }
 }
-
 @keyframes rotate-circle {
     0% {
         transform: rotate(-45deg);
@@ -2475,7 +2474,52 @@ a.btn-grad-de{
         }
     }
 }
-
+.poi-list{
+    border-radius: .25rem;
+    padding: .75rem;
+    border: 1px solid #e6e6e6;
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        margin-right: -5px;
+        margin: -5px;
+        li{
+            flex: 0 0 12.5%;
+            width: 30px;
+            display: flex;
+            max-width: 12.5%;
+            padding: 5px;
+            a{
+                display: flex;
+                border-radius: 50%;
+                &.poi-orange{
+                    background-color: #ffad66;
+                }
+                &.poi-pink{
+                    background-color: #da70bf;
+                }
+                &.poi-red{
+                    background-color: #f06d6d;
+                }
+                &.poi-purple{
+                    background-color: #8f7be0;
+                }
+                &.poi-brown{
+                    background-color: #a68f7e;
+                }
+                &.poi-sky{
+                    background-color: #7db1e3;
+                }
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
 /* list group */
 .list-group{
     &.dragula-list{
@@ -2558,6 +2602,54 @@ a.btn-grad-de{
     }
     .deactivate{
         opacity: 0.4;
+    }
+}
+.element-list-group{
+    border-top: 1px solid #e9edf2;
+    .element-item-list{
+        position: relative;
+        border-bottom: 1px solid #e9edf2;
+        padding: 1rem .75rem;
+        &:hover{
+            background-color: #f9f9f9;
+            a.btn-ele-edit{
+                display: block;
+            }
+        }
+        a.ele-title{
+            font-size: .875rem;
+            color: #333;
+            font-weight: 500;
+            flex: 1 1 0%;
+            max-width: 270px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        a.btn-ele-edit{
+            display: none;
+            position: relative;
+            i{
+                color: #a9a9a9;
+            }
+        }
+        .avatar{
+            vertical-align: middle;
+            margin-right: .25rem;
+            span{
+                background-color: #e6e6e6;
+            }
+            i{
+                font-size: 1rem;
+            }
+        }
+        .poi-icon{
+            display: flex;
+            margin-right: .25rem;
+            i{
+                color: #d4d5dc;
+            }
+        }
     }
 }
 .sidebar-secondary{
@@ -2840,7 +2932,6 @@ a.btn-grad-de{
         }
         &.on{
             color: $identity;
-            background-color: #f9f9f9;
         }
     }
     .filter-item-dropdown{
@@ -2905,7 +2996,6 @@ a.btn-grad-de{
         }
     }
 }
-
 
 a.cd-filter-trigger {
     display: flex;
@@ -3006,8 +3096,6 @@ a.cd-filter-trigger {
         display: none;
     }
 }
-
-
 
 /* search */
 .sm-search{
@@ -3824,16 +3912,6 @@ map options
         font-size: .75rem;
         color: #999;
     }
-    dl{
-        font-size: .75rem;
-        margin: 0;
-        margin-top: .25rem;
-        dt,dd{
-            display: inline-flex;
-            color: #999;
-            margin: 0;
-        }
-    }
     .card-footer{
         background-color: #fafafa;
     }
@@ -3841,6 +3919,16 @@ map options
         .card-title, .lead{
             color: $identity;
         }
+    }
+}
+dl.space-id{
+    font-size: .75rem;
+    margin: 0;
+    margin-top: .25rem;
+    dt,dd{
+        display: inline-flex;
+        color: #999;
+        margin: 0;
     }
 }
 /* map zoom/out */
