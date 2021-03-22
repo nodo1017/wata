@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" viewBox="0 0 25 24">
-    <g clip-path="url(#clip0)">
-        <circle cx="12.698" cy="12" r="11.75" fill="#F06D6D" stroke="#fff" stroke-width=".5"/>
-        <path fill="#fff" fill-rule="evenodd" d="M12.947 8.18l.257.514-.9.385-.256-.513.899-.385zm-1.67.643l.643.642-.514.513-.642-.77.514-.385zm2.184.256l.898.257-.128.514-.899-.257.128-.514zm-5.265 1.156h8.988c-.128-.642-.385-1.027-.77-1.412l3.081-2.44-.642-.642-3.21 2.568c-.128-.128-.385-.257-.642-.257L16.8 4.33l-.77-.385-1.927 3.852c-.898-.77-2.31-.642-3.21.256-1.283-.128-2.439.9-2.696 2.183zm-.513 1.027c0 2.568 1.926 4.75 4.494 5.008v1.669H9.609v.899h5.906v-.9h-2.568V16.27c2.568-.257 4.494-2.44 4.494-5.008v-.642H7.683v.642z" clip-rule="evenodd"/>
-    </g>
-    <defs>
-        <clipPath id="clip0">
-            <path fill="#fff" d="M0 0H24V24H0z" transform="translate(.698)"/>
-        </clipPath>
-    </defs>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 25 24" style="enable-background:new 0 0 25 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<path class="st0" d="M11.9,8.8l0.3,0.5l-0.9,0.4L11,9.2L11.9,8.8L11.9,8.8z M10.2,9.4l0.6,0.6l-0.5,0.5L9.7,9.8L10.2,9.4L10.2,9.4z
+	 M12.4,9.7l0.9,0.3l-0.1,0.5l-0.9-0.3L12.4,9.7L12.4,9.7z M7.1,10.8h9c-0.1-0.6-0.4-1-0.8-1.4L18.4,7l-0.6-0.6l-3.2,2.6
+	c-0.1-0.1-0.4-0.3-0.6-0.3l1.8-3.7l-0.8-0.4L13,8.4c-0.9-0.8-2.3-0.6-3.2,0.3C8.5,8.5,7.4,9.6,7.1,10.8L7.1,10.8z M6.6,11.9
+	c0,2.6,1.9,4.7,4.5,5v1.7H8.5v0.9h5.9v-0.9h-2.6v-1.7c2.6-0.3,4.5-2.4,4.5-5v-0.6H6.6C6.6,11.2,6.6,11.9,6.6,11.9z"/>
 </svg>
