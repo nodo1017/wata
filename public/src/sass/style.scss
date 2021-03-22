@@ -277,12 +277,14 @@ login
 .sign-up {
     background: url(../images/login_bg2.jpg) no-repeat;
     background-size: cover;
+    overflow: hidden;
     video {
         position: fixed;
         bottom: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
+        left: 50%;
+        width: 100%;
+        min-width: 2560px;
+        transform: translateX(-50%);
     }
     .flex-parent {
         height: 100vh;
@@ -360,6 +362,7 @@ login
             display: flex;
             justify-content: center;
             align-items: center;
+            z-index: 1;
             .flex-child {
                 height: initial;
                 border-radius: .5rem;
@@ -2316,6 +2319,11 @@ a.btn-grad-de{
         i{
             font-size: 1rem;
         }
+    }
+    .acc-del{
+        position: absolute;
+        top: .75rem;
+        right: 3rem;
     }
 }
 .route-list{
