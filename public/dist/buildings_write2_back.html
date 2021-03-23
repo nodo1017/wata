@@ -1413,25 +1413,73 @@
 <!-- // END Drawer Layout -->
 
 
-    <div class="cd-panel cd-panel--from-right js-cd-panel-main">
-        <a href="#0" class="cd-panel__close js-cd-close">Close</a>
-
-        <div class="cd-panel__container">
-            <div class="cd-panel__content">
-                
-                <div class="d-flex flex-column flex-md-row align-items-center text-center text-sm-left mb-4">
-                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                        <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                            <h3 class="mb-0">이용자 정보</h3>
-                        </div>
-                    </div>
+    <!-- alert -->
+    <div class="map-alert-container"> 
+        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">coronavirus</i>
                 </div>
-
-
-            </div> <!-- cd-panel__content -->
-        </div> <!-- cd-panel__container -->
-    </div> <!-- cd-panel -->
-
+                <div class="map-alert-title">
+                    <strong>감염병이 발생했습니.</strong>
+                </div>
+            </div>
+            <div class="d-flex flex justify-content-end align-items-center">
+                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+        </div>
+        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">warning</i>
+                </div>
+                <div class="map-alert-title">
+                    <strong>긴급상황이 발생했습니.</strong>
+                </div>
+            </div>
+            <div class="d-flex flex justify-content-end align-items-center">
+                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+        </div>
+        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">local_hospital</i>
+                </div>
+                <div class="map-alert-title">
+                    <strong>응급상황이 발생했습니.</strong>
+                </div>
+            </div>
+            <div class="d-flex flex justify-content-end align-items-center">
+                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+        </div>
+        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
+            <div class="d-flex align-items-center">
+                <div class="mr-8pt">
+                    <i class="material-icons">local_fire_department</i>
+                </div>
+                <div class="map-alert-title">
+                    <strong>화재가 발생했습니.</strong>
+                </div>
+            </div>
+            <div class="d-flex flex justify-content-end align-items-center">
+                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+        </div>
+    </div>
 
     
     <!-- jQuery -->

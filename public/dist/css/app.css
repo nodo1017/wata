@@ -11844,7 +11844,7 @@ a.close.disabled {
     top: 0;
     z-index: 1060;
     display: block;
-    max-width: 304px;
+    /* max-width: 304px; */
     font-family: 'Spoqa Han Sans Neo', Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-style: normal;
     font-weight: 400;

@@ -199,7 +199,15 @@ input, select{
     background-color: #fff;
     border-bottom: 1px solid $border-color;
 }
-
+.form-row{
+    .over-txt{
+        em{
+            position: absolute;
+            right: 5px;
+            bottom: 10px;
+        }
+    }
+}
 .title-section{
     background-color: #202224;
     padding: 1rem;
@@ -3004,7 +3012,13 @@ a.btn-grad-de{
         }
     }
 }
-
+a.btn-open-new{
+    position: absolute;
+    padding: .5rem;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
 a.cd-filter-trigger {
     display: flex;
     padding: .5rem 1rem;
@@ -3637,7 +3651,7 @@ map options
     position: absolute;
     bottom: 50px;
     right: 100px;
-    z-index: 2;
+    z-index: 9;
     .map-alert{
         padding: 1rem !important;
         height: 67px;
@@ -4805,6 +4819,7 @@ dl.space-id{
     visibility: hidden;
     -webkit-transition: visibility 0s 0.6s;
     transition: visibility 0s 0.6s;
+    z-index: 2;
     &:after{
         content: '';
         position: absolute;
@@ -4982,4 +4997,24 @@ dl.space-id{
     overflow: auto;
     /* smooth scrolling on touch devices */
     -webkit-overflow-scrolling: touch;
+}
+.list-popover{
+    .list-group-item{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding: .5rem 0;
+        .popover-title{
+            padding-right: 1rem;
+            width: 100px;
+        }
+        .popover-content{
+            min-width: 150px;
+        }
+    }
+}
+.page-content{
+    .bs-popover-left{
+        left: -5rem !important;
+    }
 }

@@ -130,7 +130,7 @@
         </div>
     </div>
     <!-- mouse click -->
-    <div class="context-wrap row" style="top: 30%; left: 40%;">
+    <div class="context-wrap row d-none" style="top: 30%; left: 40%;">
         <div class="context-menu type-row">
             <!-- 지도 클릭시 -->
             <div class="nav">
@@ -141,7 +141,7 @@
         </div>
     </div>
     <!-- mouse click -->
-    <div class="context-wrap row" style="top: 30%; left: 50%;">
+    <div class="context-wrap row d-none" style="top: 30%; left: 50%;">
         <div class="context-menu type-row">
             <!-- 지도 클릭시 -->
             <div class="nav">
@@ -158,7 +158,7 @@
         </div>
     </div>
     <!-- mouse click -->
-    <div class="context-wrap row" style="top: 30%; left: 60%;">
+    <div class="context-wrap row d-none" style="top: 30%; left: 60%;">
         <div class="context-menu type-row">
             <!-- 지도 클릭시 -->
             <div class="nav">
@@ -188,7 +188,7 @@
         <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
         <div class="mouse-point user" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
         <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user active js-cd-panel-trigger" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window" data-panel="main"></div>
         <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
         <div class="mouse-point manager" style="left: 55%; top: 50%;"></div>
         <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
@@ -207,73 +207,7 @@
             </li>
         </ul>
     </div>
-    <!-- alert -->
-    <div class="map-alert-container"> 
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">coronavirus</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>감염병이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">warning</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>긴급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_hospital</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>응급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_fire_department</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>화재가 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-    </div>
+
     <!-- map container -->
     <div id="map" style="width:100%;height:100vh;"></div>
     <script type="text/javascript"
@@ -289,3 +223,167 @@
         //var mapTypeControl = new kakao.maps.MapTypeControl();
         //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
     </script>
+
+
+
+
+
+    <div class="cd-panel cd-panel--from-right js-cd-panel-main">
+        <a href="#0" class="cd-panel__close js-cd-close">Close</a>
+
+        <div class="cd-panel__container">
+            <div class="cd-panel__content" data-perfect-scrollbar>
+                
+                <div class="d-flex mb-4">
+                    <h3 class="mb-0">사용자 정보</h3>
+                </div>
+
+                <table class="table mb-4 table-nowrap">
+                    <colgroup>
+                        <col width="*%">
+                        <col width="60%">
+                        <col width="35%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-toggle-check-all"
+                                        data-target="#projects"
+                                        id="customCheckAll">
+                                    <label class="custom-control-label"
+                                        for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                </div>
+                            </th>
+                            <th><a href="javascript:void(0)">사용자구분</a></th>
+                            <th><a href="javascript:void(0)">체류시간</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_1">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#n" class="btn-link" data-toggle="popover" data-trigger="click">A-1241</a>
+                                <div class="popoverContainer d-none">
+                                    <h6 class="mb-2">상세정보</h6>
+                                    <div class="list-group list-group-flush list-popover">
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">연락처</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">010-1234-5678</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">성별</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">남성</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">연령</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">32세</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">OS 타입</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">IOS</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">기기 명</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">iPhone PRO 11</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10분</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_2">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_2"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#n" class="btn-link" data-toggle="popover" data-trigger="click">A-1242</a>
+                                <div class="popoverContainer d-none">
+                                    <h6 class="mb-2">상세정보</h6>
+                                    <div class="list-group list-group-flush list-popover">
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">연락처</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">010-1234-5678</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">성별</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">남성</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">연령</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">46세</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">OS 타입</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">AOS</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex popover-title">
+                                                <span class="text-50">기기 명</span>
+                                            </div>
+                                            <div class="d-flex popover-content">
+                                                <span class="text-headings">Galaxy s21</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>12분</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div> <!-- cd-panel__content -->
+        </div> <!-- cd-panel__container -->
+    </div> <!-- cd-panel -->
