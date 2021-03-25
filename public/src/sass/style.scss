@@ -283,7 +283,7 @@ login
 
 -------------------------------- */
 .sign-up {
-    background: url(../images/login_bg2.jpg) no-repeat;
+    background: url(../images/login_bg.jpg) no-repeat;
     background-size: cover;
     overflow: hidden;
     video {
@@ -4745,7 +4745,7 @@ dl.space-id{
         background: url(../images/person_pin.svg) no-repeat center;
     }
     &.active{
-        background: url(../images/person_pin_view.svg) no-repeat center;
+        background: url(../images/person_pin_active.svg) no-repeat center;
         -moz-transform: scale(1.25);
         -ms-transform: scale(1.25);
         -o-transform: scale(1.25);
