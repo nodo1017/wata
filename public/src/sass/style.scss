@@ -296,14 +296,14 @@ login
     }
     .flex-parent {
         height: 100vh;
-
         .flex-child {
             display: flex;
             justify-content: center;
             align-items: center;
             height: inherit;
             background-color: rgba(20, 20, 33, 0.3);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            // box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e6e6e6;
         }
     }
     .layout-login__form {
@@ -375,6 +375,7 @@ login
                 height: initial;
                 border-radius: .5rem;
                 background-color: rgba(255, 255, 255, 1);
+                
             }
         }
         .layout-login__form {
