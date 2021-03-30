@@ -3,7 +3,43 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-    @@include('./include/platform-topbar3.html')
+    <!-- Header -->
+    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+        <div class="top-process">
+            <div class="process-bar bd-process ps-2"></div>
+            <div class="process-txt">
+                <em>2/4</em>
+                <p>간단한 가이드</p>
+            </div>
+        </div>
+        
+        <div class="d-flex flex justify-content-end align-items-center">
+            <div class="form-group m-0 ml-4 form-lang">
+                <select id="custom-select" class="custom-line">
+                    <option selected="">KOR</option>
+                    <option value="1">JPN</option>
+                    <option value="2">ENG</option>
+                </select>
+            </div>
+            <div class="nav-item dropdown ml-4">
+                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                    <span class="avatar avatar-sm">
+                        <span class="avatar-title rounded-circle">SH</span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header"><strong>Account</strong></div>
+                    <a class="dropdown-item" href="#n">정보수정</a>
+                    <a class="dropdown-item" href="#n">멤버십</a>
+                    <a class="dropdown-item" href="#n">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="mdk-drawer-layout__content page-content">
         <!-- history / live -->
         <div class="btn-mid-holder">
@@ -492,13 +528,13 @@
                     <div class="tab-pane sm-maps active" id="sm-maps">
                         <!-- 프로젝트 등록 -->
                         <div class="maps-inner">
-                            <div class="container-fluid d-flex py-4 mb-4">
+                            <div class="container-fluid d-flex py-4">
                                 <div class="flex d-flex">
                                     <div class="mr-24pt">
                                         <h3 class="mb-0">평면도 등록</h3>
+                                        <p class="text-70 mb-0">디스크립션 입력해주세요</p>
                                     </div>
                                 </div>
-                                <a href="buildings_board.html" class="material-icons">close</a>
                             </div>
                             <!-- 정보입력 -->
                             <div class="container-fluid">
@@ -577,7 +613,8 @@
                                 </div>
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="buildings_board.html" class="btn btn-outline-accent ml-0">저장</a>
+                                        <a href="buildings_write.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
+                                        <a href="buildings_detail.html" class="btn btn-outline-accent ml-0">저장 후 다음 단계</a>
                                     </div>
                                 </div>
                             </div>

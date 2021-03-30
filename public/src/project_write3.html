@@ -3,7 +3,43 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-    @@include('./include/platform-topbar3.html')
+    <!-- Header -->
+    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+        <div class="top-process">
+            <div class="process-bar ps-6"></div>
+            <div class="process-txt">
+                <em>6/7</em>
+                <p>간단한 가이드</p>
+            </div>
+        </div>
+        
+        <div class="d-flex flex justify-content-end align-items-center">
+            <div class="form-group m-0 ml-4 form-lang">
+                <select id="custom-select" class="custom-line">
+                    <option selected="">KOR</option>
+                    <option value="1">JPN</option>
+                    <option value="2">ENG</option>
+                </select>
+            </div>
+            <div class="nav-item dropdown ml-4">
+                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                    <span class="avatar avatar-sm">
+                        <span class="avatar-title rounded-circle">SH</span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header"><strong>Account</strong></div>
+                    <a class="dropdown-item" href="#n">정보수정</a>
+                    <a class="dropdown-item" href="#n">멤버십</a>
+                    <a class="dropdown-item" href="#n">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="mdk-drawer-layout__content page-content">
         <!-- edit tool -->
         <div class="btn-top-holder">
@@ -104,33 +140,9 @@
                         <div class="project-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
-                                    <a href="project_write.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
                                     <div class="mr-24pt">
                                         <h3 class="mb-0">솔루션 선택</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="step mb-4">
-                                    <div class="progression-bar progression-bar--active-accent">
-                                        <span class="progression-bar__item progression-bar__item--complete">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon">done</i>
-                                                <span class="mb-0 text-uppercase">정보입력</span>
-                                            </span>
-                                        </span>
-                                        <span class="progression-bar__item progression-bar__item--complete">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon">done</i>
-                                                <span class="mb-0 text-uppercase">건물연결</span>
-                                            </span>
-                                        </span>
-                                        <span class="progression-bar__item progression-bar__item--complete progression-bar__item--active">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon">done</i>
-                                                <span class="mb-0 text-uppercase">솔루션 선택</span>
-                                            </span>
-                                        </span>
+                                        <p class="text-70 mb-0">디스크립션 입력해주세요</p>
                                     </div>
                                 </div>
                             </div>
@@ -220,8 +232,8 @@
                                 </div>
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="project_write2.html" class="btn btn-outline-secondary mr-8pt">이전단계</a>
-                                        <a href="project_done.html" class="btn btn-outline-accent ml-0">등록하기</a>
+                                        <a href="project_write2.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
+                                        <a href="project_done.html" class="btn btn-outline-accent ml-0">저장 후 등록</a>
                                     </div>
                                 </div>
                             </div>

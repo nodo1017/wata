@@ -52,7 +52,8 @@
      <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
 
     <!-- custom CSS -->
-	<link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
 
 </head>
 
@@ -73,63 +74,20 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-        <!-- Header -->
+    <!-- Header -->
     <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
         <!-- Navbar toggler -->
         <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
             <span class="material-icons">short_text</span>
         </button>
-        <!-- history / live -->
-        <div class="nav-search">
-            <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
-            <button type="button"><i class="fas fa-search"></i></button>
-        </div>
-        <div class="status-map row align-items-center justify-content-center m-0">
-            <div class="status-con active">
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="#n" class="filter-dropdown-toggle on"><strong>평면도 등록</strong></a>
-                </div>
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="#n" class="filter-dropdown-toggle"><strong>실내지도 편집</strong></a>
-                </div>
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="#n" class="filter-dropdown-toggle"><strong>경로 편집</strong></a>
-                </div>
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="#n" class="filter-dropdown-toggle"><strong>POI 편집</strong></a>
-                </div>
-                <div class="filter-btn-cell d-flex align-items-center">
-                    <a href="#n" class=""><i class="material-icons mr-1">save</i> 저장</a>
-                    <span class="ml-2">(10분전 자동 저장)</span>
-                </div>
+        <div class="top-process">
+            <div class="process-bar bd-process ps-4"></div>
+            <div class="process-txt">
+                <em>4/4</em>
+                <p>간단한 가이드</p>
             </div>
         </div>
         
-        <!-- menu -->
-        <!-- <ul class="nav navbar-nav flex justify-content-end">
-            <li class="nav-item active">
-                <a href="#n" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Data</a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a href="#n" class="dropdown-item">Browse Courses</a>
-                    <a href="#n" class="dropdown-item">Preview Course</a>
-                    <a href="#n" class="dropdown-item">Preview Lesson</a>
-                    <a href="#n" class="dropdown-item">
-                        <span class="mr-16pt">Take Course</span>
-                        <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span>
-                    </a>
-                    <a href="#n" class="dropdown-item">Take Lesson</a>
-                    <a href="#n" class="dropdown-item">Take Quiz</a>
-                    <a href="#n" class="dropdown-item">Quiz Result</a>
-                    <a href="#n" class="dropdown-item">Student Dashboard</a>
-                    <a href="#n" class="dropdown-item">My Courses</a>
-                    <a href="#n" class="dropdown-item">My Quizzes</a>
-                    <a href="#n" class="dropdown-item">Help Center</a>
-                </div>
-            </li>
-        </ul> -->
         <div class="d-flex flex justify-content-end align-items-center">
             <div class="form-group m-0 ml-4 form-lang">
                 <select id="custom-select" class="custom-line">
@@ -153,7 +111,14 @@
             </div>
         </div>
     </div>
-        <!-- history / live -->
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2"  data-toggle="tooltip" data-title="평면도 보기" data-placement="left" data-boundary="window"><i class="material-icons">visibility</i></button>
+            <button type="button" class="btn btn-white ml-2 d-none"  data-toggle="tooltip" data-title="평면도 보기" data-placement="left" data-boundary="window"><i class="material-icons">visibility_off</i></button>
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+        </div>
+            <!-- history / live -->
     <div class="btn-mid-holder d-none">
         <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-white">
@@ -542,13 +507,8 @@
         </div> <!-- cd-panel__container -->
     </div> <!-- cd-panel -->
 
+    </div>
 
-    <!-- drawer -->
-    <!-- <div class="navbar-toggler-box">
-        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-    </div> -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
@@ -557,77 +517,22 @@
         <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
     </a>
     <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-            <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body"
+        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs"
+            role="tablist">
+            <li class="sidebar-menu-item active" data-title="Maps" data-placement="right" data-container="body"
                 data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab"
-                    aria-controls="sm-projects">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
-                    <span class="sidebar-menu-text">프로젝트</span>
-                </a>
-            </li>
-            <!-- <li class="sidebar-menu-item" data-title="Maps" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-maps" data-toggle="tab" role="tab"
+                <a class="sidebar-menu-button active" href="#sm-maps" data-toggle="tab" role="tab"
                     aria-controls="sm-maps">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">map</i>
-                    <span class="sidebar-menu-text">내지도</span>
-                </a>
-            </li> -->
-            <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-event" data-toggle="tab" role="tab"
-                    aria-controls="sm-event">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">local_mall</i>
-                    <span class="sidebar-menu-text">이벤트</span>
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">business</i>
+                    <span class="sidebar-menu-text">건물</span>
                 </a>
             </li>
-            <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-accident" data-toggle="tab" role="tab"
-                    aria-controls="sm-accident">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">error_outline</i>
-                    <span class="sidebar-menu-text">사고관리</span>
-                </a>
-            </li>
-            <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-user" data-toggle="tab" role="tab"
-                    aria-controls="sm-user">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person_outline</i>
-                    <span class="sidebar-menu-text">사용자</span>
-                </a>
-            </li>
-            <!-- <li class="sidebar-menu-item" data-title="Assets" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-assets" data-toggle="tab" role="tab"
-                    aria-controls="sm-assets">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_balance_wallet</i>
-                    <span class="sidebar-menu-text">자산관리</span>
-                </a>
-            </li> -->
-            <!-- <li class="sidebar-menu-item" data-title="Setting" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab"
-                    aria-controls="sm-setting">
-                    <i
-                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
-                    <span class="sidebar-menu-text">설정</span>
-                </a>
-            </li> -->
         </ul>
     </div>
 </div>
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
                     <div class="tab-pane sm-search" id="sm-search">
-                        <!-- <div class="wt-trigger-foldPanel">
-                            <div class="search-form search-form--dark input-group-lg">
-                                <input type="text" class="form-control" placeholder="POI, 센서, 장소 등 검색"
-                                    id="searchSample01">
-                                <button class="btn" type="button"><i class="material-icons">search</i></button>
-                            </div>
-                        </div> -->
                         <div class="search-value d-flex align-items-center">
                             <span class="d-flex align-items-center text-muted">검색결과<strong class="text-danger">26</strong>건</span>
                         </div>
@@ -952,11 +857,25 @@
                         </div>
                     </div>
                     <div class="tab-pane sm-maps active" id="sm-maps">
-                        <!-- 등록 완료 -->
+                        <!-- 맵 보기 -->
                         <div class="maps-inner">
                             <div class="tit-intro">
+                                <div class="preloader-container">
+                                    <div class="preloader-dots d-none">
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                    </div>
+                                    <div class="preloader-spinner d-none">
+                                        <svg class="spinner-container" width="65px" height="65px" viewBox="0 0 52 52">
+                                            <circle class="path" cx="26px" cy="26px" r="20px" fill="none" stroke-width="4px" />
+                                        </svg>
+                                    </div>
+                                </div>
                                 <em>등록을 완료했습니다.</em>
-                                <a href="maps_list.html" class="btn btn-outline-accent">지도 목록</a>
+                                <a href="buildings.html" class="btn btn-outline-accent">빌딩 목록</a>
                             </div>
                         </div>
                     </div>

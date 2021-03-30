@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "lib";
-@import "fonts";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 
 /* -------------------------------- global
 
@@ -362,6 +363,9 @@ login
                 margin-left: 5px;
             }
         }
+    }
+    .all-check{
+        border-top: 1px solid $border-color;
     }
 }
 @media (min-width:768px) {
@@ -1499,6 +1503,81 @@ platform map
         }
     }
 }
+.top-process{
+    position: relative;
+    width: 400px;
+    display: flex;
+    height: 64px;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    .process-txt{
+        position: relative;
+        z-index: 1;
+        em{
+            display: flex;
+            line-height: 1;
+            font-weight: 700;
+            color: #fff;
+            opacity: 0.8;
+            margin-bottom: .25rem;
+            font-style: normal;
+        }
+        p{
+            color: #fff;
+            opacity: 0.8;
+            margin: 0;
+            font-size: .75rem;
+        }
+    }
+    .process-bar{
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: rgb(243,85,84);
+        background: linear-gradient(90deg, #e83b3a 0%, #af0d0d 100%);
+        z-index: 0;
+        box-shadow: 0 0 30px 3px rgba(255, 65, 65, 0.75);
+        transition: width .3s ease-in-out;
+        &.ps-1{
+            width: 14.2857142857143%;
+        }
+        &.ps-2{
+            width: 28.5714285714286%;
+        }
+        &.ps-3{
+            width: 42.8571428571429%;
+        }
+        &.ps-4{
+            width: 57.1428571428571%;
+        }
+        &.ps-5{
+            width: 71.4285714285714%;
+        }
+        &.ps-6{
+            width: 85.7142857142857%;
+        }
+        &.ps-7{
+            width: 100%;
+        }
+    }
+    .bd-process{
+        &.ps-1{
+            width: 25%;
+        }
+        &.ps-2{
+            width: 50%;
+        }
+        &.ps-3{
+            width: 75%;
+        }
+        &.ps-4{
+            width: 100%;
+        }
+    }
+}
 .set-list {
     position: relative;
     display: flex;
@@ -2063,6 +2142,10 @@ a.btn-row-add{
     color: $primary;
     border-radius: .25rem;
     @include transition(all, 0.2s, ease-in-out);
+    i{
+        font-size: 1rem;
+        margin-right: .25rem;
+    }
     &:hover{
         border-color: $primary;
     }
@@ -2206,8 +2289,7 @@ a.btn-grad-de{
             }
         }
         a.btn-grad-col, .btn-grad-de{
-            width: 120px;
-            padding: .5rem;
+            padding: .5rem 1.5rem;
         }
     }
 }
@@ -2588,11 +2670,9 @@ a.btn-grad-de{
             align-items: center;
         }
         span.badge{
-            border-radius: 50%;
-            font-weight: 600;
-            width: 15px;
-            height: 15px;
-            vertical-align: middle;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-right: .25rem;
         }
         a.circle-pin{
             color: #e3e4e8;
@@ -2609,7 +2689,11 @@ a.btn-grad-de{
             background-size: 60%;
             border-radius: .25rem;
         }
-
+        &.disabled{
+            .avatar{
+                opacity: 0.5;
+            }
+        }
     }
     .re-list-group-item{
         background-color: #f9f9f9;
@@ -3118,6 +3202,11 @@ a.cd-filter-trigger {
         /* the the menu triger is hidden by default on desktop devices */
         display: none;
     }
+}
+.map-noData{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100vh;
 }
 
 /* search */
@@ -3690,6 +3779,7 @@ map options
     position: absolute;
     right: 20px;
     top: 84px;
+    vertical-align: top;
     z-index: 2;
     .map-location {
         position: relative;
@@ -3737,7 +3827,7 @@ map options
             background-color: $identity;
             span{
                 font-size: 1rem;
-                line-height: 34px;
+                line-height: 36px;
             }
         }
     }
@@ -3811,6 +3901,7 @@ map options
     .btn-group{
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         border-radius: .25rem;
+        vertical-align: top;
     }
     .btn-white {
         font-size: 1rem;
@@ -3879,7 +3970,7 @@ map options
     }
     .map-e {
         padding: .5rem .7rem;
-        height: 34px;
+        height: 36px;
         font-size: .75rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         &:focus {}
@@ -3899,6 +3990,10 @@ map options
         .btn.active{
         }
     }
+    button{
+        vertical-align: top;
+        height: 36px;
+    }
 }
 .btn-mid-holder{
     position: absolute;
@@ -3908,7 +4003,7 @@ map options
     z-index: 2;
     .btn {
         font-size: .75rem;
-        height: 32px;
+        height: 36px;
         border: none;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     }

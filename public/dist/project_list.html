@@ -52,7 +52,8 @@
      <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
 
     <!-- custom CSS -->
-	<link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
 
 </head>
 
@@ -311,7 +312,7 @@
         </div>
     </div>
     <!-- mouse pointer -->
-    <div class="pointer-wrap">
+    <div class="pointer-wrap d-none">
         <div class="mouse-point user" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
         <div class="mouse-point user" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
         <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
@@ -348,20 +349,18 @@
     </div>
 
     <!-- map container -->
-    <div id="map" style="width:100%;height:100vh;"></div>
-    <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
-    <script>
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(37.54545431995616, 127.2236967393457),
-            level: 1
-        };
-
-        var map = new kakao.maps.Map(container, options);
-        //var mapTypeControl = new kakao.maps.MapTypeControl();
-        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-    </script>
+    <div class="map-noData">
+        <div class="alert-wrap">
+            <!-- 얼럿 -->
+            <div class="cover">
+                <em class="alert-title">생성된 프로젝트가 없습니다.</em>
+                <p class="desc">프로젝트를 생성해보세요.</p>
+                <div class="mt-32pt">
+                    <a href="project_write.html" class="btn-grad-col">프로젝트 생성</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -713,7 +712,7 @@
                                             </a>
                                             <div class="flex list-els">
                                                 <a class="card-title" href="project_board.html">프로젝트 A</a>
-                                                <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
                                             </div>
                                         </div>
                                         <div class="dropdown">

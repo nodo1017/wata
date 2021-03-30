@@ -52,7 +52,8 @@
      <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
 
     <!-- custom CSS -->
-	<link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
 
 </head>
 
@@ -73,43 +74,20 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-        <!-- Header -->
+    <!-- Header -->
     <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
         <!-- Navbar toggler -->
         <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
             <span class="material-icons">short_text</span>
         </button>
-        <!-- history / live -->
-        <!-- <div class="nav-search">
-            <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
-            <button type="button"><i class="fas fa-search"></i></button>
-        </div> -->
+        <div class="top-process">
+            <div class="process-bar bd-process ps-3"></div>
+            <div class="process-txt">
+                <em>3/4</em>
+                <p>간단한 가이드</p>
+            </div>
+        </div>
         
-        <!-- menu -->
-        <!-- <ul class="nav navbar-nav flex justify-content-end">
-            <li class="nav-item active">
-                <a href="#n" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Data</a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a href="#n" class="dropdown-item">Browse Courses</a>
-                    <a href="#n" class="dropdown-item">Preview Course</a>
-                    <a href="#n" class="dropdown-item">Preview Lesson</a>
-                    <a href="#n" class="dropdown-item">
-                        <span class="mr-16pt">Take Course</span>
-                        <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span>
-                    </a>
-                    <a href="#n" class="dropdown-item">Take Lesson</a>
-                    <a href="#n" class="dropdown-item">Take Quiz</a>
-                    <a href="#n" class="dropdown-item">Quiz Result</a>
-                    <a href="#n" class="dropdown-item">Student Dashboard</a>
-                    <a href="#n" class="dropdown-item">My Courses</a>
-                    <a href="#n" class="dropdown-item">My Quizzes</a>
-                    <a href="#n" class="dropdown-item">Help Center</a>
-                </div>
-            </li>
-        </ul> -->
         <div class="d-flex flex justify-content-end align-items-center">
             <div class="form-group m-0 ml-4 form-lang">
                 <select id="custom-select" class="custom-line">
@@ -884,9 +862,9 @@
                             <div class="container-fluid py-4">
                                 <div class="d-flex align-items-center mb-2">
                                     <div class="flex d-flex flex-sm-row align-items-center mb-0">
-                                        <a href="buildings_board.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
                                         <div class="mr-24pt">
                                             <h3 class="mb-0">지하창고</h3>
+                                            <p class="text-70 mb-0">디스크립션 입력해주세요</p>
                                         </div>
                                     </div>
                                     <div class="row" role="tablist">
@@ -897,7 +875,7 @@
                                                     <a href="#n" class="dropdown-item">복사</a>
                                                     <div class="dropdown-divider"></div>
                                                     <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                    <a href="#n" class="dropdown-item text-danger">전체삭제</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -947,6 +925,12 @@
                                             </a>
                                             <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i class="material-icons">edit</i></a>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="buildings_write2.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
+                                        <a href="buildings_done.html" class="btn btn-outline-accent ml-0">저장 후 등록</a>
                                     </div>
                                 </div>
                             </div>

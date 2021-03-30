@@ -52,7 +52,8 @@
      <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
 
     <!-- custom CSS -->
-	<link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
 
 </head>
 
@@ -73,43 +74,20 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-        <!-- Header -->
+    <!-- Header -->
     <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
         <!-- Navbar toggler -->
         <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
             <span class="material-icons">short_text</span>
         </button>
-        <!-- history / live -->
-        <!-- <div class="nav-search">
-            <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
-            <button type="button"><i class="fas fa-search"></i></button>
-        </div> -->
+        <div class="top-process">
+            <div class="process-bar ps-7"></div>
+            <div class="process-txt">
+                <em>7/7</em>
+                <p>간단한 가이드</p>
+            </div>
+        </div>
         
-        <!-- menu -->
-        <!-- <ul class="nav navbar-nav flex justify-content-end">
-            <li class="nav-item active">
-                <a href="#n" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Data</a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a href="#n" class="dropdown-item">Browse Courses</a>
-                    <a href="#n" class="dropdown-item">Preview Course</a>
-                    <a href="#n" class="dropdown-item">Preview Lesson</a>
-                    <a href="#n" class="dropdown-item">
-                        <span class="mr-16pt">Take Course</span>
-                        <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span>
-                    </a>
-                    <a href="#n" class="dropdown-item">Take Lesson</a>
-                    <a href="#n" class="dropdown-item">Take Quiz</a>
-                    <a href="#n" class="dropdown-item">Quiz Result</a>
-                    <a href="#n" class="dropdown-item">Student Dashboard</a>
-                    <a href="#n" class="dropdown-item">My Courses</a>
-                    <a href="#n" class="dropdown-item">My Quizzes</a>
-                    <a href="#n" class="dropdown-item">Help Center</a>
-                </div>
-            </li>
-        </ul> -->
         <div class="d-flex flex justify-content-end align-items-center">
             <div class="form-group m-0 ml-4 form-lang">
                 <select id="custom-select" class="custom-line">
@@ -680,7 +658,7 @@
                     </div>
                     <div class="tab-pane sm-projects active" id="sm-projects">
                         <!-- 등록 완료 -->
-                        <div class="event-inner">
+                        <div class="project-inner">
                             <div class="tit-intro">
                                 <div class="preloader-container">
                                     <div class="preloader-dots d-none">

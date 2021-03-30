@@ -52,7 +52,8 @@
      <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
 
     <!-- custom CSS -->
-	<link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
 
 </head>
 
@@ -73,43 +74,19 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-        <!-- Header -->
+    <!-- Header -->
     <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
         <!-- Navbar toggler -->
         <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
             <span class="material-icons">short_text</span>
         </button>
-        <!-- history / live -->
-        <!-- <div class="nav-search">
-            <input type="text" placeholder="POI, 센서, 장소, 사용자 검색" id="searchSample02">
-            <button type="button"><i class="fas fa-search"></i></button>
-        </div> -->
+        <div class="top-process">
+            <div class="process-bar ps-1"></div>
+            <div class="process-txt">
+                <em>1/7</em>
+            </div>
+        </div>
         
-        <!-- menu -->
-        <!-- <ul class="nav navbar-nav flex justify-content-end">
-            <li class="nav-item active">
-                <a href="#n" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Data</a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a href="#n" class="dropdown-item">Browse Courses</a>
-                    <a href="#n" class="dropdown-item">Preview Course</a>
-                    <a href="#n" class="dropdown-item">Preview Lesson</a>
-                    <a href="#n" class="dropdown-item">
-                        <span class="mr-16pt">Take Course</span>
-                        <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span>
-                    </a>
-                    <a href="#n" class="dropdown-item">Take Lesson</a>
-                    <a href="#n" class="dropdown-item">Take Quiz</a>
-                    <a href="#n" class="dropdown-item">Quiz Result</a>
-                    <a href="#n" class="dropdown-item">Student Dashboard</a>
-                    <a href="#n" class="dropdown-item">My Courses</a>
-                    <a href="#n" class="dropdown-item">My Quizzes</a>
-                    <a href="#n" class="dropdown-item">Help Center</a>
-                </div>
-            </li>
-        </ul> -->
         <div class="d-flex flex justify-content-end align-items-center">
             <div class="form-group m-0 ml-4 form-lang">
                 <select id="custom-select" class="custom-line">
@@ -683,47 +660,13 @@
                         <div class="project-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
-                                    <a href="project_list.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
                                     <div class="mr-24pt">
                                         <h3 class="mb-0">정보입력</h3>
+                                        <p class="text-70 mb-0">디스크립션 입력해주세요</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="container-fluid">
-                                <div class="step mb-4">
-                                    <div class="progression-bar progression-bar--active-accent">
-                                        <span class="progression-bar__item progression-bar__item--complete progression-bar__item--active">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon">done</i>
-                                                <span class="mb-0 text-uppercase">정보입력</span>
-                                            </span>
-                                        </span>
-                                        <span class="progression-bar__item">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon"></i>
-                                                <span class="mb-0 text-uppercase">건물연결</span>
-                                            </span>
-                                        </span>
-                                        <span class="progression-bar__item">
-                                            <span class="progression-bar__item-content">
-                                                <i class="material-icons progression-bar__item-icon"></i>
-                                                <span class="mb-0 text-uppercase">솔루션 선택</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 1. 기능 선택 -->
-                            <!-- <div class="container-fluid">
-                                <em class="none-list">기능선택을 해주세요.</em>
-                                <div class="my-32pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
-                                    </div>
-                                </div>
-                            </div> -->
 
-                            <!-- 2. 정보입력 -->
                             <div class="container-fluid">
                                 <div class="form-group mb-32pt">
                                     <label class="form-label text-50 essential" for="projectName">프로젝트명</label>
@@ -736,7 +679,7 @@
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
                                         <a href="project_list.html" class="btn btn-outline-secondary mr-8pt">취소하기</a>
-                                        <a href="project_write2.html" class="btn btn-outline-accent ml-0">다음단계</a>
+                                        <a href="project_write2.html" class="btn btn-outline-accent ml-0">저장 후 다음 단계</a>
                                     </div>
                                 </div>
                             </div>
