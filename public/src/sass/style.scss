@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import "lib";
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+@import "fonts";
 
 /* -------------------------------- global
 
@@ -3827,7 +3826,7 @@ map options
             background-color: $identity;
             span{
                 font-size: 1rem;
-                line-height: 36px;
+                line-height: 34px;
             }
         }
     }
@@ -3970,7 +3969,7 @@ map options
     }
     .map-e {
         padding: .5rem .7rem;
-        height: 36px;
+        height: 34px;
         font-size: .75rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         &:focus {}
@@ -3992,7 +3991,6 @@ map options
     }
     button{
         vertical-align: top;
-        height: 36px;
     }
 }
 .btn-mid-holder{
@@ -4003,7 +4001,7 @@ map options
     z-index: 2;
     .btn {
         font-size: .75rem;
-        height: 36px;
+        height: 32px;
         border: none;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     }
