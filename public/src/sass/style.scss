@@ -1886,6 +1886,8 @@ platform map
         border-radius: 50%;
         padding: .25rem;
         transition: all .2s ease;
+        width: 24px;
+        height: 24px;
         i{
             font-size: 1rem;
             color: rgba(255,255,255,0.7);
@@ -1900,6 +1902,34 @@ platform map
             i{
                 color: #fff;
             }
+        }
+        &.comp-rotate-top-left{
+            left: -20px;
+            top: -20px;
+            background: url(../images/comp_rotate.png) no-repeat center;
+            background-size: 24px;
+        }
+        &.comp-rotate-bottom-right{
+            right: -20px;
+            bottom: -20px;
+            background: url(../images/comp_rotate.png) no-repeat center;
+            background-size: 24px;
+        }
+        &.comp-scale-top-right{
+            right: -20px;
+            top: -20px;
+            background: url(../images/comp_scale.png) no-repeat center;
+            background-size: 24px;
+        }
+        &.comp-scale-bottom-left{
+            left: -20px;
+            bottom: -20px;
+            background: url(../images/comp_scale.png) no-repeat center;
+            background-size: 24px;
+        }
+        &.comp-move{
+            background: url(../images/comp_move.png) no-repeat center;
+            background-size: 24px;
         }
         &.comp-top-left{
             left: -20px;
@@ -1916,8 +1946,6 @@ platform map
         &.comp-btm-right{
             right: -20px;
             bottom: -20px;
-        }
-        &.comp-center{
         }
     }
     img{

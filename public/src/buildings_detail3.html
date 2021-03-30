@@ -1,75 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>WATA</title>
-
-    <!-- Prevent the demo from appearing in search engines -->
-    <meta name="robots" content="noindex">
-
-    <!-- Preloader -->
-    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
-
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
-
-    <!-- Material Design Icons -->
-    <link type="text/css" href="css/material-icons.css" rel="stylesheet" />
-
-    <!-- Font Awesome Icons -->
-    <link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
-
-    <!-- Preloader -->
-    <link type="text/css" href="css/preloader.css" rel="stylesheet" />
-
-    <!-- App CSS -->
-    <link type="text/css" href="css/app.css" rel="stylesheet" />
-
-    <!-- Flatpickr -->
-    <link type="text/css" href="css/flatpickr.css" rel="stylesheet" />
-    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet" />
-
-    <!-- DateRangePicker -->
-    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet" />
-
-    <!-- Quill Theme -->
-    <link type="text/css" href="css/quill.css" rel="stylesheet" />
-
-    <!-- Touchspin -->
-    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet" />
-
-    <!-- Select2 -->
-    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet" />
-    <link type="text/css" href="css/select2.css" rel="stylesheet" />
-
-     <!-- ion Range Slider -->
-     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet" />
-
-     <!-- Dragula -->
-     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
-
-    <!-- custom CSS -->
-    <link type="text/css" href="css/style.css" rel="stylesheet" />
-    
-
-</head>
-
-<body class="layout-compact">
-
-    <!-- <div class="preloader">
-        <div class="sk-chase">
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-        </div>
-    </div> -->
-
+@@include('./include/platform-header.html')
 
 <!-- Drawer Layout -->
 
@@ -81,9 +10,9 @@
             <span class="material-icons">short_text</span>
         </button>
         <div class="top-process">
-            <div class="process-bar bd-process ps-3"></div>
+            <div class="process-bar ps-5"></div>
             <div class="process-txt">
-                <em>3/4</em>
+                <em>5/7</em>
                 <p>간단한 가이드</p>
             </div>
         </div>
@@ -114,422 +43,14 @@
     <div class="mdk-drawer-layout__content page-content">
         <!-- edit tool -->
         <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 active"  data-toggle="tooltip" data-title="평면도 보기" data-placement="left" data-boundary="window"><i class="material-icons">visibility</i></button>
-            <button type="button" class="btn btn-white ml-2 d-none"  data-toggle="tooltip" data-title="평면도 보기" data-placement="left" data-boundary="window"><i class="material-icons">visibility_off</i></button>
             <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
         </div>
-            <!-- history / live -->
-    <div class="btn-mid-holder d-none">
-        <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-white">
-                <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
-            </label>
-            <label class="btn btn-white active">
-                <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
-            </label>
-        </div>
-    </div>
-    <!-- edit tool -->
-    <div class="btn-top-holder d-none">
-        <div class="btn-group ml-2">
-            <button type="button" class="btn btn-white"><i class="material-icons">highlight_alt</i></button>
-            <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
-            <button type="button" class="btn btn-white"><i class="material-icons">timeline</i></button>
-            <div class="btn-group">
-                <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
-                    aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span> </button>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>이벤트 설정</strong></div>
-                    <ul class="item-list mb-2">
-                        <li><a href="#n" class="active"><i class="material-icons">location_on</i><span>개별위치</span></a></li>
-                        <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
-                    </ul>
-                    <div class="dropdown-divider"></div>
-                    <div class="dropdown-header"><strong>경보 설정</strong></div>
-                    <ul class="item-list">
-                        <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
-                        <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
-                        <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
-                        <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
-                    </ul>
-                    <div class="dropdown-divider"></div>
-                    <div class="dropdown-header"><strong>경보 설정</strong></div>
-                    <ul class="item-list">
-                        <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
-                        <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-        <div class="map-location ml-2">
-            <div class="location-header d-flex align-items-center">
-                <strong>프로젝트 A</strong>
-                <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
-                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                </a>
-            </div>
-            <div class="collapse location-body" id="map-location">
-                <div class="sidebar">
-                    <ul class="sidebar-menu">
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
-                                <li class="sidebar-menu-item active">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">B1</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">3F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">4F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">5F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">6F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">7F</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1F</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">3F</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 40%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">open_with</i> menu01</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">filter_tilt_shift</i> menu02</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">pin_drop</i> menu03</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 50%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <div class="toolbox-distance">
-                    <dl class="row align-items-center">
-                        <dt class="col">반경</dt>
-                        <dd class="col">100.0m</dd>
-                    </dl>
-                    <a href="#n" class="btn-ers"><i class="fas fa-eraser"></i> 지우기</a>
-                </div>
-                <a href="#n" class="d-flex align-items-center active"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 60%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
-                <div class="dropdown-divider"></div>
-                <a href="#n" class="d-flex align-items-center">menu02</a>
-                <a href="#n" class="d-flex align-items-center js-cd-panel-trigger" data-panel="main">menu03</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse pointer -->
-    <div class="pointer-wrap">
-        <div class="mouse-point user" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 46%; top: 52.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 44%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 45%; top: 50.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 46.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
-        <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
-        <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
-        <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
-        <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user active js-cd-panel-trigger" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window" data-panel="main"></div>
-        <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
-        <div class="mouse-point manager" style="left: 55%; top: 50%;"></div>
-        <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
-        <div class="mouse-point place-pin" style="left: 48%; top: 55%;"></div>
-        <div class="mouse-point location-pin" style="left: 58%; top: 55%;"></div>
-    </div>
-    <!-- map zoom/out -->
-    <div class="btn-widget-holder">
-        <ul>
-            <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
-            <li>
-                <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
-                    <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <!-- map container -->
-    <div id="map" style="width:100%;height:100vh;"></div>
-    <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
-    <script>
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(37.54545431995616, 127.2236967393457),
-            level: 1
-        };
-
-        var map = new kakao.maps.Map(container, options);
-        //var mapTypeControl = new kakao.maps.MapTypeControl();
-        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-    </script>
-
-
-
-
-
-    <div class="cd-panel cd-panel--from-right js-cd-panel-main">
-        <a href="#0" class="cd-panel__close js-cd-close">Close</a>
-
-        <div class="cd-panel__container">
-            <div class="cd-panel__content" data-perfect-scrollbar>
-                
-                <div class="d-flex mb-4">
-                    <h3 class="mb-0">사용자 정보</h3>
-                </div>
-
-                <table class="table mb-4 table-nowrap">
-                    <colgroup>
-                        <col width="*%">
-                        <col width="60%">
-                        <col width="35%">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-toggle-check-all"
-                                        data-target="#projects"
-                                        id="customCheckAll">
-                                    <label class="custom-control-label"
-                                        for="customCheckAll"><span class="text-hide">Toggle all</span></label>
-                                </div>
-                            </th>
-                            <th><a href="javascript:void(0)">사용자구분</a></th>
-                            <th><a href="javascript:void(0)">체류시간</a></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-check-selected-row"
-                                        id="customCheck1_1">
-                                    <label class="custom-control-label"
-                                        for="customCheck1_1"><span class="text-hide">Check</span></label>
-                                </div>
-                            </td>
-                            <td>
-                                <a href="#n" class="btn-link" data-toggle="popover" data-trigger="hover">A-1241</a>
-                                <div class="popoverContainer d-none">
-                                    <h6 class="mb-2">상세정보</h6>
-                                    <div class="list-group list-group-flush list-popover">
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">연락처</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">010-1234-5678</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">성별</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">남성</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">연령</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">32세</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">OS 타입</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">IOS</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">기기 명</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">iPhone PRO 11</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>10분</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-check-selected-row"
-                                        id="customCheck1_2">
-                                    <label class="custom-control-label"
-                                        for="customCheck1_2"><span class="text-hide">Check</span></label>
-                                </div>
-                            </td>
-                            <td>
-                                <a href="#n" class="btn-link" data-toggle="popover" data-trigger="hover">A-1242</a>
-                                <div class="popoverContainer d-none">
-                                    <h6 class="mb-2">상세정보</h6>
-                                    <div class="list-group list-group-flush list-popover">
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">연락처</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">010-1234-5678</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">성별</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">남성</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">연령</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">46세</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">OS 타입</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">AOS</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item">
-                                            <div class="d-flex popover-title">
-                                                <span class="text-50">기기 명</span>
-                                            </div>
-                                            <div class="d-flex popover-content">
-                                                <span class="text-headings">Galaxy s21</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>12분</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div> <!-- cd-panel__content -->
-        </div> <!-- cd-panel__container -->
-    </div> <!-- cd-panel -->
-
+        @@include('./include/platform-tools.html')
     </div>
 
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
-            <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-    <!-- Brand -->
-    <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
-        <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
-    </a>
-    <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs"
-            role="tablist">
-            <li class="sidebar-menu-item active" data-title="Maps" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button active" href="#sm-maps" data-toggle="tab" role="tab"
-                    aria-controls="sm-maps">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">business</i>
-                    <span class="sidebar-menu-text">건물</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
+            @@include('./include/platform-side-menu2.html')
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
                     <div class="tab-pane sm-search" id="sm-search">
@@ -875,7 +396,7 @@
                                                     <a href="#n" class="dropdown-item">복사</a>
                                                     <div class="dropdown-divider"></div>
                                                     <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#n" class="dropdown-item text-danger">전체삭제</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -884,49 +405,59 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="contents-tab nav mb-4 the-num03">
-                                    <a href="buildings_detail.html" class="active">
+                                    <a href="buildings_detail.html" class="">
                                         <span class="menu-cover"><span>실내지도</span></span>
                                     </a>
                                     <a href="buildings_detail2.html" class="">
                                         <span class="menu-cover"><span>경로</span></span>
                                     </a>
-                                    <a href="buildings_detail3.html" class="">
+                                    <a href="buildings_detail3.html" class="active">
                                         <span class="menu-cover"><span>센서</span></span>
                                     </a>
                                 </div>
-
                                 <div class="element-list-group">
                                     <div class="element-item-list">
                                         <div class="d-flex align-items-center">
                                             <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
+                                                <i class="material-icons">wifi_tethering</i>
                                             </div>
                                             <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 3</span>
+                                                <span>제목 없는 센서 4</span>
                                             </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i class="material-icons">edit</i></a>
+                                            <a href="buildings_edit2.html" class="btn-ele-edit circle-pin"><i class="material-icons">edit</i></a>
                                         </div>
                                     </div>
                                     <div class="element-item-list">
                                         <div class="d-flex align-items-center">
                                             <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
+                                                <i class="material-icons">wifi_tethering</i>
                                             </div>
                                             <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 2</span>
+                                                <span>제목 없는 센서 3</span>
                                             </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i class="material-icons">edit</i></a>
+                                            <a href="buildings_edit2.html" class="btn-ele-edit circle-pin"><i class="material-icons">edit</i></a>
                                         </div>
                                     </div>
                                     <div class="element-item-list">
                                         <div class="d-flex align-items-center">
                                             <div class="poi-icon">
-                                                <i class="material-icons">place</i>
+                                                <i class="material-icons">wifi_tethering</i>
                                             </div>
                                             <a href="#n" class="ele-title">
-                                                <span>제목 없는 포인트 1</span>
+                                                <span>제목 없는 센서 2</span>
                                             </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i class="material-icons">edit</i></a>
+                                            <a href="buildings_edit2.html" class="btn-ele-edit circle-pin"><i class="material-icons">edit</i></a>
+                                        </div>
+                                    </div>
+                                    <div class="element-item-list">
+                                        <div class="d-flex align-items-center">
+                                            <div class="poi-icon">
+                                                <i class="material-icons">wifi_tethering</i>
+                                            </div>
+                                            <a href="#n" class="ele-title">
+                                                <span>제목 없는 센서 1</span>
+                                            </a>
+                                            <a href="buildings_edit2.html" class="btn-ele-edit circle-pin"><i class="material-icons">edit</i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1624,162 +1155,4 @@
 <!-- // END Drawer Layout -->
 
 
-    <!-- alert -->
-    <div class="map-alert-container"> 
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">coronavirus</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>감염병이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">warning</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>긴급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_hospital</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>응급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert d-flex alert bg-accent text-white fade show" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_fire_department</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>화재가 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    
-    <!-- jQuery -->
-    <script src="vendor/jquery.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="vendor/popper.min.js"></script>
-    <script src="vendor/bootstrap.min.js"></script>
-
-    <!-- Perfect Scrollbar -->
-    <script src="vendor/perfect-scrollbar.min.js"></script>
-
-    <!-- DOM Factory -->
-    <script src="vendor/dom-factory.js"></script>
-
-    <!-- MDK -->
-    <script src="vendor/material-design-kit.js"></script>
-
-    <!-- App JS -->
-    <script src="js/app.js"></script>
-
-    <!-- Preloader -->
-    <script src="js/preloader.js"></script>
-
-    <!-- Range Slider -->
-    <script src="vendor/ion.rangeSlider.min.js"></script>
-    <script src="js/ion-rangeslider.js"></script>
-
-    <!-- Quill -->
-    <script src="vendor/quill.min.js"></script>
-    <script src="js/quill.js"></script>
-
-    <!-- Global Settings -->
-    <script src="js/settings.js"></script>
-
-    <!-- Flatpickr -->
-    <script src="vendor/flatpickr/flatpickr.min.js"></script>
-    <script src="js/flatpickr.js"></script>
-
-    <!-- DateRangePicker -->
-    <script src="vendor/moment.min.js"></script>
-    <script src="vendor/daterangepicker.js"></script>
-    <script src="js/daterangepicker.js"></script>
-
-    <!-- jQuery Mask Plugin -->
-    <script src="vendor/jquery.mask.min.js"></script>
-
-    <!-- Chart.js -->
-    <script src="vendor/Chart.min.js"></script>
-    <script src="js/chartjs.js"></script>
-
-    <!-- modernizr.js -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- Sidebar Mini JS -->
-    <script src="js/sidebar-mini.js"></script>
-    <script>
-        (function () {
-            'use strict';
-            // ENABLE sidebar menu tabs
-            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
-                e.preventDefault()
-                $(this).tab('show')
-            })
-            $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
-                $('.js-sidebar-mini-tabs > .active').removeClass('active')
-                $(e.target).parent().addClass('active')
-            })
-        })()
-    </script>
-
-    <!-- Dragula -->
-    <script src="vendor/dragula/dragula.min.js"></script>
-
-    <!-- Drag & Drop Page -->
-    <script src="js/dragula.js"></script>
-
-    <!-- List.js -->
-    <script src="vendor/list.min.js"></script>
-    <script src="js/list.js"></script>
-
-    <!-- Tables -->
-    <script src="js/toggle-check-all.js"></script>
-    <script src="js/check-selected-row.js"></script>
-
-    <script src="js/custom.js"></script>
-    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
-    
-</body>
-
-</html>
-
+@@include('./include/platform-footer.html')
