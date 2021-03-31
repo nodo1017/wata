@@ -211,7 +211,7 @@ input, select{
 .title-section{
     background-color: #202224;
     padding: 1rem;
-    background-image: linear-gradient(to right, #06294e,#150c49,#ac1142,#550674,#21273d);
+    background-image: linear-gradient(to right, #06294e,#150c49,#09459e,#550674,#21273d);
     background-size: 400%;
     background-position: 0 0;
     animation-duration: 35s;
@@ -1951,12 +1951,12 @@ platform map
     img{
         width: 100%;
     }
-}
 .solution-card {
     box-shadow: none;
     margin-bottom: .75rem;
     border: 1px solid #dfe2e6;
     border-radius: .25rem;
+    cursor: pointer;
     .rounded-circle {
         background-color: #a6aeb4;
 
@@ -2638,6 +2638,9 @@ a.btn-grad-de{
                 }
                 &.poi-sky{
                     background-color: #7db1e3;
+                }
+                &.poi-blue{
+                    background-color: #007bff;
                 }
             }
             img{
