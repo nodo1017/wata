@@ -1951,6 +1951,7 @@ platform map
     img{
         width: 100%;
     }
+}
 .solution-card {
     box-shadow: none;
     margin-bottom: .75rem;
@@ -5141,5 +5142,26 @@ dl.space-id{
 .page-content{
     .bs-popover-left{
         left: -5rem !important;
+    }
+}
+/* home */
+.empty-state{
+    text-align: center;
+    border-top: 1px solid #e9edf2;
+    padding: 6rem 0;
+    .empty-icon{
+        font-size: 5rem;
+        color: #e6e6e6;
+        line-height: 1.5;
+    }
+    em.empty-txt{
+        display: block;
+        font-size: 1rem;
+        color: #bdbdbd;
+    }
+    a.btn-link{
+        border: 1px solid #999;
+        padding: .75rem 1rem;
+        font-size: .875rem;
     }
 }

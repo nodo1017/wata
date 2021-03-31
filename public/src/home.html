@@ -24,7 +24,6 @@
         </div>
         <div class="recent-section">
             <div class="container page__container">
-                
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
                         <h3 class="mb-0">최근 프로젝트 목록</h3>
@@ -32,9 +31,7 @@
                     
                     <a href="project_write.html" class="btn btn-accent ml-4">프로젝트 등록</a>
                 </div>
-
-                <div class="row card-group-row">
-                    
+                <div class="row card-group-row d-none">
                     <div class="col-lg-3 card-group-row__col">
                         <div class="card o-hidden mb-0">
                             <a href="project_board.html" class="card-img-top js-image" data-position="" data-height="200">
@@ -60,7 +57,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 card-group-row__col">
                         <div class="card o-hidden mb-0">
                             <a href="#n" class="card-img-top js-image" data-position="" data-height="200">
@@ -85,7 +81,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 card-group-row__col">
                         <div class="card o-hidden mb-0">
                             <a href="#n" class="card-img-top js-image" data-position="" data-height="200">
@@ -110,7 +105,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 card-group-row__col">
                         <div class="card o-hidden mb-0">
                             <a href="#n" class="card-img-top js-image" data-position="" data-height="200">
@@ -135,16 +129,14 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
-
-
-
+                <div class="empty-state">
+                    <p class="empty-icon m-0"><i class="far fa-map"></i></p>
+                    <em class="empty-txt mb-4">아직 등록한 프로젝트가 없습니다.</em>
+                    <!-- <a href="#n" class="btn btn-link">새로운 프로젝트 생성</a> -->
+                </div>
             </div>
         </div>
-        
         <div class="page-section">
             <div class="container page__container">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
@@ -165,7 +157,7 @@
                     <a href="buildings_write.html" class="btn btn-accent ml-4">새로운 건물 생성</a>
                 </div>
 
-                <table class="table mb-4 table-nowrap">
+                <table class="table mb-4 table-nowrap d-none">
                     <colgroup>
                         <col width="5%">
                         <col width="*">
@@ -351,6 +343,11 @@
 
                     </tbody>
                 </table>
+                <div class="empty-state">
+                    <p class="empty-icon m-0"><i class="far fa-building"></i></p>
+                    <em class="empty-txt mb-4">아직 등록한 건물이 없습니다.</em>
+                    <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
+                </div>
             </div>
         </div>
     </div>
