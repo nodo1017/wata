@@ -365,6 +365,10 @@ login
     }
     .all-check{
         border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        background-color: #fbfbfb;
+        padding: .75rem 0;
+        margin-bottom: 1.5rem;
     }
 }
 @media (min-width:768px) {
@@ -2315,9 +2319,6 @@ a.btn-grad-de{
             span{
                 color: $identity;
             }
-        }
-        a.btn-grad-col, .btn-grad-de{
-            padding: .5rem 1.5rem;
         }
     }
 }
