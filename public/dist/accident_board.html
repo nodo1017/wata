@@ -383,10 +383,10 @@
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>Account</strong></div>
+                    <div class="dropdown-header"><strong>계정메뉴</strong></div>
                     <a class="dropdown-item" href="#n">정보수정</a>
                     <a class="dropdown-item" href="#n">멤버십</a>
-                    <a class="dropdown-item" href="#n">Logout</a>
+                    <a class="dropdown-item" href="#n">로그아웃</a>
                 </div>
             </div>
         </div>
@@ -1632,6 +1632,7 @@
                                     </div>
                                 </div>
                             </div> -->
+                            <!-- 상황 진행 상태 -->
                             <div class="emg-stat p-16pt">
                                 <div class="emg-top d-flex align-items-center pb-12pt mb-16pt">
                                     <a href="accident_list.html" title="목록으로" class="circle-pin go-back"><span class="material-icons text-white">arrow_back</span></a>
@@ -1645,6 +1646,22 @@
                                 <div class="emg-con py-8pt text-center">
                                     <em class="time mb-2">00:01:24</em>
                                     <p class="tit m-0">경과시간</p>
+                                </div>
+                            </div>
+                            <!-- 상황 종료 상태 -->
+                            <div class="emg-stat p-16pt emg-disabled">
+                                <div class="emg-top d-flex align-items-center pb-12pt mb-16pt">
+                                    <a href="accident_list.html" title="목록으로" class="circle-pin go-back"><span class="material-icons text-white">arrow_back</span></a>
+                                    <div class="d-flex col-auto">
+                                        <p class="text-white mb-0">최초 감지 시간</p>
+                                    </div>
+                                    <div class="col p-0 text-right">
+                                        <strong class="mb-0 text-white">2020.01.13 06:42:58</strong>
+                                    </div>
+                                </div>
+                                <div class="emg-con py-8pt text-center">
+                                    <em class="time mb-2">00:01:24</em>
+                                    <p class="tit m-0">상황종료</p>
                                 </div>
                             </div>
                             <div class="emg-info">
@@ -1704,7 +1721,7 @@
                                     <label class="form-label text-50" for="">링크 URL</label>
                                     <input type="text" class="form-line" id="" placeholder="URL 주소를 입력해주세요.">
                                 </div>
-                                <div class="form-group mb-32pt">
+                                <div class="form-group m-0">
                                     <label for="formFile" class="form-label text-50">파일등록</label>
                                     <input class="form-control" type="file" id="formFile">
                                 </div>
@@ -1771,7 +1788,7 @@
                                     </div>
                                 </div> -->
                             </div>
-                            <div class="mt-48pt">
+                            <div class="py-40pt">
                                 <div class="d-flex align-items-center justify-content-center">
                                     <a href="#n" class="btn btn-outline-secondary">상황 종료</a>
                                     <a href="accident_done.html" class="btn btn-outline-accent ml-3">메세지 전송</a>
