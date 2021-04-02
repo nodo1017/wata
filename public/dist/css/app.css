@@ -37219,7 +37219,7 @@ label {
 
 .form-label {
     color: #303956;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: .8125rem;
     font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-weight: 600;

@@ -2686,8 +2686,15 @@ a.btn-grad-de{
             max-width: 12.5%;
             padding: 5px;
             a{
+                position: relative;
                 display: flex;
                 border-radius: 50%;
+                &:before{
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -12px;
+                    margin-top: -12px;
+                }
                 &.poi-orange{
                     background-color: #f97b0e;
                 }
