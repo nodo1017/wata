@@ -60,7 +60,7 @@
                                 <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
                                     <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                 </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01" data-perfect-scrollbar>
                                     <li class="sidebar-menu-item active">
                                         <a class="sidebar-menu-button" href="#n">
                                             <span class="sidebar-menu-text">B1</span>
@@ -108,7 +108,7 @@
                                 <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
                                     <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                 </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02" data-perfect-scrollbar>
                                     <li class="sidebar-menu-item">
                                         <a class="sidebar-menu-button" href="#n">
                                             <span class="sidebar-menu-text">1F</span>
@@ -125,7 +125,6 @@
                                             <span class="sidebar-menu-text">3F</span>
                                         </a>
                                     </li>
-
                                 </ul>
                             </li>
                         </ul>
@@ -307,10 +306,8 @@
                                                 <div class="dropdown">
                                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
                                                         <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -324,10 +321,8 @@
                                                 <div class="dropdown">
                                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
                                                         <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -341,10 +336,8 @@
                                                 <div class="dropdown">
                                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
                                                         <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1056,7 +1049,10 @@
                                         <span class="menu-cover"><span>동선추적</span></span>
                                     </a>
                                 </div>
-                                <p class="mb-2"><strong class="text-iden">10</strong>명의 사용자가 선택되었습니다.</p>
+                                <div class="d-flex mb-2">
+                                    <span class="d-flex flex m-0"><strong class="text-iden">10</strong>명의 사용자가 선택되었습니다.</span>
+                                    <a href="#n" class="btn-link text-accent">전체삭제</a>
+                                </div>
                                 <div class="selected-user mt-2" data-perfect-scrollbar>
                                     <div class="card-inner">
                                         <ul>
@@ -1123,9 +1119,6 @@
                                                     <dd class="m-0">10분</dd>
                                                 </dl>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <a href="#n" class="btn btn-outline-secondary mr-8pt">과거이력보기</a>
-                                            </div>
                                         </div>
                                     </div>
                                     <div id="tab06" class="tab-pane" role="tabpanel">
@@ -1145,7 +1138,7 @@
                                         </div>
                                     </div>
                                     <div id="tab07" class="tab-pane" role="tabpanel">
-                                        <div class="route-list">
+                                        <div class="route-list mb-4">
                                             <ul class="route-user01">
                                                 <li class="line-blue current">
                                                     <div class="route-inner">
@@ -1193,6 +1186,9 @@
                                                     </div>
                                                 </li>
                                             </ul>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="user_movement.html" class="btn btn-outline-dark mr-8pt">과거 동선 보기</a>
                                         </div>
                                     </div>
                                 </div>
