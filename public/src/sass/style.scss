@@ -3347,6 +3347,22 @@ a.cd-filter-trigger {
             }
             color: #fff;
         }
+        span{
+            position: relative;
+        }
+        span.wrong-location{
+            padding-left: 20px;
+            &:before{
+                content: '\ef78';
+                position: absolute;
+                font-family: 'Material Icons';
+                left: 0;
+                line-height: 24px;
+                font-size: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
     }
 }
 /* search */
@@ -3972,6 +3988,12 @@ a.cd-filter-trigger {
                 text-decoration: underline;
             }
         }
+    }
+}
+/* maps */
+.sm-maps{
+    .hide{
+        display: none;
     }
 }
 /* -------------------------------- map options

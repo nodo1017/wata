@@ -706,17 +706,20 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="contents-tab the-num03 nav mb-4" role="tablist">
-                                    <a href="#tab05" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                                    <a href="#tab05" class="" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>정보</span></span>
                                     </a>
                                     <a href="#tab06" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>메세지</span></span>
                                     </a>
-                                    <a href="#tab07" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                    <a href="#tab07" class="active" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>동선추적</span></span>
                                     </a>
                                 </div>
-                                <p class="mb-2"><strong class="text-iden">10</strong>명의 사용자가 선택되었습니다.</p>
+                                <div class="d-flex mb-2">
+                                    <span class="d-flex flex m-0"><strong class="text-iden">10</strong>명의 사용자가 선택되었습니다.</span>
+                                    <a href="#n" class="btn-link text-accent">전체삭제</a>
+                                </div>
                                 <div class="selected-user mt-2" data-perfect-scrollbar>
                                     <div class="card-inner">
                                         <ul>
@@ -759,7 +762,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-content">
-                                    <div id="tab05" class="tab-pane active" role="tabpanel">
+                                    <div id="tab05" class="tab-pane" role="tabpanel">
                                         <div class="user-info">
                                             <div class="p-16pt">
                                                 <dl class="d-flex align-items-center">
@@ -783,9 +786,6 @@
                                                     <dd class="m-0">10분</dd>
                                                 </dl>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <a href="#n" class="btn btn-outline-secondary mr-8pt">과거이력보기</a>
-                                            </div>
                                         </div>
                                     </div>
                                     <div id="tab06" class="tab-pane" role="tabpanel">
@@ -797,15 +797,21 @@
                                             </div>
                                             <div class="form-group mb-4">
                                                 <label class="form-label mb-0 text-50 essential mb-2" for="form02">내용</label>
-                                                <textarea class="form-control" name="comment" id="form02" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
+                                                <div class="msg-box">
+                                                    <textarea class="form-control" name="comment" id="form02" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px; resize: none;"></textarea>
+                                                    <div class="d-flex p-2">
+                                                        <span class="">1/1000</span>
+                                                        <a href="#n">메세지 전송</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <a href="#n" class="btn btn-outline-dark mr-8pt">메세지 전송</a>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <a href="user_movement.html" class="btn btn-link text-accent"><strong>과거 메세지 전송 이력</strong></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="tab07" class="tab-pane" role="tabpanel">
-                                        <div class="route-list">
+                                    <div id="tab07" class="tab-pane active" role="tabpanel">
+                                        <div class="route-list mb-4">
                                             <ul class="route-user01">
                                                 <li class="line-blue current">
                                                     <div class="route-inner">
@@ -853,6 +859,9 @@
                                                     </div>
                                                 </li>
                                             </ul>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="user_movement.html" class="btn btn-link text-accent"><strong>과거 동선 보기</strong></a>
                                         </div>
                                     </div>
                                 </div>

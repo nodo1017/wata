@@ -1075,73 +1075,136 @@
                                     <div class="d-flex">
                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                             <label class="btn btn-outline-secondary active">
-                                                <input type="radio" id="NodeTypeAnchor" name="NodeType" value="" checked="" aria-checked="true" /> Anchor
+                                                <input type="radio" id="nodeTypeUwb" name="NodeType" value="" checked="" aria-checked="true" /> Uwb
                                             </label>
                                             <label class="btn btn-outline-secondary">
-                                                <input type="radio" id="NodeTypeTag" name="NodeType" value="" aria-checked="true" /> Tag
+                                                <input type="radio" id="nodeTypeBle" name="NodeType" value="" aria-checked="true" /> Ble
+                                            </label>
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" id="nodeTypeRTT" name="NodeType" value="" aria-checked="true" /> RTT
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="projectName">센서명</label>
-                                    <input type="text" class="form-line" id="projectName" placeholder="센서명을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt over-txt">
-                                    <label class="form-label text-50 essential" for="projectUuid">UUID</label>
-                                    <input type="text" class="form-line pr-6" id="projectUuid" placeholder="UUID를 입력해주세요.">
-                                    <a href="#n" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-title="복사하기" data-placement="right" data-boundary="window"><i class="material-icons">content_copy</i></a>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="projectMajorVersion">Major Version</label>
-                                    <input type="text" class="form-line" id="projectMajorVersion" placeholder="Major Version을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="projectMinorVersion">Minor Version</label>
-                                    <input type="text" class="form-line" id="projectMinorVersion" placeholder="Minor Version을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="projectTxPower">TxPower</label>
-                                    <input type="text" class="form-line" id="projectTxPower" placeholder="TxPower을 입력해주세요.">
-                                </div>
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50 essential" for="posX">posX</label>
-                                        <input type="number" class="form-line" id="posX" placeholder="" value="" required="">
+                                <!-- uwb -->
+                                <div class="uwb-form">
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential">타입</label>
+                                        <select name="category" class="form-line">
+                                            <option value="앵커">앵커</option>
+                                            <option value="태그">태그</option>
+                                            <option value="브릿지">브릿지</option>
+                                            <option value="">와이파이</option>
+                                        </select>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50 essential" for="posY">posY</label>
-                                        <input type="number" class="form-line" id="posY" placeholder="" value="" required="">
+                                    <div class="form-group mb-32pt over-txt">
+                                        <label class="form-label text-50 essential" for="projectUuid">UUID</label>
+                                        <input type="text" class="form-line pr-6" id="projectUuid" placeholder="UUID를 입력해주세요.">
+                                        <a href="#n" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-title="복사하기" data-placement="right" data-boundary="window"><i class="material-icons">content_copy</i></a>
                                     </div>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50">Group</label>
-                                    <select name="category" class="form-line">
-                                        <option value="경보 이벤트">Group A</option>
-                                        <option value="화재">Group B</option>
-                                        <option value="감염병">Group C</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50">아이콘</label>
-                                    <div class="poi-list">
-                                        <ul>
-                                            <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_4g.svg" alt=""></a></li>
-                                            <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_5g.svg" alt=""></a></li>
-                                            <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_wifi.svg" alt=""></a></li>
-                                            <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_ble.svg" alt=""></a></li>
-                                            <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_uwb.svg" alt=""></a></li>
-                                        </ul>
+                                    <div class="form-row mb-32pt">
+                                        <div class="col-md-6">
+                                            <label class="form-label text-50 essential" for="validationSample01">위도</label>
+                                            <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label text-50 essential" for="validationSample02">경도</label>
+                                            <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential">아이콘</label>
+                                        <div class="poi-list">
+                                            <ul>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_4g.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_5g.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_wifi.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_ble.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_uwb.svg" alt=""></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-row mb-32pt">
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample01">위도</label>
-                                        <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                <!-- ble -->
+                                <div class="ble-form d-none">
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential">타입</label>
+                                        <select name="category" class="form-line">
+                                            <option value="앵커">Scanner</option>
+                                            <option value="태그">beacon</option>
+                                        </select>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label text-50" for="validationSample02">경도</label>
-                                        <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                    <div class="form-group mb-32pt over-txt">
+                                        <label class="form-label text-50 essential" for="projectUuid">UUID</label>
+                                        <input type="text" class="form-line pr-6" id="projectUuid" placeholder="UUID를 입력해주세요.">
+                                        <a href="#n" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-title="복사하기" data-placement="right" data-boundary="window"><i class="material-icons">content_copy</i></a>
+                                    </div>
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential" for="projectMajorVersion">Major Version</label>
+                                        <input type="text" class="form-line" id="projectMajorVersion" placeholder="Major Version을 입력해주세요.">
+                                    </div>
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential" for="projectMinorVersion">Minor Version</label>
+                                        <input type="text" class="form-line" id="projectMinorVersion" placeholder="Minor Version을 입력해주세요.">
+                                    </div>
+                                    <div class="form-row mb-32pt">
+                                        <div class="col-md-6">
+                                            <label class="form-label text-50 essential" for="validationSample01">위도</label>
+                                            <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label text-50 essential" for="validationSample02">경도</label>
+                                            <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential">아이콘</label>
+                                        <div class="poi-list">
+                                            <ul>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_4g.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_5g.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_wifi.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_ble.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_uwb.svg" alt=""></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- rtt -->
+                                <div class="rtt-form d-none">
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential">타입</label>
+                                        <select name="category" class="form-line">
+                                            <option value="앵커">AP</option>
+                                            <option value="태그">Tag</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-32pt over-txt">
+                                        <label class="form-label text-50 essential" for="projectUuid">mac address</label>
+                                        <input type="text" class="form-line pr-6" id="projectUuid" placeholder="UUID를 입력해주세요.">
+                                        <a href="#n" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-title="복사하기" data-placement="right" data-boundary="window"><i class="material-icons">content_copy</i></a>
+                                    </div>
+                                    <div class="form-row mb-32pt">
+                                        <div class="col-md-6">
+                                            <label class="form-label text-50 essential" for="validationSample01">위도</label>
+                                            <input type="number" class="form-line" id="validationSample01" placeholder="" value="" required="">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label text-50 essential" for="validationSample02">경도</label>
+                                            <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential">아이콘</label>
+                                        <div class="poi-list">
+                                            <ul>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_4g.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_5g.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_wifi.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_ble.svg" alt=""></a></li>
+                                                <li><a href="#n" class="circle-pin"><img src="images/poi/sensor_uwb.svg" alt=""></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="my-32pt">

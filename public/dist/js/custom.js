@@ -28,6 +28,7 @@ jQuery(document).ready(function ($) {
 		selected.parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('move-out');
 	});
 
+	
 	function toggleNav() {
 		var navIsVisible = (!$('.cd-dropdown').hasClass('dropdown-is-active')) ? true : false;
 		$('.cd-dropdown').toggleClass('dropdown-is-active', navIsVisible);
@@ -41,6 +42,7 @@ jQuery(document).ready(function ($) {
 		}
 	}
 });
+
 
 // global GNB
 jQuery(document).ready(function ($) {
@@ -390,3 +392,5 @@ jQuery(document).ready(function($){
 		} 
 	}
 });
+
+/* radio tab */
