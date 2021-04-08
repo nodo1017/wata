@@ -17,6 +17,7 @@ select{
 }
 body.layout-compact{
     min-width: 1024px;
+    background-color: #f5f5f5;
 }
 .bg-gray-v1 {
     background-color: #fafafa;
@@ -2371,14 +2372,15 @@ a.btn-grad-de{
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: url("../images/patterns/tiny_grid.png") repeat;
     .cover{
         width: 800px;
         text-align: center;
         em.alert-title{
-            display: inline-flex;
+            display: flex;
             font-size: 2rem;
             font-style: normal;
+            align-items: center;
+            justify-content: center;
         }
         em.alert-sub-title{
             display: inline-flex;
@@ -2391,6 +2393,10 @@ a.btn-grad-de{
             span{
                 color: $identity;
             }
+        }
+        span.empty-icon{
+            font-size: 6rem;
+            color: #d6d6d6;
         }
     }
 }
@@ -2733,7 +2739,7 @@ a.btn-grad-de{
 }
 /* list group */
 .list-group{
-    &.dragula-list{
+    &.block-list{
         box-shadow: none;
         border-radius: 0;
         .list-group-item{
@@ -2744,6 +2750,13 @@ a.btn-grad-de{
             &.active{
                 border-color: #303b56;
             }
+            &:hover{
+                box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            }
+        }
+    }
+    &.dragula-list{
+        .list-group-item{
             &:after{
                 content: '\e8d5';
                 font-family: 'Material Icons';
@@ -2755,7 +2768,6 @@ a.btn-grad-de{
                 @include transition(all, 0.2s, ease-in-out);
             }
             &:hover{
-                box-shadow: 0 2px 6px rgba(0,0,0,0.05);
                 &:after{
                     opacity: 1;
                 }
@@ -3320,7 +3332,7 @@ a.cd-filter-trigger {
     }
 }
 .map-noData{
-    background-color: #f2f2f2;
+    background-color: #f5f5f5;
     width: 100%;
     height: 100vh;
 }
@@ -3440,7 +3452,6 @@ a.cd-filter-trigger {
     .step {
         padding: 1rem 0;
     }
-
 }
 /* maps */
 .sm-maps{
@@ -3934,14 +3945,23 @@ a.cd-filter-trigger {
         a{
             display: flex;
             justify-content: flex-end;
-            background-color: #747b8e;
+            background: rgb(236,236,236);
+            background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(253,253,253,1) 100%);
             align-items: center;
+            border: 1px solid #dadde2;
+            color: #303b56;
             border-radius: .25rem;
             padding: .5rem .75rem;
             font-size: .75rem;
-            color: #fff;
             &:active{
-                background-color: #303b56;
+                box-shadow: inset 0 1px 2px 2px rgba(0,0,0,0.03);
+                background: rgb(236,236,236);
+                background: linear-gradient(0deg, rgba(253,253,253,1) 0%, rgba(242,242,242,1) 100%);
+            }
+            &.disabled{
+                background: #f3f3f3;
+                color: #adadad;
+                pointer-events: none;
             }
         }
     }
@@ -5407,7 +5427,45 @@ dl.space-id{
 .recent-section{
     .card{
         border: none;
-        box-shadow: 0 10px 30px 0 rgba(48, 49, 51, .06);
+        &:hover{
+            box-shadow: 0 10px 25px 5px rgba(48, 49, 51, .1);
+
+        }
+        a.card-img-top{
+            position: relative;
+            span.pj-type{
+                position: absolute;
+                left: 1rem;
+                bottom: 1rem;
+                background-color: #f0f4f7;
+                padding: .25rem .5rem;
+                border-radius: 2px;
+                font-size: .688rem;
+                font-weight: 500;
+                color: $identity;
+                letter-spacing: -1px;
+            }
+        }
+        a.no-image{
+            width: 270px;
+            height: 200px;
+            background-color: #fff;
+            border-bottom: 1px solid #ebeff5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                font-size: 6rem;
+                color: #eaeef3;
+            }
+        }
+        .card-footer{
+            border-top: none;
+            .pj-type{
+                font-size: .688rem;
+                color: $identity;
+            }
+        }
     }
 }
 .page-section{
