@@ -4277,8 +4277,6 @@ map options
         }
     }
     .map-edit-tools{
-        .btn.active{
-        }
     }
     button{
         vertical-align: top;
@@ -5162,6 +5160,68 @@ dl.space-id{
     &.location-pin{
         background: url(../images/location_pin.svg) no-repeat center;
     }
+    &.space-marker{
+        &:hover{
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            -webkit-transform: none;
+            transform: none;
+        }
+        .marker-inner{
+            display: flex;
+            position: relative;
+            background-color: #5567ff;
+            padding: .25rem;
+            border-radius: 100px;
+            .marker-icon{
+                width: 32px;
+                height: 32px;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                span{
+                    color: #5567ff;
+                }
+            }
+            .marker-name{
+                display: flex;
+                align-items: center;
+                padding: 0 .5rem;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 600;
+                margin-top: 2px;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-top: -250px;
+                margin-left: -250px;
+                width: 500px;
+                height: 500px;
+                background-color: rgba(85,103,255,0.2);
+                border: 2px solid #3c50ff;
+                z-index: -1;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-top: 8px solid #5567ff;
+                border-right: 6px solid transparent;
+                border-left: 6px solid transparent;
+            }
+        }
+    }
     &.manager{
         background: url(../images/local_police.svg) no-repeat center;
     }
@@ -5470,4 +5530,24 @@ dl.space-id{
 }
 .page-section{
     padding: 4rem 0 !important;
+}
+
+/* my page */
+.my-page{
+    .sidebar-normal{
+        background-color: #f9f9f9;
+        padding: 1rem 0;
+        border-radius: .5rem;
+        ul.sidebar-menu{
+            li{
+                margin: 0;
+                a{
+                    color: rgba(47, 55, 64, .4);
+                }
+                &.active a{
+                    color: #586069;
+                }
+            }
+        }
+    }
 }
