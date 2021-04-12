@@ -5540,20 +5540,60 @@ dl.space-id{
 
 /* my page */
 .my-page{
+    .mypage__container{
+    }
+    .row{
+        margin-right: -25px;
+        margin-left: -25px;
+    }
+    .col-md-3, .col-md-9{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
     .sidebar-normal{
         background-color: #f9f9f9;
         padding: 1rem 0;
-        border-radius: .5rem;
+        border-radius: .25rem;
         ul.sidebar-menu{
             li{
                 margin: 0;
                 a{
                     color: rgba(47, 55, 64, .4);
+                    &:hover{
+                        text-decoration: underline;
+                        color: rgba(47, 55, 64, .55);
+                    }
                 }
                 &.active a{
                     color: #586069;
                 }
             }
+        }
+    }
+    .page-separator{
+        margin-bottom: 2.5rem;
+        .page-separator__text{
+            font-size: .9375rem;
+            background-color: #fff;
+        }
+    }
+    .avatar{
+        span{
+            font-size: 1.5rem;
+        }
+    }
+    .media-body{
+        margin-right: 1.5rem;
+        .form-label{
+            span{
+                color: #999;
+                font-weight: normal;
+                margin-left: .25rem;
+            }
+        }
+        .file-cover{
+            position: relative;
+            display: block;
         }
     }
 }

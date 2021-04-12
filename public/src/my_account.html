@@ -39,13 +39,12 @@
                         <div class="sidebar sidebar-normal">
                             <ul class="sidebar-menu">
                                 <li class="sidebar-menu-item active">
-                                    <a class="sidebar-menu-button" href="instructor-dashboard.html">
+                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">정보수정</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                        href="instructor-courses.html">
+                                    <a class="sidebar-menu-button" href="#n">
                                         <span class="sidebar-menu-text">멤버십</span>
                                     </a>
                                 </li>
@@ -53,7 +52,51 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                            <span>Add your page content here.</span>
+                        <div class="page-separator">
+                            <div class="page-separator__text">귀하의 프로필 정보</div>
+                        </div>
+                        <div class="col-md-7 p-0">
+                            <div class="form-group mb-4">
+                                <div class="media align-items-center">
+                                    <div class="media-body">
+                                        <label class="form-label">프로필 이미지 <span>(권장 이미지 크기는 128x128 픽셀입니다.)</span></label>
+                                        <span class="file-cover">
+                                            <input class="form-control" type="file" id="formFile" />
+                                            <a href="#n" class="file-del"><i class="material-icons">close</i></a>
+                                        </span>
+                                    </div>
+                                    <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                        <span class="avatar avatar-xl">
+                                            <span class="avatar-title rounded-circle">SH</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="accountEmail">이메일</label>
+                                <input type="text" class="form-line" id="accountEmail" placeholder="test@test.com" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="accountName">이름</label>
+                                <input type="text" class="form-line" id="accountName" placeholder="이름을 입력해주세요.">
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="form03">비밀번호</label>
+                                <input id="form03" type="password" required="" class="form-line" placeholder="비밀번호를 입력하세요.">
+                                <div class="invalid-feedback">8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</div>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="form04">비밀번호 확인</label>
+                                <input id="form04" type="password" required="" class="form-line" placeholder="비밀번호를 입력하세요.">
+                                <div class="invalid-feedback">비밀번호가 일치하지 않습니다.</div>
+                            </div>
+                            <div class="my-32pt">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="home.html" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                                    <a href="home.html" class="btn btn-outline-accent ml-0">저장하기</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
