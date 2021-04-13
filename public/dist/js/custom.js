@@ -394,6 +394,7 @@ jQuery(document).ready(function($){
 });
 
 
+// tutorial
 jQuery(document).ready(function($){
 	//check if a .cd-tour-wrapper exists in the DOM - if yes, initialize it
 	$('.cd-tour-wrapper').exists() && initTour();
@@ -480,7 +481,7 @@ jQuery(document).ready(function($){
 
 	function showLayer(layer) {
 		layer.addClass('is-visible').on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-			layer.removeClass('is-visible');
+			layer.removeClass('');
 		});
 	}
 
