@@ -5538,6 +5538,124 @@ dl.space-id{
     padding: 4rem 0 !important;
 }
 
+/* data */
+.spatial-data{
+    .row{
+        margin-right: -25px;
+        margin-left: -25px;
+    }
+    .col-md-3, .col-md-9{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .sidebar-side-acc{
+        border: 1px solid #e9edf2;
+        ul.sidebar-menu{
+            margin: 0;
+            >li.sidebar-menu-item{
+                border-radius: 0;
+                border-bottom: 1px solid #e9edf2;
+                margin: 0;
+                &:last-child{
+                    border-bottom: none;
+                }
+                >a.sidebar-menu-button{
+                    padding: 0 1rem;
+                    line-height: 60px;
+                }
+                &:hover{
+                }
+                ul.sidebar-submenu{
+                    border-top: 1px solid #e9edf2;
+                    li{
+                        &:first-child{
+                            padding-top: 1rem;
+                        }
+                        &:last-child{
+                            padding-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .accordion{
+        border: 1px solid #e9edf2;
+        border-radius: .25rem;
+        .accordion__item{
+            border: none;
+            margin: 0;
+            border-bottom: 1px solid #e9edf2;
+            &:last-of-type{
+                border-bottom: none;
+            }
+            a.accordion__toggle{
+                padding: 1rem;
+                .accordion__title{
+                    font-size: 1rem;
+                }
+            }
+            .sidebar-menu-badge{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: .75rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 100px;
+                margin: 0 .25rem 0 0;
+            }
+            .accordion__menu{
+                .accordion__menu-inner{
+                    position: relative;
+                    max-height: 250px;
+                    padding: .75rem;
+                    border-top: 1px solid #e9edf2;
+                }
+                .search-form{
+                    background-color: #f7f7f7;
+                    border-radius: 2px;
+                    margin: .5rem 1rem;
+                }
+                .accordion__menu-link{
+                    padding: .75rem 1rem;
+                    border-bottom: none;
+                    .custom-control{
+                        min-height: 1.5rem;
+                        .custom-control-input{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+                    }
+                    label.custom-control-label{
+                        cursor: pointer;
+                        font-size: 1rem;
+                        padding-left: .5rem;
+                        width: 100%;
+                        color: #333;
+                        span{
+                            font-size: .75rem;
+                            color: #a7a7a7;
+                        }
+                        &:before{
+                            top: 0;
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            border-radius: 2px;
+                            
+                        }
+                        &:after{
+                            top: 0;
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* my page */
 .my-page{
     .mypage__container{
@@ -5597,8 +5715,6 @@ dl.space-id{
         }
     }
 }
-
-
 
 /* tutorial */
 /* -------------------------------- 

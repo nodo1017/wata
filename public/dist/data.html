@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>WATA</title>
+
+	<!-- Prevent the demo from appearing in search engines -->
+	<meta name="robots" content="noindex">
+
+	<link rel="icon" href="images/icon/favicon.svg">
+	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
+
+	<!-- Preloader -->
+	<link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
+
+	<!-- Perfect Scrollbar -->
+	<link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
+
+	<!-- Material Design Icons -->
+	<link type="text/css" href="css/material-icons.css" rel="stylesheet" />
+
+	<!-- Font Awesome Icons -->
+	<link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
+
+	<!-- Preloader -->
+	<link type="text/css" href="css/preloader.css" rel="stylesheet" />
+
+	<!-- App CSS -->
+	<link type="text/css" href="css/app.css" rel="stylesheet" />
+	
+	<!-- Dark Mode CSS -->
+	<link type="text/css" href="css/dark.css" rel="stylesheet" />
+
+	<!-- swiper -->
+	<link type="text/css" href="css/swiper.min.css" rel="stylesheet" />
+
+	<!-- custom CSS -->
+	<link type="text/css" href="css/style.css" rel="stylesheet" />
+	
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+    rel="stylesheet">
+
+</head>
+
+<body class="layout-sticky-subnav layout-default">
+
+	<div class="preloader">
+		<div class="sk-chase">
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+		</div>
+	</div>
+
+<!-- Header Layout -->
+<div class="mdk-header-layout js-mdk-header-layout">
+
+	<div id="header" class="mdk-header js-mdk-header mb-0" data-effects="parallax-background waterfall" data-fixed data-condenses>
+	<div class="mdk-header__content">
+		<div class="navbar navbar-expand nav-gnb" id="default-navbar" data-primary>
+			<a href="home.html" class="navbar-brand mr-16pt">
+				<img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
+			</a>
+			<!-- <a href="index.html" class="navbar-brand mr-16pt">
+				<img src="images/logo/symbol_col.svg" alt="logo" class="img-fluid" style="max-width: 42px;" />
+			</a> -->
+		
+			<div class="nav navbar-nav flex justify-content-start ml-8pt cd-morph-dropdown">
+				<a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
+				<nav class="main-nav">
+					<ul>
+						<li>
+							<a href="project_list.html">Projects</a>
+						</li>
+						<li>
+							<a href="buildings.html">Space</a>
+						</li>
+						<li>
+							<a href="data.html">Data</a>
+						</li>
+						<!-- <li class="has-dropdown" data-content="menu02">
+							<a href="#n"></a>
+						</li> -->
+					</ul>
+				</nav>
+				<div class="morph-dropdown-wrapper">
+					<div class="morph-dropdown-inner">
+						<div class="dropdown-list">
+							<ul>
+								<li id="menu01" class="dropdown">
+									<a href="#0" class="label">Title</a>
+									<div class="content">
+										<a href="sub.html" class="dropdown-item">2depth</a>
+										<a href="sub.html" class="dropdown-item">2depth</a>
+										<a href="sub.html" class="dropdown-item">2depth</a>
+										<a href="sub.html" class="dropdown-item">2depth</a>
+										<a href="sub.html" class="dropdown-item">2depth</a>
+									</div>
+								</li>
+								<li id="menu02" class="dropdown">
+									<a href="#0" class="label">Title</a>
+									<div class="content">
+										<a href="#n" class="dropdown-item">2depth</a>
+										<a href="#n" class="dropdown-item">2depth</a>
+										<a href="#n" class="dropdown-item">2depth</a>
+										<a href="#n" class="dropdown-item">2depth</a>
+										<a href="#n" class="dropdown-item">2depth</a>
+									</div>
+								</li>
+							</ul>
+							<div class="bg-layer" aria-hidden="true"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="d-flex flex justify-content-end align-items-center">
+				<div class="form-group m-0 ml-4 form-lang">
+					<select id="custom-select" class="custom-line">
+						<option selected="">KOR</option>
+						<option value="1">JPN</option>
+						<option value="2">ENG</option>
+					</select>
+				</div>
+				<div class="nav-item dropdown ml-4">
+					<a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+						<span class="avatar avatar-sm">
+							<span class="avatar-title rounded-circle">SH</span>
+						</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<div class="dropdown-header"><strong>계정메뉴</strong></div>
+						<a class="dropdown-item" href="my_account.html">정보수정</a>
+						<a class="dropdown-item" href="#n">멤버십</a>
+						<a class="dropdown-item" href="ac_16.html">로그아웃</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <!-- Header Layout Content -->
+    <div class="mdk-header-layout__content page-content spatial-data">
+        <div class="title-section">
+            <div class="container page__container">
+                <div class="d-flex align-items-center">
+                    <div class="flex d-flex">
+                        <p class="text-white m-0"><strong>Leo</strong>님 환영합니다.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto">
+                            <a href="#n" class="btn-line"><i class="material-icons">local_atm</i><span>Membership Upgrade</span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="page-section">
+            <div class="container page__container">
+                <div class="row align-items-start">
+                    <div class="col-md-4">
+                        <div class="flex d-flex flex-column flex-sm-row align-items-center">
+                            <div class="mb-24pt">
+                                <h3 class="mb-0">데이터 카탈로그</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="d-flex flex m-0">총 <strong class="text-iden">310</strong>개의 데이터</span>
+                            <a href="#n" class="btn-link text-accent">전체 선택 해제</a>
+                        </div>
+                        <div class="accordion js-accordion" id="parent">
+                            <div class="accordion__item open">
+                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#course-toc-1" data-parent="#parent">
+                                    <span class="flex accordion__title">국가</span>
+                                    <span class="sidebar-menu-badge badge badge-accent">2</span>
+                                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                </a>
+                                <div class="accordion__menu collapse show" id="course-toc-1">
+                                    <div class="accordion__menu-inner" data-perfect-scrollbar>
+                                        <div class="search-form form-control-flush">
+                                            <input type="text" class="form-control" placeholder="Search icons" id="searchSample04">
+                                            <button class="btn" type="button"><i class="material-icons">search</i></button>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck01" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck01" class="custom-control-label">United states of America <span>(112)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck02" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck02" class="custom-control-label">United Kingdom <span>(44)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck03" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck03" class="custom-control-label">Republic of Korea <span>(98)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck04" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck04" class="custom-control-label">Japan <span>(12)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck05" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck05" class="custom-control-label">Germany <span>(102)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck06" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck06" class="custom-control-label">China <span>(72)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck07" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck07" class="custom-control-label">Republic of Singapore <span>(122)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck08" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck08" class="custom-control-label">Republic of India <span>(272)</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item open">
+                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#course-toc-2" data-parent="#parent">
+                                    <span class="flex accordion__title">카테고리</span>
+                                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                </a>
+                                <div class="accordion__menu collapse show" id="course-toc-2">
+                                    <div class="accordion__menu-inner" data-perfect-scrollbar>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck09" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck09" class="custom-control-label">Demographics <span>(19)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck10" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck10" class="custom-control-label">Environmental <span>(6)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck11" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck11" class="custom-control-label">Points of Interest <span>(4)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck12" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck12" class="custom-control-label">Derived <span>(3)</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item open">
+                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#course-toc-3" data-parent="#parent">
+                                    <span class="flex accordion__title">라이선스</span>
+                                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                </a>
+                                <div class="accordion__menu collapse show" id="course-toc-3">
+                                    <div class="accordion__menu-inner" data-perfect-scrollbar>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck13" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck13" class="custom-control-label">Public Data <span>(10)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__menu-link">
+                                            <div class="custom-control custom-checkbox">
+                                                <input id="customCheck14" type="checkbox" class="custom-control-input">
+                                                <label for="customCheck14" class="custom-control-label">Premium Data <span>(9)</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sidebar sidebar-side-acc d-none" data-perfect-scrollbar>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button js-sidebar-collapse" data-toggle="collapse" href="#enterprise_menu">
+                                        Countries
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="enterprise_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="erp-dashboard.html">
+                                                <span class="sidebar-menu-text">ERP Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="crm-dashboard.html">
+                                                <span class="sidebar-menu-text">CRM Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="hr-dashboard.html">
+                                                <span class="sidebar-menu-text">HR Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="employees.html">
+                                                <span class="sidebar-menu-text">Employees</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="staff.html">
+                                                <span class="sidebar-menu-text">Staff</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="leaves.html">
+                                                <span class="sidebar-menu-text">Leaves</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled"
+                                               href="departments.html">
+                                                <span class="sidebar-menu-text">Departments</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="documents.html">
+                                                <span class="sidebar-menu-text">Documents</span>
+                                            </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="attendance.html">
+                                                <span class="sidebar-menu-text">Attendance</span>
+                                            </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="recruitment.html">
+                                                <span class="sidebar-menu-text">Recruitment</span>
+                                            </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="payroll.html">
+                                                <span class="sidebar-menu-text">Payroll</span>
+                                            </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="training.html">
+                                                <span class="sidebar-menu-text">Training</span>
+                                            </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="employee-profile.html">
+                                                <span class="sidebar-menu-text">Employee Profile</span>
+                                            </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="accounting.html">
+                                                <span class="sidebar-menu-text">Accounting</span>
+                                            </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="inventory.html">
+                                                <span class="sidebar-menu-text">Inventory</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#productivity_menu">
+                                        Categories
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="productivity_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="projects.html">
+                                                <span class="sidebar-menu-text">Projects</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="tasks-board.html">
+                                                <span class="sidebar-menu-text">Tasks Board</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="tasks-list.html">
+                                                <span class="sidebar-menu-text">Tasks List</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled"
+                                               href="kanban.html">
+                                                <span class="sidebar-menu-text">Kanban</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="sidebar-menu-item">
+      <a class="sidebar-menu-button disabled" href="task-details.html">
+        <span class="sidebar-menu-text">Task Details</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item">
+      <a class="sidebar-menu-button disabled" href="team-members.html">
+        <span class="sidebar-menu-text">Team Members</span>
+      </a>
+    </li> -->
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#ecommerce_menu">
+                                        Licenses
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="ecommerce_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="ecommerce.html">
+                                                <span class="sidebar-menu-text">Shop Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled"
+                                               href="edit-product.html">
+                                                <span class="sidebar-menu-text">Edit Product</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#messaging_menu">
+                                        Sources
+                                        <span class="sidebar-menu-badge badge badge-accent badge-notifications ml-auto">2</span>
+                                        <span class="sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent"
+                                        id="messaging_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="messages.html">
+                                                <span class="sidebar-menu-text">Messages</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="email.html">
+                                                <span class="sidebar-menu-text">Email</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        contents
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // END Header Layout Content -->
+
+    	<!-- Footer -->
+	<div class="footer">
+		<div class="container page__container page-section d-flex flex-column">
+			<div class="row">
+				<div class="col-auto">
+					<p class="text-70 brand mb-24pt py-2">
+						<img class="brand-icon" src="images/logo/logo.svg" width="100" alt="WATA"> 와따
+					</p>
+				</div>
+				<div class="col justify-content-end">
+					<div class="d-flex justify-content-end info-cus">
+						<div class="text-right">
+							<a href="#n" class="btn btn-link">Help Center</a>
+						</div>
+						<div class="text-right">
+							<a href="#n" class="btn btn-link">Developer Center</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="measure-lead-max text-50 small mr-8pt">경기 성남시 분당구 삼평동 680 H스퀘어 2층 206호</p>
+			<p class="mb-8pt d-flex">
+				<a href="" class="text-70 btn-link mr-8pt small">Terms</a>
+				<a href="" class="text-70 btn-link small">Privacy policy</a>
+			</p>
+			<p class="text-50 small mt-n1 mb-0">Copyright 2021 &copy; All rights reserved.</p>
+		</div>
+	</div>
+	<!-- // END Footer -->
+    
+</div>
+<!-- // END Header Layout -->
+
+<!-- jQuery -->
+<script src="vendor/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="vendor/popper.min.js"></script>
+<script src="vendor/bootstrap.min.js"></script>
+
+<!-- Perfect Scrollbar -->
+<script src="vendor/perfect-scrollbar.min.js"></script>
+
+<!-- DOM Factory -->
+<script src="vendor/dom-factory.js"></script>
+
+<!-- MDK -->
+<script src="vendor/material-design-kit.js"></script>
+
+<!-- App JS -->
+<script src="js/app.js"></script>
+
+<!-- Preloader -->
+<script src="js/preloader.js"></script>
+
+<!-- custom -->
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>
