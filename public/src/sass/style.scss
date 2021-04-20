@@ -580,6 +580,9 @@ global GNB
         -moz-osx-font-smoothing: grayscale;
         -webkit-transition: opacity .2s;
         transition: opacity .2s;
+        i{
+            vertical-align: middle;
+        }
     }
 
     .cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li > a {
@@ -1485,6 +1488,16 @@ platform map
             }
         }
     }
+    .list-group{
+        cursor: pointer;
+        .list-group-item{
+            &:hover{
+                a.card-title{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 .pub-con{
     position: sticky;
@@ -1807,7 +1820,8 @@ platform map
         text-align: center;
         border-top: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
-        padding: 2rem 0;
+        padding: 2rem 1rem;
+        word-break: keep-all;
     }
     .board-title{
         border-bottom: 1px solid $border-color;
@@ -3388,6 +3402,18 @@ a.cd-filter-trigger {
         }
     }
 }
+.user-info {
+    dl{
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $border-color;
+        dt{
+            color: #868e96;
+        }
+        dd{
+            font-weight: bold;
+        }
+    }
+}
 /* search */
 .sm-search{
     .wt-trigger-foldPanel {
@@ -3728,6 +3754,78 @@ a.cd-filter-trigger {
         transform: translate(-15px, 3px) skew(30deg);
     }
 }
+/* entry */
+.sm-entry{
+    .user-info{
+        padding: 1rem 0;
+        border-top: 1px solid $border-color;
+        dd{
+            font-size: 1rem;
+            a{
+                color: $identity;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .sidebar-menu{
+        border-top: 1px solid $border-color;
+        .sidebar-menu-item{
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+            border-bottom: 1px solid $border-color;
+            &.open{
+                a.sidebar-menu-button{
+                    color: #303956;
+                }
+            }
+            a.sidebar-menu-button{
+                padding: .25rem 1rem;
+                .person_pin{
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    margin-right: 3px;
+                }
+                .sidebar-menu-badge{
+                    padding: 2px 5px;
+                    line-height: 1.2;
+                    border-radius: 2px;
+                }
+                .workers_status{
+                    font-size: .75rem;
+                }
+                .dot{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    margin-right: .75rem;
+                    &.dot-success{
+                        background-color: #68ec15;
+                        box-shadow: 0 0 5px 1px rgba(136,255,167,0.8);
+                    }
+                }
+            }
+            .sidebar-submenu{
+                .cover{
+                    border-top: 1px solid $border-color;
+                    background-color: #fafafa;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 1rem;
+                    span{
+                        font-size: .75rem;
+                    }
+                    p{
+                        font-size: .875rem;
+                    }
+                }
+            }
+        }
+    }
+}
 /* setting */
 .address-wrap{
     ul.place-name{
@@ -3817,18 +3915,6 @@ a.cd-filter-trigger {
 }
 /* user */
 .sm-user{
-    .user-info {
-        dl{
-            padding-bottom: 1rem;
-            border-bottom: 1px solid $border-color;
-            dt{
-                color: #868e96;
-            }
-            dd{
-                font-weight: bold;
-            }
-        }
-    }
     .selected-user{
         position: relative;
         background-color: #f5f5f5;
@@ -5577,6 +5663,11 @@ dl.space-id{
                 .accordion__title{
                     font-size: 1rem;
                     font-weight: 600;
+                    i{
+                        color: $main-color;
+                        font-size: 1.125rem;
+                        margin-bottom: 4px;
+                    }
                 }
             }
             .sidebar-menu-badge{
