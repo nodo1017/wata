@@ -3802,9 +3802,18 @@ a.cd-filter-trigger {
                     height: 8px;
                     border-radius: 100%;
                     margin-right: .75rem;
-                    &.dot-success{
+                    &.dot-on{
                         background-color: #68ec15;
+                        border: 1px solid rgba(0,0,0,0.1);
                         box-shadow: 0 0 5px 1px rgba(136,255,167,0.8);
+                    }
+                    &.dot-off{
+                        background-color: #d6d6d6;
+                    }
+                    &.dot-red{
+                        background-color: $identity;
+                        box-shadow: 0 0 5px 1px rgba(255,0,0,0.5);
+                        border: 1px solid rgba(0,0,0,0.2);
                     }
                 }
             }
