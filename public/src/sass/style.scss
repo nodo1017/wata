@@ -3790,6 +3790,20 @@ a.cd-filter-trigger {
         .cell{
             display: flex;
             flex-wrap: wrap;
+            span{
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 100%;
+                align-items: center;
+                display: flex;
+                color: rgba(0,0,0,0.15);
+            }
+            em{
+                flex-basis: 0;
+                flex-grow: 1;
+                max-width: 100%;
+                text-align: right;
+            }
         }
         em{
             display: flex;
@@ -3816,6 +3830,11 @@ a.cd-filter-trigger {
                 background-color: $identity;
                 border: 1px solid $identity;
                 z-index: 1;
+                .cell{
+                    span{
+                        color: rgba(0,0,0,0.3);
+                    }
+                }
                 p{
                     color: #fff;
                 }
