@@ -1296,7 +1296,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-pane sm-projects active" id="sm-projects">
+                    <div class="tab-pane sm-projects" id="sm-projects">
                         <!-- 프로젝트 등록 -->
                         <div class="project-inner">
                             <div class="container-fluid py-4">
@@ -1877,40 +1877,252 @@
                     </div>
                     <div class="tab-pane sm-entry" id="sm-entry">
                         <div class="entry-inner">
-                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">출입관리</h3>
-                                        <p class="text-70 mb-0">출입관리 페이지입니다.</p>
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <a href="entry_list.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">총인원</h3>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="board-title">
+                                    <p>2021.04.20 현재 총인원 <strong class="text-iden ml-1">47</strong>명</p>
                                 </div>
                             </div>
                             <div class="container-fluid">
-                                <div class="user-info">
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2 text-100 font-weight-bolder">인가</dt>
-                                        <dd class="m-0"><a href="entry_total.html">47명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">출근</dt>
-                                        <dd class="m-0"><a href="#n">42명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">지각</dt>
-                                        <dd class="m-0"><a href="#n">1명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">부재</dt>
-                                        <dd class="m-0"><a href="#n">3명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">총비율</dt>
-                                        <dd class="m-0">89%</dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">평균 근무시간</dt>
-                                        <dd class="m-0">6시간 56분</dd>
-                                    </dl>
+                                <div class="form-group mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h5 class="d-flex flex m-0">지점</h5>
+                                        <span class="v">총 <strong class="text-iden">50</strong>개의 지점</span>
+                                    </div>
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="vuejs">전체</option>
+                                        <option value="vuejs">지점 A</option>
+                                        <option value="vuejs">지점 B</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h5 class="d-flex flex m-0">주간 A</h5>
+                                        <span class="v">총 <strong class="text-iden">5</strong>명</span>
+                                    </div>
+
+
+                                    <ul class="sidebar-menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info">
+                                                <span class="dot dot-on"></span>
+                                                <!-- <i class="person_pin"><img src="images/person_pin.svg" alt=""></i> -->
+                                                A-1241
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">출근</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0">08:47</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info2">
+                                                <span class="dot dot-on"></span>
+                                                A-1242
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">출근</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info2">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0">08:54</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info3">
+                                                <span class="dot dot-off"></span>
+                                                A-1243
+                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">퇴근</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info3">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0">08:47</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">18:41</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info4">
+                                                <span class="dot dot-on"></span>
+                                                A-1244
+                                                <span class="sidebar-menu-badge text-warning ml-auto mr-2">지각</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info4">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0 text-accent">09:08</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info6">
+                                                <span class="dot dot-off"></span>
+                                                A-1245
+                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">부재</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info6">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h5 class="d-flex flex m-0">야간 A</h5>
+                                        <span class="v">총 <strong class="text-iden">5</strong>명</span>
+                                    </div>
+
+
+                                    <ul class="sidebar-menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info7">
+                                                <span class="dot dot-on"></span>
+                                                <!-- <i class="person_pin"><img src="images/person_pin.svg" alt=""></i> -->
+                                                A-1241
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">출근</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info7">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0">08:47</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info8">
+                                                <span class="dot dot-on"></span>
+                                                A-1242
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">출근</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info8">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0">08:54</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info9">
+                                                <span class="dot dot-off"></span>
+                                                A-1243
+                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">퇴근</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info9">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0">08:47</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">18:41</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info10">
+                                                <span class="dot dot-on"></span>
+                                                A-1244
+                                                <span class="sidebar-menu-badge text-warning ml-auto mr-2">지각</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info10">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0 text-accent">09:08</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info11">
+                                                <span class="dot dot-off"></span>
+                                                A-1245
+                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">부재</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info11">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">출근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">퇴근시간</span>
+                                                        <p class="m-0">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -2107,38 +2319,123 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-assets" id="sm-assets">
+                    <div class="tab-pane sm-assets active" id="sm-assets">
                         <div class="assets-inner">
-                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">자산관리</h3>
-                                        <p class="text-70 mb-0">자산관리 페이지입니다.</p>
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <a href="assets_list.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">자산관리</h3>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="board-title">
+                                    <p>2021.04.20 현재 총자산 <strong class="text-iden ml-1">224</strong>개</p>
                                 </div>
                             </div>
                             <div class="container-fluid">
-                                <div class="user-info">
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2 text-100 font-weight-bolder">총자산</dt>
-                                        <dd class="m-0"><a href="entry_total.html">224개</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">POS</dt>
-                                        <dd class="m-0"><a href="#n">56개</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">태블릿</dt>
-                                        <dd class="m-0"><a href="#n">98개</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">모니터</dt>
-                                        <dd class="m-0"><a href="#n">76개</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">자산현황</dt>
-                                        <dd class="m-0">96%</dd>
-                                    </dl>
+                                <div class="form-group mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h5 class="d-flex flex m-0">지점</h5>
+                                        <span class="v">총 <strong class="text-iden">50</strong>개의 지점</span>
+                                    </div>
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="vuejs">전체</option>
+                                        <option value="vuejs">지점 A</option>
+                                        <option value="vuejs">지점 B</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h5 class="d-flex flex m-0">세부 자산</h5>
+                                        <span class="v">총 <strong class="text-iden">4</strong>개</span>
+                                    </div>
+
+
+                                    <ul class="sidebar-menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info">
+                                                <span class="dot dot-on"></span>
+                                                POS
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">사용중</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">POS-21-A014</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">도입 날짜</span>
+                                                        <p class="m-0">2021.04.21</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info2">
+                                                <span class="dot dot-on"></span>
+                                                태블릿
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">사용중</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info2">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">SAMSUNG-21-A014</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">도입 날짜</span>
+                                                        <p class="m-0">2021.04.21</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info3">
+                                                <span class="dot dot-off"></span>
+                                                태블릿
+                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">미사용</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info3">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">SAMSUNG-21-A015</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">도입 날짜</span>
+                                                        <p class="m-0">2021.04.02</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info4">
+                                                <span class="dot dot-on"></span>
+                                                모니터
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">사용중</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info4">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">LG-24-QT245K8</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">도입 날짜</span>
+                                                        <p class="m-0">2021.04.21</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

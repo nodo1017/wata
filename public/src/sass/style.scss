@@ -3755,7 +3755,91 @@ a.cd-filter-trigger {
     }
 }
 /* entry */
-.sm-entry{
+.info-panel{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    li{
+        display: flex;
+        flex: 0 0 50%;
+        max-width: 50%;
+        flex-direction: column;
+        border: 1px solid $border-color;
+        margin-top: -1px;
+        &.none-link{
+            padding: .75rem;
+            em{
+                strong{
+                    color: #303956;
+                }
+            }
+        }
+        &:nth-child(even){
+            margin-left: -1px;
+        }
+        a{
+            padding: .75rem;
+        }
+        p{
+            margin: 0;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+        .cell{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        em{
+            display: flex;
+            justify-content: flex-end;
+            align-items: baseline;
+            color: #999;
+            strong{
+                font-size: 2rem;
+                
+                font-weight: 600;
+                margin-right: .5rem;
+                margin-left: .5rem;
+            }
+        }
+    }
+    &.info-link{
+        li{
+            em{
+                strong{
+                    color: $identity;
+                }
+            }
+            &:hover{
+                background-color: $identity;
+                border: 1px solid $identity;
+                z-index: 1;
+                p{
+                    color: #fff;
+                }
+                em{
+                    color: #eabdbd;
+                    strong{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &.none-link{
+        li{
+            padding: .75rem;
+            em{
+                strong{
+                    color: #303956;
+                }
+            }
+        }
+    }
+}
+.sm-entry, .assets-inner{
     .user-info{
         padding: 1rem 0;
         border-top: 1px solid $border-color;
@@ -3771,6 +3855,8 @@ a.cd-filter-trigger {
     }
     .sidebar-menu{
         border-top: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
         .sidebar-menu-item{
             padding: 0;
             margin: 0;
@@ -3818,6 +3904,89 @@ a.cd-filter-trigger {
                 }
             }
             .sidebar-submenu{
+                .cover{
+                    border-top: 1px solid $border-color;
+                    background-color: #fafafa;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 1rem;
+                    span{
+                        font-size: .75rem;
+                    }
+                    p{
+                        font-size: .875rem;
+                        word-break: break-all;
+                    }
+                }
+            }
+        }
+    }
+    .accordion-menu{
+        border-top: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+        padding: 0;
+        .accordion-item{
+            padding: 0;
+            margin: 0;
+            border-bottom: 1p px solid $border-color;
+            position: relative;
+            list-style: none;
+            a.accordion-menu-button{
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                line-height: 40px;
+                font-size: 15px;
+                padding: .25rem 1rem;
+                .dot{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    margin-right: .75rem;
+                    &.dot-on{
+                        background-color: #68ec15;
+                        border: 1px solid rgba(0,0,0,0.1);
+                        box-shadow: 0 0 5px 1px rgba(136,255,167,0.8);
+                    }
+                    &.dot-off{
+                        background-color: #d6d6d6;
+                    }
+                    &.dot-red{
+                        background-color: $identity;
+                        box-shadow: 0 0 5px 1px rgba(255,0,0,0.5);
+                        border: 1px solid rgba(0,0,0,0.2);
+                    }
+                }
+                .accordion-menu-badge{
+                    padding: 2px 5px;
+                    line-height: 1.2;
+                    border-radius: 2px;
+                    font-size: .75rem;
+                }
+                .accordion-menu-toggle-icon{
+                    transform: translate(0);
+                    margin-left: 8px;
+                    transition: transform .15s;
+                    position: relative;
+                    font-size: 1.25rem;
+                    &:before{
+                        content: "\E315";
+                        display: flex;
+                        align-items: center;
+                        font-size: inherit;
+                        color: inherit;
+                    }
+                }
+            }
+            &.open{
+                > a.accordion-menu-button{
+                    .accordion-menu-toggle-icon{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            .accordion-submenu{
                 .cover{
                     border-top: 1px solid $border-color;
                     background-color: #fafafa;
@@ -6174,11 +6343,11 @@ xnugget info
         transition: visibility 0s 0.4s;
         &.step01{
             top: 50px;
-            left: 254px;
+            left: 270px;
         }
         &.step02{
             top: 50px;
-            left: 370px;
+            left: 410px;
         }
         &.step03{
             /* set tour points positions */
