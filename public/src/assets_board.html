@@ -807,7 +807,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-entry active" id="sm-entry">
+                    <div class="tab-pane sm-entry" id="sm-entry">
                         <div class="entry-inner">
                             <div class="container-fluid py-4">
                                 <div class="d-flex align-items-center mb-2">
@@ -955,17 +955,17 @@
                                     <ul class="sidebar-menu">
                                         <li class="sidebar-menu-item">
                                             <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info7">
-                                                <span class="dot dot-off"></span>
+                                                <span class="dot dot-on"></span>
                                                 <!-- <i class="person_pin"><img src="images/person_pin.svg" alt=""></i> -->
                                                 A-1241
-                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">출근전</span>
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">출근</span>
                                                 <span class="sidebar-menu-toggle-icon"></span>
                                             </a>
                                             <div class="sidebar-submenu collapse sm-indent" id="workers_info7">
                                                 <div class="cover">
                                                     <div class="col-6 p-2">
                                                         <span class="text-50">출근시간</span>
-                                                        <p class="m-0">-</p>
+                                                        <p class="m-0">08:47</p>
                                                     </div>
                                                     <div class="col-6 p-2">
                                                         <span class="text-50">퇴근시간</span>
@@ -976,16 +976,16 @@
                                         </li>
                                         <li class="sidebar-menu-item">
                                             <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info8">
-                                                <span class="dot dot-off"></span>
+                                                <span class="dot dot-on"></span>
                                                 A-1242
-                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">출근전</span>
+                                                <span class="sidebar-menu-badge text-success ml-auto mr-2">출근</span>
                                                 <span class="sidebar-menu-toggle-icon"></span>
                                             </a>
                                             <div class="sidebar-submenu collapse sm-indent" id="workers_info8">
                                                 <div class="cover">
                                                     <div class="col-6 p-2">
                                                         <span class="text-50">출근시간</span>
-                                                        <p class="m-0">-</p>
+                                                        <p class="m-0">08:54</p>
                                                     </div>
                                                     <div class="col-6 p-2">
                                                         <span class="text-50">퇴근시간</span>
@@ -998,34 +998,34 @@
                                             <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info9">
                                                 <span class="dot dot-off"></span>
                                                 A-1243
-                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">출근전</span>
+                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">퇴근</span>
                                                 <span class="sidebar-menu-toggle-icon"></span>
                                             </a>
                                             <div class="sidebar-submenu collapse sm-indent" id="workers_info9">
                                                 <div class="cover">
                                                     <div class="col-6 p-2">
                                                         <span class="text-50">출근시간</span>
-                                                        <p class="m-0">-</p>
+                                                        <p class="m-0">08:47</p>
                                                     </div>
                                                     <div class="col-6 p-2">
                                                         <span class="text-50">퇴근시간</span>
-                                                        <p class="m-0">-</p>
+                                                        <p class="m-0">18:41</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="sidebar-menu-item">
                                             <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info10">
-                                                <span class="dot dot-off"></span>
+                                                <span class="dot dot-on"></span>
                                                 A-1244
-                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">출근전</span>
+                                                <span class="sidebar-menu-badge text-warning ml-auto mr-2">지각</span>
                                                 <span class="sidebar-menu-toggle-icon"></span>
                                             </a>
                                             <div class="sidebar-submenu collapse sm-indent" id="workers_info10">
                                                 <div class="cover">
                                                     <div class="col-6 p-2">
                                                         <span class="text-50">출근시간</span>
-                                                        <p class="m-0">-</p>
+                                                        <p class="m-0 text-accent">09:08</p>
                                                     </div>
                                                     <div class="col-6 p-2">
                                                         <span class="text-50">퇴근시간</span>
@@ -1038,7 +1038,7 @@
                                             <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info11">
                                                 <span class="dot dot-off"></span>
                                                 A-1245
-                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">출근전</span>
+                                                <span class="sidebar-menu-badge text-secondary ml-auto mr-2">부재</span>
                                                 <span class="sidebar-menu-toggle-icon"></span>
                                             </a>
                                             <div class="sidebar-submenu collapse sm-indent" id="workers_info11">
@@ -1065,124 +1065,252 @@
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
                                     <div class="mr-24pt">
-                                        <h3 class="mb-0">사고등록</h3>
+                                        <h3 class="mb-0">사고관리 리스트</h3>
+                                        <p class="text-70 mb-0">현재까지 등록된 사고관리 리스트입니다.</p>
                                     </div>
                                 </div>
-                                <a href="accident_list.html" class="btn btn-outline-dark">등록내역</a>
+                                <a href="accident_write.html" class="btn btn-outline-dark">신규등록</a>
                             </div>
                             <div class="container-fluid">
-                                <h5 class="mb-1">위치 지정</h5>
-                                <p class="text-50">아래 버튼을 클릭후 사고 발생 지점을 클릭하세요.</p>
-                                <ul class="info-panel accident-panel info-link">
-                                    <li class="active">
-                                        <a href="#n">
-                                            <p>긴급상황</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">warning</i></em>
+                                <div class="form-group d-none">
+                                    <label class="form-label">프로젝트 리스트</label>
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="vuejs">전체</option>
+                                        <option value="vuejs">건물 A</option>
+                                        <option value="vuejs">건물 B</option>
+                                    </select>
+                                </div>
+                                <div class="list-group row-list list-group-flush mb-4">
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="accident_board.html" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">local_fire_department</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="accident_board.html">건물 A 화재 발생</a>
+                                                <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
                                             </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex re-list-group-item">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="accident_board.html" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">subdirectory_arrow_right</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="accident_board.html">건물 A 화재 발생</a>
+                                                <div class="card-subtitle text-50"><span class="badge badge-accent">N</span>  20.01.13 06:42:58</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">local_fire_department</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n"><small class="text-50">[복사]</small> 건물 A 화재 발생</a>
+                                                <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">warning</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n">건물 B 긴급상황</a>
+                                                <div class="card-subtitle text-50">2020.11.21</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">coronavirus</i></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">건물 B 감염병 발생</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar">
+                                                <span class="lead text-headings text-iden"><i class="material-icons">local_hospital</i></span>
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n">건물 A 응급상황</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>
+                                                    수정</a>
+                                                <a href="#n" class="dropdown-item"><i
+                                                        class="material-icons">content_copy</i> 복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-danger"><i
+                                                        class="material-icons">delete_outline</i> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="pagination justify-content-center pagination-xsm m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>화재 발생</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">local_fire_department</i></em>
-                                            </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1">
+                                            <span>1</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>구조 요청</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">local_hospital</i></em>
-                                            </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2">
+                                            <span>2</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>감염병 발생</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">coronavirus</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <h5 class="mb-1">범위 지정</h5>
-                                <p class="text-50">아래 버튼을 클릭후 사고 발생 범위를 설정해 보세요.</p>
-                                <ul class="info-panel accident-panel info-link">
-                                    <li>
-                                        <a href="#n">
-                                            <p>구조물 선택</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">highlight_alt</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>범위 선택</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">adjust</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>선 그리기</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">timeline</i></em>
-                                            </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-assets" id="sm-assets">
+                    <div class="tab-pane sm-assets active" id="sm-assets">
                         <div class="assets-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex">
+                                    <a href="assets_total.html" class="pr-2"><i class="material-icons">arrow_back</i></a>
                                     <div class="mr-24pt">
-                                        <h3 class="mb-0">자산관리</h3>
-                                        <p class="text-70 mb-0">자산관리 페이지입니다.</p>
+                                        <h3 class="mb-0">자산명</h3>
                                     </div>
                                 </div>
-                                <a href="assets_write.html" class="btn btn-outline-dark">신규등록</a>
                             </div>
-                            <div class="container-fluid">
-                                <em class="none-list mb-4">등록한 자산이 없습니다.</em>
-                                <ul class="info-panel info-link">
-                                    <li>
-                                        <a href="assets_total.html">
-                                            <p>총자산</p>
-                                            <div class="cell">
-                                                <span class="material-icons">category</span>
-                                                <em><strong>127</strong>개</em>
+                            <div class="container-fluid contents-view">
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventArea">자산명</label>
+                                    <p class="form-text">카운터 POS</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventArea">자산분류</label>
+                                    <p class="form-text">고정자산</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">위치</label>
+                                    <p class="form-text">매장A</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">태그연결</label>
+                                    <p class="form-text">매장A POS 태그</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">타입</label>
+                                    <p class="form-text">태그</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">UUID</label>
+                                    <p class="form-text">KIR2394KFHF991</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">위도</label>
+                                    <p class="form-text">33.2131231231</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">경도</label>
+                                    <p class="form-text">33.2131231231</p>
+                                </div>
+                                <div class="form-group">
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option01">사용 여부</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option03"
+                                                    class="custom-control-input" checked="checked" onclick="return false">
+                                                <label class="custom-control-label" for="option03">active</label>
                                             </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="assets_total.html">
-                                            <p>센서</p>
-                                            <div class="cell">
-                                                <span class="material-icons">sensors</span>
-                                                <em><strong>42</strong>개</em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="container-fluid d-none">
-                                <div class="user-info">
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2 text-100 font-weight-bolder">총자산</dt>
-                                        <dd class="m-0"><a href="assets_total.html">7개</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">센서</dt>
-                                        <dd class="m-0"><a href="assets_total.html">7개</a></dd>
-                                    </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="assets_write.html" class="btn btn-outline-secondary mr-8pt">수정하기</a>
+                                        <a href="assets_total.html" class="btn btn-accent ml-0">확인</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

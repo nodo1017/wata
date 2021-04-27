@@ -421,6 +421,7 @@
                                 <div class="form-group mb-32pt">
                                     <label class="form-label text-50 essential" for="projectName">공간명</label>
                                     <input type="text" class="form-line" id="projectName" placeholder="공간명을 입력해주세요.">
+                                    <div class="invalid-feedback" style="display: block;">필수입력 항목입니다.</div>
                                 </div>
                                 <div class="form-row mb-32pt">
                                     <div class="col-md-6">
@@ -430,10 +431,12 @@
                                             <option value="화재">일본</option>
                                             <option value="감염병">미국</option>
                                         </select>
+                                        <div class="invalid-feedback" style="display: block;">필수입력 항목입니다.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label text-50">도시</label>
                                         <input type="text" class="form-line" id="" placeholder="" value="" required="">
+                                        <div class="invalid-feedback" style="display: block;">필수입력 항목입니다.</div>
                                     </div>
                                 </div>
                                 <div class="form-group mb-32pt over-txt">
@@ -453,6 +456,16 @@
                                     <div class="col-md-6">
                                         <label class="form-label text-50" for="validationSample02">경도</label>
                                         <input type="number" class="form-line" id="validationSample02" placeholder="" value="" required="">
+                                    </div>
+                                </div>
+                                <div class="alert alert-soft-accent alert-dismissible fade show" role="alert">
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <div class="mr-8pt">
+                                            <i class="material-icons">error_outline</i>
+                                        </div>
+                                        <div class="flex" style="min-width: 180px">
+                                            <small class="text-black-100">필수입력 항목을 확인해주세요.</small>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="py-32pt">
