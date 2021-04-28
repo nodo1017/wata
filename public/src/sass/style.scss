@@ -1860,6 +1860,9 @@ platform map
     }
     a.btn{
         margin-top: 1rem;
+        &.text-und{
+            text-decoration: underline;
+        }
     }
 }
 .success-checkmark {
