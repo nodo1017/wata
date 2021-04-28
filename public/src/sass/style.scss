@@ -3359,6 +3359,14 @@ a.btn-grad-de{
         i{
             font-size: 1rem;
         }
+        &.is-loading{
+            background-color: $identity;
+            color: #fff;
+            &:after{
+                border-color: #fff;
+                border-bottom-color: transparent;
+            }
+        }
     }
     span{
         font-size: .75rem;
