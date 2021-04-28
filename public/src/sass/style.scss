@@ -282,6 +282,10 @@ input, select{
 .modal{
     .modal-guide{
         max-width: 940px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
     .guide-cover{
         display: flex;
