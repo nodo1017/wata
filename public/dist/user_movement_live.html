@@ -2558,7 +2558,7 @@
     <div class="modal-dialog modal-dialog-centered modal-guide">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">사용자 가이드</h5>
+                <h5 class="modal-title" id="exampleModalLabel">사용자 메뉴 가이드</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"><i class="material-icons">clear</i></span>
                 </button>
@@ -2623,12 +2623,12 @@
                                         <li>좌측 정보창에서 사용자 정보를 확인하실 수 있습니다.</li>
                                     </ol>
                                 </div>
-                                <div class="tab-pane fade" id="guide02" role="tabpanel" aria-labelledby="guide02">
+                                <div class="tab-pane fade show" id="guide02" role="tabpanel" aria-labelledby="guide02">
                                     <!-- Swiper -->
                                     <div class="swiper-container guide-container">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="images/guide01.jpg" alt=""></div>
-                                            <div class="swiper-slide"><img src="images/guide01_2.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img src="images/guide02.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img src="images/guide02_2.jpg" alt=""></div>
                                         </div>
                                         <!-- Add Pagination -->
                                         <div class="swiper-pagination"></div>
@@ -2638,23 +2638,40 @@
                                     </div>
                                     <ol>
                                         <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
-                                        <li>좌측 정보창에서 사용자 정보를 확인하실 수 있습니다.</li>
+                                        <li>좌측 정보창에서 사용자에게 메세지를 전송할 수 있습니다.</li>
                                     </ol>
                                 </div>
-                                <div class="tab-pane fade" id="guide03" role="tabpanel" aria-labelledby="guide03">
-                                    3
+                                <div class="tab-pane fade show" id="guide03" role="tabpanel" aria-labelledby="guide03">
+                                    <!-- Swiper -->
+                                    <div class="swiper-container guide-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="images/guide03.jpg" alt=""></div>
+                                            <div class="swiper-slide"><img src="images/guide03_2.jpg" alt=""></div>
+                                        </div>
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                        <!-- Add Arrows -->
+                                        <div class="guide-arrow guide-next"></div>
+                                        <div class="guide-arrow guide-prev"></div>
+                                    </div>
+                                    <ol>
+                                        <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
+                                        <li>좌측 정보창에서 사용의 동선을 확인하실 수 있습니다.</li>
+                                    </ol>
                                 </div>
                             </div>
-                            <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+                            <link rel="stylesheet" href="css/swiper.min.css">
                             <!-- Swiper JS -->
-                            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                            <script src="js/swiper.min.js"></script>
 
                             <!-- Initialize Swiper -->
                             <script>
                                 var swiper = new Swiper('.guide-container', {
                                     spaceBetween: 30,
+                                    observer: true,
+                                    observeParents: true,
                                     autoplay: {
-                                        delay: 10000,
+                                        delay: 7000,
                                         disableOnInteraction: false,
                                     },
                                     pagination: {

@@ -28,6 +28,12 @@ jQuery(document).ready(function ($) {
 		selected.parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('move-out');
 	});
 
+	// tab 메뉴
+	$('.tabList a').click(function(e){
+		e.preventDefault();
+		$('.tabList a, .tabCon').removeClass('current');
+		$(this).add($($(this).attr('href'))).addClass('current');
+	});
 	
 	function toggleNav() {
 		var navIsVisible = (!$('.cd-dropdown').hasClass('dropdown-is-active')) ? true : false;

@@ -336,12 +336,22 @@ input, select{
         .tab-content{
             padding-left: 1.5rem;
             .tab-pane{
+                .guide-container{
+                    img{
+                        width: 100%;
+                    }
+                }
                 .swiper-container{
                     border-radius: .25rem;
                     margin-bottom: 1rem;
                     &:hover{
                         .guide-arrow{
-                            display: block;
+                            &.guide-next{
+                                right: 0;
+                            }
+                            &.guide-prev{
+                                left: 0;
+                            }
                         }
                     }
                     .swiper-wrapper{
@@ -352,7 +362,7 @@ input, select{
                         top: 50%;
                         z-index: 2;
                         transform: translateY(-50%);
-                        display: none;
+                        @include transition(all, 0.2s, ease-in-out);
                         &:before{
                             font-family: 'Material Icons';
                             font-size: 2rem;
@@ -360,13 +370,13 @@ input, select{
                             cursor: pointer;
                         }
                         &.guide-next{
-                            right: 0;
+                            right: -100px;
                             &:before{
                                 content: '\e5e1';
                             }
                         }
                         &.guide-prev{
-                            left: 0;
+                            left: -100px;
                             &:before{
                                 content: '\e2ea';
                             }
