@@ -278,6 +278,118 @@ input, select{
     }
 }
 
+/* modal */
+.modal{
+    .modal-guide{
+        max-width: 940px;
+    }
+    .guide-cover{
+        display: flex;
+        flex-wrap: wrap;
+        .col-lef, .col-right{
+            position: relative;
+            width: 100%;
+        }
+        .col-left{
+            flex: 0 0 33.3%;
+            max-width: 33.3%;
+        }
+        .col-right{
+            flex: 0 0 66.6%;
+            max-width: 66.6%;
+        }
+        ul.nav{
+            li{
+                margin-bottom: .5rem;
+            }
+            a.nav-link{
+                padding: 1rem;
+                border-radius: .25rem;
+                span{
+                    display: flex;
+                    margin-right: .75rem;
+                    color: #babdca;
+                }
+                .boxing{
+                    display: flex;
+                    flex-direction: column;
+                }
+                h5{
+                    margin-bottom: .25rem;
+                    color: #5a6380;
+                }
+                p{
+                    word-break: keep-all;
+                    margin-bottom: 0;
+                }
+                &.active{
+                    background-color: #edeef3;
+                    span{
+                        color: #303a56;
+                    }
+                    h5{
+                        color: #303a56;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            padding-left: 1.5rem;
+            .tab-pane{
+                .swiper-container{
+                    border-radius: .25rem;
+                    margin-bottom: 1rem;
+                    &:hover{
+                        .guide-arrow{
+                            display: block;
+                        }
+                    }
+                    .swiper-wrapper{
+                        overflow: visible;
+                    }
+                    .guide-arrow{
+                        position: absolute;
+                        top: 50%;
+                        z-index: 2;
+                        transform: translateY(-50%);
+                        display: none;
+                        &:before{
+                            font-family: 'Material Icons';
+                            font-size: 2rem;
+                            padding: .5rem;
+                            cursor: pointer;
+                        }
+                        &.guide-next{
+                            right: 0;
+                            &:before{
+                                content: '\e5e1';
+                            }
+                        }
+                        &.guide-prev{
+                            left: 0;
+                            &:before{
+                                content: '\e2ea';
+                            }
+                        }
+                        &.swiper-button-disabled{
+                            opacity: 0.3;
+                        }
+                    }
+                }
+                ol{
+                    padding-left: 1rem;
+                    li{
+                        line-height: 2;
+                    }
+                }
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
 /* -------------------------------- login
 
 login
@@ -3974,6 +4086,21 @@ a.cd-filter-trigger {
                 i{
                     font-size: 2.5rem;
                     color: $identity;
+                }
+            }
+            &.active{
+                background-color: #dc1515;
+                box-shadow: 0 0 15px 5px rgba(220,21,21,0.3);
+                border: 1px solid #dc1515;
+                z-index: 1;
+                p{
+                    color: #fff;
+                }
+                em{
+                    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+                    i{
+                        color: #fff;
+                    }
                 }
             }
         }
