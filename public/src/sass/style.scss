@@ -3173,6 +3173,38 @@ a.btn-grad-de{
     &.is-visible{
         display: block;
     }
+    .bg-level_1{
+        background-color: #32a1ff !important;
+        border: none !important;
+        color: #fff;
+    }
+    .bg-level_2{
+        background-color: #00c73c !important;
+        border: none !important;
+        color: #fff;
+    }
+    .bg-level_3{
+        background-color: #fda60e !important;
+        border: none !important;
+        color: #fff;
+    }
+    .bg-level_4{
+        background-color: #e64746 !important;
+        border: none !important;
+        color: #fff;
+    }
+    .txt-level_1{
+        color: #32a1ff;
+    }
+    .txt-level_2{
+        color: #00c73c;
+    }
+    .txt-level_3{
+        color: #fda60e;
+    }
+    .txt-level_4{
+        color: #e64746;
+    }
 }
 @media only screen and (min-width: 1441px){
     .status-map{
@@ -6297,6 +6329,9 @@ dl.space-id{
                     color: #ddd;
                     &:hover{
                         color: #999;
+                    }
+                    &.active{
+                        color: $identity;
                     }
                 }
             }
