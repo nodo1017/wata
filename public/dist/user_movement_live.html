@@ -369,7 +369,7 @@
                             <strong class="navbar-text-100">0건</strong>
                         </small>
                     </span>
-                    <span class="d-flex align-items-center mr-4">
+                    <span class="d-flex align-items-center tip-box mr-4">
                         <span class="avatar mr-12pt">
                             <span class="avatar-title navbar-avatar bg-level_4"><i class="material-icons">thermostat</i></span>
                         </span>
@@ -377,24 +377,86 @@
                             <span class="navbar-text-50">현재온도</span>
                             <strong class="navbar-text-100"><span class="txt-level_4">32˚</span>/29˚</strong>
                         </small>
+                        <div class="filter-tooltip">
+                            <div class="tooltip-header">
+                                <h6>현재온도</h6>
+                                <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
+                            </div>
+                            <div class="grade-value">
+                                <em class="txt-level_4">32˚</em>
+                                <span class="defualt-value">
+                                    <span class="name">적정온도</span>
+                                    <strong class="value">29˚</strong>
+                                </span>
+                            </div>
+                            <div class="level-list">
+                                <ul class="step4">
+                                    <li>좋음</li>
+                                    <li>보통</li>
+                                    <li>경계</li>
+                                    <li class="current txt-level_4">위험</li>
+                                </ul>
+                                <div class="level-bar"></div>
+                            </div>
+                        </div>
                     </span>
-                    <span class="d-flex align-items-center mr-4">
+                    <span class="d-flex align-items-center tip-box mr-4">
                         <span class="avatar mr-12pt">
                             <span class="avatar-title navbar-avatar bg-level_2"><i class="material-icons">water_drop</i></span>
                         </span>
                         <small class="flex d-flex flex-column">
                             <span class="navbar-text-50">현재습도</span>
-                            <strong class="navbar-text-100"><span class="txt-level_2">29˚</span>/16˚</strong>
+                            <strong class="navbar-text-100"><span class="txt-level_2">21˚</span>/26˚</strong>
                         </small>
+                        <div class="filter-tooltip">
+                            <div class="tooltip-header">
+                                <h6>현재습도</h6>
+                                <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
+                            </div>
+                            <div class="grade-value">
+                                <em class="txt-level_2">21˚</em>
+                                <span class="defualt-value">
+                                    <span class="name">적정습도</span>
+                                    <strong class="value">29˚</strong>
+                                </span>
+                            </div>
+                            <div class="level-list">
+                                <ul class="step4">
+                                    <li>좋음</li>
+                                    <li class="current txt-level_2">보통</li>
+                                    <li>경계</li>
+                                    <li>위험</li>
+                                </ul>
+                                <div class="level-bar"></div>
+                            </div>
+                        </div>
                     </span>
-                    <span class="d-flex align-items-center mr-4">
+                    <span class="d-flex align-items-center tip-box mr-4">
                         <span class="avatar mr-12pt">
                             <span class="avatar-title navbar-avatar bg-level_3"><i class="fas fa-radiation-alt"></i></span>
                         </span>
                         <small class="flex d-flex flex-column">
                             <span class="navbar-text-50">유해가스</span>
-                            <strong class="navbar-text-100 txt-level_3">나쁨</strong>
+                            <strong class="navbar-text-100 txt-level_3">경계</strong>
                         </small>
+                        <div class="filter-tooltip">
+                            <div class="tooltip-header">
+                                <h6>유해가스</h6>
+                                <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
+                            </div>
+                            <div class="grade-value">
+                                <em class="txt-level_3">경계</em>
+                            </div>
+                            <div class="level-list">
+                                <ul class="step4">
+                                    <li>좋음</li>
+                                    <li>보통</li>
+                                    <li class="current txt-level_3">경계</li>
+                                    <li>위험</li>
+                                </ul>
+                                <div class="level-bar"></div>
+                            </div>
+                        </div>
                     </span>
                     <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
                         <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
@@ -2173,7 +2235,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container-fluid">
+                            <div class="container-fluid d-none">
                                 <div class="contents-tab the-num03 nav mb-4" role="tablist">
                                     <a href="#tab05" class="" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>정보</span></span>
@@ -2280,6 +2342,116 @@
                                         </div>
                                     </div>
                                     <div id="tab07" class="tab-pane active" role="tabpanel">
+                                        <div class="route-list mb-4">
+                                            <ul class="route-user01">
+                                                <li class="line-blue current">
+                                                    <div class="route-inner">
+                                                        <div class="route-title">
+                                                            <span class="time">12:00</span>
+                                                            <h6 class="title">경로5</h6>
+                                                        </div>
+                                                        <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
+                                                    </div>
+                                                </li>
+                                                <li class="line-blue">
+                                                    <div class="route-inner">
+                                                        <div class="route-title">
+                                                            <span class="time">11:55</span>
+                                                            <h6 class="title">경로4</h6>
+                                                        </div>
+                                                        <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
+                                                    </div>
+                                                </li>
+                                                <li class="line-blue">
+                                                    <div class="route-inner">
+                                                        <div class="route-title">
+                                                            <span class="time">11:50</span>
+                                                            <h6 class="title">경로3</h6>
+                                                        </div>
+                                                        <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
+                                                    </div>
+                                                </li>
+                                                <li class="line-blue">
+                                                    <div class="route-inner">
+                                                        <div class="route-title">
+                                                            <span class="time">11:45</span>
+                                                            <h6 class="title">경로2</h6>
+                                                        </div>
+                                                        <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
+                                                    </div>
+                                                </li>
+                                                <li class="line-blue">
+                                                    <div class="route-inner">
+                                                        <div class="route-title">
+                                                            <span class="time">11:40</span>
+                                                            <h6 class="title">경로1</h6>
+                                                        </div>
+                                                        <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="user_movement.html" class="btn btn-link text-accent"><strong>과거 동선 보기</strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="contents-tab the-num02 nav mb-4" role="tablist">
+                                    <a href="#tab08" class="" data-toggle="tab" role="tab" aria-selected="true">
+                                        <span class="menu-cover"><span>정보</span></span>
+                                    </a>
+                                    <a href="#tab09" class="active" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span class="menu-cover"><span>동선추적</span></span>
+                                    </a>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <span class="d-flex flex m-0"><strong class="text-iden">1</strong>개의 센서가 선택되었습니다.</span>
+                                    <a href="#n" class="btn-link text-accent">전체삭제</a>
+                                </div>
+                                <div class="selected-user mt-2" data-perfect-scrollbar>
+                                    <div class="card-inner">
+                                        <ul>
+                                            <li>
+                                                <a href="#n" class="active">카운터 POS</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="tab08" class="tab-pane" role="tabpanel">
+                                        <div class="user-info">
+                                            <div class="p-16pt">
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">센서명</dt>
+                                                    <dd class="m-0">카운터 POS</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">타입</dt>
+                                                    <dd class="m-0">태그</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">UUID</dt>
+                                                    <dd class="m-0">2FF2EGD2G223-290I-9JHUDF</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">센서값 설정</dt>
+                                                    <dd class="m-0">32</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">갱신 주기</dt>
+                                                    <dd class="m-0">10분</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">배터리</dt>
+                                                    <dd class="m-0 text-accent">25%</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab09" class="tab-pane active" role="tabpanel">
                                         <div class="route-list mb-4">
                                             <ul class="route-user01">
                                                 <li class="line-blue current">
@@ -2590,150 +2762,153 @@
 <!-- // END Drawer Layout -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block; opacity: 1;">
-    <div class="modal-guide">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">사용자 메뉴 가이드</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="position-relative ">
-                    <div class="guide-cover">
-                        <div class="col-left">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#guide01">
-                                        <span class="material-icons-round">
-                                            person_search
-                                        </span>
-                                        <div class="boxing">
-                                            <h5>사용자 정보 보기</h5>
-                                            <p>사용자의 기본 정보를 확인합니다.</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#guide02">
-                                        <span class="material-icons-round">
-                                            email
-                                        </span>
-                                        <div class="boxing">
-                                            <h5>메세지 보내기</h5>
-                                            <p>사용자에게 메세지 전송을 할 수 있습니다.</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#guide03">
-                                        <span class="material-icons-round">
-                                            timeline
-                                        </span>
-                                        <div class="boxing">
-                                            <h5>사용자 동선추적</h5>
-                                            <p>과거 방문 이력과 동선을 확인 할 수 있습니다.</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-right">
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="guide01" role="tabpanel" aria-labelledby="guide01">
-                                    <!-- Swiper -->
-                                    <div class="swiper-container guide-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="images/guide01.jpg" alt=""></div>
-                                            <div class="swiper-slide"><img src="images/guide01_2.jpg" alt=""></div>
-                                        </div>
-                                        <!-- Add Pagination -->
-                                        <div class="swiper-pagination"></div>
-                                        <!-- Add Arrows -->
-                                        <div class="guide-arrow guide-next"></div>
-                                        <div class="guide-arrow guide-prev"></div>
-                                    </div>
-                                    <ol>
-                                        <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
-                                        <li>좌측 정보창에서 사용자 정보를 확인하실 수 있습니다.</li>
-                                    </ol>
-                                </div>
-                                <div class="tab-pane fade show" id="guide02" role="tabpanel" aria-labelledby="guide02">
-                                    <!-- Swiper -->
-                                    <div class="swiper-container guide-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="images/guide02.jpg" alt=""></div>
-                                            <div class="swiper-slide"><img src="images/guide02_2.jpg" alt=""></div>
-                                        </div>
-                                        <!-- Add Pagination -->
-                                        <div class="swiper-pagination"></div>
-                                        <!-- Add Arrows -->
-                                        <div class="guide-arrow guide-next"></div>
-                                        <div class="guide-arrow guide-prev"></div>
-                                    </div>
-                                    <ol>
-                                        <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
-                                        <li>좌측 정보창에서 사용자에게 메세지를 전송할 수 있습니다.</li>
-                                    </ol>
-                                </div>
-                                <div class="tab-pane fade show" id="guide03" role="tabpanel" aria-labelledby="guide03">
-                                    <!-- Swiper -->
-                                    <div class="swiper-container guide-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="images/guide03.jpg" alt=""></div>
-                                            <div class="swiper-slide"><img src="images/guide03_2.jpg" alt=""></div>
-                                        </div>
-                                        <!-- Add Pagination -->
-                                        <div class="swiper-pagination"></div>
-                                        <!-- Add Arrows -->
-                                        <div class="guide-arrow guide-next"></div>
-                                        <div class="guide-arrow guide-prev"></div>
-                                    </div>
-                                    <ol>
-                                        <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
-                                        <li>좌측 정보창에서 사용의 동선을 확인하실 수 있습니다.</li>
-                                    </ol>
-                                </div>
-                            </div>
-                            <link rel="stylesheet" href="css/swiper.min.css">
-                            <!-- Swiper JS -->
-                            <script src="js/swiper.min.js"></script>
+<div class="d-none">
 
-                            <!-- Initialize Swiper -->
-                            <script>
-                                var swiper = new Swiper('.guide-container', {
-                                    spaceBetween: 30,
-                                    observer: true,
-                                    observeParents: true,
-                                    // autoplay: {
-                                    //     delay: 7000,
-                                    //     disableOnInteraction: false,
-                                    // },
-                                    pagination: {
-                                        el: '.swiper-pagination',
-                                        type: 'fraction',
-                                    },
-                                    navigation: {
-                                        nextEl: '.guide-next',
-                                        prevEl: '.guide-prev',
-                                    },
-                                });
-                            </script>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block; opacity: 1;">
+        <div class="modal-guide">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">사용자 메뉴 가이드</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="position-relative ">
+                        <div class="guide-cover">
+                            <div class="col-left">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#guide01">
+                                            <span class="material-icons-round">
+                                                person_search
+                                            </span>
+                                            <div class="boxing">
+                                                <h5>사용자 정보 보기</h5>
+                                                <p>사용자의 기본 정보를 확인합니다.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#guide02">
+                                            <span class="material-icons-round">
+                                                email
+                                            </span>
+                                            <div class="boxing">
+                                                <h5>메세지 보내기</h5>
+                                                <p>사용자에게 메세지 전송을 할 수 있습니다.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#guide03">
+                                            <span class="material-icons-round">
+                                                timeline
+                                            </span>
+                                            <div class="boxing">
+                                                <h5>사용자 동선추적</h5>
+                                                <p>과거 방문 이력과 동선을 확인 할 수 있습니다.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-right">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="guide01" role="tabpanel" aria-labelledby="guide01">
+                                        <!-- Swiper -->
+                                        <div class="swiper-container guide-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="images/guide01.jpg" alt=""></div>
+                                                <div class="swiper-slide"><img src="images/guide01_2.jpg" alt=""></div>
+                                            </div>
+                                            <!-- Add Pagination -->
+                                            <div class="swiper-pagination"></div>
+                                            <!-- Add Arrows -->
+                                            <div class="guide-arrow guide-next"></div>
+                                            <div class="guide-arrow guide-prev"></div>
+                                        </div>
+                                        <ol>
+                                            <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
+                                            <li>좌측 정보창에서 사용자 정보를 확인하실 수 있습니다.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="tab-pane fade show" id="guide02" role="tabpanel" aria-labelledby="guide02">
+                                        <!-- Swiper -->
+                                        <div class="swiper-container guide-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="images/guide02.jpg" alt=""></div>
+                                                <div class="swiper-slide"><img src="images/guide02_2.jpg" alt=""></div>
+                                            </div>
+                                            <!-- Add Pagination -->
+                                            <div class="swiper-pagination"></div>
+                                            <!-- Add Arrows -->
+                                            <div class="guide-arrow guide-next"></div>
+                                            <div class="guide-arrow guide-prev"></div>
+                                        </div>
+                                        <ol>
+                                            <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
+                                            <li>좌측 정보창에서 사용자에게 메세지를 전송할 수 있습니다.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="tab-pane fade show" id="guide03" role="tabpanel" aria-labelledby="guide03">
+                                        <!-- Swiper -->
+                                        <div class="swiper-container guide-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="images/guide03.jpg" alt=""></div>
+                                                <div class="swiper-slide"><img src="images/guide03_2.jpg" alt=""></div>
+                                            </div>
+                                            <!-- Add Pagination -->
+                                            <div class="swiper-pagination"></div>
+                                            <!-- Add Arrows -->
+                                            <div class="guide-arrow guide-next"></div>
+                                            <div class="guide-arrow guide-prev"></div>
+                                        </div>
+                                        <ol>
+                                            <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
+                                            <li>좌측 정보창에서 사용의 동선을 확인하실 수 있습니다.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <link rel="stylesheet" href="css/swiper.min.css">
+                                <!-- Swiper JS -->
+                                <script src="js/swiper.min.js"></script>
+    
+                                <!-- Initialize Swiper -->
+                                <script>
+                                    var swiper = new Swiper('.guide-container', {
+                                        spaceBetween: 30,
+                                        observer: true,
+                                        observeParents: true,
+                                        // autoplay: {
+                                        //     delay: 7000,
+                                        //     disableOnInteraction: false,
+                                        // },
+                                        pagination: {
+                                            el: '.swiper-pagination',
+                                            type: 'fraction',
+                                        },
+                                        navigation: {
+                                            nextEl: '.guide-next',
+                                            prevEl: '.guide-prev',
+                                        },
+                                    });
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="checkItem01">
-                    <label for="checkItem01" class="custom-control-label">더이상 보지 않기</label>
+                <div class="modal-footer">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkItem01">
+                        <label for="checkItem01" class="custom-control-label">더이상 보지 않기</label>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal-backdrop fade show"></div>
 </div>
-<div class="modal-backdrop fade show"></div>
 
     <!-- alert -->
     <div class="map-alert-container"> 
