@@ -1,11 +1,17 @@
 @@include('./include/platform-header.html')
 
 <!-- Drawer Layout -->
-<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
     @@include('./include/platform-topbar.html')
-    @@include('./include/platform-tools.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
             @@include('./include/platform-side-menu.html')
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
@@ -95,8 +101,6 @@
                     <div class="tab-pane sm-projects" id="sm-projects">
                         <!-- 프로젝트 리스트 -->
                         <div class="project-inner">
-
-
                             <div class="container-fluid py-4">
                                 <div class="d-flex align-items-center mb-2">
                                     <div class="flex d-flex flex-sm-row align-items-center mb-0">
@@ -123,7 +127,6 @@
                                     <p>discription</p>
                                 </div>
                             </div>
-
                             <div class="container-fluid">
                                 <div class="row align-items-center mb-4">
                                     <div class="col-auto">
@@ -145,63 +148,73 @@
                                 </div>
                             </div>
                             <div class="container-fluid">
-                                <div class="contents-tab nav mb-4" role="tablist">
+                                <div class="contents-tab nav mb-4 the-num02" role="tablist">
                                     <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>공간</span></span>
                                     </a>
-                                    <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                    <!-- <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>앱키</span></span>
-                                    </a>
+                                    </a> -->
                                     <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                        <span class="menu-cover"><span>플랫폼</span></span>
+                                        <span class="menu-cover"><span>통계</span></span>
                                     </a>
-                                    <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                    <!-- <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>팀관리</span></span>
-                                    </a>
+                                    </a> -->
                                 </div>
                                 <div class="tab-content">
                                     <div id="tab01" class="tab-pane active" role="tabpanel">
+                                        <em class="none-list mb-4">등록한 건물이 없습니다.</em>
                                         <div class="list-group block-list dragula-list mb-4" data-toggle="dragula">
-                                            <div class="list-group-item d-flex">
+                                            <div class="list-group-item d-flex active">
                                                 <div class="flex d-flex align-items-center mr-16pt">
                                                     <div class="flex">
                                                         <a class="card-title" href="#n">건물 A</a>
-                                                        <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.01.07</div>
+                                                        <div class="card-subtitle text-50"><span class="badge badge-accent">배포중</span> 2021.01.07</div>
                                                     </div>
                                                 </div>
                                                 <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
                                                 <div class="dropdown">
                                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item">상단 고정</a>
-                                                        <a href="#n" class="dropdown-item">수정</a>
-                                                        <a href="#n" class="dropdown-item">복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item d-flex disabled">
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="#n">건물 B</a>
+                                                        <div class="card-subtitle text-50"><span class="badge badge-secondary">수정중</span> 2021.01.07</div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="list-group-item d-flex">
                                                 <div class="flex d-flex align-items-center mr-16pt">
                                                     <div class="flex">
-                                                        <a class="card-title" href="#n">건물 B</a>
-                                                        <div class="card-subtitle text-50">2021.01.07</div>
+                                                        <a class="card-title" href="#n">건물 C</a>
+                                                        <div class="card-subtitle text-50"><span class="badge badge-accent">배포중</span> 2021.01.07</div>
                                                     </div>
                                                 </div>
                                                 <div class="dropdown">
                                                     <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item"><i class="material-icons">push_pin</i>상단 고정</a>
-                                                        <a href="#n" class="dropdown-item"><i class="material-icons">edit</i>수정</a>
-                                                        <a href="#n" class="dropdown-item"><i class="material-icons">content_copy</i> 복사</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="#n" class="dropdown-item text-danger"><i class="material-icons">delete_outline</i> 삭제</a>
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-center">
-                                            <a href="#n" class="btn-add" data-toggle="tooltip" data-title="지도 추가" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a>
+                                            <a href="buildings_write.html" class="btn-row-add"><i class="material-icons">add</i> 공간 추가</a>
                                         </div>
                                         <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
                                             <li class="page-item disabled">
@@ -228,12 +241,82 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div id="tab02" class="tab-pane" role="tabpanel">2
+                                    <!-- <div id="tab02" class="tab-pane" role="tabpanel">2
+                                    </div> -->
+                                    <div id="tab03" class="tab-pane" role="tabpanel">
+                                        <em class="none-list mb-4 d-none">등록한 데이터가 없습니다.</em>
+                                        <div class="list-card">
+                                            <a href="project_board_graph.html" class="card-cover">
+                                                <div class="media-left mr-12pt">
+                                                    <div class="avatar">
+                                                        <span class="material-icons-round">area_chart</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5>통계</h5>
+                                                    <p>프로젝트의 모든 통계 데이터를 확인하실 수 있습니다.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="list-card">
+                                            <a href="project_board_data.html" class="card-cover">
+                                                <div class="media-left mr-12pt">
+                                                    <div class="avatar">
+                                                        <span class="material-icons-round">notes</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5>데이터</h5>
+                                                    <p>프로젝트의 모든 데이터를 확인하실 수 있습니다.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+
+                                        <div class="list-group block-list mb-4 d-none">
+                                            <div class="list-group-item d-flex js-cd-panel-trigger active" data-panel="main">
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <div class="flex">
+                                                        <div class="card-title">방문객</div>
+                                                        <p class="card-subtitle text-50 d-flex align-items-center">
+                                                            31.5%
+                                                            <i class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item d-flex js-cd-panel-trigger" data-panel="main">
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <div class="flex">
+                                                        <div class="card-title">체류시간</div>
+                                                        <p class="card-subtitle text-50 d-flex align-items-center">
+                                                            51.5%
+                                                            <i class="material-icons text-primary ml-4pt icon-16pt">keyboard_arrow_down</i>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="project_board_graph.html" class="btn-row-add mb-4 d-none"><i class="material-icons">add</i> 새로운 그래프 추가</a>
                                     </div>
-                                    <div id="tab03" class="tab-pane" role="tabpanel">3
-                                    </div>
-                                    <div id="tab04" class="tab-pane" role="tabpanel">4
-                                    </div>
+                                    <!-- <div id="tab04" class="tab-pane" role="tabpanel">4
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -811,17 +894,20 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="contents-tab the-num03 nav mb-4" role="tablist">
-                                    <a href="#tab05" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                                    <a href="#tab05" class="" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>정보</span></span>
                                     </a>
                                     <a href="#tab06" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>메세지</span></span>
                                     </a>
-                                    <a href="#tab07" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                    <a href="#tab07" class="active" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>동선추적</span></span>
                                     </a>
                                 </div>
-                                <p class="mb-2"><strong class="text-iden">10</strong>명의 사용자가 선택되었습니다.</p>
+                                <div class="d-flex mb-2">
+                                    <span class="d-flex flex m-0"><strong class="text-iden">10</strong>명의 사용자가 선택되었습니다.</span>
+                                    <a href="#n" class="btn-link text-accent">전체삭제</a>
+                                </div>
                                 <div class="selected-user mt-2" data-perfect-scrollbar>
                                     <div class="card-inner">
                                         <ul>
@@ -864,7 +950,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-content">
-                                    <div id="tab05" class="tab-pane active" role="tabpanel">
+                                    <div id="tab05" class="tab-pane" role="tabpanel">
                                         <div class="user-info">
                                             <div class="p-16pt">
                                                 <dl class="d-flex align-items-center">
@@ -888,9 +974,6 @@
                                                     <dd class="m-0">10분</dd>
                                                 </dl>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <a href="#n" class="btn btn-outline-secondary mr-8pt">과거이력보기</a>
-                                            </div>
                                         </div>
                                     </div>
                                     <div id="tab06" class="tab-pane" role="tabpanel">
@@ -902,15 +985,21 @@
                                             </div>
                                             <div class="form-group mb-4">
                                                 <label class="form-label mb-0 text-50 essential mb-2" for="form02">내용</label>
-                                                <textarea class="form-control" name="comment" id="form02" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
+                                                <div class="msg-box">
+                                                    <textarea class="form-control" name="comment" id="form02" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px; resize: none;"></textarea>
+                                                    <div class="d-flex p-2">
+                                                        <span class="">1/1000</span>
+                                                        <a href="#n">메세지 전송</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <a href="#n" class="btn btn-outline-dark mr-8pt">메세지 전송</a>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <a href="user_movement.html" class="btn btn-link text-accent"><strong>과거 메세지 전송 이력</strong></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="tab07" class="tab-pane" role="tabpanel">
-                                        <div class="route-list">
+                                    <div id="tab07" class="tab-pane active" role="tabpanel">
+                                        <div class="route-list mb-4">
                                             <ul class="route-user01">
                                                 <li class="line-blue current">
                                                     <div class="route-inner">
@@ -958,6 +1047,9 @@
                                                     </div>
                                                 </li>
                                             </ul>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="user_movement.html" class="btn btn-link text-accent"><strong>과거 동선 보기</strong></a>
                                         </div>
                                     </div>
                                 </div>

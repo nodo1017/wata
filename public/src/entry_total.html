@@ -2,7 +2,7 @@
 
 <!-- Drawer Layout -->
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
     @@include('./include/platform-topbar.html')
     <div class="mdk-drawer-layout__content page-content">
         <!-- history / live -->
@@ -141,7 +141,7 @@
         </button>
     </div> -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="compact" data-opened>
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
             @@include('./include/platform-side-menu.html')
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
@@ -278,19 +278,19 @@
                                 </div>
                             </div>
                             <div class="container-fluid">
-                                <div class="contents-tab nav mb-4" role="tablist">
+                                <div class="contents-tab nav mb-4 the-num02" role="tablist">
                                     <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>공간</span></span>
                                     </a>
-                                    <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                    <!-- <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>앱키</span></span>
-                                    </a>
+                                    </a> -->
                                     <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>통계</span></span>
                                     </a>
-                                    <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                    <!-- <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>팀관리</span></span>
-                                    </a>
+                                    </a> -->
                                 </div>
                                 <div class="tab-content">
                                     <div id="tab01" class="tab-pane active" role="tabpanel">
@@ -371,11 +371,40 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div id="tab02" class="tab-pane" role="tabpanel">2
-                                    </div>
+                                    <!-- <div id="tab02" class="tab-pane" role="tabpanel">2
+                                    </div> -->
                                     <div id="tab03" class="tab-pane" role="tabpanel">
-                                        <em class="none-list mb-4">등록한 데이터가 없습니다.</em>
-                                        <div class="list-group block-list mb-4">
+                                        <em class="none-list mb-4 d-none">등록한 데이터가 없습니다.</em>
+                                        <div class="list-card">
+                                            <a href="project_board_graph.html" class="card-cover">
+                                                <div class="media-left mr-12pt">
+                                                    <div class="avatar">
+                                                        <span class="material-icons-round">area_chart</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5>통계</h5>
+                                                    <p>프로젝트의 모든 통계 데이터를 확인하실 수 있습니다.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="list-card">
+                                            <a href="project_board_data.html" class="card-cover">
+                                                <div class="media-left mr-12pt">
+                                                    <div class="avatar">
+                                                        <span class="material-icons-round">notes</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5>데이터</h5>
+                                                    <p>프로젝트의 모든 데이터를 확인하실 수 있습니다.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+
+                                        <div class="list-group block-list mb-4 d-none">
                                             <div class="list-group-item d-flex js-cd-panel-trigger active" data-panel="main">
                                                 <div class="flex d-flex align-items-center mr-16pt">
                                                     <div class="flex">
@@ -414,10 +443,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="project_board_graph.html" class="btn-row-add mb-4"><i class="material-icons">add</i> 새로운 그래프 추가</a>
+                                        <a href="project_board_graph.html" class="btn-row-add mb-4 d-none"><i class="material-icons">add</i> 새로운 그래프 추가</a>
                                     </div>
-                                    <div id="tab04" class="tab-pane" role="tabpanel">4
-                                    </div>
+                                    <!-- <div id="tab04" class="tab-pane" role="tabpanel">4
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
