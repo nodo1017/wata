@@ -194,6 +194,11 @@ input, select{
 .js-mdk-header{
     .nav-gnb{
         background-color: #fff;
+        height: 100%;
+        min-height: 80px;
+        .navbar-nav{
+            height: 100%;
+        }
     }
 }
 .mdk-header--shadow-show {
@@ -210,14 +215,19 @@ input, select{
     }
 }
 .title-section{
-    background-color: #181f35;
-    padding: 1rem;
+    background-color: #fff;
+    padding: 1.25rem;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
     // background-image: linear-gradient(to right, #06294e,#150c49,#09459e,#550674,#21273d);
     // background-size: 400%;
     // background-position: 0 0;
     // animation-duration: 35s;
     // animation-iteration-count: infinite;
     // animation-name: title-section-grad;
+    .mb-caption{
+        font-size: .875rem;
+    }
     strong{
         font-weight: 700;
     }
@@ -233,16 +243,16 @@ input, select{
         padding: .5rem 0;
         color: rgba(255,255,255,0.7);
         font-weight: 500;
+        background: linear-gradient(to right, #ff5957, #301ae2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         i{
             vertical-align: middle;
         }
         span{
-            text-decoration: underline;
             padding-left: .25rem;
-            font-weight: 500;
-        }
-        &:hover{
-            color: rgba(255,255,255,1);
+            font-weight: 600;
+            font-size: .875rem;
         }
     }
 }
@@ -694,11 +704,12 @@ global GNB
         margin: 0;
     }
 
-    .cd-morph-dropdown .main-nav > ul > li {}
+    .cd-morph-dropdown .main-nav > ul > li {
+        margin-right: 3rem;
+    }
 
     .cd-morph-dropdown .main-nav > ul > li > a {
-        display: block;
-        padding: 1rem 1.8rem;
+        display: flex;
         color: #303956;
         font-size: 1rem;
         font-weight: 700;
@@ -706,8 +717,22 @@ global GNB
         -moz-osx-font-smoothing: grayscale;
         -webkit-transition: opacity .2s;
         transition: opacity .2s;
+        height: 100%;
+        align-items: center;
+        position: relative;
         i{
             vertical-align: middle;
+            margin-right: .25rem;
+        }
+        &.active{
+            &:before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $identity;
+                bottom: -1px;
+            }
         }
     }
 
@@ -2652,7 +2677,7 @@ a.btn-grad-de{
 }
 .recent-section{
     padding: 4rem 0;
-    background-color: #f9f9f9;
+    background-color: #f8f9fb;
 }
 .accordion{
     &.accordion--boxed{
@@ -2825,6 +2850,13 @@ a.btn-grad-de{
                         line-height: 1;
                         padding: .25rem 0;
                     }
+                }
+            }
+            &.active{
+                a.btn-location{
+                    border: 2px solid #cc2d2c;
+                    background-color: $identity;
+                    color: #fff;
                 }
             }
         }
@@ -3426,6 +3458,12 @@ a.btn-grad-de{
         h6{
             display: flex;
             margin: 0;
+            align-items: center;
+            span{
+                font-size: .688rem;
+                color: #999;
+                margin-left: .25rem;
+            }
         }
         a.btn-setting{
             display: flex;
@@ -3464,13 +3502,11 @@ a.btn-grad-de{
         h6{
             margin: 0;
         }
-        .grade-value{
-            text-align: center;
+        .tooltip-body{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            border-radius: .5rem;
             margin-bottom: .5rem;
             em{
                 font-size: 3rem;
@@ -3482,6 +3518,7 @@ a.btn-grad-de{
                 flex-direction: column;
                 margin-left: .75rem;
                 margin-top: -4px;
+                text-align: center;
                 .name{
                     color: #999;
                     border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -3489,6 +3526,37 @@ a.btn-grad-de{
                 }
                 strong{
                     font-size: .813rem;
+                }
+            }
+            .body-inner{
+                display: flex;
+                flex-direction: column;
+            }
+            .cell{
+                width: 100%;
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                border: 1px solid #edf0f2;
+                padding: 0 .5rem;
+                border-radius: .25rem;
+                margin-bottom: .5rem;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+                .set-name{
+                    flex: 0 0 30%;
+                    max-width: 30%;
+                    margin: 0;
+                    font-size: .75rem;
+                }
+                .set-value{
+                    flex: 0 0 70%;
+                    max-width: 70%;
+                    input{
+                        border: none;
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -3538,6 +3606,7 @@ a.btn-grad-de{
                 background: linear-gradient(90deg, rgba(50,161,255,1) 0%, rgba(0,199,60,1) 33%, rgba(253,166,14,1) 66%, rgba(230,71,70,1) 100%);
             }
         }
+
     }
 }
 .add-filter{

@@ -373,12 +373,12 @@
                             <span class="navbar-text-50">현재온도</span>
                             <strong class="navbar-text-100"><span class="txt-level_4">32˚</span>/29˚</strong>
                         </small>    
-                        <div class="filter-tooltip">
+                        <div class="filter-tooltip d-none">
                             <div class="tooltip-header">
                                 <h6>현재온도</h6>
                                 <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
                             </div>
-                            <div class="grade-value">
+                            <div class="tooltip-body">
                                 <em class="txt-level_4">32˚</em>
                                 <span class="defualt-value">
                                     <span class="name">적정온도</span>
@@ -395,6 +395,49 @@
                                 <div class="level-bar"></div>
                             </div>
                         </div>
+                        <div class="filter-tooltip">
+                            <div class="tooltip-header">
+                                <h6>온도 설정 <span>(단위 : ˚ )</span></h6>
+                                <a href="#n" class="btn-setting"><i class="material-icons">close</i></a>
+                            </div>
+                            <div class="tooltip-body">
+                                <div class="body-inner">
+                                    <div class="cell">
+                                        <label class="set-name" for="temperature">기본 :</label>
+                                        <div class="set-value">
+                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <label class="set-name txt-level_1" for="temperature">좋음 :</label>
+                                        <div class="set-value">
+                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <label class="set-name txt-level_2" for="temperature">보통 :</label>
+                                        <div class="set-value">
+                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <label class="set-name txt-level_3" for="temperature">나쁨 :</label>
+                                        <div class="set-value">
+                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <label class="set-name txt-level_4" for="temperature">위험 :</label>
+                                        <div class="set-value">
+                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a href="#n" class="btn btn-link text-accent">온도 설정 완료</a>
+                            </div>
+                        </div>
                     </span>
                     <span class="d-flex align-items-center tip-box mr-4">
                         <span class="avatar mr-12pt">
@@ -409,7 +452,7 @@
                                 <h6>현재습도</h6>
                                 <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
                             </div>
-                            <div class="grade-value">
+                            <div class="tooltip-body">
                                 <em class="txt-level_2">21˚</em>
                                 <span class="defualt-value">
                                     <span class="name">적정습도</span>
@@ -440,7 +483,7 @@
                                 <h6>유해가스</h6>
                                 <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
                             </div>
-                            <div class="grade-value">
+                            <div class="tooltip-body">
                                 <em class="txt-level_3">경계</em>
                             </div>
                             <div class="level-list">
@@ -1227,8 +1270,8 @@
                 data-boundary="window">
                 <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab"
                     aria-controls="sm-projects">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wysiwyg</i>
-                    <span class="sidebar-menu-text">프로젝트</span>
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">shop_2</i>
+                    <span class="sidebar-menu-text">앱</span>
                 </a>
             </li>
             <!-- <li class="sidebar-menu-item" data-title="Maps" data-placement="right" data-container="body"
@@ -2344,7 +2387,7 @@
                                                         <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
                                                     </div>
                                                 </li>
-                                                <li class="line-blue">
+                                                <li class="line-blue active">
                                                     <div class="route-inner">
                                                         <div class="route-title">
                                                             <span class="time">11:55</span>
