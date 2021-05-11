@@ -2994,6 +2994,12 @@ a.btn-grad-de{
             background-size: 60%;
             border-radius: .25rem;
         }
+        a.mode-edit{
+            background: url("../images/mode_edit.svg") no-repeat center;
+            background-color: #eee;
+            background-size: 60%;
+            border-radius: .25rem;
+        }
         &.disabled{
             .avatar{
                 opacity: 0.5;
@@ -6309,7 +6315,6 @@ dl.space-id{
         border: none;
         &:hover{
             box-shadow: 0 10px 25px 5px rgba(48, 49, 51, .1);
-
         }
         a.card-img-top{
             position: relative;
@@ -6347,6 +6352,36 @@ dl.space-id{
             }
         }
     }
+    .main-chart{
+        display: flex;
+        flex-flow: row wrap;
+        margin-right: -12px;
+        margin-left: -12px;
+        .card{
+            &:hover{
+                box-shadow: 0 3px 3px -2px rgba(39, 44, 51, .1), 0 3px 4px 0 rgba(39, 44, 51, .04), 0 1px 8px 0 rgba(39, 44, 51, .02);
+            }
+        }
+        .cell{
+            display: flex;
+            flex: 0 0 33.3%;
+            max-width: 33.3%;
+            padding-left: 12px;
+            padding-right: 12px;
+            .row{
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+                .col-6{
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+                .card{
+                    width: 100%;
+                }
+            }
+        }
+    }
     .box-list{
         list-style-type: none;
         padding: 0;
@@ -6356,7 +6391,9 @@ dl.space-id{
         li{
             display: flex;
             flex: 0 0 50%;
+            flex-wrap: wrap;
             max-width: 50%;
+            padding: 5px;
         }
     }
 }
