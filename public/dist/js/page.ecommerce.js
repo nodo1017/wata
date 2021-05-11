@@ -1194,7 +1194,7 @@
                             fontSize: 12,
                             fontColor: "rgba(54, 76, 102, 0.54)",
                             position: "top",
-                            text: "SALES OVER TIME"
+                            text: "VISITORS"
                         },
                         scales: {
                             xAxes: [{
@@ -1240,7 +1240,7 @@
                     }
                     a = {
                         datasets: [{
-                            label: "Total Sales",
+                            label: "Visitors",
                             data: a
                         }]
                     };
@@ -1255,7 +1255,7 @@
                             fontSize: 12,
                             fontColor: "rgba(54, 76, 102, 0.54)",
                             position: "top",
-                            text: "VISITORS OVER TIME"
+                            text: "VISITORS"
                         },
                         scales: {
                             xAxes: [{
@@ -1301,7 +1301,7 @@
                     }
                     a = {
                         datasets: [{
-                            label: "Total Visitors",
+                            label: "Visitors",
                             data: a,
                             barThickness: 20
                         }]
@@ -1317,7 +1317,7 @@
                             fontSize: 12,
                             fontColor: "rgba(54, 76, 102, 0.54)",
                             position: "top",
-                            text: "CUSTOMERS"
+                            text: "VISITORS"
                         },
                         scales: {
                             yAxes: [{
@@ -1364,7 +1364,7 @@
                         for (l.s(); !(i = l.n()).done;) {
                             var p = i.value;
                             a.push({
-                                y: t(0, 5),
+                                y: t(10, 15),
                                 x: p.toDate()
                             }), u.push({
                                 y: t(5, 10),
@@ -1378,10 +1378,10 @@
                     }
                     var y = {
                         datasets: [{
-                            label: "First time",
+                            label: "현재",
                             data: a
                         }, {
-                            label: "Returning",
+                            label: "과거",
                             data: u
                         }]
                     };

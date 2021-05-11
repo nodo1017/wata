@@ -1,173 +1,9 @@
-<!DOCTYPE html>
-<html lang="ko" dir="ltr">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>WATA</title>
-
-	<!-- Prevent the demo from appearing in search engines -->
-	<meta name="robots" content="noindex">
-
-	<link rel="icon" href="images/icon/favicon.svg">
-	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
-	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
-	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
-	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
-
-	<!-- Preloader -->
-	<link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
-
-	<!-- Perfect Scrollbar -->
-	<link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
-
-	<!-- Material Design Icons -->
-	<link type="text/css" href="css/material-icons.css" rel="stylesheet" />
-
-	<!-- Font Awesome Icons -->
-	<link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
-
-	<!-- Preloader -->
-	<link type="text/css" href="css/preloader.css" rel="stylesheet" />
-
-	<!-- App CSS -->
-	<link type="text/css" href="css/app.css" rel="stylesheet" />
-	
-	<!-- Dark Mode CSS -->
-	<link type="text/css" href="css/dark.css" rel="stylesheet" />
-
-	<!-- swiper -->
-	<link type="text/css" href="css/swiper.min.css" rel="stylesheet" />
-
-	<!-- custom CSS -->
-	<link type="text/css" href="css/style.css" rel="stylesheet" />
-	
-    <!-- https://material.io/resources/icons/?style=baseline -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=outline -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=round -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=sharp -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=twotone -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
-    rel="stylesheet">
-
-</head>
-
-<body class="layout-sticky-subnav layout-default">
-
-	<div class="preloader">
-		<div class="sk-chase">
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-		</div>
-	</div>
+@@include('./include/header.html')
 
 <!-- Header Layout -->
 <div class="mdk-header-layout js-mdk-header-layout">
 
-	<div id="header" class="mdk-header js-mdk-header mb-0" data-effects="parallax-background waterfall" data-fixed data-condenses>
-	<div class="mdk-header__content">
-		<div class="navbar navbar-expand nav-gnb" id="default-navbar" data-primary>
-			<a href="home.html" class="navbar-brand mr-16pt">
-				<img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
-			</a>
-			<!-- <a href="index.html" class="navbar-brand mr-16pt">
-				<img src="images/logo/symbol_col.svg" alt="logo" class="img-fluid" style="max-width: 42px;" />
-			</a> -->
-		
-			<div class="nav navbar-nav flex justify-content-start ml-40pt cd-morph-dropdown">
-				<a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
-				<nav class="main-nav">
-					<ul>
-						<li>
-							<a href="front.html" class=""><i class="material-icons-outlined">topic</i> MWC메뉴</a>
-						</li>
-						<li>
-							<a href="project_list.html" class=""><i class="material-icons-outlined">topic</i> Projects</a>
-						</li>
-						<li>
-							<a href="buildings.html" class="active"><i class="material-icons-outlined">map</i> Space</a>
-						</li>
-						<li>
-							<a href="data.html" class=""><i class="material-icons-outlined">storage</i> Data</a>
-						</li>
-						<!-- <li class="has-dropdown" data-content="menu02">
-							<a href="#n"></a>
-						</li> -->
-					</ul>
-				</nav>
-				<div class="morph-dropdown-wrapper">
-					<div class="morph-dropdown-inner">
-						<div class="dropdown-list">
-							<ul>
-								<li id="menu01" class="dropdown">
-									<a href="#0" class="label">Title</a>
-									<div class="content">
-										<a href="sub.html" class="dropdown-item">2depth</a>
-										<a href="sub.html" class="dropdown-item">2depth</a>
-										<a href="sub.html" class="dropdown-item">2depth</a>
-										<a href="sub.html" class="dropdown-item">2depth</a>
-										<a href="sub.html" class="dropdown-item">2depth</a>
-									</div>
-								</li>
-								<li id="menu02" class="dropdown">
-									<a href="#0" class="label">Title</a>
-									<div class="content">
-										<a href="#n" class="dropdown-item">2depth</a>
-										<a href="#n" class="dropdown-item">2depth</a>
-										<a href="#n" class="dropdown-item">2depth</a>
-										<a href="#n" class="dropdown-item">2depth</a>
-										<a href="#n" class="dropdown-item">2depth</a>
-									</div>
-								</li>
-							</ul>
-							<div class="bg-layer" aria-hidden="true"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-			<div class="d-flex flex justify-content-end align-items-center">
-				<div class="form-group m-0 ml-4 form-lang">
-					<select id="custom-select" class="custom-line">
-						<option selected="">KOR</option>
-						<option value="1">JPN</option>
-						<option value="2">ENG</option>
-					</select>
-				</div>
-				<div class="nav-item dropdown ml-4">
-					<a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-						<span class="avatar avatar-sm">
-							<span class="avatar-title rounded-circle">SH</span>
-						</span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div class="dropdown-header"><strong>계정메뉴</strong></div>
-						<a class="dropdown-item" href="my_account.html">정보수정</a>
-						<a class="dropdown-item" href="#n">멤버십</a>
-						<a class="dropdown-item" href="ac_16.html">로그아웃</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+	@@include('./include/gnb.html')
 
     <!-- Header Layout Content -->
     <div class="mdk-header-layout__content page-content">
@@ -175,7 +11,7 @@
             <div class="container page__container">
                 <div class="d-flex align-items-center">
                     <div class="flex d-flex">
-                        <p class="mb-caption m-0"><strong>Leo</strong>님 환영합니다.</p>
+                        <p class="mb-caption m-0"><strong>WATA</strong>님 환영합니다.</p>
                     </div>
                     <div class="row">
                         <div class="col-auto">
@@ -482,35 +318,7 @@
         </div>
     </div>
 
-    	<!-- Footer -->
-	<div class="footer">
-		<div class="container page__container page-section d-flex flex-column">
-			<div class="row">
-				<div class="col-auto">
-					<p class="text-70 brand mb-24pt py-2">
-						<img class="brand-icon" src="images/logo/logo.svg" width="100" alt="WATA"> 와따
-					</p>
-				</div>
-				<div class="col justify-content-end">
-					<div class="d-flex justify-content-end info-cus">
-						<div class="text-right">
-							<a href="#n" class="btn btn-link">Help Center</a>
-						</div>
-						<div class="text-right">
-							<a href="#n" class="btn btn-link">Developer Center</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<p class="measure-lead-max text-50 small mr-8pt">R&D센터 : 경기 성남시 분당구 삼평동 680 H스퀘어 2층 206호</p>
-			<p class="mb-8pt d-flex">
-				<a href="" class="text-70 btn-link mr-8pt small">Terms</a>
-				<a href="" class="text-70 btn-link small">Privacy policy</a>
-			</p>
-			<p class="text-50 small mt-n1 mb-0">Copyright 2021 &copy; All rights reserved.</p>
-		</div>
-	</div>
-	<!-- // END Footer -->
+    @@include('./include/copyright.html')
     
 </div>
 
@@ -555,31 +363,4 @@
 <div class="cd-cover-layer"></div>
 
 
-<!-- jQuery -->
-<script src="vendor/jquery.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="vendor/popper.min.js"></script>
-<script src="vendor/bootstrap.min.js"></script>
-
-<!-- Perfect Scrollbar -->
-<script src="vendor/perfect-scrollbar.min.js"></script>
-
-<!-- DOM Factory -->
-<script src="vendor/dom-factory.js"></script>
-
-<!-- MDK -->
-<script src="vendor/material-design-kit.js"></script>
-
-<!-- App JS -->
-<script src="js/app.js"></script>
-
-<!-- Preloader -->
-<script src="js/preloader.js"></script>
-
-<!-- custom -->
-<script src="js/custom.js"></script>
-
-
-</body>
-</html>
+@@include('./include/footer.html')
