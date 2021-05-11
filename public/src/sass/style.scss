@@ -6347,6 +6347,18 @@ dl.space-id{
             }
         }
     }
+    .box-list{
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        li{
+            display: flex;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
 }
 .page-section{
     padding: 4rem 0 !important;
