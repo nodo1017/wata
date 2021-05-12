@@ -162,7 +162,7 @@ body.layout-compact{
     background-size: 24px;
 }
 .table{
-    border-bottom: 1px solid #e9edf2;
+    border-bottom: 1px solid $border-color;
     thead{
         th{
             padding: 1rem !important;
@@ -410,6 +410,17 @@ input, select{
                     margin-bottom: 0;
                 }
             }
+        }
+    }
+    .qr-cover{
+        text-align: center;
+        padding: 1rem;
+        img.img-qr-code{
+            max-width: 200px;
+        }
+        img.id-card{
+            max-width: 400px;
+            border: 1px solid $border-color;
         }
     }
 }
@@ -6311,6 +6322,9 @@ dl.space-id{
     }
 }
 .recent-section{
+    &.bg-grad{
+        background-color: #f8f9fb;
+    }
     .card{
         border: none;
         &:hover{
@@ -6393,12 +6407,66 @@ dl.space-id{
             flex: 0 0 50%;
             flex-wrap: wrap;
             max-width: 50%;
-            padding: 5px;
+            flex-direction: column;
+            padding: 1rem;
+            align-items: center;
+            justify-content: center;
+            &:nth-child(1), &:nth-child(2){
+                border-bottom: 1px solid $border-color;
+            }
+            &:nth-child(odd){
+                border-right: 1px solid $border-color;
+            }
+            em{
+                font-size: 2.75rem;
+                color: $identity;
+                font-weight: 600;
+                background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-style: normal;
+            }
+            p{
+                color: #b9b9b9;
+                margin: 0;
+                font-weight: 500;
+                font-size:.875rem;
+            }
         }
     }
 }
 .page-section{
     padding: 4rem 0 !important;
+    border-bottom: 1px solid $border-color;
+    &:last-of-type{
+        border: none;
+    }
+    .sort-wrap{
+        display: flex;
+        width: auto;
+        align-items: center;
+        margin-right: 1rem;
+        a.sort-item{
+            display: inline-flex;
+            align-items: center;
+            padding: .25rem .5rem;
+            border-radius: 2px;
+            margin-right: .5rem;
+            &.active{
+                border: 1px solid $identity;
+                color: $identity;
+            }
+            &:hover{
+                background-color: #f9f9f9;
+            }
+        }
+    }
+    .flatpickr-wrapper{
+        input.form-control{
+            width: 24px;
+            position: absolute;
+        }
+    }
 }
 
 /* data */

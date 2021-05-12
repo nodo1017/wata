@@ -22,7 +22,7 @@
 
             </div>
         </div>
-        <div class="recent-section">
+        <div class="recent-section bg-grad">
             <div class="container page__container">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
@@ -34,10 +34,22 @@
 
                     <div class="cell">
                         <ul class="card box-list mb-0">
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
+                            <li>
+                                <em>239</em>
+                                <p>Visitors</p>
+                            </li>
+                            <li>
+                                <em>57</em>
+                                <p>Visitors</p>
+                            </li>
+                            <li>
+                                <em>677</em>
+                                <p>Visitors</p>
+                            </li>
+                            <li>
+                                <em>123</em>
+                                <p>Visitors</p>
+                            </li>
                         </ul>
                     </div>
                     <div class="cell">
@@ -92,8 +104,7 @@
                                 <div class="h2 mb-0 mr-3">452</div>
                                 <div class="flex">
                                     <div class="card-title">총 방문자</div>
-                                    <div class="card-subtitle text-50 d-flex align-items-center">9.6% <i
-                                            class="material-icons text-accent icon-16pt ml-4pt">keyboard_arrow_down</i>
+                                    <div class="card-subtitle text-50 d-flex align-items-center">9.6% <i class="material-icons text-accent icon-16pt ml-4pt">keyboard_arrow_down</i>
                                     </div>
                                 </div>
                                 <div class="ml-3 align-self-start">
@@ -130,165 +141,181 @@
             <div class="container page__container">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
-                        <h3 class="d-flex align-items-center mb-0 "><i class="material-icons-outlined icon--left">map</i> 공간 목록</h3>
-                        <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 공간이 등록되어 있습니다.</small>
+                        <h3 class="d-flex align-items-center mb-0 ">업체 리스트</h3>
+                        <!-- <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 공간이 등록되어 있습니다.</small> -->
                     </div>
                     
-                    <!-- <div class="w-auto table d-flex align-items-center mb-sm-0">
-                        <small class="text-muted text-headings text-uppercase mr-3 d-none d-sm-block">Sort by</small>
-                        <a href="#" class="sort desc small text-headings text-uppercase">최근순</a>
-                        <a href="#" class="sort small text-headings text-uppercase ml-2">이름순</a>
-                    </div> -->
-                    <form class="form-inline ml-4">
-                        <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
-                        <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
-                    </form>
-                    <a href="buildings_write.html" class="btn btn-accent ml-4">새로운 공간 등록</a>
+                    <div class="sort-wrap">
+                        <a href="#n" class="sort-item active">일일방문</a>
+                        <a href="#n" class="sort-item">주간방문</a>
+                        <a href="#n" class="sort-item">월간방문</a>
+                    </div>
+                    <div class="flatpickr-wrapper">
+                        <div id="recent_orders_date"
+                             data-toggle="flatpickr"
+                             data-flatpickr-wrap="true"
+                             data-flatpickr-mode="range"
+                             data-flatpickr-alt-format="d/m/Y"
+                             data-flatpickr-date-format="d/m/Y">
+                             <a href="javascript:void(0)" class="d-flex" data-toggle>
+                                <span class="material-icons-outlined">edit_calendar</span>
+                            </a>
+                            <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021" data-input>
+                        </div>
+                    </div>
                 </div>     
                 <table class="table mb-4 table-nowrap">
                     <colgroup>
-                        <col width="5%">
                         <col width="*">
-                        <col width="13%">
-                        <col width="13%">
-                        <col width="13%">
-                        <col width="12%">
-                        <col width="3%">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-toggle-check-all"
-                                        data-target="#projects"
-                                        id="customCheckAll">
-                                    <label class="custom-control-label"
-                                        for="customCheckAll"><span class="text-hide">Toggle all</span></label>
-                                </div>
-                            </th>
-                            <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">공간명</a>
-                            </th>
-                            <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-link">프로젝트</a>
-                            </th>
-                            <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">최근 수정일</a>
-                            </th>
-                            <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">배포일자</a>
-                            </th>
-                            <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">상태</a>
-                            </th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-company">회사명</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-booth">부스번호</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-field">분야</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-contact">연락처</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-email">이메일</a></th>
+                            <th>QR발행</th>
                         </tr>
                     </thead>
                     <tbody class="list" id="projects">
                         <tr>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-check-selected-row"
-                                        id="customCheck1_1">
-                                    <label class="custom-control-label"
-                                        for="customCheck1_1"><span class="text-hide">Check</span></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="flex d-flex align-items-center mr-16pt">
-                                    <a href="buildings_board.html" class="avatar mr-12pt">
-                                        <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
-                                    </a>
-                                    <div class="flex list-els">
-                                        <a class="card-title" href="buildings_board.html">건물 A</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="#n" class="dropdown-toggle text-primary" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">3 Project</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 B</a>
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 C</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>2021.01.06</td>
-                            <td>2021.01.10</td>
-                            <td><span class="text-accent">배포중</span></td>
-                        </tr>
-
-                        <tr class="selected">
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-check-selected-row"
-                                        checked=""
-                                        id="customCheck1_5">
-                                    <label class="custom-control-label"
-                                        for="customCheck1_5"><span class="text-hide">Check</span></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="flex d-flex align-items-center mr-16pt">
-                                    <a href="buildings_board.html" class="avatar mr-12pt">
-                                        <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
-                                    </a>
-                                    <div class="flex list-els">
-                                        <a class="card-title" href="buildings_board.html">건물 B</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="#n" class="dropdown-toggle text-primary" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">1 Project</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>2021.01.07</td>
-                            <td>2021.01.12</td>
-                            <td><span class="text-accent">배포중</span></td>
+                            <td>SAMSUNG</td>
+                            <td>A-3</td>
+                            <td>전자</td>
+                            <td>02-123-4567</td>
+                            <td>gd.hong@samsung.com</td>
+                            <td><a href="#n" class="btn btn-sm btn-link text-accent" data-toggle="modal" data-target="#qrCodeModal">QR발행</a></td>
                         </tr>
 
                         <tr>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-check-selected-row"
-                                        id="customCheck1_2">
-                                    <label class="custom-control-label"
-                                        for="customCheck1_2"><span class="text-hide">Check</span></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="flex d-flex align-items-center mr-16pt">
-                                    <a href="buildings_board.html" class="avatar mr-12pt">
-                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                    </a>
-                                    <div class="flex list-els">
-                                        <a class="card-title" href="buildings_board.html">건물 C</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="#n" class="dropdown-toggle text-primary" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">2 Project</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 B</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>2021.01.07</td>
-                            <td>2021.01.12</td>
-                            <td><span class="text-secondary">수정중</span></td>
+                            <td>LG</td>
+                            <td>A-1</td>
+                            <td>유통</td>
+                            <td>02-123-4567</td>
+                            <td>kim.js@lg.com</td>
+                            <td><a href="#n" class="btn btn-sm btn-link text-accent" data-toggle="modal" data-target="#qrCodeModal">QR발행</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>SK</td>
+                            <td>A-2</td>
+                            <td>제조</td>
+                            <td>02-123-4567</td>
+                            <td>jeong.sh@sk.com</td>
+                            <td><a href="#n" class="btn btn-sm btn-link text-accent" data-toggle="modal" data-target="#qrCodeModal">QR발행</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Hyundai</td>
+                            <td>A-5</td>
+                            <td>제조</td>
+                            <td>02-123-4567</td>
+                            <td>lee.jongkook@hyundai.com</td>
+                            <td><a href="#n" class="btn btn-sm btn-link text-accent" data-toggle="modal" data-target="#qrCodeModal">QR발행</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="empty-state d-none">
+                    <p class="empty-icon m-0"><i class="far fa-building"></i></p>
+                    <em class="empty-txt mb-4">아직 등록한 건물이 없습니다.</em>
+                    <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="page-section">
+            <div class="container page__container">
+                <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                    <div class="flex title-row">
+                        <h3 class="d-flex align-items-center mb-0 ">방문자 리스트</h3>
+                        <!-- <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 공간이 등록되어 있습니다.</small> -->
+                    </div>
+                    
+                    <div class="sort-wrap">
+                        <a href="#n" class="sort-item active">일일방문</a>
+                        <a href="#n" class="sort-item">주간방문</a>
+                        <a href="#n" class="sort-item">월간방문</a>
+                    </div>
+                    <div class="flatpickr-wrapper">
+                        <div id="recent_orders_date"
+                             data-toggle="flatpickr"
+                             data-flatpickr-wrap="true"
+                             data-flatpickr-mode="range"
+                             data-flatpickr-alt-format="d/m/Y"
+                             data-flatpickr-date-format="d/m/Y">
+                            <a href="javascript:void(0)" class="d-flex" data-toggle>
+                                <span class="material-icons-outlined">edit_calendar</span>
+                            </a>
+                            <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021" data-input>
+                        </div>
+                    </div>
+                </div>     
+                <table class="table mb-4 table-nowrap">
+                    <colgroup>
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">방문자 명 ID</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-gender">성별</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-company">회사명</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-nation">국가</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-date">방문날짜</a></th>
+                            <th><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-count">방문횟수</a></th>
+                            <th>명함보기</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list" id="projects">
+                        <tr>
+                            <td>A-1231</td>
+                            <td>남</td>
+                            <td>SAMSUNG</td>
+                            <td>한국</td>
+                            <td>2021.05.30</td>
+                            <td>2</td>
+                            <td><a href="#n" class="btn btn-sm btn-link text-accent" data-toggle="modal" data-target="#idCardModal">명함보기</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>A-1325</td>
+                            <td>남</td>
+                            <td>LG</td>
+                            <td>한국</td>
+                            <td>2021.05.24</td>
+                            <td>1</td>
+                            <td><a href="#n" class="btn btn-sm btn-link text-accent" data-toggle="modal" data-target="#idCardModal">명함보기</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>A-0492</td>
+                            <td>여</td>
+                            <td>SK</td>
+                            <td>한국</td>
+                            <td>2021.05.24</td>
+                            <td>1</td>
+                            <td><a href="#n" class="btn btn-sm btn-link text-accent" data-toggle="modal" data-target="#idCardModal">명함보기</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>A-1944</td>
+                            <td>남</td>
+                            <td>Hyundai</td>
+                            <td>한국</td>
+                            <td>2021.05.20</td>
+                            <td>1</td>
+                            <td><a href="#n" class="btn btn-sm btn-link text-accent" data-toggle="modal" data-target="#idCardModal">명함보기</a></td>
                         </tr>
 
                     </tbody>
@@ -307,44 +334,128 @@
 </div>
 
 
-<div class="cd-nugget-info">
-    <a href="#n" id="cd-tour-trigger" class="cd-btn">Help</a>
-</div>
-<div class="cd-tour-wrapper">
-    <div class="cd-single-step step01">
-        <span>Step 1</span>
-        <div class="cd-more-info bottom">
-            <h5>Project</h5>
-            <p>관제 모니터링을 시작 하려면 <strong>프로젝트</strong>를 먼저 생성해야합니다.</p>
-            <p><strong>프로젝트</strong>를 먼저 생성해 보세요.</p>
-        </div>
-    </div> 
-    <div class="cd-single-step step02">
-        <span>Step 2</span>
-        <div class="cd-more-info bottom">
-            <h5>Space</h5>
-            <p>프로젝트에 사용되는 지도를 <strong>등록</strong>하고 <strong>편집</strong>하실 수 있습니다.</p>
-            <p>지도 데이터를 한번 등록시켜 놓으면, <strong>여러 프로젝트에 연결</strong>하여 사용하실 수 있습니다.</p>
-        </div>
-    </div> 
-    <div class="cd-single-step step03">
-        <span>Step 3</span>
-        <div class="cd-more-info right">
-            <h5>최근 프로젝트 목록</h5>
-            <p>최근 관제 모니터링을 진행한 프로젝트 리스트입니다.</p>
-        </div>
-    </div>
-    <div class="cd-single-step step04">
-        <span>Step 4</span>
-        <div class="cd-more-info right">
-            <h5>공간 목록</h5>
-            <p>최근에 신규 등록 또는 수정을 진행한 공간 리스트입니다.</p>
+<!-- Modal -->
+<div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCode" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="qrCode">QR발행</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="qr-cover">
+                    <img src="images/qr_test.webp" class="img-qr-code" alt="">
+                    <p>QR코드를 생성했습니다.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="idCardModal" tabindex="-1" aria-labelledby="idCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="idCard">명함보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="qr-cover">
+                    <img src="images/test_idcard.jpg" class="id-card" alt="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="cd-cover-layer"></div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="vendor/popper.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Preloader -->
+    <script src="js/preloader.js"></script>
+
+    <!-- Range Slider -->
+    <script src="vendor/ion.rangeSlider.min.js"></script>
+    <script src="js/ion-rangeslider.js"></script>
+
+    <!-- Quill -->
+    <script src="vendor/quill.min.js"></script>
+    <script src="js/quill.js"></script>
+
+    <!-- Global Settings -->
+    <script src="js/settings.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="vendor/moment.min.js"></script>
+    <script src="vendor/moment-range.js"></script>
+
+    <!-- Chart.js -->
+    <script src="vendor/Chart.min.js"></script>
+    <script src="js/chartjs.js"></script>
+    <script src="js/chartjs-rounded-bar.js"></script>
+
+    <!-- Chart.js Samples -->
+    <script src="js/page.ecommerce.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="js/flatpickr.js"></script>
+
+    <script src="vendor/daterangepicker.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+    <!-- jQuery Mask Plugin -->
+    <script src="vendor/jquery.mask.min.js"></script>
+
+    <!-- modernizr.js -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
+    
 
 
-@@include('./include/footer.html')
+</body>
+</html>
