@@ -35,6 +35,26 @@ jQuery(document).ready(function ($) {
 		$(this).add($($(this).attr('href'))).addClass('current');
 	});
 	
+
+	$('.file-controls').on('click', '.btn-file-add', function (e) {
+		e.preventDefault();
+
+		var controlForm = $('.file-controls:first'),
+			currentEntry = $(this).parents('.multi-file:first'),
+			newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+		newEntry.find('input').val('');
+		controlForm.find('.multi-file:not(:last) .btn-file-add')
+			.removeClass('btn-file-add').addClass('btn-file-remove')
+			.html('<span class="material-icons">delete_outline</span>');
+	}).on('click', '.btn-file-remove', function (e) {
+		$(this).parents('.multi-file:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+
+
 	function toggleNav() {
 		var navIsVisible = (!$('.cd-dropdown').hasClass('dropdown-is-active')) ? true : false;
 		$('.cd-dropdown').toggleClass('dropdown-is-active', navIsVisible);

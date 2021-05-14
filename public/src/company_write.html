@@ -895,7 +895,7 @@
                                         <h3 class="mb-0">업체 정보입력</h3>
                                     </div>
                                 </div>
-                                <a href="buildings_write.html" class="material-icons">close</a>
+                                <a href="#n" class="material-icons">close</a>
                             </div>
                             <!-- 1. 기능 선택 -->
                             <!-- <div class="container-fluid">
@@ -942,24 +942,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group mb-32pt">
-                                    <label for="formFile" class="form-label text-50">파일등록</label>
-                                    <div class="d-flex flex multi-file">
-                                        <input class="form-control" type="file" id="formFile">
-                                        <a href="#n" class="btn-file-add ml-2 align-items-center circle-pin">
-                                            <span class="material-icons">add</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 mb-0" for="">설정</label>
-                                    <div class="set-list">
-                                        <label class="form-label mb-0" for="option01">활성화 여부</label>
-                                        <div class="control-cover">
-                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                <input checked="" type="checkbox" id="option03"
-                                                    class="custom-control-input">
-                                                <label class="custom-control-label" for="option03">active</label>
-                                            </div>
+                                    <label for="formFile" class="form-label text-50 essential">문서등록</label>
+                                    <div class="file-controls">
+                                        <div class="multi-file d-flex flex">
+                                            <input class="form-control" type="file" id="formFile">
+                                            <a href="#n" class="btn-file-add ml-2 align-items-center circle-pin">
+                                                <span class="material-icons">add</span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1224,27 +1213,5 @@
 
 <!-- // END Drawer Layout -->
 
-<script>
-    $(function () {
-        $(document).on('click', '.btn-file-add', function (e) {
-            e.preventDefault();
-
-            var controlForm = $('.controls:first'),
-                currentEntry = $(this).parents('.entry:first'),
-                newEntry = $(currentEntry.clone()).appendTo(controlForm);
-
-            newEntry.find('input').val('');
-            controlForm.find('.entry:not(:last) .btn-add')
-                .removeClass('btn-add').addClass('btn-remove')
-                .removeClass('btn-success').addClass('btn-danger')
-                .html('<span class="fa fa-trash"></span>');
-        }).on('click', '.btn-remove', function (e) {
-            $(this).parents('.entry:first').remove();
-
-            e.preventDefault();
-            return false;
-        });
-    });
-</script>
 
 @@include('./include/platform-footer.html')

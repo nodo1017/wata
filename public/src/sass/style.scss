@@ -123,17 +123,23 @@ body.layout-compact{
         right: 5px;
         bottom: .5rem;
     }
-    .multi-file{
-        a.btn-file-add{
-            display: flex;
-            padding: 0 .5rem;
-            justify-content: center;
-            background-color: #fff;
-            border: none;
-            position: relative;
-            .material-icons{
-                font-size: 24px;
-                line-height: 1;
+    .file-controls{
+        .multi-file{
+            margin-bottom: .5rem;
+            &:last-of-type{
+                margin: 0;
+            }
+            a.btn-file-add, a.btn-file-remove{
+                display: flex;
+                padding: 0 .5rem;
+                justify-content: center;
+                background-color: #fff;
+                border: none;
+                position: relative;
+                .material-icons{
+                    font-size: 24px;
+                    line-height: 1;
+                }
             }
         }
     }
@@ -3815,6 +3821,19 @@ a.cd-filter-trigger {
         dd{
             font-weight: bold;
             text-align: right;
+            a.btn-file{
+                display: block;
+                font-size: .75rem;
+                font-weight: normal;
+                padding: .25rem;
+                color: $identity;
+                i{
+                    font-size: .75rem;
+                }
+                &:hover{
+                    background-color: #f9f9f9;
+                }
+            }
         }
     }
 }
@@ -6492,6 +6511,9 @@ dl.space-id{
 .banner-section{
     background-color: #f9f9f9;
     padding: 2rem 0;
+    .container{
+        z-index: 1;
+    }
     .left-area{
         height: 100%;
         ul.box-item{
