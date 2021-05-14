@@ -123,6 +123,20 @@ body.layout-compact{
         right: 5px;
         bottom: .5rem;
     }
+    .multi-file{
+        a.btn-file-add{
+            display: flex;
+            padding: 0 .5rem;
+            justify-content: center;
+            background-color: #fff;
+            border: none;
+            position: relative;
+            .material-icons{
+                font-size: 24px;
+                line-height: 1;
+            }
+        }
+    }
 }
 .essential {
     position: relative;
@@ -166,6 +180,7 @@ body.layout-compact{
     thead{
         th{
             padding: 1rem !important;
+            background-color: #f9f9f9;
         }
     }
 }
@@ -2689,6 +2704,9 @@ a.btn-grad-de{
 .recent-section{
     padding: 4rem 0;
     background-color: #f8f9fb;
+    .page__container{
+        z-index: 2;
+    }
 }
 .accordion{
     &.accordion--boxed{
@@ -3792,9 +3810,11 @@ a.cd-filter-trigger {
         border-bottom: 1px solid $border-color;
         dt{
             color: #868e96;
+            min-width: 100px;
         }
         dd{
             font-weight: bold;
+            text-align: right;
         }
     }
 }
@@ -6437,9 +6457,10 @@ dl.space-id{
 }
 .page-section{
     padding: 4rem 0 !important;
-    border-bottom: 1px solid $border-color;
     &:last-of-type{
-        border: none;
+    }
+    &.bg-gray{
+        background-color: #f8f9fb;
     }
     .sort-wrap{
         display: flex;
@@ -6465,6 +6486,88 @@ dl.space-id{
         input.form-control{
             width: 24px;
             position: absolute;
+        }
+    }
+}
+.banner-section{
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+    .left-area{
+        height: 100%;
+        ul.box-item{
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            li{
+                display: flex;
+                flex: 0 0 33.3%;
+                max-width: 33.3%;
+                flex-direction: column;
+                padding-left: 6px;
+                height: 100%;
+                padding-right: 6px;
+                a{
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    background-color: #fff;
+                    border-radius: .25rem;
+                    padding: 2rem 1rem;
+                    border: 1px solid transparent;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+                    &.current{
+                        border: 1px solid $identity;
+                        background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
+                        p{
+                            color: #fff;
+                        }
+                        em{
+                            color: #fff;
+                            background: none;
+                            -webkit-text-fill-color: #fff;
+                        }
+                    }
+                    p{
+                        color: #b9b9b9;
+                        margin: 0;
+                        font-weight: 500;
+                        font-size:.875rem;
+                    }
+                    em{
+                        font-size: 2.75rem;
+                        color: $identity;
+                        font-weight: 600;
+                        background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+    }
+    .right-area{
+        height: 100%;
+        .tabCon{
+            display: none;
+            &.current{
+                display: block;
+            }
+        }
+        .card{
+            border: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .h2{
+            background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }
