@@ -26,9 +26,9 @@
         if (4 & r && "object" == typeof t && t && t.__esModule) return t;
         var e = Object.create(null);
         if (n.r(e), Object.defineProperty(e, "default", {
-                enumerable: !0,
-                value: t
-            }), 2 & r && "string" != typeof t)
+            enumerable: !0,
+            value: t
+        }), 2 & r && "string" != typeof t)
             for (var o in t) n.d(e, o, function (r) {
                 return t[r]
             }.bind(null, o));
@@ -96,7 +96,7 @@
                 n = {};
             try {
                 (t = Object.getOwnPropertyDescriptor(Object.prototype, "__proto__").set).call(n, []), r = n instanceof Array
-            } catch (t) {}
+            } catch (t) { }
             return function (n, i) {
                 return e(n), o(i), r ? t.call(n, i) : n.__proto__ = i, n
             }
@@ -465,7 +465,7 @@
     136: function (t, r, n) {
         var e = n(1);
         t.exports = !e((function () {
-            function t() {}
+            function t() { }
             return t.prototype.constructor = null, Object.getPrototypeOf(new t) !== t.prototype
         }))
     },
@@ -577,7 +577,7 @@
             }, Array.from(a, (function () {
                 throw 2
             }))
-        } catch (t) {}
+        } catch (t) { }
         t.exports = function (t, r) {
             if (!r && !o) return !1;
             var n = !1;
@@ -592,7 +592,7 @@
                         }
                     }
                 }, t(i)
-            } catch (t) {}
+            } catch (t) { }
             return n
         }
     },
@@ -758,7 +758,7 @@
         r.f = e ? s : function (t, r) {
             if (t = a(t), r = u(r, !0), f) try {
                 return s(t, r)
-            } catch (t) {}
+            } catch (t) { }
             if (c(t, r)) return i(!o.f.call(t, r), t[r])
         }
     },
@@ -965,15 +965,15 @@
                         if ((p || w in S) && (m = x(h = S[w], w, b), t))
                             if (r) A[w] = m;
                             else if (m) switch (t) {
-                        case 3:
-                            return !0;
-                        case 5:
-                            return h;
-                        case 6:
-                            return w;
-                        case 2:
-                            c.call(A, h)
-                    } else if (s) return !1;
+                                case 3:
+                                    return !0;
+                                case 5:
+                                    return h;
+                                case 6:
+                                    return w;
+                                case 2:
+                                    c.call(A, h)
+                            } else if (s) return !1;
                     return l ? -1 : f || s ? s : A
                 }
             };
@@ -1043,14 +1043,14 @@
             f = n(43),
             s = n(27),
             l = s("IE_PROTO"),
-            p = function () {},
+            p = function () { },
             y = function (t) {
                 return "<script>" + t + "<\/script>"
             },
             v = function () {
                 try {
                     e = document.domain && new ActiveXObject("htmlfile")
-                } catch (t) {}
+                } catch (t) { }
                 var t, r;
                 v = e ? function (t) {
                     t.write(y("")), t.close();
@@ -1121,25 +1121,25 @@
             var n;
             if ("undefined" == typeof Symbol || null == t[Symbol.iterator]) {
                 if (Array.isArray(t) || (n = function (t, r) {
-                        if (!t) return;
-                        if ("string" == typeof t) return o(t, r);
-                        var n = Object.prototype.toString.call(t).slice(8, -1);
-                        "Object" === n && t.constructor && (n = t.constructor.name);
-                        if ("Map" === n || "Set" === n) return Array.from(t);
-                        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return o(t, r)
-                    }(t)) || r && t && "number" == typeof t.length) {
+                    if (!t) return;
+                    if ("string" == typeof t) return o(t, r);
+                    var n = Object.prototype.toString.call(t).slice(8, -1);
+                    "Object" === n && t.constructor && (n = t.constructor.name);
+                    if ("Map" === n || "Set" === n) return Array.from(t);
+                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return o(t, r)
+                }(t)) || r && t && "number" == typeof t.length) {
                     n && (t = n);
                     var e = 0,
-                        i = function () {};
+                        i = function () { };
                     return {
                         s: i,
                         n: function () {
                             return e >= t.length ? {
                                 done: !0
                             } : {
-                                done: !1,
-                                value: t[e++]
-                            }
+                                    done: !1,
+                                    value: t[e++]
+                                }
                         },
                         e: function (t) {
                             throw t
@@ -1246,392 +1246,392 @@
                     };
                     Charts.create(r, n, o, a)
                 }("#totalSalesChart"),
-                function (r) {
-                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "roundedBar",
-                        o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                    o = Chart.helpers.merge({
-                        title: {
-                            display: !0,
-                            fontSize: 12,
-                            fontColor: "rgba(54, 76, 102, 0.54)",
-                            position: "top",
-                            text: "VISITORS"
-                        },
-                        scales: {
-                            xAxes: [{
-                                ticks: {
-                                    padding: 4,
-                                    callback: function (t) {
-                                        return t
-                                    }
-                                },
-                                offset: !0,
-                                gridLines: {
-                                    display: !1
-                                },
-                                type: "time",
-                                time: {
-                                    unit: "day",
-                                    displayFormats: {
-                                        day: "D/MM"
+                    function (r) {
+                        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "roundedBar",
+                            o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                        o = Chart.helpers.merge({
+                            title: {
+                                display: !0,
+                                fontSize: 12,
+                                fontColor: "rgba(54, 76, 102, 0.54)",
+                                position: "top",
+                                text: "VISITORS"
+                            },
+                            scales: {
+                                xAxes: [{
+                                    ticks: {
+                                        padding: 4,
+                                        callback: function (t) {
+                                            return t
+                                        }
                                     },
-                                    stepSize: 2,
-                                    maxTicksLimit: 7
-                                }
-                            }]
-                        }
-                    }, o);
-                    var i, a = [],
-                        u = moment().subtract(6, "days").format("YYYY-MM-DD"),
-                        c = moment().format("YYYY-MM-DD"),
-                        f = moment.range(u, c),
-                        s = e(f.by("days"));
-                    try {
-                        for (s.s(); !(i = s.n()).done;) {
-                            var l = i.value;
-                            a.push({
-                                y: t(10, 30),
-                                x: l.toDate()
-                            })
-                        }
-                    } catch (t) {
-                        s.e(t)
-                    } finally {
-                        s.f()
-                    }
-                    a = {
-                        datasets: [{
-                            label: "Visitors",
-                            data: a,
-                            barThickness: 20
-                        }]
-                    };
-                    Charts.create(r, n, o, a)
-                }("#totalVisitorsChart"),
-                function (r) {
-                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "line",
-                        o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                    o = Chart.helpers.merge({
-                        title: {
-                            display: !0,
-                            fontSize: 12,
-                            fontColor: "rgba(54, 76, 102, 0.54)",
-                            position: "top",
-                            text: "VISITORS"
-                        },
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    autoSkip: !1,
-                                    autoSkipPadding: 0,
-                                    padding: 4,
-                                    maxTicksLimit: 4,
-                                    callback: function (t) {
-                                        return t
-                                    }
-                                }
-                            }],
-                            xAxes: [{
-                                ticks: {
-                                    padding: 4,
-                                    callback: function (t) {
-                                        return t
-                                    }
-                                },
-                                gridLines: {
-                                    display: !1
-                                },
-                                type: "time",
-                                time: {
-                                    unit: "day",
-                                    displayFormats: {
-                                        day: "D/MM"
+                                    offset: !0,
+                                    gridLines: {
+                                        display: !1
                                     },
-                                    stepSize: 2,
-                                    maxTicksLimit: 7,
-                                    autoSkip: !1
-                                }
-                            }]
-                        }
-                    }, o);
-                    var i, a = [],
-                        u = [],
-                        c = moment().subtract(6, "days").format("YYYY-MM-DD"),
-                        f = moment().format("YYYY-MM-DD"),
-                        s = moment.range(c, f),
-                        l = e(s.by("days"));
-                    try {
-                        for (l.s(); !(i = l.n()).done;) {
-                            var p = i.value;
-                            a.push({
-                                y: t(10, 15),
-                                x: p.toDate()
-                            }), u.push({
-                                y: t(5, 10),
-                                x: p.toDate()
-                            })
-                        }
-                    } catch (t) {
-                        l.e(t)
-                    } finally {
-                        l.f()
-                    }
-                    var y = {
-                        datasets: [{
-                            label: "현재",
-                            data: a
-                        }, {
-                            label: "과거",
-                            data: u
-                        }]
-                    };
-                    Charts.create(r, n, o, y)
-                }("#repeatCustomerRateChart"),
-                function (r) {
-                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "line",
-                        o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                    o = Chart.helpers.merge({
-                        title: {
-                            display: !0,
-                            fontSize: 12,
-                            fontColor: "rgba(54, 76, 102, 0.54)",
-                            position: "top",
-                            text: "ORDERS OVER TIME"
-                        },
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    stepSize: 1,
-                                    callback: function (t) {
-                                        return t
+                                    type: "time",
+                                    time: {
+                                        unit: "day",
+                                        displayFormats: {
+                                            day: "D/MM"
+                                        },
+                                        stepSize: 2,
+                                        maxTicksLimit: 7
                                     }
-                                }
-                            }],
-                            xAxes: [{
-                                ticks: {
-                                    padding: 4,
-                                    callback: function (t) {
-                                        return t
-                                    }
-                                },
-                                gridLines: {
-                                    display: !1
-                                },
-                                type: "time",
-                                time: {
-                                    unit: "day",
-                                    displayFormats: {
-                                        day: "D/MM"
-                                    },
-                                    stepSize: 2,
-                                    maxTicksLimit: 7,
-                                    autoSkip: !1
-                                }
-                            }]
+                                }]
+                            }
+                        }, o);
+                        var i, a = [],
+                            u = moment().subtract(6, "days").format("YYYY-MM-DD"),
+                            c = moment().format("YYYY-MM-DD"),
+                            f = moment.range(u, c),
+                            s = e(f.by("days"));
+                        try {
+                            for (s.s(); !(i = s.n()).done;) {
+                                var l = i.value;
+                                a.push({
+                                    y: t(10, 30),
+                                    x: l.toDate()
+                                })
+                            }
+                        } catch (t) {
+                            s.e(t)
+                        } finally {
+                            s.f()
                         }
-                    }, o);
-                    var i, a = [],
-                        u = moment().subtract(6, "days").format("YYYY-MM-DD"),
-                        c = moment().format("YYYY-MM-DD"),
-                        f = moment.range(u, c),
-                        s = e(f.by("days"));
-                    try {
-                        for (s.s(); !(i = s.n()).done;) {
-                            var l = i.value;
-                            a.push({
-                                y: t(0, 2),
-                                x: l.toDate()
-                            })
-                        }
-                    } catch (t) {
-                        s.e(t)
-                    } finally {
-                        s.f()
-                    }
-                    a = {
-                        datasets: [{
-                            label: "Total Orders",
-                            data: a
-                        }]
-                    };
-                    Charts.create(r, n, o, a)
-                }("#totalOrdersChart"),
-                function (r) {
-                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "line",
-                        o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                    o = Chart.helpers.merge({
-                        title: {
-                            display: !0,
-                            fontSize: 12,
-                            fontColor: "rgba(54, 76, 102, 0.54)",
-                            position: "top",
-                            text: "ORDER VALUE"
-                        },
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    stepSize: 10
-                                }
-                            }],
-                            xAxes: [{
-                                ticks: {
-                                    padding: 4,
-                                    callback: function (t) {
-                                        return t
-                                    }
-                                },
-                                gridLines: {
-                                    display: !1
-                                },
-                                type: "time",
-                                time: {
-                                    unit: "day",
-                                    displayFormats: {
-                                        day: "D/MM"
-                                    },
-                                    stepSize: 2,
-                                    maxTicksLimit: 7,
-                                    autoSkip: !1
-                                }
-                            }]
-                        }
-                    }, o);
-                    var i, a = [],
-                        u = moment().subtract(6, "days").format("YYYY-MM-DD"),
-                        c = moment().format("YYYY-MM-DD"),
-                        f = moment.range(u, c),
-                        s = e(f.by("days"));
-                    try {
-                        for (s.s(); !(i = s.n()).done;) {
-                            var l = i.value;
-                            a.push({
-                                y: t(0, 50),
-                                x: l.toDate()
-                            })
-                        }
-                    } catch (t) {
-                        s.e(t)
-                    } finally {
-                        s.f()
-                    }
-                    a = {
-                        datasets: [{
-                            label: "Order Value",
-                            data: a
-                        }]
-                    };
-                    Charts.create(r, n, o, a)
-                }("#averageOrderValueChart"),
-                function (t) {
-                    var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "doughnut",
-                        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                        e = {
-                            labels: ["Desktop", "Mobile", "Tablet"],
+                        a = {
                             datasets: [{
-                                data: [267, 184, 0]
+                                label: "Visitors",
+                                data: a,
+                                barThickness: 20
                             }]
                         };
-                    Charts.create(t, r, n, e)
-                }("#visitsByDeviceChart"),
-                function (t) {
-                    var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "line",
-                        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                    n = Chart.helpers.merge({
-                        scales: {
-                            xAxes: [{
-                                gridLines: {
-                                    display: !1
-                                },
-                                ticks: {
-                                    callback: function (value) {
-                                        return moment(new Date(value)).format("MM월 DD일");
+                        Charts.create(r, n, o, a)
+                    }("#totalVisitorsChart"),
+                    function (r) {
+                        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "line",
+                            o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                        o = Chart.helpers.merge({
+                            title: {
+                                display: !0,
+                                fontSize: 12,
+                                fontColor: "rgba(54, 76, 102, 0.54)",
+                                position: "top",
+                                text: "VISITORS"
+                            },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        autoSkip: !1,
+                                        autoSkipPadding: 0,
+                                        padding: 4,
+                                        maxTicksLimit: 4,
+                                        callback: function (t) {
+                                            return t
+                                        }
                                     }
-                                },
-                                type: "time",
-                                time: {
-                                    unit: "day"
-                                }
-                            }]
-                        }
-                    }, n);
-                    var o, 
-                        i = [],
-                        a = [],
-                        u = moment().subtract(7, "days").format("YYYY-MM-DD"),
-                        c = moment().format("YYYY-MM-DD"),
-                        f = moment.range(u, c),
-                        s = e(f.by("days"));
-
-                    var consumerTransition = 10;
-                    
-                    let parentArray = [];
-                    for (let num = 0; num < consumerTransition; num++) {
-                        parentArray[num] = [];
-                    }
-                    
-                    try {
-                        for (s.s(); !(o = s.n()).done;) {
-                            var l = o.value,
-                                p = Math.round(Math.floor(300 * Math.random()) + 10);
-
-                            for (let num = 0; num < consumerTransition; num++) {
-
-                                parentArray[num].push({
-                                    y: Math.round(eval("." + Math.floor((Math.random() * 20) + 1)) * p),
-                                    x: l.toDate()    
-                                });
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                        padding: 4,
+                                        callback: function (t) {
+                                            return t
+                                        }
+                                    },
+                                    gridLines: {
+                                        display: !1
+                                    },
+                                    type: "time",
+                                    time: {
+                                        unit: "day",
+                                        displayFormats: {
+                                            day: "D/MM"
+                                        },
+                                        stepSize: 2,
+                                        maxTicksLimit: 7,
+                                        autoSkip: !1
+                                    }
+                                }]
                             }
-                            
-                            i.push({
-                                y: p,
-                                x: l.toDate()
-                            }), a.push({
-                                y: Math.round(.1 * p),
-                                x: l.toDate()
+                        }, o);
+                        var i, a = [],
+                            u = [],
+                            c = moment().subtract(6, "days").format("YYYY-MM-DD"),
+                            f = moment().format("YYYY-MM-DD"),
+                            s = moment.range(c, f),
+                            l = e(s.by("days"));
+                        try {
+                            for (l.s(); !(i = l.n()).done;) {
+                                var p = i.value;
+                                a.push({
+                                    y: t(10, 15),
+                                    x: p.toDate()
+                                }), u.push({
+                                    y: t(5, 10),
+                                    x: p.toDate()
+                                })
+                            }
+                        } catch (t) {
+                            l.e(t)
+                        } finally {
+                            l.f()
+                        }
+                        var y = {
+                            datasets: [{
+                                label: "현재",
+                                data: a
+                            }, {
+                                label: "과거",
+                                data: u
+                            }]
+                        };
+                        Charts.create(r, n, o, y)
+                    }("#repeatCustomerRateChart"),
+                    function (r) {
+                        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "line",
+                            o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                        o = Chart.helpers.merge({
+                            title: {
+                                display: !0,
+                                fontSize: 12,
+                                fontColor: "rgba(54, 76, 102, 0.54)",
+                                position: "top",
+                                text: "ORDERS OVER TIME"
+                            },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        stepSize: 1,
+                                        callback: function (t) {
+                                            return t
+                                        }
+                                    }
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                        padding: 4,
+                                        callback: function (t) {
+                                            return t
+                                        }
+                                    },
+                                    gridLines: {
+                                        display: !1
+                                    },
+                                    type: "time",
+                                    time: {
+                                        unit: "day",
+                                        displayFormats: {
+                                            day: "D/MM"
+                                        },
+                                        stepSize: 2,
+                                        maxTicksLimit: 7,
+                                        autoSkip: !1
+                                    }
+                                }]
+                            }
+                        }, o);
+                        var i, a = [],
+                            u = moment().subtract(6, "days").format("YYYY-MM-DD"),
+                            c = moment().format("YYYY-MM-DD"),
+                            f = moment.range(u, c),
+                            s = e(f.by("days"));
+                        try {
+                            for (s.s(); !(i = s.n()).done;) {
+                                var l = i.value;
+                                a.push({
+                                    y: t(0, 2),
+                                    x: l.toDate()
+                                })
+                            }
+                        } catch (t) {
+                            s.e(t)
+                        } finally {
+                            s.f()
+                        }
+                        a = {
+                            datasets: [{
+                                label: "Total Orders",
+                                data: a
+                            }]
+                        };
+                        Charts.create(r, n, o, a)
+                    }("#totalOrdersChart"),
+                    function (r) {
+                        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "line",
+                            o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                        o = Chart.helpers.merge({
+                            title: {
+                                display: !0,
+                                fontSize: 12,
+                                fontColor: "rgba(54, 76, 102, 0.54)",
+                                position: "top",
+                                text: "ORDER VALUE"
+                            },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        stepSize: 10
+                                    }
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                        padding: 4,
+                                        callback: function (t) {
+                                            return t
+                                        }
+                                    },
+                                    gridLines: {
+                                        display: !1
+                                    },
+                                    type: "time",
+                                    time: {
+                                        unit: "day",
+                                        displayFormats: {
+                                            day: "D/MM"
+                                        },
+                                        stepSize: 2,
+                                        maxTicksLimit: 7,
+                                        autoSkip: !1
+                                    }
+                                }]
+                            }
+                        }, o);
+                        var i, a = [],
+                            u = moment().subtract(6, "days").format("YYYY-MM-DD"),
+                            c = moment().format("YYYY-MM-DD"),
+                            f = moment.range(u, c),
+                            s = e(f.by("days"));
+                        try {
+                            for (s.s(); !(i = s.n()).done;) {
+                                var l = i.value;
+                                a.push({
+                                    y: t(0, 50),
+                                    x: l.toDate()
+                                })
+                            }
+                        } catch (t) {
+                            s.e(t)
+                        } finally {
+                            s.f()
+                        }
+                        a = {
+                            datasets: [{
+                                label: "Order Value",
+                                data: a
+                            }]
+                        };
+                        Charts.create(r, n, o, a)
+                    }("#averageOrderValueChart"),
+                    function (t) {
+                        var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "doughnut",
+                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                            e = {
+                                labels: ["Desktop", "Mobile", "Tablet"],
+                                datasets: [{
+                                    data: [267, 184, 0]
+                                }]
+                            };
+                        Charts.create(t, r, n, e)
+                    }("#visitsByDeviceChart"),
+                    function (t) {
+                        var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "line",
+                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                        n = Chart.helpers.merge({
+                            scales: {
+                                xAxes: [{
+                                    gridLines: {
+                                        display: !1
+                                    },
+                                    ticks: {
+                                        callback: function (value) {
+                                            return moment(new Date(value)).format("MM월 DD일");
+                                        }
+                                    },
+                                    type: "time",
+                                    time: {
+                                        unit: "day"
+                                    }
+                                }]
+                            }
+                        }, n);
+                        var o,
+                            i = [],
+                            a = [],
+                            u = moment().subtract(7, "days").format("YYYY-MM-DD"),
+                            c = moment().format("YYYY-MM-DD"),
+                            f = moment.range(u, c),
+                            s = e(f.by("days"));
+
+                        var consumerTransition = 10;
+
+                        let parentArray = [];
+                        for (let num = 0; num < consumerTransition; num++) {
+                            parentArray[num] = [];
+                        }
+
+                        try {
+                            for (s.s(); !(o = s.n()).done;) {
+                                var l = o.value,
+                                    p = Math.round(Math.floor(300 * Math.random()) + 10);
+
+                                for (let num = 0; num < consumerTransition; num++) {
+
+                                    parentArray[num].push({
+                                        y: Math.round(eval("." + Math.floor((Math.random() * 20) + 1)) * p),
+                                        x: l.toDate()
+                                    });
+                                }
+
+                                i.push({
+                                    y: p,
+                                    x: l.toDate()
+                                }), a.push({
+                                    y: Math.round(.1 * p),
+                                    x: l.toDate()
+                                })
+                            }
+                        } catch (t) {
+                            s.e(t)
+                        } finally {
+                            s.f()
+                        }
+
+                        let datasets = [
+
+                        ];
+
+                        var dynamicColors = function () {
+                            var r = Math.floor(Math.random() * 255);
+                            var g = Math.floor(Math.random() * 255);
+                            var b = Math.floor(Math.random() * 255);
+                            return "rgb(" + r + "," + g + "," + b + ")";
+                        };
+
+                        for (let num = 0; num < consumerTransition; num++) {
+                            datasets.push({
+                                borderColor: dynamicColors(),
+                                label: "Label" + (num + 1),
+                                data: parentArray[num]
                             })
                         }
-                    } catch (t) {
-                        s.e(t)
-                    } finally {
-                        s.f()
-                    }
 
-                    let datasets = [
+                        i = {
+                            datasets: datasets
+                        };
 
-                    ];
-
-                    var dynamicColors = function() {
-                        var r = Math.floor(Math.random() * 255);
-                        var g = Math.floor(Math.random() * 255);
-                        var b = Math.floor(Math.random() * 255);
-                        return "rgb(" + r + "," + g + "," + b + ")";
-                     };
-
-                    for (let num = 0; num < consumerTransition; num++) {
-                        datasets.push({
-                            borderColor: dynamicColors(),
-                            label: "Label" + (num + 1),
-                            data: parentArray[num]
-                        })
-                    }
-
-                    i = {
-                        datasets: datasets
-                    };
-
-                    /*
-                    i = {
-                        datasets: [{
-                            label: "Conversion",
-                            data: a
-                        }, {
-                            label: "Views",
-                            data: i
-                        }]
-                    };
-                    */
-                    Charts.create(t, r, n, i)
-                }("#viewsChart")
+                        /*
+                        i = {
+                            datasets: [{
+                                label: "Conversion",
+                                data: a
+                            }, {
+                                label: "Views",
+                                data: i
+                            }]
+                        };
+                        */
+                        Charts.create(t, r, n, i)
+                    }("#viewsChart")
             }()
     },
     57: function (t, r, n) {
@@ -1669,7 +1669,7 @@
                     if (p = r[s], l = t.noTargetGet ? (y = o(n, s)) && y.value : n[s], !f(d ? s : v + (g ? "." : "#") + s, t.forced) && void 0 !== l) {
                         if (typeof p == typeof l) continue;
                         c(p, l)
-                    }(t.sham || l && l.sham) && i(p, "sham", !0), a(n, s, p, t)
+                    } (t.sham || l && l.sham) && i(p, "sham", !0), a(n, s, p, t)
                 }
         }
     },
@@ -1705,7 +1705,7 @@
             i = n(3)("species");
         t.exports = function (t, r) {
             var n;
-            return o(t) && ("function" != typeof (n = t.constructor) || n !== Array && !o(n.prototype) ? e(n) && null === (n = n[i]) && (n = void 0) : n = void 0), new(void 0 === n ? Array : n)(0 === r ? 0 : r)
+            return o(t) && ("function" != typeof (n = t.constructor) || n !== Array && !o(n.prototype) ? e(n) && null === (n = n[i]) && (n = void 0) : n = void 0), new (void 0 === n ? Array : n)(0 === r ? 0 : r)
         }
     },
     66: function (t, r, n) {
@@ -1763,7 +1763,7 @@
         r.f = e ? u : function (t, r, n) {
             if (i(t), r = a(r, !0), i(n), o) try {
                 return u(t, r, n)
-            } catch (t) {}
+            } catch (t) { }
             if ("get" in n || "set" in n) throw TypeError("Accessors not supported");
             return "value" in n && (t[r] = n.value), t
         }
@@ -1863,7 +1863,7 @@
                     y = a(t, p),
                     v = a(void 0 === r ? p : r, p);
                 if (i(l) && ("function" != typeof (n = l.constructor) || n !== Array && !i(n.prototype) ? o(n) && null === (n = n[d]) && (n = void 0) : n = void 0, n === Array || void 0 === n)) return g.call(l, y, v);
-                for (e = new(void 0 === n ? Array : n)(h(v - y, 0)), s = 0; y < v; y++, s++) y in l && f(e, s, l[y]);
+                for (e = new (void 0 === n ? Array : n)(h(v - y, 0)), s = 0; y < v; y++, s++) y in l && f(e, s, l[y]);
                 return e.length = s, e
             }
         })
@@ -1944,7 +1944,7 @@
             return void 0 === t ? "Undefined" : null === t ? "Null" : "string" == typeof (n = function (t, r) {
                 try {
                     return t[r]
-                } catch (t) {}
+                } catch (t) { }
             }(r = Object(t), i)) ? n : a ? o(r) : "Object" == (e = o(r)) && "function" == typeof r.callee ? "Arguments" : e
         }
     },
@@ -1979,9 +1979,9 @@
                 value: r[e],
                 done: !1
             } : {
-                value: [e, r[e]],
-                done: !1
-            }
+                            value: [e, r[e]],
+                            done: !1
+                        }
         }), "values"), i.Arguments = i.Array, o("keys"), o("values"), o("entries")
     },
     94: function (t, r, n) {
@@ -2045,20 +2045,20 @@
         t.exports = function (t, r, n, s, y, m, b) {
             o(n, r, s);
             var S, x, O, w = function (t) {
-                    if (t === y && C) return C;
-                    if (!d && t in j) return j[t];
-                    switch (t) {
-                        case "keys":
-                        case "values":
-                        case "entries":
-                            return function () {
-                                return new n(this, t)
-                            }
-                    }
-                    return function () {
-                        return new n(this)
-                    }
-                },
+                if (t === y && C) return C;
+                if (!d && t in j) return j[t];
+                switch (t) {
+                    case "keys":
+                    case "values":
+                    case "entries":
+                        return function () {
+                            return new n(this, t)
+                        }
+                }
+                return function () {
+                    return new n(this)
+                }
+            },
                 M = r + " Iterator",
                 A = !1,
                 j = t.prototype,
@@ -2066,14 +2066,14 @@
                 C = !d && T || w(y),
                 k = "Array" == r && j.entries || T;
             if (k && (S = i(k.call(new t)), v !== Object.prototype && S.next && (l || i(S) === v || (a ? a(S, v) : "function" != typeof S[g] && c(S, g, h)), u(S, M, !0, !0), l && (p[M] = h))), "values" == y && T && "values" !== T.name && (A = !0, C = function () {
-                    return T.call(this)
-                }), l && !b || j[g] === C || c(j, g, C), p[r] = C, y)
+                return T.call(this)
+            }), l && !b || j[g] === C || c(j, g, C), p[r] = C, y)
                 if (x = {
-                        values: w("values"),
-                        keys: m ? C : w("keys"),
-                        entries: w("entries")
-                    }, b)
-                    for (O in x)(d || A || !(O in j)) && f(j, O, x[O]);
+                    values: w("values"),
+                    keys: m ? C : w("keys"),
+                    entries: w("entries")
+                }, b)
+                    for (O in x) (d || A || !(O in j)) && f(j, O, x[O]);
                 else e({
                     target: r,
                     proto: !0,
