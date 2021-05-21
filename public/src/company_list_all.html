@@ -1,1022 +1,19 @@
-<!DOCTYPE html>
-<html lang="ko" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>WATA</title>
-
-    <!-- Prevent the demo from appearing in search engines -->
-    <meta name="robots" content="noindex">
-        
-    <link rel="icon" href="images/icon/favicon.svg">
-	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
-	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
-	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
-	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
-
-    <!-- Preloader -->
-    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
-
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
-
-    <!-- Material Design Icons -->
-    <link type="text/css" href="css/material-icons.css" rel="stylesheet" />
-
-    <!-- Font Awesome Icons -->
-    <link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
-
-    <!-- Preloader -->
-    <link type="text/css" href="css/preloader.css" rel="stylesheet" />
-
-    <!-- App CSS -->
-    <link type="text/css" href="css/app.css" rel="stylesheet" />
-
-    <!-- Flatpickr -->
-    <link type="text/css" href="css/flatpickr.css" rel="stylesheet" />
-    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet" />
-
-    <!-- DateRangePicker -->
-    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet" />
-
-    <!-- Quill Theme -->
-    <link type="text/css" href="css/quill.css" rel="stylesheet" />
-
-    <!-- Touchspin -->
-    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet" />
-
-    <!-- Select2 -->
-    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet" />
-    <link type="text/css" href="css/select2.css" rel="stylesheet" />
-
-     <!-- ion Range Slider -->
-     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet" />
-
-     <!-- Dragula -->
-     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
-
-    <!-- custom CSS -->
-    <link type="text/css" href="css/style.css" rel="stylesheet" />
-    
-    <!-- https://material.io/resources/icons/?style=baseline -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=outline -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=round -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=sharp -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=twotone -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
-    rel="stylesheet">
-
-</head>
-
-<body class="layout-compact">
-
-    <!-- <div class="preloader">
-        <div class="sk-chase">
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-        </div>
-    </div> -->
-
+@@include('./include/platform-header.html')
 
 <!-- Drawer Layout -->
+
 <div class="mdk-drawer-layout js-mdk-drawer-layout">
-        <!-- Header -->
-    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
-        <!-- history / live -->
-        <div class="nav-search">
-            <select name="" id="">
-                <option value="">POI</option>
-                <option value="">센서</option>
-                <option value="">장소</option>
-            </select>
-            <input type="text" placeholder="검색어를 입력해 주세요." id="searchSample02">
-            <button type="button"><i class="fas fa-search"></i></button>
-        </div>
-        <div class="filter-cell filter-area d-flex align-items-center">
-            <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                <strong>구역선택</strong>
-            </a>
-            <div class="filter-item-dropdown" data-perfect-scrollbar>
-                <div class="dropdown-header"><strong>건물 A동</strong></div>
-                <a href="#n" class="dropdown-item">전체구역</a>
-                <div class="dropdown-divider"></div>
-                <div class="dropdown-header"><strong>문화콘텐츠 컴플렉스</strong></div>
-                <a href="#n" class="dropdown-item">1층 주차장</a>
-                <a href="#n" class="dropdown-item">1층 로비</a>
-                <div class="dropdown-divider"></div>
-                <div class="dropdown-header"><strong>영상후반작업시설</strong></div>
-                <a href="#n" class="dropdown-item">4층 전체</a>
-                <a href="#n" class="dropdown-item">교육실</a>
-                <a href="#n" class="dropdown-item">회의실</a>
-                <div class="dropdown-divider"></div>
-                <div class="dropdown-header"><strong>사용자 정의</strong></div>
-                <a href="#n" class="dropdown-item">관리구역 A</a>
-                <a href="#n" class="dropdown-item">관리구역 B</a>
-            </div>
-        </div>
-        <div id="filter-bar">
-            <a href="#0" class="cd-filter-trigger"><i class="material-icons">tune</i>필터</a>
-            <div class="status-map align-items-center justify-content-center">
-                <div class="tabBox mapStauts01 status-con active">
-                    <div class="filter-cell filter-list d-flex align-items-center">
-                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                            <strong><span>기간</span> 2021.04.05~2021.04.31</strong>
-                        </a>
-                        <div class="filter-item-dropdown date-pick" style="width: 350px;">
-                            <div class="dropdown-body pt-8pt">
-                                <div class="form-group">
-                                    <input type="hidden" data-toggle="flatpickr" data-flatpickr-mode="range" data-flatpickr-inline="true" value="2021-01-01 to 2021-01-31">
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center mb-2">
-                                <a href="#n" class="btn btn-outline-secondary">확인</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-cell filter-list d-flex align-items-center">
-                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                            <strong>시간선택</strong>
-                        </a>
-                        <div class="filter-item-dropdown" style="width: 250px;">
-                            <div class="dropdown-header"><strong>시작시간</strong></div>
-                            <div class="dropdown-body mb-4">
-                                <div class="form-row">
-                                    <div class="col-lg-4">
-                                        <select class="form-line" name="" id="">
-                                            <option value="">AM</option>
-                                            <option value="">PM</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <select class="form-line" name="" id="">
-                                            <option value="">01</option>
-                                            <option value="">02</option>
-                                            <option value="">03</option>
-                                            <option value="">04</option>
-                                            <option value="">05</option>
-                                            <option value="">06</option>
-                                            <option value="">07</option>
-                                            <option value="">08</option>
-                                            <option value="">09</option>
-                                            <option value="">10</option>
-                                            <option value="">11</option>
-                                            <option value="">12</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <select class="form-line" name="" id="">
-                                            <option value="">00</option>
-                                            <option value="">10</option>
-                                            <option value="">20</option>
-                                            <option value="">30</option>
-                                            <option value="">40</option>
-                                            <option value="">50</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown-header"><strong>종료시간</strong></div>
-                            <div class="dropdown-body mb-4">
-                                <div class="form-row">
-                                    <div class="col-lg-4">
-                                        <select class="form-line" name="" id="">
-                                            <option value="">AM</option>
-                                            <option value="">PM</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <select class="form-line" name="" id="">
-                                            <option value="">01</option>
-                                            <option value="">02</option>
-                                            <option value="">03</option>
-                                            <option value="">04</option>
-                                            <option value="">05</option>
-                                            <option value="">06</option>
-                                            <option value="">07</option>
-                                            <option value="">08</option>
-                                            <option value="">09</option>
-                                            <option value="">10</option>
-                                            <option value="">11</option>
-                                            <option value="">12</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <select class="form-line" name="" id="">
-                                            <option value="">00</option>
-                                            <option value="">10</option>
-                                            <option value="">20</option>
-                                            <option value="">30</option>
-                                            <option value="">40</option>
-                                            <option value="">50</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center mb-2">
-                                <a href="#n" class="btn btn-outline-secondary">확인</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-cell filter-list d-flex align-items-center">
-                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                            <strong>연령대</strong>
-                        </a>
-                        <div class="filter-item-dropdown" style="width: 300px;">
-                            <div class="dropdown-body my-2">
-                                <div class="flex" style="max-width: 100%">
-                                    <input id="userAge" type="text" data-toggle="ion-rangeslider"
-                                        data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
-                                        data-grid="true">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-cell filter-list d-flex align-items-center">
-                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                            <strong>성별</strong>
-                        </a>
-                        <div class="filter-item-dropdown">
-                            <div class="dropdown-body my-2">
-                                <div class="form-check custom-checkbox">
-                                    <input class="custom-control-input" type="radio" name="navBarGenderVal"
-                                        value="" id="navBarGenderAll" checked>
-                                    <label class="custom-control-label" for="navBarGenderAll">전체</label>
-                                </div>
-                                <div class="form-check custom-checkbox mt-12pt">
-                                    <input class="custom-control-input" type="radio" name="navBarGenderVal"
-                                        value="1" id="navBarGenderMale">
-                                    <label class="custom-control-label" for="navBarGenderMale">남</label>
-                                </div>
-                                <div class="form-check custom-checkbox mt-12pt">
-                                    <input class="custom-control-input" type="radio" name="navBarGenderVal"
-                                        value="2" id="navBarGenderFeMale">
-                                    <label class="custom-control-label" for="navBarGenderFeMale">여</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-cell filter-list d-flex align-items-center">
-                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                            <strong>휴대폰 종류</strong>
-                        </a>
-                        <div class="filter-item-dropdown">
-                            <div class="dropdown-body my-2">
-                                <div class="form-check custom-checkbox">
-                                    <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
-                                        value="" id="deviceTypeAll" checked>
-                                    <label class="custom-control-label" for="deviceTypeAll">전체</label>
-                                </div>
-        
-                                <div class="form-check custom-checkbox mt-12pt">
-                                    <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
-                                        value="1" id="deviceTypeAos">
-                                    <label class="custom-control-label" for="deviceTypeAos">Android</label>
-                                </div>
-                                <div class="form-check custom-checkbox mt-12pt">
-                                    <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal"
-                                        value="2" id="deviceTypeIos">
-                                    <label class="custom-control-label" for="deviceTypeIos">iOS</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-cell filter-list d-flex align-items-center">
-                        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                            <strong>체류시간(m)</strong>
-                        </a>
-                        <div class="filter-item-dropdown" style="width: 300px;">
-                            <div class="dropdown-body my-2">
-                                <div class="flex" style="max-width: 100%">
-                                    <input id="userStay" type="text" data-toggle="ion-rangeslider"
-                                        data-min="0" data-max="100" data-from="20" data-to="50" data-type="double"
-                                        data-grid="true">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
-                        <a href="#n" class=""><i class="material-icons mr-1">done</i> 설정</a>
-                        <!-- <a href="#n" class="is-loading is-loading-sm">Button</a> -->
-                    </div>
-                </div>
-                <div class="tabBox mapStauts02 status-con">
-                    <span class="d-flex align-items-center mr-4 pl-3">
-                        <span class="avatar mr-12pt">
-                            <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
-                        </span>
-                        <small class="flex d-flex flex-column">
-                            <span class="navbar-text-50">전체 이용객 수</span>
-                            <strong class="navbar-text-100">117명<span class="liveUser liveUser-up">2명 증가</span></strong>
-                        </small>
-                    </span>
-                    <span class="d-flex align-items-center mr-4">
-                        <span class="avatar mr-12pt">
-                            <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
-                        </span>
-                        <small class="flex d-flex flex-column">
-                            <span class="navbar-text-50">구역별 이용객 수</span>
-                            <strong class="navbar-text-100">11명<span class="liveUser liveUser-down">5명 감소</span></strong>
-                        </small>
-                    </span>
-                    <span class="d-flex align-items-center mr-4">
-                        <span class="avatar mr-12pt">
-                            <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
-                        </span>
-                        <small class="flex d-flex flex-column">
-                            <span class="navbar-text-50">사용자 체류시간</span>
-                            <strong class="navbar-text-100">10분</strong>
-                        </small>
-                    </span>
-                    <span class="d-flex align-items-center mr-4">
-                        <span class="avatar mr-12pt">
-                            <span class="avatar-title navbar-avatar"><i class="material-icons">track_changes</i></span>
-                        </span>
-                        <small class="flex d-flex flex-column">
-                            <span class="navbar-text-50">구역별 방문 순위</span>
-                            <strong class="navbar-text-100">미디어회의실</strong>
-                        </small>
-                    </span>
-                    <span class="d-flex align-items-center mr-4">
-                        <span class="avatar mr-12pt">
-                            <span class="avatar-title navbar-avatar"><i
-                                    class="material-icons">notification_important</i></span>
-                        </span>
-                        <small class="flex d-flex flex-column">
-                            <span class="navbar-text-50">사고발생 건 수</span>
-                            <strong class="navbar-text-100">0건</strong>
-                        </small>
-                    </span>
-                    <span class="d-flex align-items-center tip-box mr-4">
-                        <span class="avatar mr-12pt">
-                            <span class="avatar-title navbar-avatar bg-level_4"><i class="material-icons">thermostat</i></span>
-                        </span>
-                        <small class="flex d-flex flex-column">
-                            <span class="navbar-text-50">현재온도</span>
-                            <strong class="navbar-text-100"><span class="txt-level_4">32˚</span>/29˚</strong>
-                        </small>    
-                        <div class="filter-tooltip d-none">
-                            <div class="tooltip-header">
-                                <h6>현재온도</h6>
-                                <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
-                            </div>
-                            <div class="tooltip-body">
-                                <em class="txt-level_4">32˚</em>
-                                <span class="defualt-value">
-                                    <span class="name">적정온도</span>
-                                    <strong class="value">29˚</strong>
-                                </span>
-                            </div>
-                            <div class="level-list">
-                                <ul class="step4">
-                                    <li>좋음</li>
-                                    <li>보통</li>
-                                    <li>경계</li>
-                                    <li class="current txt-level_4">위험</li>
-                                </ul>
-                                <div class="level-bar"></div>
-                            </div>
-                        </div>
-                        <div class="filter-tooltip">
-                            <div class="tooltip-header">
-                                <h6>온도 설정 <span>(단위 : ˚ )</span></h6>
-                                <a href="#n" class="btn-setting"><i class="material-icons">close</i></a>
-                            </div>
-                            <div class="tooltip-body">
-                                <div class="body-inner">
-                                    <div class="cell">
-                                        <label class="set-name" for="temperature">기본 :</label>
-                                        <div class="set-value">
-                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <label class="set-name txt-level_1" for="temperature">좋음 :</label>
-                                        <div class="set-value">
-                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <label class="set-name txt-level_2" for="temperature">보통 :</label>
-                                        <div class="set-value">
-                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <label class="set-name txt-level_3" for="temperature">나쁨 :</label>
-                                        <div class="set-value">
-                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <label class="set-name txt-level_4" for="temperature">위험 :</label>
-                                        <div class="set-value">
-                                            <input type="number" class="form-control" id="temperature" placeholder="온도입력">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a href="#n" class="btn btn-link text-accent">온도 설정 완료</a>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="d-flex align-items-center tip-box mr-4">
-                        <span class="avatar mr-12pt">
-                            <span class="avatar-title navbar-avatar bg-level_2"><i class="material-icons">water_drop</i></span>
-                        </span>
-                        <small class="flex d-flex flex-column">
-                            <span class="navbar-text-50">현재습도</span>
-                            <strong class="navbar-text-100"><span class="txt-level_2">21˚</span>/26˚</strong>
-                        </small>
-                        <div class="filter-tooltip">
-                            <div class="tooltip-header">
-                                <h6>현재습도</h6>
-                                <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
-                            </div>
-                            <div class="tooltip-body">
-                                <em class="txt-level_2">21˚</em>
-                                <span class="defualt-value">
-                                    <span class="name">적정습도</span>
-                                    <strong class="value">29˚</strong>
-                                </span>
-                            </div>
-                            <div class="level-list">
-                                <ul class="step4">
-                                    <li>좋음</li>
-                                    <li class="current txt-level_2">보통</li>
-                                    <li>경계</li>
-                                    <li>위험</li>
-                                </ul>
-                                <div class="level-bar"></div>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="d-flex align-items-center tip-box mr-4">
-                        <span class="avatar mr-12pt">
-                            <span class="avatar-title navbar-avatar bg-level_3"><i class="fas fa-radiation-alt"></i></span>
-                        </span>
-                        <small class="flex d-flex flex-column">
-                            <span class="navbar-text-50">유해가스</span>
-                            <strong class="navbar-text-100 txt-level_3">경계</strong>
-                        </small>
-                        <div class="filter-tooltip">
-                            <div class="tooltip-header">
-                                <h6>유해가스</h6>
-                                <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
-                            </div>
-                            <div class="tooltip-body">
-                                <em class="txt-level_3">경계</em>
-                            </div>
-                            <div class="level-list">
-                                <ul class="step4">
-                                    <li>좋음</li>
-                                    <li>보통</li>
-                                    <li class="current txt-level_3">경계</li>
-                                    <li>위험</li>
-                                </ul>
-                                <div class="level-bar"></div>
-                            </div>
-                        </div>
-                    </span>
-                    <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
-                        <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- menu -->
-        <!-- <ul class="nav navbar-nav flex justify-content-end">
-            <li class="nav-item active">
-                <a href="#n" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Data</a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a href="#n" class="dropdown-item">Browse Courses</a>
-                    <a href="#n" class="dropdown-item">Preview Course</a>
-                    <a href="#n" class="dropdown-item">Preview Lesson</a>
-                    <a href="#n" class="dropdown-item">
-                        <span class="mr-16pt">Take Course</span>
-                        <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span>
-                    </a>
-                    <a href="#n" class="dropdown-item">Take Lesson</a>
-                    <a href="#n" class="dropdown-item">Take Quiz</a>
-                    <a href="#n" class="dropdown-item">Quiz Result</a>
-                    <a href="#n" class="dropdown-item">Student Dashboard</a>
-                    <a href="#n" class="dropdown-item">My Courses</a>
-                    <a href="#n" class="dropdown-item">My Quizzes</a>
-                    <a href="#n" class="dropdown-item">Help Center</a>
-                </div>
-            </li>
-        </ul> -->
-        <div class="d-flex flex justify-content-end align-items-center">
-            <div class="form-group m-0 ml-4 form-lang">
-                <select id="custom-select" class="custom-line">
-                    <option selected="">KOR</option>
-                    <option value="1">JPN</option>
-                    <option value="2">ENG</option>
-                </select>
-            </div>
-            <div class="nav-item dropdown ml-4">
-                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                    <span class="avatar avatar-sm">
-                        <span class="avatar-title rounded-circle">SH</span>
-                    </span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>계정메뉴</strong></div>
-                    <a class="dropdown-item" href="my_account.html">정보수정</a>
-                    <a class="dropdown-item" href="#n">멤버십</a>
-                    <a class="dropdown-item" href="ac_16.html">로그아웃</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @@include('./include/platform-topbar3.html')
     <div class="mdk-drawer-layout__content page-content">
-        <!-- history / live -->
-        <div class="btn-mid-holder">
-            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-white">
-                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
-                </label>
-                <label class="btn btn-white active">
-                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
-                </label>
-            </div>
-        </div>
         <!-- edit tool -->
         <div class="btn-top-holder">
             <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-            <div class="btn-group ml-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span> </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
-                        <ul class="item-list mb-2">
-                            <li><a href="#n" class="active"><i class="material-icons">location_on</i><span>개별위치</span></a></li>
-                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
-                        </ul>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
-                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
-                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
-                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
-                        </ul>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
-                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="map-location ml-2">
-                <div class="location-header d-flex align-items-center">
-                    <strong>프로젝트 A</strong>
-                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
-                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                    </a>
-                </div>
-                <div class="collapse location-body" id="map-location">
-                    <div class="sidebar">
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
-                                    <li class="sidebar-menu-item active">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">B1</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">4F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">5F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">6F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">7F</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
-            <!-- history / live -->
-    <div class="btn-mid-holder d-none">
-        <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-white">
-                <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
-            </label>
-            <label class="btn btn-white active">
-                <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
-            </label>
-        </div>
-    </div>
-    <!-- edit tool -->
-    <div class="btn-top-holder d-none">
-        <div class="btn-group ml-2">
-            <button type="button" class="btn btn-white"><i class="material-icons">highlight_alt</i></button>
-            <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
-            <button type="button" class="btn btn-white"><i class="material-icons">timeline</i></button>
-            <div class="btn-group">
-                <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
-                    aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span> </button>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>이벤트 설정</strong></div>
-                    <ul class="item-list mb-2">
-                        <li><a href="#n" class="active"><i class="material-icons">location_on</i><span>개별위치</span></a></li>
-                        <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
-                    </ul>
-                    <div class="dropdown-divider"></div>
-                    <div class="dropdown-header"><strong>경보 설정</strong></div>
-                    <ul class="item-list">
-                        <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
-                        <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
-                        <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
-                        <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
-                    </ul>
-                    <div class="dropdown-divider"></div>
-                    <div class="dropdown-header"><strong>경보 설정</strong></div>
-                    <ul class="item-list">
-                        <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
-                        <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-        <div class="map-location ml-2">
-            <div class="location-header d-flex align-items-center">
-                <strong>프로젝트 A</strong>
-                <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
-                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                </a>
-            </div>
-            <div class="collapse location-body" id="map-location">
-                <div class="sidebar">
-                    <ul class="sidebar-menu">
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
-                                <li class="sidebar-menu-item active">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">B1</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">3F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">4F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">5F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">6F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">7F</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">1F</span>
-                                        <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">2F</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#n">
-                                        <span class="sidebar-menu-text">3F</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 40%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">open_with</i> menu01</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">filter_tilt_shift</i> menu02</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">pin_drop</i> menu03</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 50%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <div class="toolbox-distance">
-                    <dl class="row align-items-center">
-                        <dt class="col">반경</dt>
-                        <dd class="col">100.0m</dd>
-                    </dl>
-                    <a href="#n" class="btn-ers"><i class="fas fa-eraser"></i> 지우기</a>
-                </div>
-                <a href="#n" class="d-flex align-items-center active"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 60%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
-                <div class="dropdown-divider"></div>
-                <a href="#n" class="d-flex align-items-center">menu02</a>
-                <a href="#n" class="d-flex align-items-center js-cd-panel-trigger" data-panel="main">menu03</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse pointer -->
-    <div class="pointer-wrap">
-        <div class="mouse-point user" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 46%; top: 52.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 44%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 45%; top: 50.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 46.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
-        <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
-        <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
-        <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
-        <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user active js-cd-panel-trigger" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window" data-panel="main"></div>
-        <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
-        <div class="mouse-point manager" style="left: 55%; top: 50%;"></div>
-        <div class="mouse-point manager" style="left: 35%; top: 40%;"></div>
-        <div class="mouse-point place-pin" style="left: 48%; top: 55%;"></div>
-        <div class="mouse-point space-marker d-none" style="left: 58%; top: 55%;">
-            <div class="marker-inner">
-                <div class="marker-icon"><span class="material-icons">location_on</span></div>
-                <div class="marker-name">H스퀘어</div>
-            </div>
-        </div>
-    </div>
-    <!-- map zoom/out -->
-    <div class="btn-widget-holder">
-        <ul>
-            <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
-            <li>
-                <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
-                    <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <!-- map container -->
-    <div id="map" style="width:100%;height:100vh;"></div>
-    <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
-    <script>
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(37.54545431995616, 127.2236967393457),
-            level: 1
-        };
-
-        var map = new kakao.maps.Map(container, options);
-        //var mapTypeControl = new kakao.maps.MapTypeControl();
-        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-    </script>
-
+        @@include('./include/platform-tools.html')
     </div>
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-    <!-- Brand -->
-    <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
-        <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
-    </a>
-    <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-            <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab"
-                    aria-controls="sm-projects">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">shop_2</i>
-                    <span class="sidebar-menu-text">앱</span>
-                </a>
-            </li>
-            
-            <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="company_list_all.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">bar_chart</i>
-                    <span class="sidebar-menu-text">통계</span>
-                </a>
-            </li>
-            <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="company.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">manage_search</i>
-                    <span class="sidebar-menu-text">기업정보<br>(기업화면)</span>
-                </a>
-            </li>
-            <li class="sidebar-menu-item" data-title="Company" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="kotra.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">manage_search</i>
-                    <span class="sidebar-menu-text">업체정보<br>(코트라화면)</span>
-                </a>
-            </li>
-            <!-- <li class="sidebar-menu-item" data-title="Maps" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-maps" data-toggle="tab" role="tab"
-                    aria-controls="sm-maps">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">map</i>
-                    <span class="sidebar-menu-text">내지도</span>
-                </a>
-            </li> -->
-            <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-event" data-toggle="tab" role="tab"
-                    aria-controls="sm-event">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">local_mall</i>
-                    <span class="sidebar-menu-text">이벤트</span>
-                </a>
-            </li>
-            <li class="sidebar-menu-item" data-title="Entry" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-entry" data-toggle="tab" role="tab"
-                    aria-controls="sm-entry">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">camera_outdoor</i>
-                    <span class="sidebar-menu-text">출입관리</span>
-                </a>
-            </li>
-            <!-- <li class="sidebar-menu-item" data-title="Visitor" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-visitor" data-toggle="tab" role="tab"
-                    aria-controls="sm-visitor">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">badge</i>
-                    <span class="sidebar-menu-text">방문객</span>
-                </a>
-            </li> -->
-            <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-accident" data-toggle="tab" role="tab"
-                    aria-controls="sm-accident">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">error_outline</i>
-                    <span class="sidebar-menu-text">사고관리</span>
-                </a>
-            </li>
-            <li class="sidebar-menu-item" data-title="Assets" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-assets" data-toggle="tab" role="tab"
-                    aria-controls="sm-assets">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">category</i>
-                    <span class="sidebar-menu-text">자산관리</span>
-                </a>
-            </li>
-            <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-user" data-toggle="tab" role="tab"
-                    aria-controls="sm-user">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">person_search</i>
-                    <span class="sidebar-menu-text">사용자</span>
-                </a>
-            </li>
-            <!-- <li class="sidebar-menu-item" data-title="Setting" data-placement="right" data-container="body"
-                data-boundary="window">
-                <a class="sidebar-menu-button" href="#sm-setting" data-toggle="tab" role="tab"
-                    aria-controls="sm-setting">
-                    <i
-                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">miscellaneous_services</i>
-                    <span class="sidebar-menu-text">설정</span>
-                </a>
-            </li> -->
-        </ul>
-    </div>
-</div>
+            @@include('./include/platform-side-menu.html')
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
                     <div class="tab-pane sm-search" id="sm-search">
@@ -1325,8 +322,55 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane sm-graph active" id="sm-graph">
+                        <!-- 프로젝트 등록 -->
+                        <div class="graph-inner">
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <!-- <a href="project_board.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a> -->
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">통계</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="board-title">
+                                    <p>프로젝트의 모든 그래프를 확인하실 수 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <ul class="dot-list">
+                                    <li><a href="#n" class="active"><span></span> 전체</a></li>
+                                    <li><a href="#n" class=""><span></span> SOYNET</a></li>
+                                    <li><a href="#n" class=""><span></span> Testworks</a></li>
+                                    <li><a href="#n" class=""><span></span> Coconut Silo</a></li>
+                                    <li><a href="#n" class=""><span></span> WATA Inc.</a></li>
+                                    <li><a href="#n" class=""><span></span> Asleep</a></li>
+                                    <li><a href="#n" class=""><span></span> AIMBROAD</a></li>
+                                    <li><a href="#n" class=""><span></span> Point Mobile Co., Ltd.</a></li>
+                                    <li><a href="#n" class=""><span></span> Global Coding Research, LTD</a></li>
+                                    <li><a href="#n" class=""><span></span> GeniRobot Co., Ltd.</a></li>
+                                    <li><a href="#n" class=""><span></span> Contela Inc.</a></li>
+                                    <li><a href="#n" class=""><span></span> UBCS Co., Ltd.</a></li>
+                                    <li><a href="#n" class=""><span></span> Philko International Inc.</a></li>
+                                    <li><a href="#n" class=""><span></span> PURIUM</a></li>
+                                    <li><a href="#n" class=""><span></span> MAIN INFO</a></li>
+                                    <li><a href="#n" class=""><span></span> HnB Genomics Co.,Ltd</a></li>
+                                    <li><a href="#n" class=""><span></span> The Little Cat</a></li>
+                                    <li><a href="#n" class=""><span></span> 12CM</a></li>
+                                    <li><a href="#n" class=""><span></span> CT5 Inc.</a></li>
+                                    <li><a href="#n" class=""><span></span> EHI CO.,LTD.</a></li>
+                                    <li><a href="#n" class=""><span></span> Gooroomee Inc.</a></li>
+                                    <li><a href="#n" class=""><span></span> Seerslab Inc</a></li>
+                                    <li><a href="#n" class=""><span></span> 4DREPLAY</a></li>
+                                    <li><a href="#n" class=""><span></span> Elvisiontech</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane sm-maps" id="sm-maps">
-                        <!-- 맵 리스트 -->
+                        <!-- 프로젝트 리스트 -->
                         <div class="maps-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center py-4">
                                 <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
@@ -1606,7 +650,8 @@
                                             </a>
                                             <div class="flex list-els">
                                                 <a class="card-title" href="event_board.html">이벤트 A</a>
-                                                <div class="card-subtitle text-50"><span class="badge badge-accent">N</span> 2021.03.01</div>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-accent">N</span> 2021.03.01</div>
                                             </div>
                                         </div>
                                         <div class="dropdown">
@@ -1828,7 +873,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-accident active" id="sm-accident">
+                    <div class="tab-pane sm-accident" id="sm-accident">
                         <!-- 사고관리 리스트 -->
                         <div class="accident-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
@@ -1968,13 +1013,13 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="contents-tab the-num03 nav mb-4" role="tablist">
-                                    <a href="#tab05" class="" data-toggle="tab" role="tab" aria-selected="true">
+                                    <a href="#tab05" class="active" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>정보</span></span>
                                     </a>
                                     <a href="#tab06" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>메세지</span></span>
                                     </a>
-                                    <a href="#tab07" class="active" data-toggle="tab" role="tab" aria-selected="false">
+                                    <a href="#tab07" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>동선추적</span></span>
                                     </a>
                                 </div>
@@ -2024,7 +1069,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-content">
-                                    <div id="tab05" class="tab-pane" role="tabpanel">
+                                    <div id="tab05" class="tab-pane active" role="tabpanel">
                                         <div class="user-info">
                                             <div class="p-16pt">
                                                 <dl class="d-flex align-items-center">
@@ -2063,7 +1108,7 @@
                                                     <textarea class="form-control" name="comment" id="form02" rows="3" placeholder="내용을 입력해 주세요." style="margin-top: 0px; margin-bottom: 0px; height: 148px; resize: none;"></textarea>
                                                     <div class="d-flex p-2">
                                                         <span class="">1/1000</span>
-                                                        <a href="#n">메세지 전송</a>
+                                                        <a href="#n" class="disabled">메세지 전송</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2072,7 +1117,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="tab07" class="tab-pane active" role="tabpanel">
+                                    <div id="tab07" class="tab-pane" role="tabpanel">
                                         <div class="route-list mb-4">
                                             <ul class="route-user01">
                                                 <li class="line-blue current">
@@ -2084,7 +1129,7 @@
                                                         <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
                                                     </div>
                                                 </li>
-                                                <li class="line-blue">
+                                                <li class="line-blue active">
                                                     <div class="route-inner">
                                                         <div class="route-title">
                                                             <span class="time">11:55</span>
@@ -2127,6 +1172,477 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane sm-company" id="sm-company">
+                        <!-- 프로젝트 등록 -->
+                        <div class="company-inner">
+                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
+                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                                        <h3 class="mb-0">업체정보</h3>
+                                        <p class="text-70 mb-0">참가업체 리스트입니다.</p>
+                                    </div>
+                                </div>
+                                <div class="row" role="tablist">
+                                    <div class="col-auto">
+                                        <a href="company_write.html" class="btn btn-outline-dark">업체등록</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="form-group">
+                                    <label class="form-label">구분</label>
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="전체">전체</option>
+                                        <option value="AI / Big Data">AI / Big Data</option>
+                                        <option value="Edtech">Edtech</option>
+                                        <option value="Telecommunications">Telecommunications</option>
+                                        <option value="IoT / Living">IoT / Living</option>
+                                        <option value="Media / AR">Media / AR</option>
+                                    </select>
+                                </div>
+                                <div class="list-group row-list list-group-flush mb-4">
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0020_soynet.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">SOYNET</a>
+                                                <div class="card-subtitle text-50"><small>AI / Big Data</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0018_testworks.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Testworks</a>
+                                                <div class="card-subtitle text-50"><small>AI / Big Data</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0007_coconut-silo.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Coconut Silo</a>
+                                                <div class="card-subtitle text-50"><small>AI / Big Data</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0009_wata.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">WATA Inc.</a>
+                                                <div class="card-subtitle text-50"><small>AI / Big Data</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0011_asleep.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Asleep</a>
+                                                <div class="card-subtitle text-50"><small>AI / Big Data</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0019_aimbroad.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">AIMBROAD</a>
+                                                <div class="card-subtitle text-50"><small>AI / Big Data</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0017_pointmobile.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Point Mobile Co., Ltd.</a>
+                                                <div class="card-subtitle text-50"><small>AI / Big Data</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0014_GCR.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Global Coding Research, LTD</a>
+                                                <div class="card-subtitle text-50"><small>Edtech</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0008_Genirobot.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">GeniRobot Co., Ltd.</a>
+                                                <div class="card-subtitle text-50"><small>Edtech</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0001_contela.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Contela Inc.</a>
+                                                <div class="card-subtitle text-50"><small>Telecommunications</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0003_ubcs.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">UBCS Co., Ltd.</a>
+                                                <div class="card-subtitle text-50"><small>Telecommunications</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0015_philco.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Philko International Inc.</a>
+                                                <div class="card-subtitle text-50"><small>IoT / Living</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0016_purium.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">PURIUM</a>
+                                                <div class="card-subtitle text-50"><small>IoT / Living</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0012_main-info.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">MAIN INFO</a>
+                                                <div class="card-subtitle text-50"><small>IoT / Living</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0010_hnb-genomics.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">HnB Genomics Co.,Ltd</a>
+                                                <div class="card-subtitle text-50"><small>IoT / Living</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0013_The-little-cat.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">The Little Cat</a>
+                                                <div class="card-subtitle text-50"><small>IoT / Living</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0004_12cm.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">12CM</a>
+                                                <div class="card-subtitle text-50"><small>IoT / Living</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0006_CT5.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">CT5 Inc.</a>
+                                                <div class="card-subtitle text-50"><small>IoT / Living</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0002_ehi.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">EHI CO.,LTD.</a>
+                                                <div class="card-subtitle text-50"><small>IoT / Living</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0021_gooroomee.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Gooroomee Inc.</a>
+                                                <div class="card-subtitle text-50"><small>Media / AR</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/Seerslab_g.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Seerslab Inc</a>
+                                                <div class="card-subtitle text-50"><small>Media / AR</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0000_4d-replay.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">4DREPLAY</a>
+                                                <div class="card-subtitle text-50"><small>Media / AR</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="company_board.html" class="avatar mr-12pt">
+                                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0005_eivision.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="company_board.html">Elvisiontech</a>
+                                                <div class="card-subtitle text-50"><small>Media / AR</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="pagination justify-content-center pagination-xsm m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1">
+                                            <span>1</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2">
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -2341,7 +1857,7 @@
                         <div class="container-fluid">
                             <div class="form-group">
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option01">자동업데이트</label>
+                                    <label class="form-label mb-0" for="option03">자동업데이트</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option03"
@@ -2351,7 +1867,7 @@
                                     </div>
                                 </div>
                                 <div class="set-list">
-                                    <label class="form-label mb-0" for="option02">옵션2</label>
+                                    <label class="form-label mb-0" for="option04">옵션2</label>
                                     <div class="control-cover">
                                         <div class="custom-control custom-checkbox-toggle ml-8pt">
                                             <input checked="" type="checkbox" id="option04"
@@ -2378,139 +1894,468 @@
         </div>
     </div>
     <!-- // END drawer -->
+    <div class="sidebar-depth" data-perfect-scrollbar>
+        <a href="#n" class="sidebar-depth-close"><span class="material-icons">close</span></a>
+        <div class="sidebar-depth-wrap p-0">
+            <!-- <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                <div class="flex title-row">
+                    <h3 class="mb-0">그래프 메뉴01 목록</h3>
+                    <small class="text-muted text-headings text-uppercase"><strong class="text-accent">6개</strong>의 데이터가 등록되어 있습니다.</small>
+                </div>
+                
+                <form class="form-inline ml-4">
+                    <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
+                    <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
+                </form>
+            </div> -->
+
+            <div class="mdk-header-layout__content page-content">
+                <div id="dot-bg" class="recent-section">
+                    <div class="container page__container">
+                        <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                            <div class="flex title-row">
+                                <h3 class="d-flex align-items-center mb-0">한국관 방문자 통계</h3>
+                            </div>
+                            <div class="sort-wrap">
+                                <a href="#n" class="sort-item active">6/28</a>
+                                <a href="#n" class="sort-item">6/29</a>
+                                <a href="#n" class="sort-item">6/30</a>
+                                <a href="#n" class="sort-item">7/1</a>
+                            </div>
+                        </div>
+                        <div class="visitors-chart">
+
+                            <div class="cell">
+                                <ul class="card box-list mb-0">
+                                    <li>
+                                        <em>239</em>
+                                        <p>Visitors</p>
+                                    </li>
+                                    <li>
+                                        <em>57</em>
+                                        <p>Visitors</p>
+                                    </li>
+                                    <li>
+                                        <em>677</em>
+                                        <p>Visitors</p>
+                                    </li>
+                                    <li>
+                                        <em>123</em>
+                                        <p>Visitors</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cell">
+                                <div class="card card-group-row__card mb-0">
+                                    <div class="card-body d-flex flex-row align-items-center flex-0">
+                                        <div class="h2 mb-0 mr-3">25%</div>
+                                        <div class="flex">
+                                            <p class="card-title">방문자 분포</p>
+                                            <div class="card-subtitle text-50 d-flex align-items-center">어제보다 1.9% <i
+                                                    class="material-icons text-accent icon-16pt ml-4pt">keyboard_arrow_up</i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3 align-self-start">
+                                            <div class="dropdown mb-2">
+                                                <a href="" class="dropdown-toggle" data-toggle="dropdown"
+                                                    data-caret="false"><i
+                                                        class="material-icons text-50">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="" class="dropdown-item">View report</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="row align-items-center">
+                                            <div class="col-8">
+                                                <div class="chart" style="height: 200px;">
+                                                    <div
+                                                        class="text-center fullbleed d-flex align-items-center justify-content-center flex-column z-0">
+                                                        <h2 class="m-0">25%</h2>
+                                                        <strong>Visitors</strong>
+                                                    </div>
+                                                    <canvas class="chart-canvas position-relative z-1"
+                                                        id="attendanceDoughnutChart"
+                                                        data-chart-legend="#attendanceDoughnutChartLegend"
+                                                        data-chart-line-background-color="primary;accent;gray.700;gray">
+                                                        <span style="font-size: 1rem;"
+                                                            class="text-muted"><strong>Attendance</strong> doughnut
+                                                            chart goes here.</span>
+                                                    </canvas>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="attendanceDoughnutChartLegend" class="chart-legend chart-legend--vertical m-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="card card-group-row__card mb-0">
+                                    <div class="card-body d-flex flex-row align-items-center flex-0">
+                                        <div class="h2 mb-0 mr-3">677</div>
+                                        <div class="flex">
+                                            <div class="card-title">총방문자</div>
+                                            <div class="card-subtitle text-50 d-flex align-items-center">어제보다 2.6% <i
+                                                    class="material-icons text-accent icon-16pt ml-4pt">keyboard_arrow_up</i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3 align-self-start">
+                                            <div class="dropdown mb-2">
+                                                <a href="" class="dropdown-toggle" data-toggle="dropdown"
+                                                    data-caret="false"><i
+                                                        class="material-icons text-50">more_horiz</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="" class="dropdown-item">View report</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body flex-0 d-none">
+                                        <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
+                                            <span class="flex text-body">Online Store</span>
+                                            <span class="mx-3">&dollar;50.99</span>
+                                            <span class="d-flex align-items-center"><i
+                                                    class="material-icons text-success icon-16pt mr-1">keyboard_arrow_up</i>
+                                                3.2%</span>
+                                        </small>
+                                        <small class="d-flex align-items-center font-weight-bold text-muted">
+                                            <span class="flex text-body">Facebook</span>
+                                            <span class="mx-3">&dollar;32.00</span>
+                                            <span class="d-flex align-items-center"><i
+                                                    class="material-icons text-danger icon-16pt mr-1">keyboard_arrow_down</i>
+                                                7.0%</span>
+                                        </small>
+                                    </div>
+                                    <div
+                                        class="card-body text-muted flex d-flex flex-column align-items-center justify-content-center">
+                                        <div class="chart w-100" style="height: 200px;">
+                                            <canvas class="chart-canvas js-update-chart-line js-update-chart-area"
+                                                id="totalSalesChart" data-chart-legend="#totalSalesChartLegend"
+                                                data-chart-line-background-color="gradient:primary"
+                                                data-chart-line-background-opacity="0.24"
+                                                data-chart-line-border-color="primary" data-chart-prefix="$"
+                                                data-chart-dark-mode="false">
+                                                <span style="font-size: 1rem;"><strong>Total Sales</strong> chart goes
+                                                    here.</span>
+                                            </canvas>
+                                        </div>
+                                        <div id="totalSalesChartLegend"
+                                            class="chart-legend chart-legend--horizontal mt-16pt"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-section">
+                    <div class="container page__container">
+                        <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                            <div class="flex title-row">
+                                <h3 class="d-flex align-items-center mb-0 ">한국관 방문자 목록</h3>
+                                <!-- <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 공간이 등록되어 있습니다.</small> -->
+                            </div>
+                            <div class="sort-wrap d-none">
+                                <a href="#n" class="sort-item active">일일방문</a>
+                                <a href="#n" class="sort-item">주간방문</a>
+                                <a href="#n" class="sort-item">월간방문</a>
+                            </div>
+                            <!-- <a href="project_write.html" class="btn btn-accent ml-4">업체등록</a> -->
+                        </div>
+                        <table class="table mb-5 table-nowrap">
+                            <colgroup>
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><a href="javascript:void(0)" class="sort"
+                                            data-sort="js-lists-values-company">회사명</a></th>
+                                    <th><a href="javascript:void(0)" class="sort"
+                                            data-sort="js-lists-values-booth">부스번호</a></th>
+                                    <th><a href="javascript:void(0)" class="sort"
+                                            data-sort="js-lists-values-field">분야</a></th>
+                                    <th><a href="javascript:void(0)" class="sort"
+                                            data-sort="js-lists-values-contact">연락처</a></th>
+                                    <th><a href="javascript:void(0)" class="sort"
+                                            data-sort="js-lists-values-email">이메일</a></th>
+                                    <th>QR인쇄</th>
+                                </tr>
+                            </thead>
+                            <tbody class="list" id="projects">
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
+                                    <td>A-3</td>
+                                    <td>전자</td>
+                                    <td>02-123-4567</td>
+                                    <td>gd.hong@samsung.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
+                                    <td>A-1</td>
+                                    <td>유통</td>
+                                    <td>02-123-4567</td>
+                                    <td>kim.js@lg.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SK</a></td>
+                                    <td>A-2</td>
+                                    <td>제조</td>
+                                    <td>02-123-4567</td>
+                                    <td>jeong.sh@sk.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">Hyundai</a></td>
+                                    <td>A-5</td>
+                                    <td>제조</td>
+                                    <td>02-123-4567</td>
+                                    <td>lee.jongkook@hyundai.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
+                                    <td>A-3</td>
+                                    <td>전자</td>
+                                    <td>02-123-4567</td>
+                                    <td>gd.hong@samsung.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
+                                    <td>A-1</td>
+                                    <td>유통</td>
+                                    <td>02-123-4567</td>
+                                    <td>kim.js@lg.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
+                                    <td>A-3</td>
+                                    <td>전자</td>
+                                    <td>02-123-4567</td>
+                                    <td>gd.hong@samsung.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
+                                    <td>A-1</td>
+                                    <td>유통</td>
+                                    <td>02-123-4567</td>
+                                    <td>kim.js@lg.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SK</a></td>
+                                    <td>A-2</td>
+                                    <td>제조</td>
+                                    <td>02-123-4567</td>
+                                    <td>jeong.sh@sk.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">Hyundai</a></td>
+                                    <td>A-5</td>
+                                    <td>제조</td>
+                                    <td>02-123-4567</td>
+                                    <td>lee.jongkook@hyundai.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
+                                    <td>A-3</td>
+                                    <td>전자</td>
+                                    <td>02-123-4567</td>
+                                    <td>gd.hong@samsung.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
+                                    <td>A-1</td>
+                                    <td>유통</td>
+                                    <td>02-123-4567</td>
+                                    <td>kim.js@lg.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <ul class="pagination justify-content-center pagination-xsm m-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>Prev</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 1">
+                                    <span>1</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 2">
+                                    <span>2</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>Next</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="empty-state d-none">
+                            <p class="empty-icon m-0"><i class="far fa-building"></i></p>
+                            <em class="empty-txt mb-4">아직 등록한 건물이 없습니다.</em>
+                            <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
-
-    <!-- alert -->
-    <div class="map-alert-container"> 
-        <div class="map-alert alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">coronavirus</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>감염병이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+<!-- Modal -->
+<div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCode" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="qrCode">QR발행</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
                 </button>
             </div>
-        </div>
-        <div class="map-alert alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">warning</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>긴급상황이 발생했습니.</strong>
+            <div class="modal-body">
+                <div class="qr-cover">
+                    <img src="images/qr_test.webp" class="img-qr-code" alt="">
+                    <p><a href="#n" class="btn btn-link text-accent">QR코드 인쇄</a></p>
                 </div>
             </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_hospital</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>응급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert alert bg-accent text-white fade show" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_fire_department</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>화재가 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
             </div>
         </div>
     </div>
+</div>
 
-    
-    <!-- jQuery -->
-    <script src="vendor/jquery.min.js"></script>
 
-    <!-- Bootstrap -->
-    <script src="vendor/popper.min.js"></script>
-    <script src="vendor/bootstrap.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/vanta.dots.min.js"></script>
+<script>
+    VANTA.DOTS({
+        el: "#dot-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color2: 0xffffff,
+        backgroundColor: 0xf9f9f9,
+        size: 5.00,
+        spacing: 40.00
+    })
+</script>
 
-    <!-- Perfect Scrollbar -->
-    <script src="vendor/perfect-scrollbar.min.js"></script>
 
-    <!-- DOM Factory -->
-    <script src="vendor/dom-factory.js"></script>
+<!-- jQuery -->
+<script src="vendor/jquery.min.js"></script>
 
-    <!-- MDK -->
-    <script src="vendor/material-design-kit.js"></script>
+<!-- Bootstrap -->
+<script src="vendor/popper.min.js"></script>
+<script src="vendor/bootstrap.min.js"></script>
 
-    <!-- App JS -->
-    <script src="js/app.js"></script>
+<!-- Perfect Scrollbar -->
+<script src="vendor/perfect-scrollbar.min.js"></script>
 
-    <!-- Preloader -->
-    <script src="js/preloader.js"></script>
+<!-- DOM Factory -->
+<script src="vendor/dom-factory.js"></script>
 
-    <!-- Range Slider -->
-    <script src="vendor/ion.rangeSlider.min.js"></script>
-    <script src="js/ion-rangeslider.js"></script>
+<!-- MDK -->
+<script src="vendor/material-design-kit.js"></script>
 
-    <!-- Quill -->
-    <script src="vendor/quill.min.js"></script>
-    <script src="js/quill.js"></script>
+<!-- App JS -->
+<script src="js/app.js"></script>
 
-    <!-- Global Settings -->
-    <script src="js/settings.js"></script>
+<!-- Preloader -->
+<script src="js/preloader.js"></script>
 
-    <!-- DateRangePicker -->
-    <script src="vendor/moment.min.js"></script>
-    <script src="vendor/moment-range.js"></script>
+<!-- Global Settings -->
+<script src="js/settings.js"></script>
 
-    <!-- Chart.js -->
-    <script src="vendor/Chart.min.js"></script>
-    <script src="js/chartjs.js"></script>
-    <script src="js/chartjs-rounded-bar.js"></script>
+<!-- Moment.js -->
+<script src="vendor/moment.min.js"></script>
+<script src="vendor/moment-range.js"></script>
 
-    <!-- Chart.js Samples -->
-    <script src="js/page.ecommerce.js"></script>
+<!-- Flatpickr -->
+<script src="vendor/flatpickr/flatpickr.min.js"></script>
+<script src="js/flatpickr.js"></script>
 
-    <!-- Flatpickr -->
-    <script src="vendor/flatpickr/flatpickr.min.js"></script>
-    <script src="js/flatpickr.js"></script>
+<!-- Chart.js -->
+<script src="vendor/Chart.min.js"></script>
+<script src="js/chartjs.js"></script>
+<script src="js/chartjs-rounded-bar.js"></script>
 
-    <script src="vendor/daterangepicker.js"></script>
-    <script src="js/daterangepicker.js"></script>
+<!-- Chart.js Samples -->
+<script src="js/page.hr-dashboard.js"></script>
 
-    <!-- jQuery Mask Plugin -->
-    <script src="vendor/jquery.mask.min.js"></script>
+<!-- Chart.js Samples -->
+<script src="js/page.ecommerce.js"></script>
 
-    <!-- modernizr.js -->
-    <script src="js/modernizr.js"></script>
+<!-- List.js -->
+<script src="vendor/list.min.js"></script>
+<script src="js/list.js"></script>
 
-    <!-- Sidebar Mini JS -->
-    <script src="js/sidebar-mini.js"></script>
-    <script>
+
+<!-- modernizr.js -->
+<script src="js/modernizr.js"></script>
+
+<!-- Tables -->
+<script src="js/toggle-check-all.js"></script>
+<script src="js/check-selected-row.js"></script>
+
+<script src="js/custom.js"></script>
+<script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
+
+
+
+<!-- Sidebar Mini JS -->
+<script src="js/sidebar-mini.js"></script>
+<script>
         (function () {
             'use strict';
             // ENABLE sidebar menu tabs
@@ -2523,25 +2368,9 @@
                 $(e.target).parent().addClass('active')
             })
         })()
-    </script>
+</script>
 
-    <!-- Dragula -->
-    <script src="vendor/dragula/dragula.min.js"></script>
 
-    <!-- Drag & Drop Page -->
-    <script src="js/dragula.js"></script>
-
-    <!-- List.js -->
-    <script src="vendor/list.min.js"></script>
-    <script src="js/list.js"></script>
-
-    <!-- Tables -->
-    <script src="js/toggle-check-all.js"></script>
-    <script src="js/check-selected-row.js"></script>
-
-    <script src="js/custom.js"></script>
-    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
-    
 
 
 </body>

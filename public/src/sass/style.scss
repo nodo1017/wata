@@ -6395,8 +6395,6 @@ dl.space-id{
     /* smooth scrolling on touch devices */
     -webkit-overflow-scrolling: touch;
     .panel__board{
-        h5{
-        }
         .cell{
             ul{
                 list-style-type: none;
@@ -6444,6 +6442,11 @@ dl.space-id{
         input.form-control{
             width: 24px;
             position: absolute;
+        }
+    }
+    table{
+        th, td{
+            text-align: center;
         }
     }
 }
