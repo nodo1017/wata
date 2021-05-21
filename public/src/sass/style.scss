@@ -2085,6 +2085,15 @@ platform map
     margin-top: 64px;
     z-index: 0;
     background-color: #fff;
+    a.sidebar-depth-close{
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        z-index: 2;
+        span{
+            font-size: 4rem;
+        }
+    }
     .sidebar-depth-wrap{
         position: relative;
         padding: 3rem;
@@ -4975,6 +4984,10 @@ map options
         margin: 0;
         margin-top: 1rem;
         width: 350px;
+        display: flex;
+        &:not(.show){
+            display: none;
+        }
         button{
             float: none;
             margin-left: 1rem;
@@ -6400,7 +6413,7 @@ dl.space-id{
                     justify-content: center;
                     border-bottom: 1px solid $border-color;
                     em{
-                        font-size: 2.75rem;
+                        font-size: 2rem;
                         color: $identity;
                         font-weight: 600;
                         font-style: normal;
@@ -6419,6 +6432,10 @@ dl.space-id{
                 }
             }
         }
+    }
+    .badge{
+        border-radius: 100px;
+        font-weight: 600;
     }
     .flatpickr-wrapper{
         a{
@@ -6447,7 +6464,6 @@ dl.space-id{
 }
 .page-content{
     .bs-popover-left{
-        left: -5rem !important;
     }
 }
 .page-separator{

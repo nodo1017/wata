@@ -467,7 +467,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-graph active" id="sm-graph">
+                    <div class="tab-pane sm-graph" id="sm-graph">
                         <!-- 프로젝트 등록 -->
                         <div class="graph-inner">
                             <div class="container-fluid py-4">
@@ -1178,13 +1178,13 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="contents-tab the-num03 nav mb-4" role="tablist">
-                                    <a href="#tab05" class="" data-toggle="tab" role="tab" aria-selected="true">
+                                    <a href="#tab05" class="active" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>정보</span></span>
                                     </a>
                                     <a href="#tab06" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>메세지</span></span>
                                     </a>
-                                    <a href="#tab07" class="active" data-toggle="tab" role="tab" aria-selected="false">
+                                    <a href="#tab07" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>동선추적</span></span>
                                     </a>
                                 </div>
@@ -1236,7 +1236,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-content">
-                                    <div id="tab05" class="tab-pane" role="tabpanel">
+                                    <div id="tab05" class="tab-pane active" role="tabpanel">
                                         <div class="user-info">
                                             <div class="p-16pt">
                                                 <dl class="d-flex align-items-center">
@@ -1289,7 +1289,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="tab07" class="tab-pane active" role="tabpanel">
+                                    <div id="tab07" class="tab-pane" role="tabpanel">
                                         <div class="route-list mb-4">
                                             <ul class="route-user01">
                                                 <li class="line-blue current">
@@ -1353,7 +1353,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-company" id="sm-company">
+                    <div class="tab-pane sm-company active" id="sm-company">
                         <!-- 프로젝트 등록 -->
                         <div class="company-inner">
                             <div class="container-fluid d-flex flex-md-row align-items-center py-4">
@@ -2069,6 +2069,7 @@
     </div>
     <!-- // END drawer -->
     <div class="sidebar-depth" data-perfect-scrollbar>
+        <a href="kotra.html" class="sidebar-depth-close"><span class="material-icons">close</span></a>
         <div class="sidebar-depth-wrap p-0">
             <!-- <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                 <div class="flex title-row">
@@ -2087,7 +2088,7 @@
                     <div class="container page__container">
                         <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                             <div class="flex title-row">
-                                <h3 class="d-flex align-items-center mb-0">방문통계</h3>
+                                <h3 class="d-flex align-items-center mb-0">한국관 방문자 통계</h3>
                             </div>
                             <div class="sort-wrap">
                                 <a href="#n" class="sort-item active">6/28</a>
@@ -2227,7 +2228,7 @@
                     <div class="container page__container">
                         <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                             <div class="flex title-row">
-                                <h3 class="d-flex align-items-center mb-0 ">방문자 리스트</h3>
+                                <h3 class="d-flex align-items-center mb-0 ">한국관 방문자 목록</h3>
                                 <!-- <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 공간이 등록되어 있습니다.</small> -->
                             </div>
                             <div class="sort-wrap d-none">
@@ -2262,6 +2263,66 @@
                                 </tr>
                             </thead>
                             <tbody class="list" id="projects">
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
+                                    <td>A-3</td>
+                                    <td>전자</td>
+                                    <td>02-123-4567</td>
+                                    <td>gd.hong@samsung.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
+                                    <td>A-1</td>
+                                    <td>유통</td>
+                                    <td>02-123-4567</td>
+                                    <td>kim.js@lg.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SK</a></td>
+                                    <td>A-2</td>
+                                    <td>제조</td>
+                                    <td>02-123-4567</td>
+                                    <td>jeong.sh@sk.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">Hyundai</a></td>
+                                    <td>A-5</td>
+                                    <td>제조</td>
+                                    <td>02-123-4567</td>
+                                    <td>lee.jongkook@hyundai.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
+                                    <td>A-3</td>
+                                    <td>전자</td>
+                                    <td>02-123-4567</td>
+                                    <td>gd.hong@samsung.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
+                                    <td>A-1</td>
+                                    <td>유통</td>
+                                    <td>02-123-4567</td>
+                                    <td>kim.js@lg.com</td>
+                                    <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
+                                            data-target="#qrCodeModal">QR인쇄</a></td>
+                                </tr>
+
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
                                     <td>A-3</td>

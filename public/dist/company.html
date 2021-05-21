@@ -909,13 +909,394 @@
         //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
     </script>
 
+        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible">
+            <a href="#0" class="cd-panel__close js-cd-close">Close</a>
+    
+            <div class="cd-panel__container">
+                <div class="cd-panel__content p-4" data-perfect-scrollbar>
+    
+                    <div class="panel__board">
+                        <div class="d-flex flex-row align-items-center mb-0 py-4">
+                            <div class="flex">
+                                <h5 class="d-flex align-items-center mb-0">방문자 통계</h5>
+                            </div>
+                            <div class="flatpickr-wrapper d-none">
+                                <div id="recent_orders_date"
+                                     data-toggle="flatpickr"
+                                     data-flatpickr-wrap="true"
+                                     data-flatpickr-mode="range"
+                                     data-flatpickr-alt-format="d/m/Y"
+                                     data-flatpickr-date-format="d/m/Y">
+                                     <a href="javascript:void(0)" class="d-flex" data-toggle>
+                                        <span class="material-icons-outlined">edit_calendar</span>
+                                    </a>
+                                    <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021" data-input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <ul>
+                                <li>
+                                    <p>Visitors</p>
+                                    <em>239</em>
+                                </li>
+                                <li>
+                                    <p>Visitors</p>
+                                    <em>57</em>
+                                </li>
+                                <li>
+                                    <p>Visitors</p>
+                                    <em>677</em>
+                                </li>
+                                <li>
+                                    <p>Visitors</p>
+                                    <em>123</em>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="panel__board">
+                        <div class="d-flex flex-row align-items-center mb-0 py-4">
+                            <div class="flex">
+                                <h5 class="d-flex align-items-center mb-0">방문자 목록</h5>
+                            </div>
+                        </div>
+                        <table class="table mb-4 table-nowrap">
+                            <colgroup>
+                                <col width="32%">
+                                <col width="32%">
+                                <col width="32%">
+                                <col wudth="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><a href="javascript:void(0)">ID</a></th>
+                                    <th><a href="javascript:void(0)">회사명</a></th>
+                                    <th><a href="javascript:void(0)">국가</a></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1241</a>
+                                        <div class="popoverContainer d-none">
+                                            <h6 class="mb-2">상세정보</h6>
+                                            <div class="list-group list-group-flush list-popover">
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문자 명 ID</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">A-1231</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">성별</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">남성</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">회사명</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">SAMSUNG</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">국가</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">한국</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문날짜</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2021.06.28</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문횟수</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>SAMSUNG</td>
+                                    <td>한국</td>
+                                    <td><span class="badge badge-accent">N</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1242</a>
+                                        <div class="popoverContainer d-none">
+                                            <h6 class="mb-2">상세정보</h6>
+                                            <div class="list-group list-group-flush list-popover">
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문자 명 ID</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">A-1232</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">성별</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">남성</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">회사명</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">Apple</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">국가</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">미국</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문날짜</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2021.06.28</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문횟수</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Apple</td>
+                                    <td>미국</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1242</a>
+                                        <div class="popoverContainer d-none">
+                                            <h6 class="mb-2">상세정보</h6>
+                                            <div class="list-group list-group-flush list-popover">
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문자 명 ID</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">A-1232</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">성별</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">남성</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">회사명</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">Apple</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">국가</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">미국</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문날짜</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2021.06.28</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문횟수</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Apple</td>
+                                    <td>미국</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1242</a>
+                                        <div class="popoverContainer d-none">
+                                            <h6 class="mb-2">상세정보</h6>
+                                            <div class="list-group list-group-flush list-popover">
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문자 명 ID</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">A-1232</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">성별</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">남성</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">회사명</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">Apple</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">국가</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">미국</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문날짜</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2021.06.28</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문횟수</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Apple</td>
+                                    <td>미국</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1242</a>
+                                        <div class="popoverContainer d-none">
+                                            <h6 class="mb-2">상세정보</h6>
+                                            <div class="list-group list-group-flush list-popover">
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문자 명 ID</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">A-1232</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">성별</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">남성</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">회사명</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">Apple</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">국가</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">미국</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문날짜</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2021.06.28</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item">
+                                                    <div class="d-flex popover-title">
+                                                        <span class="text-50">방문횟수</span>
+                                                    </div>
+                                                    <div class="d-flex popover-content">
+                                                        <span class="text-headings">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Apple</td>
+                                    <td>미국</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="my-32pt">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a href="company_data.html" class="btn btn-accent ml-0">통계 자세히보기</a>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                </div> <!-- cd-panel__content -->
+            </div> <!-- cd-panel__container -->
+        </div> <!-- cd-panel -->
     </div>
-    <!-- drawer -->
-    <!-- <div class="navbar-toggler-box">
-        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-    </div> -->
     <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
         <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
@@ -1150,19 +1531,19 @@
                                 </div>
                             </div>
                             <div class="container-fluid">
-                                <div class="contents-tab nav mb-4" role="tablist">
+                                <div class="contents-tab nav mb-4 the-num02" role="tablist">
                                     <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>공간</span></span>
                                     </a>
-                                    <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                    <!-- <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>앱키</span></span>
-                                    </a>
+                                    </a> -->
                                     <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>통계</span></span>
                                     </a>
-                                    <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                    <!-- <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>팀관리</span></span>
-                                    </a>
+                                    </a> -->
                                 </div>
                                 <div class="tab-content">
                                     <div id="tab01" class="tab-pane active" role="tabpanel">
@@ -1243,11 +1624,40 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div id="tab02" class="tab-pane" role="tabpanel">2
-                                    </div>
+                                    <!-- <div id="tab02" class="tab-pane" role="tabpanel">2
+                                    </div> -->
                                     <div id="tab03" class="tab-pane" role="tabpanel">
-                                        <em class="none-list mb-4">등록한 데이터가 없습니다.</em>
-                                        <div class="list-group block-list mb-4">
+                                        <em class="none-list mb-4 d-none">등록한 데이터가 없습니다.</em>
+                                        <div class="list-card">
+                                            <a href="project_board_graph.html" class="card-cover">
+                                                <div class="media-left mr-12pt">
+                                                    <div class="avatar">
+                                                        <span class="material-icons-round">area_chart</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5>통계</h5>
+                                                    <p>프로젝트의 모든 통계 데이터를 확인하실 수 있습니다.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="list-card">
+                                            <a href="project_board_data.html" class="card-cover">
+                                                <div class="media-left mr-12pt">
+                                                    <div class="avatar">
+                                                        <span class="material-icons-round">notes</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5>데이터</h5>
+                                                    <p>프로젝트의 모든 데이터를 확인하실 수 있습니다.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+
+                                        <div class="list-group block-list mb-4 d-none">
                                             <div class="list-group-item d-flex js-cd-panel-trigger active" data-panel="main">
                                                 <div class="flex d-flex align-items-center mr-16pt">
                                                     <div class="flex">
@@ -1286,11 +1696,34 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="project_board_graph.html" class="btn-row-add mb-4"><i class="material-icons">add</i> 새로운 그래프 추가</a>
+                                        <a href="project_board_graph.html" class="btn-row-add mb-4 d-none"><i class="material-icons">add</i> 새로운 그래프 추가</a>
                                     </div>
-                                    <div id="tab04" class="tab-pane" role="tabpanel">4
+                                    <!-- <div id="tab04" class="tab-pane" role="tabpanel">4
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane sm-graph" id="sm-graph">
+                        <!-- 프로젝트 등록 -->
+                        <div class="graph-inner">
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <!-- <a href="project_board.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a> -->
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">데이터</h3>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="board-title">
+                                    <p>프로젝트의 모든 그래프를 확인하실 수 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <ul class="dot-list">
+                                    <li><a href="#n" class="active"><span></span> 방문자 통계</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1775,102 +2208,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane sm-visitor active" id="sm-visitor">
-                        <div class="visitor-inner">
-                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">방문객 관리</h3>
-                                        <p class="text-70 mb-0">출입관리 페이지입니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <ul class="info-panel info-link">
-                                    <li>
-                                        <a href="entry_total.html">
-                                            <p>인가</p>
-                                            <div class="cell">
-                                                <span class="material-icons">people</span>
-                                                <em><strong>47</strong>명</em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="entry_total.html">
-                                            <p>출근</p>
-                                            <div class="cell">
-                                                <span class="material-icons">how_to_reg</span>
-                                                <em><strong>42</strong>명</em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="entry_total.html">
-                                            <p>지각</p>
-                                            <div class="cell">
-                                                <span class="material-icons">schedule</span>
-                                                <em><strong>1</strong>명</em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="entry_total.html">
-                                            <p>부재</p>
-                                            <div class="cell">
-                                                <span class="material-icons">person_off</span>
-                                                <em><strong>3</strong>명</em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="info-panel none-link">
-                                    <li>
-                                        <p>출입현황</p>
-                                        <div class="cell">
-                                            <span class="material-icons text-accent">expand_less</span>
-                                            <em><strong>89</strong>%</em>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p>평균 근무시간</p>
-                                        <div class="cell">
-                                            <span class="material-icons text-primary">expand_more</span>
-                                            <em><strong>8</strong>h <strong>13</strong>m</em>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="container-fluid d-none">
-                                <div class="user-info">
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2 text-100 font-weight-bolder">인가</dt>
-                                        <dd class="m-0"><a href="entry_total.html">47명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">출근</dt>
-                                        <dd class="m-0"><a href="#n">42명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">지각</dt>
-                                        <dd class="m-0"><a href="#n">1명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">부재</dt>
-                                        <dd class="m-0"><a href="#n">3명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">출입현황</dt>
-                                        <dd class="m-0">89%</dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">평균 근무시간</dt>
-                                        <dd class="m-0">6시간 56분</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="tab-pane sm-accident" id="sm-accident">
                         <!-- 사고관리 리스트 -->
                         <div class="accident-inner">
@@ -2011,13 +2348,13 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="contents-tab the-num03 nav mb-4" role="tablist">
-                                    <a href="#tab05" class="" data-toggle="tab" role="tab" aria-selected="true">
+                                    <a href="#tab05" class="active" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>정보</span></span>
                                     </a>
                                     <a href="#tab06" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>메세지</span></span>
                                     </a>
-                                    <a href="#tab07" class="active" data-toggle="tab" role="tab" aria-selected="false">
+                                    <a href="#tab07" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>동선추적</span></span>
                                     </a>
                                 </div>
@@ -2067,7 +2404,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-content">
-                                    <div id="tab05" class="tab-pane" role="tabpanel">
+                                    <div id="tab05" class="tab-pane active" role="tabpanel">
                                         <div class="user-info">
                                             <div class="p-16pt">
                                                 <dl class="d-flex align-items-center">
@@ -2115,7 +2452,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="tab07" class="tab-pane active" role="tabpanel">
+                                    <div id="tab07" class="tab-pane" role="tabpanel">
                                         <div class="route-list mb-4">
                                             <ul class="route-user01">
                                                 <li class="line-blue current">
@@ -2168,6 +2505,74 @@
                                         <div class="d-flex justify-content-center align-items-center">
                                             <a href="user_movement.html" class="btn btn-link text-accent"><strong>과거 동선 보기</strong></a>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane sm-company active" id="sm-company">
+                        <div class="company-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex align-items-center">
+                                    <a href="company_list.html" class="pr-2"><i class="material-icons">arrow_back</i></a>
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">업체정보</h3>
+                                    </div>
+                                </div>
+                                <div class="row" role="tablist">
+                                    <div class="col-auto">
+                                        <div class="dropdown">
+                                            <a href="project_list.html" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="company-logo">
+                                <img src="https://www.mwc2021korea.com/wp-content/uploads/logotipos_0020_soynet.jpg" alt="">
+                            </div>
+                            <div class="container-fluid contents-view">
+                                <div class="form-group">
+                                    <em class="form-title">SOYNET</em>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventArea">회사소개</label>
+                                    <p class="form-text">AI클라우드 공간인식 시스템</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">산업분류</label>
+                                    <p class="form-text">IT / Solution</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventArea">부스번호</label>
+                                    <p class="form-text">GS-2345</p>
+                                </div>
+                                <div class="form-group">
+                                    <div class="d-flex align-items-center">
+                                        <label class="form-label text-50">업체 QR</label>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img src="images/qr_test.webp" alt="" style="max-width: 150px;">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formFile" class="form-label text-50">등록문서</label>
+                                    <div class="form-row align-items-center">
+                                        <a href="#n" class="btn-file">
+                                            <i class="material-icons">file_download</i> 회사소개서.pptx</a>
+                                        <a href="#n" class="btn-file">
+                                            <i class="material-icons">file_download</i>기술문서.docs</a>
+                                        <a href="#n" class="btn-file">
+                                            <i class="material-icons">file_download</i>사업소개서.docs</a>
+                                    </div>
+                                </div>
+                                <div class="my-32pt d-none">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="company_list.html" class="btn btn-outline-secondary mr-8pt">목록으로</a>
+                                        <a href="company_write.html" class="btn btn-accent ml-0">수정하기</a>
                                     </div>
                                 </div>
                             </div>
@@ -2420,81 +2825,12 @@
             </div>
         </div>
     </div>
-    <!-- // END drawer -->
 </div>
 
 <!-- // END Drawer Layout -->
 
 
-    <!-- alert -->
-    <div class="map-alert-container"> 
-        <div class="map-alert alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">coronavirus</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>감염병이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">warning</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>긴급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert alert bg-accent text-white fade" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_hospital</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>응급상황이 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-        <div class="map-alert alert bg-accent text-white fade show" role="alert">
-            <div class="d-flex align-items-center">
-                <div class="mr-8pt">
-                    <i class="material-icons">local_fire_department</i>
-                </div>
-                <div class="map-alert-title">
-                    <strong>화재가 발생했습니.</strong>
-                </div>
-            </div>
-            <div class="d-flex flex justify-content-end align-items-center">
-                <a href="accident_board.html" class="btn btn-link btn-sm">위치확인</a>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-            </div>
-        </div>
-    </div>
 
-    
     <!-- jQuery -->
     <script src="vendor/jquery.min.js"></script>
 

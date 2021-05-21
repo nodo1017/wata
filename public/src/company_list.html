@@ -571,94 +571,162 @@
                         </div>
                     </div>
                     <div class="tab-pane sm-event" id="sm-event">
-                        <!-- 프로젝트 등록 -->
+                        <!-- 이벤트 리스트 -->
                         <div class="event-inner">
-                            <div class="container-fluid d-flex align-items-center py-4">
-                                <div class="flex d-flex">
-                                    <div class="mr-24pt">
-                                        <h3 class="mb-0">이벤트 등록</h3>
+                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
+                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                                        <h3 class="mb-0">이벤트</h3>
+                                        <p class="text-70 mb-0">현재 진행중인 이벤트 목록입니다.</p>
                                     </div>
                                 </div>
-                                <div class="btn-group">
-                                    <a href="#n" class="btn btn-outline-accent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">기능 선택</a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <div class="dropdown-header"><strong>범위 지정</strong></div>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">highlight_alt</i> 구조물 선택</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">adjust</i> 범위 선택</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">timeline</i> 선 그리기</a>
-                                        <div class="dropdown-divider"></div>
-                                        <div class="dropdown-header"><strong>사용자 지정</strong></div>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">place</i> 관리구역 A</a>
-                                        <a class="dropdown-item" href="#"><i class="material-icons">place</i> 관리구역 B</a>
+                                <div class="row" role="tablist">
+                                    <div class="col-auto">
+                                        <a href="event_write.html" class="btn btn-outline-dark">신규등록</a>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 1. 기능 선택 -->
-                            <!-- <div class="container-fluid">
-                                <em class="none-list">기능선택을 해주세요.</em>
-                                <div class="my-32pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- 2. 정보입력 -->
                             <div class="container-fluid">
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50 essential" for="eventName">이벤트명</label>
-                                    <input type="text" class="form-line" id="eventName" placeholder="이벤트명을 입력해주세요.">
+                                <div class="form-group d-none">
+                                    <label class="form-label">프로젝트 리스트</label>
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="vuejs">전체</option>
+                                        <option value="vuejs">건물 A</option>
+                                        <option value="vuejs">건물 B</option>
+                                    </select>
                                 </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50 essential" for="eventName">기간</label>
-                                    <input id="flatpickrSample02"
-                                           type="hidden"
-                                           class="form-control flatpickr-input"
-                                           data-toggle="flatpickr"
-                                           data-flatpickr-mode="range"
-                                           value="2021-02-01 to 2021-02-28">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50 essential" for="eventArea">구역선택</label>
-                                    <input type="text" class="form-line" id="eventArea" placeholder="구역을 선택해주세요." value="" required="">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50 essential" for="eventTitle">제목</label>
-                                    <input type="text" class="form-line" id="eventTitle" placeholder="제목을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential">내용</label>
-                                    <div style="height: 150px;"
-                                        data-toggle="quill"
-                                        data-quill-placeholder="Quill WYSIWYG editor"
-                                        data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                        <p>Hello World!</p>
-                                        <p>Some initial <strong>bold</strong> text</p>
-                                        <p><br></p>
+                                <div class="list-group row-list list-group-flush mb-4">
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="event_board.html" class="avatar mr-12pt">
+                                                <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="event_board.html">이벤트 A</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-accent">N</span> 2021.03.01</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label for="formFile" class="form-label text-50">파일등록</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 mb-0" for="">설정</label>
-                                    <div class="set-list">
-                                        <label class="form-label mb-0" for="option01">활성화 여부</label>
-                                        <div class="control-cover">
-                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                <input checked="" type="checkbox" id="option03"
-                                                    class="custom-control-input">
-                                                <label class="custom-control-label" for="option03">active</label>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar mr-12pt">
+                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n">이벤트 B</a>
+                                                <div class="card-subtitle text-50">2020.11.21</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <a href="#n" class="avatar mr-12pt">
+                                                <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">이벤트 C</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt deactivate">
+                                            <a href="#n" class="avatar mr-12pt">
+                                                <img src="images/slider04.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n">이벤트 D</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt deactivate">
+                                            <a href="#n" class="avatar mr-12pt">
+                                                <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                            </a>
+                                            <div class="flex list-els">
+                                                <a class="card-title" href="#n">이벤트 E</a>
+                                                <div class="card-subtitle text-50">2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">복사</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="my-32pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="#n" class="btn btn-outline-secondary mr-8pt">취소하기</a>
-                                        <a href="event_done.html" class="btn btn-outline-accent ml-0">등록하기</a>
-                                    </div>
-                                </div>
+                                <ul class="pagination justify-content-center pagination-xsm m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1">
+                                            <span>1</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2">
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -898,13 +966,13 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="contents-tab the-num03 nav mb-4" role="tablist">
-                                    <a href="#tab05" class="" data-toggle="tab" role="tab" aria-selected="true">
+                                    <a href="#tab05" class="active" data-toggle="tab" role="tab" aria-selected="true">
                                         <span class="menu-cover"><span>정보</span></span>
                                     </a>
                                     <a href="#tab06" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>메세지</span></span>
                                     </a>
-                                    <a href="#tab07" class="active" data-toggle="tab" role="tab" aria-selected="false">
+                                    <a href="#tab07" class="" data-toggle="tab" role="tab" aria-selected="false">
                                         <span class="menu-cover"><span>동선추적</span></span>
                                     </a>
                                 </div>
@@ -954,7 +1022,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-content">
-                                    <div id="tab05" class="tab-pane" role="tabpanel">
+                                    <div id="tab05" class="tab-pane active" role="tabpanel">
                                         <div class="user-info">
                                             <div class="p-16pt">
                                                 <dl class="d-flex align-items-center">
@@ -1002,7 +1070,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="tab07" class="tab-pane active" role="tabpanel">
+                                    <div id="tab07" class="tab-pane" role="tabpanel">
                                         <div class="route-list mb-4">
                                             <ul class="route-user01">
                                                 <li class="line-blue current">
