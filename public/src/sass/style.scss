@@ -6209,6 +6209,33 @@ dl.space-id{
 .cd-main-content {
     text-align: center;
 }
+.cd-panel__open{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    a{
+        display: flex;
+        background: url(../images/btn_panel_open.svg) no-repeat;
+        height: 150px;
+        width: 40px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: rgba(255,255,255,0.8);
+        small{
+            font-weight: bold;
+            font-size: .688rem;
+        }
+        &:hover{
+            color: rgba(255,255,255,1);
+            z-index: 3;
+        }
+    }
+}
 .cd-panel {
     position: fixed;
     top: 0;
