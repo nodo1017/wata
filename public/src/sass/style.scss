@@ -267,6 +267,7 @@ input, select{
         background: linear-gradient(to right, #ff5957, #301ae2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-clip: text;
         i{
             vertical-align: middle;
         }
@@ -1515,14 +1516,11 @@ platform Flow
                     width: 100%;
                 }
             }
-
             a.go-platform {
                 display: inline-flex;
                 font-size: 1vw;
                 font-style: normal;
                 font-weight: 500;
-
-                em {}
             }
         }
 
@@ -5218,7 +5216,6 @@ map options
         height: 34px;
         font-size: .75rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-        &:focus {}
     }
     .nav-btn__status {
         .btn {
@@ -5230,8 +5227,6 @@ map options
             border-color: darken($identity, 10%);
             color: #fff;
         }
-    }
-    .map-edit-tools{
     }
     button{
         vertical-align: top;
@@ -6089,7 +6084,7 @@ dl.space-id{
         -o-transform: scale(1.25);
         -webkit-transform: scale(1.25);
         transform: scale(1.25);
-        z-index: 3;
+        z-index: 2;
     }
     &.user-unknow{
         background: url(../images/person_pin_unknow.svg) no-repeat center;
@@ -6219,7 +6214,7 @@ dl.space-id{
     flex-direction: column;
     a{
         display: flex;
-        background: url(../images/btn_panel_open.svg) no-repeat;
+        background: url("../images/btn_panel_open.svg") no-repeat;
         height: 150px;
         width: 40px;
         align-items: center;
@@ -6445,6 +6440,7 @@ dl.space-id{
                         background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
+                        background-clip: text;
                         font-style: normal;
                     }
                     p{
@@ -6490,10 +6486,6 @@ dl.space-id{
         .popover-content{
             min-width: 150px;
         }
-    }
-}
-.page-content{
-    .bs-popover-left{
     }
 }
 .page-separator{
@@ -6626,6 +6618,7 @@ dl.space-id{
                         background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
+                        background-clip: text;
                         font-style: normal;
                     }
                 }
@@ -6648,6 +6641,7 @@ dl.space-id{
             background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     }
     .flatpickr-wrapper{
@@ -6662,8 +6656,6 @@ dl.space-id{
 }
 .page-section{
     padding: 4rem 0 !important;
-    &:last-of-type{
-    }
     &.bg-gray{
         background-color: #f8f9fb;
     }
@@ -6731,6 +6723,7 @@ dl.space-id{
                 background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                background-clip: text;
                 font-style: normal;
             }
             p{
@@ -6986,8 +6979,6 @@ dl.space-id{
 
 /* my page */
 .my-page{
-    .mypage__container{
-    }
     .row{
         margin-right: -25px;
         margin-left: -25px;
