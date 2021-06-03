@@ -540,6 +540,25 @@ login
         padding: .75rem 0;
         margin-bottom: 1.5rem;
     }
+    .company-list{
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: .5rem;
+        li{
+            margin-left: 2rem;
+            a{
+                display: flex;
+                font-size: 1rem;
+                padding: .5rem;
+                padding-left: 0;
+                font-weight: 600;
+                position: relative;
+                &.active{
+                    color: $identity;
+                }
+            }
+        }
+    }
 }
 @media (min-width:768px) {
     .sign-up {
@@ -1645,6 +1664,7 @@ platform map
         }
         .sidebar-menu-button{
             padding: .625rem .5rem !important;
+            text-align: center;
         }
     }
     .sidebar-secondary {
@@ -2084,17 +2104,18 @@ platform map
     z-index: 0;
     background-color: #fff;
     a.sidebar-depth-close{
-        position: absolute;
+        position: fixed;
         right: 2rem;
-        top: 2rem;
+        top: 5.5rem;
         z-index: 2;
         span{
-            font-size: 4rem;
+            font-size: 3rem;
         }
     }
     .sidebar-depth-wrap{
         position: relative;
         padding: 3rem;
+        padding-bottom: 8rem;
     }
     .tab-cover{
         position: relative;
@@ -2176,6 +2197,8 @@ platform map
     }
     .page-content{
         margin-bottom: 150px;
+    }
+    .recent-section{
         .sort-wrap{
             display: flex;
             width: auto;
@@ -2186,13 +2209,56 @@ platform map
                 padding: .25rem .5rem;
                 border-radius: 2px;
                 margin-left: .5rem;
-                background-color: #f9f9f9;
                 &.active{
                     border: 1px solid $identity;
                     color: $identity;
                 }
                 &:hover{
                     background-color: #f2f2f2;
+                }
+            }
+        }
+    }
+    .recent-section, .page-section{
+        padding: 2rem 0 !important;
+    }
+    .ch-group{
+        padding: 2rem 0;
+        .card{
+            width: 100%;
+            border: 1px solid $border-color;
+            box-shadow: none;
+            border-radius: .25rem;
+            h6{
+            }
+            em{
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 600;
+                color: $identity;
+                background: $identity;
+                background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 1.2;
+                text-align: right;
+                span{
+                    font-size: 1rem;
+                }
+            }
+            .cell{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                &.keyword{
+                    height: 2rem;
+                    em{
+                        font-size: 1rem;
+                    }
+                }
+                span{
+                    margin-left: .5rem;
                 }
             }
         }
@@ -3862,6 +3928,7 @@ a.cd-filter-trigger {
         dd{
             font-weight: bold;
             text-align: right;
+            word-break: break-all;
             a.btn-file{
                 display: block;
                 font-size: .75rem;
@@ -6418,33 +6485,60 @@ dl.space-id{
     -webkit-overflow-scrolling: touch;
     .panel__board{
         .cell{
-            ul{
+            >ul{
                 list-style-type: none;
                 padding: 0;
                 display: flex;
                 flex-direction: column;
                 width: 100%;
                 border-top: 1px solid $border-color;
-                li{
+                >li{
                     display: flex;
                     flex-direction: row;
-                    padding: 1rem 2rem;
+                    padding: 1rem;
                     align-items: center;
                     justify-content: center;
                     border-bottom: 1px solid $border-color;
-                    em{
-                        font-size: 2rem;
-                        color: $identity;
-                        font-weight: 600;
-                        font-style: normal;
-                        background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        background-clip: text;
-                        font-style: normal;
+                    .vl-c{
+                        em{
+                            font-size: 2rem;
+                            color: $identity;
+                            font-weight: 600;
+                            font-style: normal;
+                            background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            font-style: normal;
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                        ul{
+                            list-style-type: none;
+                            padding: 0;
+                            display: flex;
+                            flex-direction: row;
+                            background-color: #f2f2f2;
+                            border-radius: .5rem;
+                            li{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                padding: .25rem .5rem;
+                                font-size: .688rem;
+                                text-align: center;
+                                span{
+                                    font-size: 1rem;
+                                    color: $identity;
+                                }
+                            }
+                        }
+                        p{
+                            margin: 0;
+                        }
                     }
-                    p{
-                        color: #b9b9b9;
+                    p.title{
+                        color: #303956;
                         margin: 0;
                         font-weight: 500;
                         font-size:.875rem;
@@ -6452,6 +6546,109 @@ dl.space-id{
                     }
                 }
             }
+        }
+    }
+    .accordion__menu{
+        .accordion__menu-link{
+            border-top: 1px solid #f3f4f5;
+            padding: 1rem 1.5rem;
+        }
+        .state-up{
+            em{
+                color: $identity;
+                background: $identity;
+                background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            ul li{
+                span{
+                    color: $identity;
+                }
+            }
+            p.desc{
+                span{
+                    color: $identity;
+                }
+            }
+        }
+        .state-down{
+            em{
+                color: $identity;
+                background: rgb(85,103,255);
+                background: linear-gradient(120deg, rgba(85,103,255,1) 0%, rgba(94,24,208,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            ul li{
+                span{
+                    color: $primary;
+                }
+            }
+            p.desc{
+                span{
+                    color: $primary;
+                }
+            }
+        }
+        em{
+            font-size: 2rem;
+            color: $identity;
+            font-weight: 600;
+            font-style: normal;
+            font-style: normal;
+            display: flex;
+            align-items: baseline;
+            span{
+                font-size: 1rem;
+                margin-left: .5rem;
+            }
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            border-radius: .5rem;
+            margin: 0;
+            border-radius: .25rem;
+            margin-bottom: 1rem;
+            li{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: .25rem 1rem;
+                font-size: .688rem;
+                text-align: center;
+                align-items: center;
+                border-left: 1px solid #f2f2f2;
+                color: #303956;
+                &:first-child{
+                    border-left: none;
+                }
+                &:last-child{
+                    padding-right: 0;
+                }
+                span{
+                    font-size: 1rem;
+                    margin-left: .25rem;
+                    font-weight: 600;
+                }
+            }
+        }
+        p.desc{
+            margin: 0;
+            text-align: right;
+            span{
+                font-weight: 600;
+            }
+        }
+        .icon-holder--ssmall{
+            width: 24px;
+            height: 24px;
+            font-weight: 600;
         }
     }
     .badge{
@@ -6591,7 +6788,7 @@ dl.space-id{
                     background-color: #fff;
                     border-radius: .25rem;
                     padding: 2rem 1rem;
-                    border: 1px solid transparent;
+                    border: 1px solid $border-color;
                     box-shadow: 0 2px 5px rgba(0,0,0,0.03);
                     &.current{
                         border: 1px solid $identity;
@@ -6634,8 +6831,8 @@ dl.space-id{
             }
         }
         .card{
-            border: none;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            border: 1px solid $border-color;
+            box-shadow: none;
         }
         .h2{
             background: linear-gradient(120deg, rgba(255,119,0,1) 0%, rgba(232,59,58,1) 100%);
@@ -6672,6 +6869,8 @@ dl.space-id{
     margin-right: -12px;
     margin-left: -12px;
     .card{
+        box-shadow: none;
+        border: 1px solid $border-color;
         &:hover{
             box-shadow: 0 3px 3px -2px rgba(39, 44, 51, .1), 0 3px 4px 0 rgba(39, 44, 51, .04), 0 1px 8px 0 rgba(39, 44, 51, .02);
         }

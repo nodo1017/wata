@@ -3,7 +3,7 @@
 <!-- Drawer Layout -->
 
 <div class="mdk-drawer-layout js-mdk-drawer-layout">
-    @@include('./include/platform-topbar3.html')
+    @@include('./include/platform-topbar.html')
     <div class="mdk-drawer-layout__content page-content">
         <!-- edit tool -->
         <div class="btn-top-holder">
@@ -1896,162 +1896,107 @@
     <!-- // END drawer -->
     <div class="sidebar-depth" data-perfect-scrollbar>
         <a href="#n" class="sidebar-depth-close"><span class="material-icons">close</span></a>
-        <div class="sidebar-depth-wrap p-0">
-            <!-- <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
-                <div class="flex title-row">
-                    <h3 class="mb-0">그래프 메뉴01 목록</h3>
-                    <small class="text-muted text-headings text-uppercase"><strong class="text-accent">6개</strong>의 데이터가 등록되어 있습니다.</small>
-                </div>
-                
-                <form class="form-inline ml-4">
-                    <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
-                    <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
-                </form>
-            </div> -->
-
-            <div class="mdk-header-layout__content page-content">
-                <div id="dot-bg" class="recent-section">
-                    <div class="container page__container">
-                        <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
-                            <div class="flex title-row">
-                                <h3 class="d-flex align-items-center mb-0">한국관 방문자 통계</h3>
-                            </div>
-                            <div class="sort-wrap">
-                                <a href="#n" class="sort-item active">6/28</a>
-                                <a href="#n" class="sort-item">6/29</a>
-                                <a href="#n" class="sort-item">6/30</a>
-                                <a href="#n" class="sort-item">7/1</a>
-                            </div>
-                        </div>
-                        <div class="visitors-chart">
-
-                            <div class="cell">
-                                <ul class="card box-list mb-0">
-                                    <li>
-                                        <em>239</em>
-                                        <p>Visitors</p>
-                                    </li>
-                                    <li>
-                                        <em>57</em>
-                                        <p>Visitors</p>
-                                    </li>
-                                    <li>
-                                        <em>677</em>
-                                        <p>Visitors</p>
-                                    </li>
-                                    <li>
-                                        <em>123</em>
-                                        <p>Visitors</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="cell">
-                                <div class="card card-group-row__card mb-0">
-                                    <div class="card-body d-flex flex-row align-items-center flex-0">
-                                        <div class="h2 mb-0 mr-3">25%</div>
-                                        <div class="flex">
-                                            <p class="card-title">방문자 분포</p>
-                                            <div class="card-subtitle text-50 d-flex align-items-center">어제보다 1.9% <i
-                                                    class="material-icons text-accent icon-16pt ml-4pt">keyboard_arrow_up</i>
-                                            </div>
-                                        </div>
-                                        <div class="ml-3 align-self-start">
-                                            <div class="dropdown mb-2">
-                                                <a href="" class="dropdown-toggle" data-toggle="dropdown"
-                                                    data-caret="false"><i
-                                                        class="material-icons text-50">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="" class="dropdown-item">View report</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body d-flex align-items-center">
-                                        <div class="row align-items-center">
-                                            <div class="col-8">
-                                                <div class="chart" style="height: 200px;">
-                                                    <div
-                                                        class="text-center fullbleed d-flex align-items-center justify-content-center flex-column z-0">
-                                                        <h2 class="m-0">25%</h2>
-                                                        <strong>Visitors</strong>
-                                                    </div>
-                                                    <canvas class="chart-canvas position-relative z-1"
-                                                        id="attendanceDoughnutChart"
-                                                        data-chart-legend="#attendanceDoughnutChartLegend"
-                                                        data-chart-line-background-color="primary;accent;gray.700;gray">
-                                                        <span style="font-size: 1rem;"
-                                                            class="text-muted"><strong>Attendance</strong> doughnut
-                                                            chart goes here.</span>
-                                                    </canvas>
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div id="attendanceDoughnutChartLegend" class="chart-legend chart-legend--vertical m-0"></div>
-                                            </div>
+        <div class="sidebar-depth-wrap">
+            <div class="tab-cover mb-4">
+                <ul class="nav" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#sidebar-menu01">방문자 통계</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#sidebar-menu02">부스 통계</a>
+                    </li>
+                    <li class="nav-item">   
+                        <a class="nav-link" data-toggle="tab" href="#sidebar-menu03">프로모션 통계</a>
+                    </li>
+                    <li class="nav-item">   
+                        <a class="nav-link" data-toggle="tab" href="#sidebar-menu04">사고 통계</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="sidebar-menu01" class="tab-pane active" role="tabpanel">
+                    <div class="ch-group">
+                        <div class="row mb-4">
+                            <div class="col-md-4 col-lg-2 d-flex">
+                                <div class="card m-0">
+                                    <div class="card-body">
+                                        <h6>일 평균 방문자 수</h6>
+                                        <div class="cell">
+                                            <em>715</em>
+                                            <span class="text-muted">명</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="cell">
-                                <div class="card card-group-row__card mb-0">
-                                    <div class="card-body d-flex flex-row align-items-center flex-0">
-                                        <div class="h2 mb-0 mr-3">677</div>
-                                        <div class="flex">
-                                            <div class="card-title">총방문자</div>
-                                            <div class="card-subtitle text-50 d-flex align-items-center">어제보다 2.6% <i
-                                                    class="material-icons text-accent icon-16pt ml-4pt">keyboard_arrow_up</i>
-                                            </div>
-                                        </div>
-                                        <div class="ml-3 align-self-start">
-                                            <div class="dropdown mb-2">
-                                                <a href="" class="dropdown-toggle" data-toggle="dropdown"
-                                                    data-caret="false"><i
-                                                        class="material-icons text-50">more_horiz</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="" class="dropdown-item">View report</a>
-                                                </div>
-                                            </div>
+                            <div class="col-md-4 col-lg-2 d-flex">
+                                <div class="card m-0">
+                                    <div class="card-body">
+                                        <h6>누적 방문자 수</h6>
+                                        <div class="cell">
+                                            <em>2,648</em>
+                                            <span class="text-muted">명</span>
                                         </div>
                                     </div>
-                                    <div class="card-body flex-0 d-none">
-                                        <small class="d-flex align-items-center font-weight-bold text-muted mb-1">
-                                            <span class="flex text-body">Online Store</span>
-                                            <span class="mx-3">&dollar;50.99</span>
-                                            <span class="d-flex align-items-center"><i
-                                                    class="material-icons text-success icon-16pt mr-1">keyboard_arrow_up</i>
-                                                3.2%</span>
-                                        </small>
-                                        <small class="d-flex align-items-center font-weight-bold text-muted">
-                                            <span class="flex text-body">Facebook</span>
-                                            <span class="mx-3">&dollar;32.00</span>
-                                            <span class="d-flex align-items-center"><i
-                                                    class="material-icons text-danger icon-16pt mr-1">keyboard_arrow_down</i>
-                                                7.0%</span>
-                                        </small>
-                                    </div>
-                                    <div
-                                        class="card-body text-muted flex d-flex flex-column align-items-center justify-content-center">
-                                        <div class="chart w-100" style="height: 200px;">
-                                            <canvas class="chart-canvas js-update-chart-line js-update-chart-area"
-                                                id="totalSalesChart" data-chart-legend="#totalSalesChartLegend"
-                                                data-chart-line-background-color="gradient:primary"
-                                                data-chart-line-background-opacity="0.24"
-                                                data-chart-line-border-color="primary" data-chart-prefix="$"
-                                                data-chart-dark-mode="false">
-                                                <span style="font-size: 1rem;"><strong>Total Sales</strong> chart goes
-                                                    here.</span>
-                                            </canvas>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-2 d-flex">
+                                <div class="card m-0">
+                                    <div class="card-body">
+                                        <h6>평균 체류시간</h6>
+                                        <div class="cell">
+                                            <em>47</em>
+                                            <span class="text-muted">분</span>
                                         </div>
-                                        <div id="totalSalesChartLegend"
-                                            class="chart-legend chart-legend--horizontal mt-16pt"></div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-2 d-flex">
+                                <div class="card m-0">
+                                    <div class="card-body">
+                                        <h6>부스 별 평균 체류시간</h6>
+                                        <div class="cell">
+                                            <em>17</em>
+                                            <span class="text-muted">분</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-2 d-flex">
+                                <div class="card m-0">
+                                    <div class="card-body">
+                                        <h6>평균 방문 부스</h6>
+                                        <div class="cell">
+                                            <em>4.5</em>
+                                            <span class="text-muted">개</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-2 d-flex">
+                                <div class="card m-0">
+                                    <div class="card-body">
+                                        <h6>전체 방문자 관심분야</h6>
+                                        <div class="cell keyword">
+                                            <em>IoT, Big data, 5G</em>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    1
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    2
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="page-section">
-                    <div class="container page__container">
+                    <div class="page-section">
                         <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                             <div class="flex title-row">
                                 <h3 class="d-flex align-items-center mb-0 ">한국관 방문자 목록</h3>
@@ -2098,7 +2043,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
                                     <td>A-1</td>
@@ -2108,7 +2053,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">SK</a></td>
                                     <td>A-2</td>
@@ -2118,7 +2063,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">Hyundai</a></td>
                                     <td>A-5</td>
@@ -2128,7 +2073,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
                                     <td>A-3</td>
@@ -2138,7 +2083,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
                                     <td>A-1</td>
@@ -2148,7 +2093,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
                                     <td>A-3</td>
@@ -2158,7 +2103,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
                                     <td>A-1</td>
@@ -2168,7 +2113,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">SK</a></td>
                                     <td>A-2</td>
@@ -2178,7 +2123,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">Hyundai</a></td>
                                     <td>A-5</td>
@@ -2188,7 +2133,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">SAMSUNG</a></td>
                                     <td>A-3</td>
@@ -2198,7 +2143,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                                 <tr>
                                     <td><a href="company_board.html" class="btn-link text-accent">LG</a></td>
                                     <td>A-1</td>
@@ -2208,7 +2153,7 @@
                                     <td><a href="#n" class="btn-link text-accent" data-toggle="modal"
                                             data-target="#qrCodeModal">QR인쇄</a></td>
                                 </tr>
-
+    
                             </tbody>
                         </table>
                         <ul class="pagination justify-content-center pagination-xsm m-0">
@@ -2241,6 +2186,12 @@
                             <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
                         </div>
                     </div>
+                </div>
+                <div id="sidebar-menu02" class="tab-pane" role="tabpanel">
+                    2
+                </div>
+                <div id="sidebar-menu03" class="tab-pane" role="tabpanel">
+                    3
                 </div>
             </div>
 
@@ -2285,7 +2236,7 @@
         scale: 1.00,
         scaleMobile: 1.00,
         color2: 0xffffff,
-        backgroundColor: 0xf9f9f9,
+        backgroundColor: 0xffffff,
         size: 5.00,
         spacing: 40.00
     })
@@ -2335,6 +2286,9 @@
 
 <!-- Chart.js Samples -->
 <script src="js/page.ecommerce.js"></script>
+
+<!-- Chart.js Samples -->
+<script src="js/page.employees.js"></script>
 
 <!-- List.js -->
 <script src="vendor/list.min.js"></script>
