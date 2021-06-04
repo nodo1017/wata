@@ -2224,6 +2224,12 @@ platform map
     }
     .ch-group{
         padding: 2rem 0;
+        .half-col{
+            flex-direction: column;
+        }
+        .half-row{
+            flex-direction: row;
+        }
         .card{
             width: 100%;
             border: 1px solid $border-color;
@@ -2260,6 +2266,29 @@ platform map
                 span{
                     margin-left: .5rem;
                 }
+            }
+        }
+        .half-container{
+            display: flex;
+            height: 100%;
+            &.half-row{
+                .half{
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    &:first-of-type{
+                        border-right: 1px solid $border-color;
+                    }
+                }
+            }
+            &.half-col{
+                .half{
+                    &:first-of-type{
+                        border-bottom: 1px solid $border-color;
+                    }
+                }
+            }
+            .half{
+                display: flex;
             }
         }
     }
@@ -5317,6 +5346,36 @@ map options
         color: #fff;
     }
 }
+.edit-tools-group{
+    padding: 1.5rem;
+    border: 1px dashed transparent;
+    background-color: transparent;
+    @include transition(all, 0.2s, ease-in-out);
+    a.btn-handle{
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        background-color: rgba(0,0,0,0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+        @include transition(all, 0.2s, ease-in-out);
+        span{
+            font-size: 1rem;
+            color: #fff;
+        }
+    }
+    &:hover{
+        border-color: rgba(0,0,0,0.2);
+        background-color: rgba(255,255,255,0.2);
+        a.btn-handle{
+            opacity: 1;
+        }
+    }
+}
 .maps-item-list{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -6595,7 +6654,6 @@ dl.space-id{
         }
         em{
             font-size: 2rem;
-            color: $identity;
             font-weight: 600;
             font-style: normal;
             font-style: normal;
