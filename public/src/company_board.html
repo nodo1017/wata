@@ -150,388 +150,162 @@
     
             <div class="cd-panel__container">
                 <div class="cd-panel__content p-4" data-perfect-scrollbar>
-    
-                    <div class="panel__board">
-                        <div class="d-flex flex-row align-items-center mb-0 py-4">
-                            <div class="flex">
-                                <h5 class="d-flex align-items-center mb-0">SOYNET 방문자 통계</h5>
+                    
+                    
+
+                    <div class="d-flex flex-row align-items-center mb-0 pb-4">
+                        <div class="flex">
+                            <h3 class="d-flex align-items-center mb-0">SOYNET 현황</h3>
+                            <p class="text-50 m-0">2021-06-01 13:00:00 기준</p>
+                        </div>
+                        <div class="flatpickr-wrapper d-none">
+                            <div id="recent_orders_date"
+                                 data-toggle="flatpickr"
+                                 data-flatpickr-wrap="true"
+                                 data-flatpickr-mode="range"
+                                 data-flatpickr-alt-format="d/m/Y"
+                                 data-flatpickr-date-format="d/m/Y">
+                                 <a href="javascript:void(0)" class="d-flex" data-toggle>
+                                    <span class="material-icons-outlined">edit_calendar</span>
+                                </a>
+                                <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021" data-input>
                             </div>
-                            <div class="flatpickr-wrapper d-none">
-                                <div id="recent_orders_date"
-                                     data-toggle="flatpickr"
-                                     data-flatpickr-wrap="true"
-                                     data-flatpickr-mode="range"
-                                     data-flatpickr-alt-format="d/m/Y"
-                                     data-flatpickr-date-format="d/m/Y">
-                                     <a href="javascript:void(0)" class="d-flex" data-toggle>
-                                        <span class="material-icons-outlined">edit_calendar</span>
-                                    </a>
-                                    <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021" data-input>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion js-accordion accordion--boxed list-group-flush" id="parent">
+                        
+                        <div class="accordion__item open">
+                            <a href="#"
+                                class="accordion__toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#panel01"
+                                data-parent="#parent">
+                                <span class="flex d-flex align-items-center">
+                                    <!-- <span class="material-icons-outlined icon--left">watch_later</span> -->
+                                    실시간 방문자 정보 <small class="text-muted ml-1">단위(명)</small>
+                                </span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu collapse show" id="panel01">
+                                <div class="accordion__menu-link align-items-start state-up">
+                                    <em class="flex">14</em>
+                                    <div class="visitor-group">
+                                        <ul>
+                                            <li>Buyer<span>2</span></li>
+                                            <li>Exhibitor<span>1</span></li>
+                                            <li>Visitor<span>11</span></li>
+                                        </ul>
+                                        <p class="desc">전일 동시간 기준 2명 <span>증가</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="cell">
-                            <ul>
-                                <li>
-                                    <p>Visitors</p>
-                                    <em>239</em>
-                                </li>
-                                <li>
-                                    <p>Visitors</p>
-                                    <em>57</em>
-                                </li>
-                                <li>
-                                    <p>Visitors</p>
-                                    <em>677</em>
-                                </li>
-                                <li>
-                                    <p>Visitors</p>
-                                    <em>123</em>
-                                </li>
-                            </ul>
+
+                        <div class="accordion__item open">
+                            <a href="#"
+                                class="accordion__toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#panel02"
+                                data-parent="#parent">
+                                <span class="flex d-flex align-items-center">
+                                    <!-- <span class="material-icons-outlined icon--left">flag</span> -->
+                                    평균 체류시간 <small class="text-muted ml-1">단위(분)</small>
+                                </span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu collapse show" id="panel02">
+                                <div class="accordion__menu-link state-up">
+                                    <em class="flex">12</em>
+                                    <p class="desc">전일 동시간 기준 2 min <span>증가</span></p>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="accordion__item open">
+                            <a href="#"
+                                class="accordion__toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#panel03"
+                                data-parent="#parent">
+                                <span class="flex d-flex align-items-center">
+                                    <!-- <span class="material-icons-outlined icon--left">warning_amber</span> -->
+                                    사고 발생 건 수  <small class="text-muted ml-1">단위(건)</small>
+                                </span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu collapse show" id="panel03">
+                                <div class="accordion__menu-link">
+                                    <em class="flex">0</em>
+                                    <p class="desc">전일 동시간 기준<span>동일</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item open">
+                            <a href="#"
+                                class="accordion__toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#panel04"
+                                data-parent="#parent">
+                                <span class="flex d-flex align-items-center">
+                                    <!-- <span class="material-icons-outlined icon--left">emoji_events</span> -->
+                                    인기 부스</span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu collapse show"
+                                    id="panel04">
+                                <div class="accordion__menu-link">
+                                    <span class="icon-holder icon-holder--ssmall icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                        1
+                                    </span>
+                                    <h6 class="flex m-0"><a class="flex" href="#n">와따</a></h6>
+                                    <span class="text-muted">34명</span>
+                                </div>
+                                <div class="accordion__menu-link active">
+                                    <span class="icon-holder icon-holder--ssmall icon-holder--secondary rounded-circle d-inline-flex icon--left">
+                                        2
+                                    </span>
+                                    <h6 class="flex m-0"><a class="flex" href="#n">SOYNET</a></h6>
+                                    <span class="text-muted">28명</span>
+                                </div>
+                                <div class="accordion__menu-link">
+                                    <span class="icon-holder icon-holder--ssmall icon-holder--secondary rounded-circle d-inline-flex icon--left">
+                                        3
+                                    </span>
+                                    <h6 class="flex m-0"><a class="flex" href="#n">Testworks</a></h6>
+                                    <span class="text-muted">24명</span>
+                                </div>
+                                <div class="accordion__menu-link">
+                                    <span class="icon-holder icon-holder--ssmall icon-holder--secondary rounded-circle d-inline-flex icon--left">
+                                        4
+                                    </span>
+                                    <h6 class="flex m-0"><a class="flex" href="#n">Asleep</a></h6>
+                                    <span class="text-muted">17명</span>
+                                </div>
+                                <div class="accordion__menu-link">
+                                    <span class="icon-holder icon-holder--ssmall icon-holder--secondary rounded-circle d-inline-flex icon--left">
+                                        5
+                                    </span>
+                                    <h6 class="flex m-0"><a class="flex" href="#n">Global Coding Research, LTD</a></h6>
+                                    <span class="text-muted">15명</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-    
-                    <div class="panel__board">
-                        <div class="d-flex flex-row align-items-center mb-0 py-4">
-                            <div class="flex">
-                                <h5 class="d-flex align-items-center mb-0">SOYNET 방문자 목록</h5>
-                            </div>
-                        </div>
-                        <table class="table mb-4 table-nowrap">
-                            <colgroup>
-                                <col width="32%">
-                                <col width="32%">
-                                <col width="32%">
-                                <col wudth="*">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th><a href="javascript:void(0)">ID</a></th>
-                                    <th><a href="javascript:void(0)">회사명</a></th>
-                                    <th><a href="javascript:void(0)">국가</a></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1241</a>
-                                        <div class="popoverContainer d-none">
-                                            <h6 class="mb-2">상세정보</h6>
-                                            <div class="list-group list-group-flush list-popover">
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문자 명 ID</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">A-1231</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">성별</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">남성</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">회사명</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">SAMSUNG</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">국가</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">한국</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문날짜</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2021.06.28</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문횟수</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>SAMSUNG</td>
-                                    <td>한국</td>
-                                    <td><span class="badge badge-accent">N</span></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1242</a>
-                                        <div class="popoverContainer d-none">
-                                            <h6 class="mb-2">상세정보</h6>
-                                            <div class="list-group list-group-flush list-popover">
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문자 명 ID</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">A-1232</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">성별</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">남성</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">회사명</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">Apple</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">국가</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">미국</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문날짜</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2021.06.28</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문횟수</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>Apple</td>
-                                    <td>미국</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1242</a>
-                                        <div class="popoverContainer d-none">
-                                            <h6 class="mb-2">상세정보</h6>
-                                            <div class="list-group list-group-flush list-popover">
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문자 명 ID</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">A-1232</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">성별</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">남성</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">회사명</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">Apple</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">국가</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">미국</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문날짜</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2021.06.28</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문횟수</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>Apple</td>
-                                    <td>미국</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1242</a>
-                                        <div class="popoverContainer d-none">
-                                            <h6 class="mb-2">상세정보</h6>
-                                            <div class="list-group list-group-flush list-popover">
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문자 명 ID</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">A-1232</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">성별</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">남성</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">회사명</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">Apple</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">국가</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">미국</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문날짜</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2021.06.28</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문횟수</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>Apple</td>
-                                    <td>미국</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="#n" class="text-underline" data-toggle="popover" data-placement="left" data-trigger="hover">A-1242</a>
-                                        <div class="popoverContainer d-none">
-                                            <h6 class="mb-2">상세정보</h6>
-                                            <div class="list-group list-group-flush list-popover">
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문자 명 ID</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">A-1232</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">성별</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">남성</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">회사명</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">Apple</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">국가</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">미국</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문날짜</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2021.06.28</span>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group-item">
-                                                    <div class="d-flex popover-title">
-                                                        <span class="text-50">방문횟수</span>
-                                                    </div>
-                                                    <div class="d-flex popover-content">
-                                                        <span class="text-headings">2</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>Apple</td>
-                                    <td>미국</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="my-32pt">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a href="company_list.html" class="btn btn-accent ml-0">통계 자세히보기</a>
-                            </div>
+
+                    <div class="my-32pt">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="company_list.html" class="btn btn-accent ml-0">통계 자세히보기</a>
                         </div>
                     </div>
     
     
                 </div> <!-- cd-panel__content -->
-            </div> 
-        </div> 
+            </div> <!-- cd-panel__container -->
+        </div> <!-- cd-panel -->
     
     </div>
     <!-- drawer -->
