@@ -1294,10 +1294,6 @@ swiper slider
     width: 100%;
     height: 100%;
 }
-.swiper-wrapper {
-    border-radius: 0.625rem;
-    overflow: hidden;
-}
 .swiper-slide {
     position: relative;
     text-align: center;
@@ -1319,19 +1315,19 @@ swiper slider
     overflow: hidden;
     height: 500px;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.6);
-    }
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(255, 255, 255, 0.6);
+    // }
 
-    &.swiper-slide-active:before {
-        display: none;
-    }
+    // &.swiper-slide-active:before {
+    //     display: none;
+    // }
 
     img {
         width: 100%;
@@ -2289,6 +2285,64 @@ platform map
             }
             .half{
                 display: flex;
+            }
+        }
+        .list-group{
+            a.list-group-item{
+                border: 1px solid transparent;
+                border-top: 1px solid $border-color;
+                &:hover{
+                    h5{
+                        text-decoration: underline;
+                        color: #303956;
+                    }
+                }
+                &.active{
+                    background-color: #fafafa;
+                    h5{
+                        color: #303956;
+                    }
+                    dl{
+                        opacity: 1;
+                    }
+                }
+            }
+            &.ongoing{
+                a:hover{
+                    h5{
+                        color: $identity;
+                    }
+                }
+                a.active{
+                    h5{
+                        color: $identity;
+                    }
+                }
+            }
+            h5{
+                color: #868e96;
+            }
+            dl{
+                display: flex;
+                margin-bottom: .5rem;
+                opacity: 0.7;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+                dt,dd{
+                    display: flex;
+                    margin: 0;
+                    word-break: keep-all;
+                }
+                dt{
+                    flex: 0 0 25%;
+                    margin-right: .5rem;
+                }
+                dd{
+                    flex: 0 0 75%;
+                    padding-left: .5rem;
+                    color: #646b71;
+                }
             }
         }
     }
@@ -5344,6 +5398,61 @@ map options
         background-color: $identity;
         border-color: darken($identity, 10%);
         color: #fff;
+    }
+}
+.btn-mid-holder-floor{
+    position: absolute;
+    top: 84px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    max-width: 500px;
+    .floor-inner{
+        overflow: hidden;
+        border-radius: .25rem;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        background-color: #fff;
+    }
+    .swiper-slide{
+        border-left: 1px solid $border-color;
+        &:first-of-type{
+            border-left: none;
+        }
+    }
+    a.btn-floor{
+        font-size: .75rem;
+        color: #303956;
+        font-weight: 600;
+        padding: .5rem 3rem;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover{
+            background-color: #ececec;
+            border-color: #e6e6e6;
+        }
+        &.active{
+            background-color: $identity;
+            color: #fff;
+        }
+    }
+    .floor-button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        border-radius: 50%;
+        &.floor-button-next{
+            right: -2rem;
+        }
+        &.floor-button-prev{
+            left: -2rem;
+        }
+        &.swiper-button-disabled{
+            opacity: 0;
+        }
     }
 }
 .edit-tools-group{

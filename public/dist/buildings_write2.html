@@ -138,7 +138,7 @@
     </div>
     <div class="mdk-drawer-layout__content page-content">
         <!-- 층 버튼 -->
-        <div class="btn-mid-holder">
+        <div class="btn-mid-holder d-none">
             <div class="btn-group">
                 <a href="#n" class="btn btn-white">B1</a>
                 <a href="#n" class="btn btn-white active">1F</a>
@@ -148,8 +148,58 @@
                 <a href="#n" class="btn btn-white">5F</a>
                 <a href="#n" class="btn btn-white">6F</a>
                 <a href="#n" class="btn btn-white">7F</a>
+                <a href="#n" class="btn btn-white">8F</a>
+                <a href="#n" class="btn btn-white">9F</a>
+                <a href="#n" class="btn btn-white">10F</a>
+                <a href="#n" class="btn btn-white">11F</a>
+                <a href="#n" class="btn btn-white">12F</a>
+                <a href="#n" class="btn btn-white">13F</a>
+                <a href="#n" class="btn btn-white">14F</a>
+                <a href="#n" class="btn btn-white">15F</a>
             </div>
         </div>
+
+        <div class="btn-mid-holder-floor">
+            <div class="floor-inner">
+                <div class="swiper-container floor-item">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">4F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">5F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">6F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">7F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">8F</a></div>
+                
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">9F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">10F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">11F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">12F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">13F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">14F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">15F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">16F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">17F</a></div>
+                
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">18F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">19F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">20F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">21F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">22F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">23F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">24F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">25F</a></div>
+                        <div class="swiper-slide"><a href="#n" class="btn-floor">26F</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="floor-button floor-button-next"><span class="material-icons">chevron_right</span></div>
+            <div class="floor-button floor-button-prev"><span class="material-icons">chevron_left</span></div>
+        </div>
+    
+
 
         <!-- 층 버튼 -->
         <div class="btn-mid-holder edit-tools-group" style="top: 200px; left: 80%;">
@@ -1473,8 +1523,30 @@
     </div>
 </div>
 
-<!-- // END Drawer Layout -->
 
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".floor-item", {
+        allowTouchMove: false,
+        direction: "horizontal",
+        mousewheel: true,
+        slidesPerView: 10,
+        slidesPerGroup: 10,
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".floor-button-next",
+          prevEl: ".floor-button-prev",
+        },
+      });
+    </script>
 
     <!-- alert -->
     <div class="map-alert-container"> 
