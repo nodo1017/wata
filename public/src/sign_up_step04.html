@@ -1,0 +1,45 @@
+@@include('./include/header.html')
+
+<div class="mdk-header-layout js-mdk-header-layout sign-up">
+    <div class="flex-parent">
+        <div class="flex-child">
+            <div class="layout-login__form sign-up__step04">
+                <div class="title-group mb-5">
+                    <h3 class="m-0">간단한 정보입력</h3>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label text-50 essential" for="form02">이메일</label>
+                    <input id="form02" type="email" required="" class="form-line pr-6" placeholder="jaeyong.lee@samsung.com" disabled>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label text-50 essential" for="form02">이름</label>
+                    <input id="form02" type="text" required="" class="form-line pr-6" placeholder="이름을 입력해 주세요.">
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label text-50 essential" for="form03">비밀번호</label>
+                    <input id="form03" type="password" required="" class="form-line" placeholder="비밀번호를 입력하세요.">
+                    <div class="invalid-feedback">8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</div>
+                </div>
+                <div class="form-group mb-5">
+                    <label class="form-label text-50 essential" for="form04">비밀번호 확인</label>
+                    <input id="form04" type="password" required="" class="form-line" placeholder="비밀번호를 입력하세요.">
+                    <div class="invalid-feedback">비밀번호가 일치하지 않습니다.</div>
+                </div>
+                <div class="form-group text-center mb-32pt">
+                    <button class="btn btn-block btn-lg btn-accent" onclick="location.href='sign_up_step05.html'" type="submit">다음</button>
+                </div>
+            </div>
+            <ol class="step-group">
+                <li><span>STEP</span>1</li>
+                <li><span>STEP</span>2</li>
+                <li class="active"><span>STEP</span>3</li>
+                <li><span>STEP</span>4</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+
+
+@@include('./include/footer.html')

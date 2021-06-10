@@ -89,35 +89,28 @@
 <div class="mdk-header-layout js-mdk-header-layout sign-up">
     <div class="flex-parent">
         <div class="flex-child">
-            <div class="layout-login__form">
-                <h2 class="mb-2">비밀번호 찾기</h2>
-                <p class="mb-5 text-50">이메일 주소를 입력하시면 비밀번호 재설정 링크를 보내드립니다.</p>
-                <form action="index.html" novalidate>
-                    <div class="form-group mb-5">
-                        <label class="form-label essential text-50" for="email_2">이메일</label>
-                        <input id="email_2" type="email" required="" class="form-line" placeholder="이메일을 입력하세요.">
-                    </div>
-                    <div class="alert alert-soft-accent alert-dismissible fade show" role="alert">
-                        <div class="d-flex flex-wrap align-items-center">
-                            <div class="mr-8pt">
-                                <i class="material-icons">error_outline</i>
-                            </div>
-                            <div class="flex" style="min-width: 180px">
-                                <small class="text-black-100">가입하지 않은 아이디이거나, 잘못된 이메일입니다.</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group text-center mb-32pt">
-                        <button class="btn btn-block btn-lg btn-accent" type="submit"><i class="material-icons icon--left">send</i> 메일보내기</button>
-                    </div>
-                    <ul class="signin-help">
-                        <li>아직 계정이 없으신가요?<a class="text-body text-underline" href="AC_01.html">계정생성</a></li>
-                    </ul>
-                </form>
+            <div class="layout-login__form sign-up__step05">
+                <div class="msg-board">
+                    <h2>회원가입 완료</h2>
+                    <em>회원가입이 완료 되었습니다.<br>새로운팀을 만들어 보세요.</em>
+                </div>
+                <div class="form-group text-center mb-32pt">
+                    <button class="btn btn-block btn-lg btn-accent" onclick="location.href='sign_up_step06.html'" type="submit">팀 만들기</button>
+                </div>
+                <div class="text-50">팀 만들기는 가입 완료 후 언제든 가능합니다. <a href="ac_16.html" class="text-body text-underline">건너뛰기</a></div>
             </div>
+            <ol class="step-group">
+                <li><span>STEP</span>1</li>
+                <li><span>STEP</span>2</li>
+                <li><span>STEP</span>3</li>
+                <li class="active"><span>STEP</span>4</li>
+            </ol>
         </div>
     </div>
 </div>
+
+
+
 
 <!-- jQuery -->
 <script src="vendor/jquery.min.js"></script>
