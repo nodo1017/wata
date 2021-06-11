@@ -19,6 +19,10 @@ body.layout-compact{
     min-width: 1024px;
     background-color: #f5f5f5;
 }
+input::placeholder, textarea::placeholder{
+    color: rgb(189, 189, 189);
+    font-weight: normal;
+}
 .bg-gray-v1 {
     background-color: #fafafa;
 }
@@ -517,6 +521,13 @@ login
         .btn-link{
             color: $identity;
         }
+        .file-controls{
+            .multi-file{
+                .btn-file-add, .btn-file-remove{
+                    border-bottom: 1px solid #384046;
+                }
+            }
+        }
     }
     .input-group {
         input {
@@ -643,22 +654,59 @@ login
             }
         }
     }
-    .sign-up__step05{
-        .msg-board{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+    .msg-board{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        word-break: keep-all;
+        h2{
             margin-bottom: 2rem;
-            h2{
-                margin-bottom: 2rem;
+        }
+        em{
+            font-style: normal;
+            font-size: 1.5rem;
+            font-weight: lighter;
+            text-align: center;
+        }
+        img{
+            width: 80px;
+            margin-bottom: 2rem;
+        }
+    }
+    .my-group{
+        margin-bottom: 2rem;
+        border-top: 1px solid #303956;
+        border-bottom: 1px solid #303956;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        h6{
+            position: absolute;
+            top: -26px;
+            left: 0;
+            background-color: #303956;
+            color: #fff;
+            margin: 0;
+            padding: .25rem .5rem;
+            font-size: .75rem;
+        }
+        .cell{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &:first-of-type{
+                padding-bottom: 1rem;
             }
-            em{
-                font-style: normal;
-                font-size: 1.5rem;
-                font-weight: lighter;
-                text-align: center;
-            }
+        }
+        span{
+            margin-right: 1rem;
+        }
+        h4{
+            margin: 0;
+            font-size: 1rem;
         }
     }
 }
