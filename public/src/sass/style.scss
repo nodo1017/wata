@@ -7955,6 +7955,18 @@ xnugget info
             }
         }
     }
+    table{
+        .media-body{
+            strong{
+                text-decoration: underline;
+            }
+            &:hover{
+                strong{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 
 .contents-section{
@@ -8419,6 +8431,32 @@ xnugget info
         .file-cover{
             position: relative;
             display: block;
+        }
+    }
+}
+
+
+#toast-container{
+    >.toast{
+        background-image: none !important;
+        padding: 1rem;
+    }
+    >div{
+        color: var(--dark);
+    }
+    .toast-success{
+        background-color: #fff;
+    }
+    .toast-message{
+        color: var(--dark);
+        
+        &:before{
+            content: '\e86c';
+            font-family: 'Material Icons';
+            vertical-align: middle;
+            color: var(--green);
+            font-size: 1.5rem;
+            margin-right: .5rem;
         }
     }
 }

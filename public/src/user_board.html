@@ -56,12 +56,12 @@
                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                     </a>
                     <ul class="sidebar-submenu collapse sm-indent show" id="group_menu">
-                        <li class="sidebar-menu-item">
+                        <li class="sidebar-menu-item active">
                             <a class="sidebar-menu-button" href="user.html">
                                 <span class="sidebar-menu-text">사용자</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item active">
+                        <li class="sidebar-menu-item">
                             <a class="sidebar-menu-button" href="my_groups.html">
                                 <span class="sidebar-menu-text">그룹</span>
                             </a>
@@ -113,6 +113,10 @@
                                         <h5>leo.jeong@watanow.com</h5>
                                     </li>
                                     <li>
+                                        <p>회사명</p>
+                                        <h5>WATA,Inc</h5>
+                                    </li>
+                                    <li>
                                         <p>부서</p>
                                         <h5>디자인팀</h5>
                                     </li>
@@ -128,10 +132,10 @@
                             <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                                 <div class="flex title-row">
                                     <h3 class="mb-0">프로젝트</h3>
-                                    <small class="text-muted text-headings text-uppercase">이 사용자의 제품 역할을 관리하고 제품 액세스 권한을 부여합니다.</small>
+                                    <small class="text-muted text-headings text-uppercase">이 사용자의 역할을 관리하고 액세스 권한을 부여합니다.</small>
                                 </div>
                                 
-                                <a href="#n" class="btn btn-accent btn-rounded ml-4" data-toggle="modal" data-target="#projectAdd">프로젝트 추가</a>
+                                <a href="#n" class="btn btn-accent btn-rounded ml-4" data-toggle="modal" data-target="#projectAdd">프로젝트에 추가</a>
                             </div>
                             <table class="table mb-4 table-nowrap">
                                 <thead>
@@ -321,6 +325,17 @@
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button"
+                                    class="btn btn-success"
+                                    data-toggle="toastr"
+                                    data-toastr-type="success"
+                                    data-toastr-title="null"
+                                    data-toastr-progress-bar="false"
+                                    data-toastr-message="권한 설정을 변경하였습니다.">
+                                권한설정 셀렉트 박스 액션 참고 (참고 후 버튼은 삭제 해주세요) 
+                            </button>
                         </div>
                     </div>
                 </div>
