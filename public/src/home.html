@@ -1,40 +1,96 @@
 @@include('./include/header.html')
 
-<!-- Header Layout -->
-<div class="mdk-header-layout js-mdk-header-layout">
 
-	@@include('./include/gnb.html')
-
-    <!-- Header Layout Content -->
-    <div class="mdk-header-layout__content page-content">
-        <div class="title-section">
-            <div class="container page__container">
-                <div class="d-flex align-items-center">
-                    <div class="flex d-flex">
-                        <p class="mb-caption m-0"><strong>Leo</strong>님 환영합니다.</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-auto">
-                            <a href="#n" class="btn-line"><i class="material-icons">local_atm</i><span>Membership Upgrade</span></a>
-                        </div>
-                    </div>
-                </div>
-
+<main class="dashboard-main">
+    <nav class="dashboard-nav">
+        <a href="home.html" class="navbar-brand mr-16pt">
+            <img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <div class="top-menu-cover">
+            <div class="top-menu">
+                <a href="AC_16.html" class="menu-item text-primary">Sign in</a>
+                <a href="#n" class="menu-item"><span class="material-icons icon--left">code_off</span>Developers</a>
             </div>
         </div>
-        <div class="recent-section">
-            <div class="container page__container">
+    </nav>
+    <div class="dashboard-body">
+        <aside class="side-nav sidebar sidebar-light sidebar-light-dodger-blue sidebar-left">
+            <ul class="sidebar-menu">
+
+                <li class="sidebar-menu-item active">
+                    <a class="sidebar-menu-button" href="home.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">topic</span>
+                        <span class="sidebar-menu-text">프로젝트</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" data-toggle="collapse" href="#space_menu">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">map</span>
+                        공간
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent" id="space_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="space.html">
+                                <span class="sidebar-menu-text">사용자 정의</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="space_public.html">
+                                <span class="sidebar-menu-text">공공지도</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="data.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">storage</span>
+                        <span class="sidebar-menu-text">데이터</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" data-toggle="collapse" href="#group_menu">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">groups</span>
+                        그룹설정
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent" id="group_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="user.html">
+                                <span class="sidebar-menu-text">사용자</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="my_groups.html">
+                                <span class="sidebar-menu-text">그룹</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="my_account.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">account_circle</span>
+                        <span class="sidebar-menu-text">내정보</span>
+                    </a>
+                </li>
+
+            </ul>
+        </aside>
+        <div class="contents" data-perfect-scrollbar>
+
+            
+            <div class="contents-section">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
-                        <h3 class="d-flex align-items-center mb-0"><i class="material-icons-outlined icon--left">topic</i> 최근 프로젝트 목록</h3>
+                        <h3 class="d-flex align-items-center mb-0">최근 프로젝트 목록</h3>
                     </div>
                     
-                    <a href="project_write.html" class="btn btn-accent ml-4">새로운 프로젝트 등록</a>
+                    <!-- <a href="project_list.html" class="btn btn-rounded btn-accent ml-4">관제 리스트</a> -->
                 </div>
                 <div class="row card-group-row">
                     <div class="col-lg-3 card-group-row__col">
                         <div class="card o-hidden mb-0">
-                            <a href="project_board.html" class="card-img-top js-image" data-position="" data-height="200">
+                            <a href="project_board.html" class="card-img-top js-image" data-position="" data-height="250">
                                 <span class="pj-type">스마트 오피스</span>
                                 <img src="images/slider01.jpg" alt="">
                             </a>
@@ -59,7 +115,7 @@
                     </div>
                     <div class="col-lg-3 card-group-row__col">
                         <div class="card o-hidden mb-0">
-                            <a href="#n" class="card-img-top js-image no-image" data-position="" data-height="200">
+                            <a href="#n" class="card-img-top js-image no-image" data-position="" data-height="250">
                                 <span class="pj-type">스마트 팩토리</span>
                                 <span class="material-icons">image_not_supported</span>
                             </a>
@@ -83,7 +139,7 @@
                     </div>
                     <div class="col-lg-3 card-group-row__col">
                         <div class="card o-hidden mb-0">
-                            <a href="#n" class="card-img-top js-image" data-position="" data-height="200">
+                            <a href="#n" class="card-img-top js-image" data-position="" data-height="250">
                                 <span class="pj-type">스마트 팩토리</span>
                                 <img src="images/slider03.jpg" alt="">
                             </a>
@@ -108,7 +164,7 @@
                     </div>
                     <div class="col-lg-3 card-group-row__col">
                         <div class="card o-hidden mb-0">
-                            <a href="#n" class="card-img-top js-image" data-position="" data-height="200">
+                            <a href="#n" class="card-img-top js-image" data-position="" data-height="250">
                                 <span class="pj-type">스마트 리테일</span>
                                 <img src="images/slider04.jpg" alt="">
                             </a>
@@ -137,17 +193,15 @@
                 </div> -->
                 <div class="empty-state d-none">
                     <p class="empty-icon m-0"><i class="far fa-map"></i></p>
-                    <em class="empty-txt mb-4">아직 등록한 프로젝트가 없습니다.</em>
+                    <em class="empty-txt m-0">아직 등록한 프로젝트가 없습니다.</em>
                     <!-- <a href="#n" class="btn btn-link">새로운 프로젝트 생성</a> -->
                 </div>
             </div>
-        </div>
-        <div class="page-section">
-            <div class="container page__container">
+            <div class="contents-section">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
-                        <h3 class="d-flex align-items-center mb-0 "><i class="material-icons-outlined icon--left">map</i> 공간 목록</h3>
-                        <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 공간이 등록되어 있습니다.</small>
+                        <h3 class="d-flex align-items-center mb-0 ">프로젝트 목록</h3>
+                        <small class="text-muted text-headings text-uppercase"><strong class="text-accent">13개</strong>의 프로젝트가 등록되어 있습니다.</small>
                     </div>
                     
                     <!-- <div class="w-auto table d-flex align-items-center mb-sm-0">
@@ -159,7 +213,7 @@
                         <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
                         <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
                     </form>
-                    <a href="buildings_write.html" class="btn btn-accent ml-4">새로운 공간 등록</a>
+                    <a href="project_write.html" class="btn btn-rounded btn-accent ml-4">새로운 프로젝트 등록</a>
                 </div>     
                 <table class="table mb-4 table-nowrap">
                     <colgroup>
@@ -167,41 +221,30 @@
                         <col width="*">
                         <col width="13%">
                         <col width="13%">
-                        <col width="13%">
-                        <col width="12%">
-                        <col width="3%">
+                        <col width="5%">
                     </colgroup>
                     <thead>
                         <tr>
                             <th>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-toggle-check-all"
-                                        data-target="#projects"
-                                        id="customCheckAll">
-                                    <label class="custom-control-label"
-                                        for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                    <input type="checkbox" class="custom-control-input js-toggle-check-all" data-target="#projects" id="customCheckAll">
+                                    <label class="custom-control-label" for="customCheckAll"><span class="text-hide">Toggle all</span></label>
                                 </div>
                             </th>
                             <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">공간명</a>
-                            </th>
-                            <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-link">프로젝트</a>
+                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">프로젝트명</a>
                             </th>
                             <th>
                                 <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">최근 수정일</a>
                             </th>
                             <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">배포일자</a>
+                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">최초 생성일</a>
                             </th>
-                            <th>
-                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">상태</a>
-                            </th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody class="list" id="projects">
-                        <tr>
+                        <tr class="selected">
                             <td>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox"
@@ -217,61 +260,22 @@
                                         <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
                                     </a>
                                     <div class="flex list-els">
-                                        <a class="card-title" href="buildings_board.html">건물 A</a>
+                                        <a class="card-title" href="buildings_board.html">판교 에이치스퀘어</a>
                                     </div>
                                 </div>
                             </td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="#n" class="dropdown-toggle text-primary" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">3 Project</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 B</a>
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 C</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>2021.01.06</td>
+                            <td>2021.06.06</td>
                             <td>2021.01.10</td>
-                            <td><span class="text-accent">배포중</span></td>
-                        </tr>
-
-                        <tr class="selected">
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox"
-                                        class="custom-control-input js-check-selected-row"
-                                        checked=""
-                                        id="customCheck1_5">
-                                    <label class="custom-control-label"
-                                        for="customCheck1_5"><span class="text-hide">Check</span></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="flex d-flex align-items-center mr-16pt">
-                                    <a href="buildings_board.html" class="avatar mr-12pt">
-                                        <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
-                                    </a>
-                                    <div class="flex list-els">
-                                        <a class="card-title" href="buildings_board.html">건물 B</a>
+                            <td class="text-right">
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
                                     </div>
                                 </div>
                             </td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="#n" class="dropdown-toggle text-primary" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">1 Project</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>2021.01.07</td>
-                            <td>2021.01.12</td>
-                            <td><span class="text-accent">배포중</span></td>
                         </tr>
-
                         <tr>
                             <td>
                                 <div class="custom-control custom-checkbox">
@@ -285,42 +289,162 @@
                             <td>
                                 <div class="flex d-flex align-items-center mr-16pt">
                                     <a href="buildings_board.html" class="avatar mr-12pt">
-                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                        <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
                                     </a>
                                     <div class="flex list-els">
-                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                        <a class="card-title" href="buildings_board.html">판교역</a>
                                     </div>
+                                </div>
+                            </td>
+                            <td>2021.06.06</td>
+                            <td>2021.01.12</td>
+                            <td class="text-right">
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_3">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_3"><span class="text-hide">Check</span></label>
                                 </div>
                             </td>
                             <td>
-                                <div class="btn-group">
-                                    <a href="#n" class="dropdown-toggle text-primary" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">2 Project</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 A</a>
-                                        <a class="dropdown-item text-primary" href="#">프로젝트 B</a>
+                                <div class="flex d-flex align-items-center mr-16pt">
+                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                        <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <a class="card-title" href="buildings_board.html">강남역</a>
                                     </div>
                                 </div>
                             </td>
-                            <td>2021.01.07</td>
+                            <td>2021.06.06</td>
                             <td>2021.01.12</td>
-                            <td><span class="text-secondary">수정중</span></td>
+                            <td class="text-right">
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
-
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_4">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_4"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center mr-16pt">
+                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                        <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <a class="card-title" href="buildings_board.html">인천공항</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>2021.06.06</td>
+                            <td>2021.01.12</td>
+                            <td class="text-right">
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_5">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_5"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center mr-16pt">
+                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                        <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <a class="card-title" href="buildings_board.html">인천공항</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>2021.06.06</td>
+                            <td>2021.01.12</td>
+                            <td class="text-right">
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                        <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
+                <div class="flex mb-4">
+                    <a href="#n" class="btn btn-outline-secondary btn-rounded">선택 삭제</a>
+                </div>
+                <ul class="pagination justify-content-center pagination-xsm m-0">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>Prev</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Page 1">
+                            <span>1</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Page 2">
+                            <span>2</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span>Next</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                        </a>
+                    </li>
+                </ul>
                 <div class="empty-state d-none">
                     <p class="empty-icon m-0"><i class="far fa-building"></i></p>
                     <em class="empty-txt mb-4">아직 등록한 건물이 없습니다.</em>
                     <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
                 </div>
             </div>
+
         </div>
     </div>
+</main>
 
-    @@include('./include/copyright.html')
-    
-</div>
+
 
 
 <div class="cd-nugget-info">
@@ -358,8 +482,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="cd-cover-layer"></div>
 
 

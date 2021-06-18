@@ -1,0 +1,406 @@
+@@include('./include/header.html')
+
+
+<main class="dashboard-main">
+    <nav class="dashboard-nav">
+        <a href="home.html" class="navbar-brand mr-16pt">
+            <img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <div class="top-menu-cover">
+            <div class="top-menu">
+                <a href="AC_16.html" class="menu-item text-primary">Sign in</a>
+                <a href="#n" class="menu-item"><span class="material-icons icon--left">code_off</span>Developers</a>
+            </div>
+        </div>
+    </nav>
+    <div class="dashboard-body">
+        <aside class="side-nav sidebar sidebar-light sidebar-light-dodger-blue sidebar-left">
+            <ul class="sidebar-menu">
+
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="home.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">topic</span>
+                        <span class="sidebar-menu-text">프로젝트</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item ">
+                    <a class="sidebar-menu-button" data-toggle="collapse" href="#space_menu">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">map</span>
+                        공간
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent" id="space_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="space.html">
+                                <span class="sidebar-menu-text">사용자 정의</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="space_public.html">
+                                <span class="sidebar-menu-text">공공지도</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="data.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">storage</span>
+                        <span class="sidebar-menu-text">데이터</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-item active open">
+                    <a class="sidebar-menu-button" data-toggle="collapse" href="#group_menu">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">groups</span>
+                        그룹설정
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent show" id="group_menu">
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="user.html">
+                                <span class="sidebar-menu-text">사용자</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="my_groups.html">
+                                <span class="sidebar-menu-text">그룹</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="my_account.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">account_circle</span>
+                        <span class="sidebar-menu-text">내정보</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="contents" data-perfect-scrollbar>
+            <div class="contents-section col-md-16">
+                <div class="row align-items-start">
+                    <div class="col-md-4">
+                        <div class="cell">
+                            <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-5 sort-wrap">
+                                <div class="flex title-row">
+                                    <h3 class="mb-0">사용자 초대</h3>
+                                    <small class="text-muted text-headings text-uppercase">프로젝트를 함께할 팀원을 초대해 보세요.</small>
+                                </div>
+                            </div>
+    
+                            <div class="form-group mb-5">
+                                <label for="formFile" class="form-label text-50 essential">이메일</label>
+                                <div class="file-controls">
+                                    <div class="multi-file d-flex flex mb-4">
+                                        <input id="form01" type="email" required="" class="form-line" placeholder="초대할 구성원의 이메일을 입력해 주세요.">
+                                        <a href="#n" class="btn-file-add align-items-center circle-pin">
+                                            <span class="material-icons">add</span>
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert alert-soft-success alert-dismissible fade show d-none" role="alert">
+                                <div class="d-flex flex-wrap align-items-center">
+                                    <div class="mr-8pt">
+                                        <i class="material-icons">done</i>
+                                    </div>
+                                    <div class="flex" style="min-width: 180px">
+                                        <small class="text-black-100">이메일을 성공적으로 발송 했습니다.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-center mb-32pt">
+                                <button class="btn btn-block btn-lg btn-accent" type="submit">초대장 보내기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                            <div class="flex title-row">
+                                <h3 class="mb-0">사용자 리스트</h3>
+                                <small class="text-muted text-headings text-uppercase">그룹 사용자에 대한 액세스를 관한을 부여합니다</small>
+                            </div>
+                            <form class="form-inline ml-4">
+                                <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
+                                <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
+                            </form>
+                            <!-- <a href="#n" class="btn btn-accent btn-rounded ml-4">사용자 초대</a> -->
+                        </div>
+                        <table class="table mb-4 table-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">사용자</a>
+                                    </th>
+                                    <th>
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-link">마지막 활성 상태</a>
+                                    </th>
+                                    <th>
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">상태</a>
+                                    </th>
+                                    <th>
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">작업</a>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="list" id="projects">
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="media flex-nowrap align-items-center">
+                                            <span class="avatar avatar-sm mr-2">
+                                                <span class="avatar-title rounded-circle">JY</span>
+                                            </span>
+                                            <div class="media-body">
+                                                <strong class="text-dark">Jaeyong Lee</strong>
+                                                <div class="text-muted small">jaeyong.lee@samsung.com</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>2021.01.06</td>
+                                    <td>초대됨</td>
+                                    <td><a href="#n" class="text-underline text-accent">초대 재전송</a></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">세부 사항 보기</a>
+                                                <a href="#n" class="dropdown-item">그룹에 사용자 추가</a>
+                                                <a href="#n" class="dropdown-item text-danger">액세스 일시 중단</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="media flex-nowrap align-items-center">
+                                            <span class="avatar avatar-sm mr-2">
+                                                <span class="avatar-title rounded-circle">GH</span>
+                                            </span>
+                                            <div class="media-body">
+                                                <strong class="text-dark">Gunhee Lee</strong>
+                                                <div class="text-muted small">gunhee.lee@samsung.com</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>2021.01.06</td>
+                                    <td>초대됨</td>
+                                    <td><a href="#n" class="text-underline text-accent">초대 재전송</a></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">세부 사항 보기</a>
+                                                <a href="#n" class="dropdown-item">그룹에 사용자 추가</a>
+                                                <a href="#n" class="dropdown-item text-danger">액세스 일시 중단</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="media flex-nowrap align-items-center">
+                                            <span class="avatar avatar-sm mr-2">
+                                                <img src="images/icon/wata_symbol.png" alt="Avatar" class="avatar-img rounded-circle">
+                                            </span>
+                                            <div class="media-body">
+                                                <strong class="text-dark">Jeong Leo</strong>
+                                                <div class="text-muted small">jeong.Leo@watanow.com</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>2021.01.06</td>
+                                    <td>초대실패</td>
+                                    <td><a href="#n" class="text-underline text-accent">초대 재전송</a></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">세부 사항 보기</a>
+                                                <a href="#n" class="dropdown-item">그룹에 사용자 추가</a>
+                                                <a href="#n" class="dropdown-item text-danger">액세스 일시 중단</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="media flex-nowrap align-items-center">
+                                            <span class="avatar avatar-sm mr-2">
+                                                <img src="images/icon/wata_symbol.png" alt="Avatar" class="avatar-img rounded-circle">
+                                            </span>
+                                            <div class="media-body">
+                                                <strong class="text-dark">Jeong Leo</strong>
+                                                <div class="text-muted small">jeong.Leo@watanow.com</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>2021.01.06</td>
+                                    <td>활성</td>
+                                    <td><a href="user_board.html" class="text-underline text-primary">세부 사항 보기</a></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">세부 사항 보기</a>
+                                                <a href="#n" class="dropdown-item">그룹에 사용자 추가</a>
+                                                <a href="#n" class="dropdown-item text-danger">액세스 일시 중단</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="media flex-nowrap align-items-center">
+                                            <span class="avatar avatar-sm mr-2">
+                                                <img src="images/icon/wata_symbol.png" alt="Avatar" class="avatar-img rounded-circle">
+                                            </span>
+                                            <div class="media-body">
+                                                <strong class="text-dark">Jeong Leo</strong>
+                                                <div class="text-muted small">jeong.Leo@watanow.com</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>2021.01.06</td>
+                                    <td>초대됨</td>
+                                    <td><a href="#n" class="text-underline text-accent">초대 재전송</a></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">세부사항 보기</a>
+                                                <a href="#n" class="dropdown-item">그룹에 사용자 추가</a>
+                                                <a href="#n" class="dropdown-item text-danger">액세스 일시 중단</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="media flex-nowrap align-items-center">
+                                            <span class="avatar avatar-sm mr-2">
+                                                <img src="images/icon/wata_symbol.png" alt="Avatar" class="avatar-img rounded-circle">
+                                            </span>
+                                            <div class="media-body">
+                                                <strong class="text-dark">Jeong Leo</strong>
+                                                <div class="text-muted small">jeong.Leo@watanow.com</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>2021.01.06</td>
+                                    <td>초대됨</td>
+                                    <td><a href="#n" class="text-underline text-accent">초대 재전송</a></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">세부 사항 보기</a>
+                                                <a href="#n" class="dropdown-item">그룹에 사용자 추가</a>
+                                                <a href="#n" class="dropdown-item text-danger">액세스 일시 중단</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="media flex-nowrap align-items-center">
+                                            <span class="avatar avatar-sm mr-2">
+                                                <img src="images/icon/wata_symbol.png" alt="Avatar" class="avatar-img rounded-circle">
+                                            </span>
+                                            <div class="media-body">
+                                                <strong class="text-dark">Jeong Leo</strong>
+                                                <div class="text-muted small">jeong.Leo@watanow.com</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>2021.01.06</td>
+                                    <td>초대됨</td>
+                                    <td><a href="#n" class="text-underline text-accent">초대 재전송</a></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">세부 사항 보기</a>
+                                                <a href="#n" class="dropdown-item">그룹에 사용자 추가</a>
+                                                <a href="#n" class="dropdown-item text-danger">액세스 일시 중단</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#n" class="media flex-nowrap align-items-center">
+                                            <span class="avatar avatar-sm mr-2">
+                                                <img src="images/icon/wata_symbol.png" alt="Avatar" class="avatar-img rounded-circle">
+                                            </span>
+                                            <div class="media-body">
+                                                <strong class="text-dark">Jeong Leo</strong>
+                                                <div class="text-muted small">jeong.Leo@watanow.com</div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>2021.01.06</td>
+                                    <td>초대됨</td>
+                                    <td><a href="#n" class="text-underline text-accent">초대 재전송</a></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">세부 사항 보기</a>
+                                                <a href="#n" class="dropdown-item">그룹에 사용자 추가</a>
+                                                <a href="#n" class="dropdown-item text-danger">액세스 일시 중단</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul class="pagination justify-content-center pagination-xsm m-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>Prev</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 1">
+                                    <span>1</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 2">
+                                    <span>2</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>Next</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</main>
+
+
+
+
+
+@@include('./include/footer.html')

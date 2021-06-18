@@ -1,30 +1,85 @@
 @@include('./include/header.html')
 
-<!-- Header Layout -->
-<div class="mdk-header-layout js-mdk-header-layout">
 
-	@@include('./include/gnb.html')
-
-    <!-- Header Layout Content -->
-    <div class="mdk-header-layout__content page-content spatial-data">
-        <div class="title-section">
-            <div class="container page__container">
-                <div class="d-flex align-items-center">
-                    <div class="flex d-flex">
-                        <p class="mb-caption m-0"><strong>Leo</strong>님 환영합니다.</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-auto">
-                            <a href="#n" class="btn-line"><i class="material-icons">local_atm</i><span>Membership Upgrade</span></a>
-                        </div>
-                    </div>
-                </div>
-
+<main class="dashboard-main">
+    <nav class="dashboard-nav">
+        <a href="home.html" class="navbar-brand mr-16pt">
+            <img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <div class="top-menu-cover">
+            <div class="top-menu">
+                <a href="AC_16.html" class="menu-item text-primary">Sign in</a>
+                <a href="#n" class="menu-item"><span class="material-icons icon--left">code_off</span>Developers</a>
             </div>
         </div>
+    </nav>
+    <div class="dashboard-body spatial-data">
+        <aside class="side-nav sidebar sidebar-light sidebar-light-dodger-blue sidebar-left">
+            <ul class="sidebar-menu">
 
-        <div class="page-section">
-            <div class="container page__container">
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="home.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">topic</span>
+                        <span class="sidebar-menu-text">프로젝트</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item ">
+                    <a class="sidebar-menu-button" data-toggle="collapse" href="#space_menu">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">map</span>
+                        공간
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent" id="space_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="space.html">
+                                <span class="sidebar-menu-text">사용자 정의</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="space_public.html">
+                                <span class="sidebar-menu-text">공공지도</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item active">
+                    <a class="sidebar-menu-button" href="data.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">storage</span>
+                        <span class="sidebar-menu-text">데이터</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" data-toggle="collapse" href="#group_menu">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">groups</span>
+                        그룹설정
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent" id="group_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="user.html">
+                                <span class="sidebar-menu-text">사용자</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="my_groups.html">
+                                <span class="sidebar-menu-text">그룹</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="my_account.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">account_circle</span>
+                        <span class="sidebar-menu-text">내정보</span>
+                    </a>
+                </li>
+
+            </ul>
+        </aside>
+        <div class="contents" data-perfect-scrollbar>
+
+            <div class="contents-section col-md-16">
+
                 <div class="row align-items-start">
                     <div class="col-md-4">
                         <div class="flex d-flex flex-column flex-sm-row align-items-center">
@@ -346,14 +401,15 @@
 
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
-    <!-- // END Header Layout Content -->
+</main>
 
-    @@include('./include/copyright.html')
-    
-</div>
-<!-- // END Header Layout -->
+
+
+
 
 @@include('./include/footer.html')

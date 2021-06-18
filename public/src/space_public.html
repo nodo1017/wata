@@ -1,205 +1,87 @@
-<!DOCTYPE html>
-<html lang="ko" dir="ltr">
+@@include('./include/header.html')
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>WATA</title>
 
-	<!-- Prevent the demo from appearing in search engines -->
-	<meta name="robots" content="noindex">
-
-	<link rel="icon" href="images/icon/favicon.svg">
-	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
-	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
-	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
-	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
-
-	<!-- Preloader -->
-	<link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
-
-	<!-- Perfect Scrollbar -->
-	<link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
-
-	<!-- Material Design Icons -->
-	<link type="text/css" href="css/material-icons.css" rel="stylesheet" />
-
-	<!-- Font Awesome Icons -->
-	<link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
-
-	<!-- Preloader -->
-	<link type="text/css" href="css/preloader.css" rel="stylesheet" />
-
-	<!-- App CSS -->
-	<link type="text/css" href="css/app.css" rel="stylesheet" />
-	
-	<!-- Dark Mode CSS -->
-	<link type="text/css" href="css/dark.css" rel="stylesheet" />
-
-	<!-- Flatpickr -->
-	<link type="text/css" href="css/flatpickr.css"	rel="stylesheet">
-	<link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet">
-
-	<!-- swiper -->
-	<link type="text/css" href="css/swiper.min.css" rel="stylesheet" />
-
-	<!-- custom CSS -->
-	<link type="text/css" href="css/style.css" rel="stylesheet" />
-	
-    <!-- https://material.io/resources/icons/?style=baseline -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=outline -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=round -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=sharp -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
-    rel="stylesheet">
-
-    <!-- https://material.io/resources/icons/?style=twotone -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
-    rel="stylesheet">
-
-	<!-- Select12 -->
-	<link type="text/css" href="css/select2.css" rel="stylesheet">
-	<link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet">
-
-	<!-- Toastr -->
-	<link type="text/css" href="vendor/toastr.min.css" rel="stylesheet">
-	<link type="text/css" href="css/toastr.css" rel="stylesheet">
-
-</head>
-
-<body class="layout-sticky-subnav layout-default">
-
-	<div class="preloader">
-		<div class="sk-chase">
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-			<div class="sk-chase-dot"></div>
-		</div>
-	</div>
-
-<!-- Header Layout -->
-<div class="mdk-header-layout js-mdk-header-layout">
-
-	<div id="header" class="mdk-header js-mdk-header mb-0" data-effects="parallax-background waterfall" data-fixed data-condenses>
-	<div class="mdk-header__content">
-		<div class="navbar navbar-expand nav-gnb" id="default-navbar" data-primary>
-			<a href="home.html" class="navbar-brand mr-16pt">
-				<img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
-			</a>
-			<!-- <a href="index.html" class="navbar-brand mr-16pt">
-				<img src="images/logo/symbol_col.svg" alt="logo" class="img-fluid" style="max-width: 42px;" />
-			</a> -->
-		
-			<div class="nav navbar-nav flex justify-content-start ml-40pt cd-morph-dropdown">
-				<a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
-				<nav class="main-nav">
-					<ul>
-						<li>
-							<a href="project_list.html" class=""><i class="material-icons-outlined">topic</i> Projects</a>
-						</li>
-						<li>
-							<a href="buildings.html" class="active"><i class="material-icons-outlined">map</i> Space</a>
-						</li>
-						<li>
-							<a href="data.html" class=""><i class="material-icons-outlined">storage</i> Data</a>
-						</li>
-						<!-- <li class="has-dropdown" data-content="menu02">
-							<a href="#n">test</a>
-							<div class="morph-dropdown-wrapper">
-								<div class="morph-dropdown-inner">
-									<div class="dropdown-list">
-										<ul>
-											<li id="menu01" class="dropdown">
-												<a href="#0" class="label">Title</a>
-												<div class="content">
-													<a href="sub.html" class="dropdown-item">2depth</a>
-													<a href="sub.html" class="dropdown-item">2depth</a>
-													<a href="sub.html" class="dropdown-item">2depth</a>
-													<a href="sub.html" class="dropdown-item">2depth</a>
-													<a href="sub.html" class="dropdown-item">2depth</a>
-												</div>
-											</li>
-											<li id="menu02" class="dropdown">
-												<a href="#0" class="label">Title</a>
-												<div class="content">
-													<a href="#n" class="dropdown-item">2depth</a>
-													<a href="#n" class="dropdown-item">2depth</a>
-													<a href="#n" class="dropdown-item">2depth</a>
-													<a href="#n" class="dropdown-item">2depth</a>
-													<a href="#n" class="dropdown-item">2depth</a>
-												</div>
-											</li>
-										</ul>
-										<div class="bg-layer" aria-hidden="true"></div>
-									</div>
-								</div>
-							</div>
-						</li> -->
-					</ul>
-				</nav>
-			</div>
-		
-			<div class="d-flex flex justify-content-end align-items-center">
-				<div class="form-group m-0 ml-4 form-lang">
-					<select id="custom-select" class="custom-line">
-						<option selected="">KOR</option>
-						<option value="1">JPN</option>
-						<option value="2">ENG</option>
-					</select>
-				</div>
-				<div class="nav-item dropdown ml-4">
-					<a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-						<span class="avatar avatar-sm">
-							<span class="avatar-title rounded-circle">SH</span>
-						</span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div class="dropdown-header"><strong>계정메뉴</strong></div>
-						<a class="dropdown-item" href="my_account.html">정보수정</a>
-						<a class="dropdown-item" href="#n">멤버십</a>
-						<a class="dropdown-item" href="ac_16.html">로그아웃</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-    <!-- Header Layout Content -->
-    <div class="mdk-header-layout__content page-content">
-        <div class="title-section">
-            <div class="container page__container">
-                <div class="d-flex align-items-center">
-                    <div class="flex d-flex">
-                        <p class="mb-caption m-0"><strong>Leo</strong>님 환영합니다.</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-auto">
-                            <a href="#n" class="btn-line"><i class="material-icons">local_atm</i><span>Membership Upgrade</span></a>
-                        </div>
-                    </div>
-                </div>
+<main class="dashboard-main">
+    <nav class="dashboard-nav">
+        <a href="home.html" class="navbar-brand mr-16pt">
+            <img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <div class="top-menu-cover">
+            <div class="top-menu">
+                <a href="#n" class="menu-item text-primary">Sign in</a>
+                <a href="#n" class="menu-item"><span class="material-icons icon--left">code_off</span>Developers</a>
             </div>
         </div>
+    </nav>
+    <div class="dashboard-body">
+        <aside class="side-nav sidebar sidebar-light sidebar-light-dodger-blue sidebar-left">
+            <ul class="sidebar-menu">
 
-        <div class="page-section">
-            <div class="container page__container">
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="home.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">topic</span>
+                        <span class="sidebar-menu-text">프로젝트</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item active open">
+                    <a class="sidebar-menu-button" data-toggle="collapse" href="#space_menu">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">map</span>
+                        공간
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent show" id="space_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="space.html">
+                                <span class="sidebar-menu-text">사용자 정의</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="space_public.html">
+                                <span class="sidebar-menu-text">공공지도</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="data.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">storage</span>
+                        <span class="sidebar-menu-text">데이터</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" data-toggle="collapse" href="#group_menu">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">groups</span>
+                        그룹설정
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent" id="group_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="user.html">
+                                <span class="sidebar-menu-text">사용자</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="my_groups.html">
+                                <span class="sidebar-menu-text">그룹</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button" href="my_account.html">
+                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">account_circle</span>
+                        <span class="sidebar-menu-text">내정보</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="contents" data-perfect-scrollbar>
+
+            
+            <div class="contents-section">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
-                        <h3 class="mb-0">공간 목록</h3>
+                        <h3 class="mb-0">공공 지도</h3>
                         <small class="text-muted text-headings text-uppercase"><strong class="text-accent">3개</strong>의 공간이 등록되어 있습니다.</small>
                     </div>
                     
@@ -212,10 +94,10 @@
                         <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
                         <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
                     </form>
-                    <a href="buildings_write.html" class="btn btn-accent ml-4">새로운 공간 등록</a>
+                    <a href="buildings_write.html" class="btn btn-accent btn-rounded ml-4">새로운 공간 등록</a>
                 </div>
 
-                <div class="empty-state">
+                <div class="empty-state d-none">
                     <p class="empty-icon m-0"><i class="far fa-building"></i></p>
                     <em class="empty-txt mb-4">아직 등록한 공간이 없습니다.</em>
                     <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
@@ -398,7 +280,9 @@
 
                     </tbody>
                 </table>
-
+                <div class="flex mb-4">
+                    <a href="#n" class="btn btn-outline-secondary btn-rounded">선택 삭제</a>
+                </div>
                 <ul class="pagination justify-content-center pagination-xsm m-0">
                     <li class="page-item disabled">
                         <a class="page-link" href="#" aria-label="Previous">
@@ -423,84 +307,15 @@
                         </a>
                     </li>
                 </ul>
-                
-                <!-- <div class="d-flex justify-content-center mt-5">
-                    <a href="#n" class="btn-grad-col">프로젝트 등록</a>
-                </div> -->
+
             </div>
+
         </div>
     </div>
-    <!-- // END Header Layout Content -->
+</main>
 
-    	<!-- Footer -->
-	<div class="footer">
-		<div class="container page__container page-section d-flex flex-column">
-			<div class="row">
-				<div class="col-auto">
-					<p class="text-70 brand mb-24pt py-2">
-						<img class="brand-icon" src="images/logo/logo.svg" width="100" alt="WATA"> 와따
-					</p>
-				</div>
-				<div class="col justify-content-end">
-					<div class="d-flex justify-content-end info-cus">
-						<div class="text-right">
-							<a href="#n" class="btn btn-link">Help Center</a>
-						</div>
-						<div class="text-right">
-							<a href="#n" class="btn btn-link">Developer Center</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<p class="measure-lead-max text-50 small mr-8pt">R&D센터 : 경기 성남시 분당구 삼평동 680 H스퀘어 2층 206호</p>
-			<p class="mb-8pt d-flex">
-				<a href="" class="text-70 btn-link mr-8pt small">Terms</a>
-				<a href="" class="text-70 btn-link small">Privacy policy</a>
-			</p>
-			<p class="text-50 small mt-n1 mb-0">Copyright 2021 &copy; All rights reserved.</p>
-		</div>
-	</div>
-	<!-- // END Footer -->
-    
-</div>
-<!-- // END Header Layout -->
 
-<!-- jQuery -->
-<script src="vendor/jquery.min.js"></script>
 
-<!-- Bootstrap -->
-<script src="vendor/popper.min.js"></script>
-<script src="vendor/bootstrap.min.js"></script>
 
-<!-- Perfect Scrollbar -->
-<script src="vendor/perfect-scrollbar.min.js"></script>
 
-<!-- DOM Factory -->
-<script src="vendor/dom-factory.js"></script>
-
-<!-- MDK -->
-<script src="vendor/material-design-kit.js"></script>
-
-<!-- App JS -->
-<script src="js/app.js"></script>
-
-<!-- Preloader -->
-<script src="js/preloader.js"></script>
-
-<!-- Select2 -->
-<script src="vendor/select2/select2.min.js"></script>
-<script src="js/select2.js"></script>
-
-<!-- Toastr -->
-<script src="vendor/toastr.min.js"></script>
-<script src="js/toastr.js"></script>
-
-<!-- Tables -->
-<script src="js/toggle-check-all.js"></script>
-<script src="js/check-selected-row.js"></script>
-
-<!-- custom -->
-<script src="js/custom.js"></script>
-
-</body>
-</html>
+@@include('./include/footer.html')
